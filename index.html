@@ -35,28 +35,77 @@
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "24243 SE 43rd Ct",
-        "addressLocality": "Issaquah",
+        "addressLocality": "Sammamish",
         "addressRegion": "WA",
         "postalCode": "98029",
         "addressCountry": "US"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "47.6164",
-        "longitude": "-122.0356"
-      },
+      "areaServed": "WA",
       "image": "https://starkroofingrenovation.com/stark-cover.png",
-      "description": "Professional roofing, gutter replacement, siding installation & general renovation services in Greater Seattle",
       "priceRange": "$$",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "30"
-      }
+      "description": "Professional roofing, gutter replacement, siding installation & general renovation services in Greater Seattle"
     }
     </script>
 
-    
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Stark Roofing & Renovation",
+      "image": "https://starkroofingrenovation.com/stark-logo-transparent.png",
+      "description": "Full-service roofing and renovation contractor",
+      "telephone": "+1-206-398-5500",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24243 SE 43rd Ct",
+        "addressLocality": "Sammamish",
+        "addressRegion": "WA",
+        "postalCode": "98029"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Roofing & Renovation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof Replacement"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gutter Replacement"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Siding Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Window Replacement"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
 
   <body>
