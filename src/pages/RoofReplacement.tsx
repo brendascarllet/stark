@@ -21,6 +21,7 @@ import { useEntranceAnimations } from '@/hooks/useEntranceAnimations';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 import AnimatedSection from '@/components/AnimatedSection';
 import EmergencyServiceBar from '@/components/navigation/EmergencyServiceBar';
+import FAQSection from '@/components/roof-replacement/FAQSection';
 
 const RoofReplacement = () => {
   useEffect(() => {
@@ -51,7 +52,7 @@ const RoofReplacement = () => {
       <ServicePageHero
         title="Roof Replacement"
         subtitle="Expert installation using premium GAF materials — built to handle everything Washington weather throws at it."
-        badge="GAF Master Elite® Certified"
+        badge="GAF Certified"
         bgImage="/drone-1.jpg"
         breadcrumb="Roof Replacement"
         secondaryCta={{ label: "View Our Work", href: "#gallery" }}
@@ -106,6 +107,10 @@ const RoofReplacement = () => {
       
       <AnimatedSection animation="fade">
         <GallerySection />
+      </AnimatedSection>
+
+      <AnimatedSection animation="slide-up">
+        <FAQSection />
       </AnimatedSection>
       
       <AnimatedSection animation="slide-up">

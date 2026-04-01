@@ -30,7 +30,7 @@ const LynnwoodLocation = () => {
         <h3 className="text-2xl font-semibold mb-3">Local Lynnwood Advantages</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
           <li><strong>Same-Day Emergency Response</strong> - Based in Lynnwood means faster service</li>
-          <li><strong>GAF Silver Pledge Certified</strong> - Factory-trained, quality-assured installers</li>
+          <li><strong>GAF Certified</strong> - Factory-trained, quality-assured installers</li>
           <li><strong>Free Roof Inspections</strong> - Expert EagleView drone assessments</li>
           <li><strong>Flexible Financing</strong> - Payment options to fit your budget</li>
           <li><strong>Transparent Estimates</strong> - Honest, competitive pricing</li>
@@ -50,7 +50,7 @@ const LynnwoodLocation = () => {
         <p className="text-gray-700 mb-4">
           <strong>Stark Roofing & Renovation</strong><br />
           626 199th PL SW, Lynnwood, WA 98036<br />
-          Phone: <strong>206-398-5500</strong><br />
+          Phone: <strong>206-739-8232</strong><br />
           Email: office@starkroofingrenovation.com
         </p>
       </div>

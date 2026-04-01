@@ -19,7 +19,7 @@ const WindowReplacement = () => {
 
   useSEOMeta({
     title: 'Window Replacement & Installation | Energy-Efficient | Seattle',
-    description: 'Professional window replacement in Seattle & Puget Sound. Energy-efficient windows. Improve comfort and curb appeal. Free estimates. 206-398-5500.',
+    description: 'Professional window replacement in Seattle & Puget Sound. Energy-efficient windows. Improve comfort and curb appeal. Free estimates. 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/window-replacement',
     keywords: 'window replacement Seattle, replacement windows, energy efficient windows, new windows, window installation',
     ogTitle: 'Window Replacement - Energy Efficient | Stark Roofing',

@@ -27,7 +27,7 @@ const StormDamage = () => {
 
   useSEOMeta({
     title: 'Emergency Storm Damage Repair | 24/7 Service | Seattle',
-    description: 'Emergency storm damage repair. Roof damage, hail damage, wind damage. 24/7 emergency response. Insurance claim assistance. Seattle & Puget Sound. 206-398-5500.',
+    description: 'Emergency storm damage repair. Roof damage, hail damage, wind damage. 24/7 emergency response. Insurance claim assistance. Seattle & Puget Sound. 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/storm-damage',
     keywords: 'storm damage repair, roof hail damage, wind damage roof, emergency roof repair, storm damage contractor',
     ogTitle: 'Storm Damage Repair - 24/7 Emergency Service | Stark Roofing',

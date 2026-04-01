@@ -15,7 +15,7 @@ const SidingInstallation = () => {
 
   useSEOMeta({
     title: 'Siding Installation & Replacement | James Hardie | Seattle',
-    description: 'Professional siding installation in Seattle & Puget Sound. James Hardie & premium materials. Transform your home. Free estimates. Call 206-398-5500.',
+    description: 'Professional siding installation in Seattle & Puget Sound. James Hardie & premium materials. Transform your home. Free estimates. Call 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/siding-installation',
     keywords: 'siding installation Seattle, siding replacement, James Hardie siding, fiber cement siding, home exterior',
     ogTitle: 'Siding Installation - Transform Your Home | Stark Roofing',

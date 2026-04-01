@@ -47,15 +47,11 @@ const PaymentOptionsSection = () => {
               POPULAR
             </div>
             <div className="bg-stark-red p-6 text-white text-center">
-              <h3 className="text-2xl font-heading font-bold">0% Interest</h3>
+              <h3 className="text-2xl font-heading font-bold">Low Monthly Payments</h3>
               <p className="text-white/80 mt-2">For qualified homeowners</p>
             </div>
             <div className="p-6">
               <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle2 className="text-green-500 mr-2 mt-1 flex-shrink-0" size={20} />
-                  <span>No interest for 12 months</span>
-                </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="text-green-500 mr-2 mt-1 flex-shrink-0" size={20} />
                   <span>No money down</span>
@@ -63,6 +59,10 @@ const PaymentOptionsSection = () => {
                 <li className="flex items-start">
                   <CheckCircle2 className="text-green-500 mr-2 mt-1 flex-shrink-0" size={20} />
                   <span>Quick approval process</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-green-500 mr-2 mt-1 flex-shrink-0" size={20} />
+                  <span>Competitive rates</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="text-green-500 mr-2 mt-1 flex-shrink-0" size={20} />

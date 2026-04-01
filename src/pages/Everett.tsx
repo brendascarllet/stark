@@ -29,7 +29,7 @@ const EverettLocation = () => {
       <div>
         <h3 className="text-2xl font-semibold mb-3">Everett Roofing Excellence</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
-          <li><strong>GAF Silver Pledge Certified</strong> - Quality materials and installation</li>
+          <li><strong>GAF Certified</strong> - Quality materials and installation</li>
           <li><strong>Expert Assessment</strong> - Drone-assisted roof inspections</li>
           <li><strong>Fair Pricing</strong> - Competitive, transparent estimates</li>
           <li><strong>Financing Options</strong> - Flexible payment plans available</li>
@@ -48,7 +48,7 @@ const EverettLocation = () => {
       <div className="bg-gray-100 p-6 rounded-lg">
         <h3 className="text-2xl font-semibold mb-3">Schedule Your Everett Roof Estimate</h3>
         <p className="text-gray-700 mb-4">
-          Call <strong>206-398-5500</strong> or complete the form above for your free roof inspection and estimate.
+          Call <strong>206-739-8232</strong> or complete the form above for your free roof inspection and estimate.
         </p>
       </div>
     </div>

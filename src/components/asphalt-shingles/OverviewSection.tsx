@@ -11,7 +11,7 @@ const OverviewSection: React.FC = () => {
               The Gold Standard in Asphalt Shingles
             </h2>
             <p className="text-lg text-charcoal/80 mb-6">
-              GAF Timberline HDZ® shingles represent the pinnacle of asphalt shingle technology, combining beauty, performance, and value. As certified GAF Master Elite® contractors, we're proud to offer this industry-leading product to homeowners looking for the perfect balance of aesthetics, durability, and affordability.
+              GAF Timberline HDZ® shingles represent the pinnacle of asphalt shingle technology, combining beauty, performance, and value. As certified GAF certified contractors, we're proud to offer this industry-leading product to homeowners looking for the perfect balance of aesthetics, durability, and affordability.
             </p>
             <p className="text-lg text-charcoal/80 mb-6">
               These dimensional shingles feature a proprietary color blending technology that creates a beautiful, wood-shake look that enhances your home's curb appeal. Their thick, layered construction provides exceptional protection against the elements while the innovative LayerLock™ technology ensures secure installation and superior wind resistance.

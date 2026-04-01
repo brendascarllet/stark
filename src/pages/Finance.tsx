@@ -19,9 +19,9 @@ const Finance = () => {
   
   useSEOMeta({
     title: 'Financing Options | Payment Plans | Roofing Services',
-    description: 'Flexible financing & payment options for roofing projects. Apply today. No-interest plans available. Seattle & Puget Sound. 206-398-5500.',
+    description: 'Flexible financing & payment options for roofing projects. Apply today. Seattle & Puget Sound. 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/finance',
-    keywords: 'roofing financing, payment plans, roof loan, no-interest financing, affordable roofing',
+    keywords: 'roofing financing, payment plans, roof loan, affordable roofing, roofing payment plans',
     ogTitle: 'Flexible Financing - Make Your Roof Affordable | Stark Roofing',
     ogDescription: 'Flexible payment plans and financing options to fit your budget.',
     ogImage: 'https://starkroofingrenovation.com/stark-cover.png',

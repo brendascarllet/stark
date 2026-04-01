@@ -28,7 +28,7 @@ const GutterRepair = () => {
 
   useSEOMeta({
     title: 'Gutter Repair Services | Fix Leaking Gutters | Seattle',
-    description: 'Professional gutter repair in Seattle & Puget Sound. Fix leaks, clogs, sagging gutters. Same-week service. Free estimates. Call 206-398-5500.',
+    description: 'Professional gutter repair in Seattle & Puget Sound. Fix leaks, clogs, sagging gutters. Same-week service. Free estimates. Call 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/gutter-repair',
     keywords: 'gutter repair Seattle, fix leaking gutter, gutter cleaning, gutter maintenance, gutter services',
     ogTitle: 'Gutter Repair - Fast & Professional | Stark Roofing',

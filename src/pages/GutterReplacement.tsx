@@ -20,7 +20,7 @@ const GutterReplacement = () => {
 
   useSEOMeta({
     title: 'Gutter Replacement Services | Seamless Gutters | Seattle',
-    description: 'Professional gutter replacement & installation in Seattle & Puget Sound. Seamless gutters, gutter repair, protection. Free estimates. Call 206-398-5500.',
+    description: 'Professional gutter replacement & installation in Seattle & Puget Sound. Seamless gutters, gutter repair, protection. Free estimates. Call 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/gutter-replacement',
     keywords: 'gutter replacement Seattle, seamless gutters, gutter installation, gutter repair, gutter cleaning',
     ogTitle: 'Gutter Replacement - Seattle | Stark Roofing',

@@ -31,7 +31,7 @@ const SammamishLocation = () => {
         <ul className="list-disc list-inside space-y-2 text-gray-700">
           <li><strong>Local Headquarters</strong> - Based right in Sammamish, we know the area</li>
           <li><strong>Same-Day Emergency Response</strong> - Quick service for urgent needs</li>
-          <li><strong>GAF Silver Pledge Certified</strong> - Factory-trained professional installers</li>
+          <li><strong>GAF Certified</strong> - Factory-trained professional installers</li>
           <li><strong>Free Roof Inspections</strong> - Expert EagleView drone assessments</li>
           <li><strong>Competitive Pricing</strong> - Transparent, honest estimates</li>
           <li><strong>Flexible Financing</strong> - Payment options for every budget</li>
@@ -58,7 +58,7 @@ const SammamishLocation = () => {
         <p className="text-gray-700 mb-4">
           <strong>Stark Roofing & Renovation</strong><br />
           24243 SE 43rd Ct, Sammamish, WA 98029<br />
-          Phone: <strong>206-398-5500</strong><br />
+          Phone: <strong>206-739-8232</strong><br />
           Email: office@starkroofingrenovation.com
         </p>
       </div>

@@ -21,7 +21,7 @@ const MetalRoofing = () => {
   
   useSEOMeta({
     title: 'Metal Roofing Installation | Durable & Modern | Seattle',
-    description: 'Professional metal roofing installation. Durable, energy-efficient, and beautiful. 30+ year lifespan. Free estimates. Seattle & Puget Sound. 206-398-5500.',
+    description: 'Professional metal roofing installation. Durable, energy-efficient, and beautiful. 30+ year lifespan. Free estimates. Seattle & Puget Sound. 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/metal-roofing',
     keywords: 'metal roofing, metal roof installation, standing seam roofing, durable roofing, modern roofing',
     ogTitle: 'Metal Roofing - Durable & Long-Lasting | Stark Roofing',

@@ -135,7 +135,7 @@ const AsphaltCalculator = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-stark-red mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Professional installation by GAF Master Elite® contractors</span>
+                      <span>Professional installation by GAF certified contractors</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-stark-red mr-2 flex-shrink-0 mt-0.5" />

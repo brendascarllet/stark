@@ -32,7 +32,7 @@ const LocationPage: React.FC<LocationPageProps> = ({
 
   const canonicalUrl = `https://starkroofingrenovation.com/service-area/${city.toLowerCase().replace(/\s+/g, '-')}`;
   const pageTitle = `Roofing Services in ${city}, ${state} | Stark Roofing`;
-  const pageDescription = `Professional roofing, gutter & renovation services in ${city}, ${state}. ${description} Serving the ${region}. GAF Certified. Call 206-398-5500 for a free estimate.`;
+  const pageDescription = `Professional roofing, gutter & renovation services in ${city}, ${state}. ${description} Serving the ${region}. GAF Certified. Call 206-739-8232 for a free estimate.`;
 
   useSEOMeta({
     title: pageTitle,
@@ -51,7 +51,7 @@ const LocationPage: React.FC<LocationPageProps> = ({
       "name": `Stark Roofing & Renovation - ${city}`,
       "image": `https://starkroofingrenovation.com/${heroImage}`,
       "description": pageDescription,
-      "telephone": "+1-206-398-5500",
+      "telephone": "+1-206-739-8232",
       "email": "office@starkroofingrenovation.com",
       "address": {
         "@type": "PostalAddress",

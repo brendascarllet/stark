@@ -2,10 +2,23 @@ import React from 'react';
 import { Download, ArrowDown, ArrowUp, Check } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
+import FAQSchema from '@/components/shared/FAQSchema';
+
+const warrantyFaqItems = [
+  { question: "What does the 25-year labor warranty cover?", answer: "Our labor warranty covers any defects or issues arising from the installation process itself. This includes problems with flashing, sealing, improper nailing, and any other workmanship-related issues that might cause leaks or damage." },
+  { question: "Is the warranty transferable if I sell my home?", answer: "Yes, our warranty is fully transferable to a new homeowner one time during the warranty period. This adds value to your home when selling and provides peace of mind to the new owners." },
+  { question: "What happens if I need to make a warranty claim?", answer: "Simply contact our office at (206) 739-8232, and we'll schedule an inspection within 48 hours. If we find any issues covered by the warranty, repairs will be scheduled promptly at no cost to you." },
+  { question: "Does the warranty cover storm damage?", answer: "The manufacturer warranty includes coverage for wind damage up to 130 MPH for the first 15 years. Storm damage such as hail or falling objects would typically be covered by your homeowner's insurance, but we work closely with insurance companies to ensure proper repairs." },
+  { question: "Are there any maintenance requirements to keep the warranty valid?", answer: "We recommend an annual roof inspection to identify and address minor issues before they become major problems. However, regular maintenance is not required to maintain warranty coverage. Any damage caused by neglect or improper maintenance would not be covered." },
+  { question: "How does your warranty compare to other Seattle roofing companies?", answer: "Our warranty includes 25-year labor coverage (industry average is 1–5 years), no prorating, transferability to new homeowners, and coverage of all roofing system components. As a GAF certified contractor, we can also offer enhanced manufacturer warranties." },
+  { question: "What is the GAF manufacturer warranty?", answer: "The GAF manufacturer warranty is an enhanced warranty available through GAF-certified contractors like Stark Roofing. It provides coverage for both materials and workmanship backed by GAF — one of North America's largest roofing manufacturers — giving you an extra layer of protection beyond our standard labor warranty." },
+  { question: "Does the warranty cover the entire roofing system or just shingles?", answer: "Our warranty covers the complete roofing system — including shingles, underlayment, flashing, ventilation, and all accessories installed as part of your roof replacement. This whole-system approach ensures every component is protected." },
+];
 
 const WarrantyFAQ = () => {
   return (
     <section id="faq" className="section-padding bg-white">
+      <FAQSchema faqs={warrantyFaqItems} />
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-title text-center">Frequently Asked Questions</h2>
         <p className="section-subtitle text-center mb-12">
@@ -51,7 +64,7 @@ const WarrantyFAQ = () => {
                   Simply contact our office, and we'll schedule an inspection within 48 hours. If we find any issues covered by the warranty, repairs will be scheduled promptly at no cost to you. Our goal is to resolve warranty claims as quickly and efficiently as possible.
                 </p>
                 <ol className="list-decimal ml-5 space-y-2 text-charcoal/80">
-                  <li>Contact our warranty department at (123) 456-7890</li>
+                  <li>Contact our warranty department at (206) 739-8232</li>
                   <li>Schedule an inspection (typically within 48 hours)</li>
                   <li>Receive a detailed assessment report</li>
                   <li>If covered, repairs will be scheduled promptly</li>

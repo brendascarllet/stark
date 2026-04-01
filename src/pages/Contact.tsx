@@ -15,8 +15,8 @@ const Contact = () => {
   }, []);
 
   useSEOMeta({
-    title: 'Contact Stark Roofing | Free Estimate | 206-398-5500',
-    description: 'Contact Stark Roofing for a free inspection & estimate. Roofing, gutters, siding services. Call 206-398-5500 or fill out our form.',
+    title: 'Contact Stark Roofing | Free Estimate | 206-739-8232',
+    description: 'Contact Stark Roofing for a free inspection & estimate. Roofing, gutters, siding services. Call 206-739-8232 or fill out our form.',
     canonical: 'https://starkroofingrenovation.com/contact',
     keywords: 'contact roofing contractor, free estimate, roofing inspection, get a quote',
     ogTitle: 'Contact Stark Roofing - Free Estimate Today',

@@ -26,7 +26,7 @@
 #### A. **LocalBusiness Schema**
 - Company name, address (Sammamish), phone, email
 - Service areas: Sammamish, Seattle, Lynnwood, Bothell, Redmond, Kirkland, Everett, Tacoma
-- Certifications: GAF Silver Pledge
+- Certifications: GAF Certified
 - Social links
 
 **Impact:** Google can now display local business information in Knowledge Panel. Improves local pack rankings.
@@ -392,4 +392,4 @@ Once these are confirmed, begin with the "Quick Wins" section above.
 
 **Prepared By:** Claude Copilot  
 **For:** Brenda Mendes, Stark Roofing & Renovation  
-**Contact:** office@starkroofingrenovation.com | 206-398-5500
+**Contact:** office@starkroofingrenovation.com | 206-739-8232

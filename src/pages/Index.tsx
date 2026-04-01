@@ -21,6 +21,7 @@ import HappinessSection from '@/components/home/HappinessSection';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import ScrollToTop from '@/components/ScrollToTop';
 import AnimatedSection from '@/components/AnimatedSection';
+import HomeFAQSection from '@/components/home/FAQSection';
 import { motion } from 'framer-motion';
 
 const Index = () => {
@@ -116,6 +117,10 @@ const Index = () => {
       
       <AnimatedSection animation="fade">
         <HappinessSection />
+      </AnimatedSection>
+
+      <AnimatedSection animation="slide-up">
+        <HomeFAQSection />
       </AnimatedSection>
       
       <AnimatedSection animation="slide-up">

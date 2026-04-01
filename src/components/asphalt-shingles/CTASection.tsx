@@ -11,7 +11,7 @@ const CTASection: React.FC = () => {
             Ready for a New GAF Roof?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Contact us today for a free consultation and estimate. As certified GAF Master Elite® contractors, we'll help you choose the perfect shingle color and design for your home.
+            Contact us today for a free consultation and estimate. As certified GAF certified contractors, we'll help you choose the perfect shingle color and design for your home.
           </p>
           <Link to="#contact" className="btn-primary">
             Get a Free Estimate

@@ -15,7 +15,7 @@ const CommercialRoofing = () => {
   
   useSEOMeta({
     title: 'Commercial Roofing Services | TPO & Flat Roofs | Seattle',
-    description: 'Professional commercial roofing for businesses. TPO, EPDM, modified bitumen. Licensed contractor. Free estimates. Seattle & Puget Sound. 206-398-5500.',
+    description: 'Professional commercial roofing for businesses. TPO, EPDM, modified bitumen. Licensed contractor. Free estimates. Seattle & Puget Sound. 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/commercial-roofing',
     keywords: 'commercial roofing Seattle, TPO roofing, flat roof, commercial roof repair, business roofing',
     ogTitle: 'Commercial Roofing - Seattle Business Solutions',

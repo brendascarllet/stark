@@ -212,7 +212,7 @@ const HeroSection: React.FC = () => {
                   animate={{ y: '0%', opacity: 1 }}
                   transition={{ delay: 1.6, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  Built to Last · GAF Master Elite® Certified
+                  Built to Last · GAF Certified
                 </motion.p>
               </div>
 
@@ -342,7 +342,7 @@ const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.55 }}
               >
-                {['GAF Master Elite® Certified', 'Licensed & Bonded', 'Free Estimates'].map((badge) => (
+                {['GAF Certified', 'Licensed & Bonded', 'Free Estimates'].map((badge) => (
                   <span key={badge}
                     className="px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold tracking-wider text-white border border-white/30 bg-white/10 backdrop-blur-sm">
                     {badge}

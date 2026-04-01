@@ -17,8 +17,8 @@ const Certifications = () => {
             <div className="flex items-center bg-white p-6 rounded-xl shadow-md border-l-4 border-stark-red">
               <Award className="text-stark-red mr-4" size={36} />
               <div>
-                <h3 className="text-lg font-heading font-bold text-navy">GAF Master Elite® Certified</h3>
-                <p className="text-sm text-charcoal/80">Top 2% of roofing contractors nationwide</p>
+                <h3 className="text-lg font-heading font-bold text-navy">GAF Certified</h3>
+                <p className="text-sm text-charcoal/80">Factory-trained professional installers</p>
               </div>
             </div>
             

@@ -17,7 +17,7 @@ const Skylights = () => {
 
   useSEOMeta({
     title: 'Skylight Installation & Replacement | Velux Certified | Seattle',
-    description: 'Professional skylight installation in Seattle & Puget Sound. Velux certified. Bring natural light safely. Expert flashing. Free estimates. 206-398-5500.',
+    description: 'Professional skylight installation in Seattle & Puget Sound. Velux certified. Bring natural light safely. Expert flashing. Free estimates. 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/skylights',
     keywords: 'skylight installation Seattle, Velux skylights, skylight repair, natural light windows, roof windows',
     ogTitle: 'Skylight Installation - Velux Certified | Stark Roofing',

@@ -17,7 +17,7 @@ const Footer = () => {
               STARK <span className="text-stark-red">ROOFING</span>
             </h3>
             <p className="text-gray-300 max-w-xs text-sm md:text-base">
-              Your trusted provider of premium roofing and renovation services. GAF Master Elite® certified for excellence.
+              Your trusted provider of premium roofing and renovation services. GAF certified for excellence.
             </p>
             
             <div className="flex space-x-4 pt-2">

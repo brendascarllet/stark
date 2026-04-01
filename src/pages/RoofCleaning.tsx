@@ -24,7 +24,7 @@ const RoofCleaning = () => {
 
   useSEOMeta({
     title: 'Professional Roof Cleaning Services | Seattle & Puget Sound',
-    description: 'Professional roof cleaning to remove moss, algae, and debris. Extends roof life. Improves curb appeal. Free estimates. Sammamish to Seattle. 206-398-5500.',
+    description: 'Professional roof cleaning to remove moss, algae, and debris. Extends roof life. Improves curb appeal. Free estimates. Sammamish to Seattle. 206-739-8232.',
     canonical: 'https://starkroofingrenovation.com/roof-cleaning',
     keywords: 'roof cleaning Seattle, moss removal, roof algae cleaning, professional roof cleaning, roof maintenance',
     ogTitle: 'Roof Cleaning - Extend Your Roof Life | Stark Roofing',

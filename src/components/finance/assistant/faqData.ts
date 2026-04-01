@@ -4,7 +4,7 @@ export const faqResponses = {
   "how much": "Roof replacements start at $8,500. For exact pricing, we'll need your roof size.",
   "emergency": "We offer 24/7 emergency services. Our team can be on-site within 2 hours in most cases.",
   "timeline": "Most residential roof replacements take 1-2 days. Complex projects may take up to a week.",
-  "financing": "We offer flexible financing with payments as low as $150/month and 0% interest options for qualified homeowners. <a href='/finance'>Learn more</a>.",
+  "financing": "We offer flexible financing with competitive rates and programs for all credit profiles. <a href='/finance'>Learn more</a>.",
   "warranty": "Our workmanship is backed by a 10-year warranty. Materials have 25-50 year manufacturer warranties depending on your selection.",
   "service areas": "We service all of King, Pierce, and Snohomish counties including Seattle, Tacoma, Bellevue, and Everett.",
   "free estimate": "Yes! Our estimates are always free and include a thorough inspection of your property.",

@@ -29,7 +29,7 @@ const SeattleLocation = () => {
       <div>
         <h3 className="text-2xl font-semibold mb-3">Why Choose Stark Roofing in Seattle?</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
-          <li><strong>GAF Silver Pledge Certified</strong> - Factory-trained installers using premium GAF materials</li>
+          <li><strong>GAF Certified</strong> - Factory-trained installers using premium GAF materials</li>
           <li><strong>Local Expertise</strong> - 10+ years serving Seattle and Puget Sound</li>
           <li><strong>Free Estimates</strong> - No-obligation, detailed roof inspections</li>
           <li><strong>Transparent Pricing</strong> - Competitive rates with financing options available</li>
@@ -48,7 +48,7 @@ const SeattleLocation = () => {
       <div className="bg-gray-100 p-6 rounded-lg">
         <h3 className="text-2xl font-semibold mb-3">Ready for Your Free Estimate?</h3>
         <p className="text-gray-700 mb-4">
-          Call us today at <strong>206-398-5500</strong> or submit the form above for a free, no-obligation roof inspection and estimate.
+          Call us today at <strong>206-739-8232</strong> or submit the form above for a free, no-obligation roof inspection and estimate.
         </p>
       </div>
     </div>

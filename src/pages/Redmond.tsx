@@ -29,7 +29,7 @@ const RedmondLocation = () => {
       <div>
         <h3 className="text-2xl font-semibold mb-3">Redmond Roofing Excellence</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
-          <li><strong>GAF Silver Pledge Certified</strong> - Premium materials and quality assurance</li>
+          <li><strong>GAF Certified</strong> - Premium materials and quality assurance</li>
           <li><strong>Expert Inspections</strong> - Drone-assisted roof assessments</li>
           <li><strong>Competitive Pricing</strong> - Transparent, honest estimates</li>
           <li><strong>Flexible Financing</strong> - Payment options for every budget</li>
@@ -48,7 +48,7 @@ const RedmondLocation = () => {
       <div className="bg-gray-100 p-6 rounded-lg">
         <h3 className="text-2xl font-semibold mb-3">Schedule Your Free Redmond Roof Estimate</h3>
         <p className="text-gray-700 mb-4">
-          Call <strong>206-398-5500</strong> today or fill out the form above for your complimentary roof inspection and estimate.
+          Call <strong>206-739-8232</strong> today or fill out the form above for your complimentary roof inspection and estimate.
         </p>
       </div>
     </div>

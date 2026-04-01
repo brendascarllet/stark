@@ -18,7 +18,7 @@ const About = () => {
   }, []);
 
   useSEOMeta({
-    title: 'About Stark Roofing | GAF Silver Pledge Certified | Since Day One',
+    title: 'About Stark Roofing | GAF Certified | Since Day One',
     description: 'Learn about Stark Roofing & Renovation. Family-owned, GAF certified, serving Seattle & Puget Sound with quality and integrity.',
     canonical: 'https://starkroofingrenovation.com/about',
     keywords: 'about Stark Roofing, GAF certified roofer, family business, roofing contractor Seattle',
@@ -32,8 +32,8 @@ const About = () => {
       <Navbar />
       <ServicePageHero
         title="About Stark Roofing"
-        subtitle="Family-owned, GAF Silver Pledge certified, and proud to serve the Greater Seattle area since day one."
-        badge="GAF Silver Pledge Certified"
+        subtitle="Family-owned, GAF certified, and proud to serve the Greater Seattle area since day one."
+        badge="GAF Certified"
         bgImage="/crew-1.jpg"
         breadcrumb="About Us"
         ctaLabel="Meet the Team"

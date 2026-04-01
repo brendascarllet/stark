@@ -7,7 +7,7 @@ const TacomaLocation = () => {
       <div>
         <h2 className="text-3xl font-bold mb-4">Roofing Services in Tacoma, WA</h2>
         <p className="text-lg text-gray-700 mb-4">
-          Stark Roofing & Renovation serves Tacoma and Pierce County with expert roofing, gutter, siding, and renovation services. With our GAF Silver Pledge certification, we deliver the highest quality roofing solutions backed by comprehensive warranties.
+          Stark Roofing & Renovation serves Tacoma and Pierce County with expert roofing, gutter, siding, and renovation services. With our GAF certification, we deliver the highest quality roofing solutions backed by comprehensive warranties.
         </p>
       </div>
 
@@ -29,7 +29,7 @@ const TacomaLocation = () => {
       <div>
         <h3 className="text-2xl font-semibold mb-3">Why Tacoma Trusts Stark Roofing</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
-          <li><strong>GAF Silver Pledge Certified</strong> - Premium materials and quality craftsmanship</li>
+          <li><strong>GAF Certified</strong> - Premium materials and quality craftsmanship</li>
           <li><strong>Free Professional Inspection</strong> - Detailed drone assessment</li>
           <li><strong>Competitive Pricing</strong> - Transparent, fair estimates</li>
           <li><strong>Financing Available</strong> - Flexible payment options</li>
@@ -48,7 +48,7 @@ const TacomaLocation = () => {
       <div className="bg-gray-100 p-6 rounded-lg">
         <h3 className="text-2xl font-semibold mb-3">Free Tacoma Roof Estimate</h3>
         <p className="text-gray-700 mb-4">
-          Call Stark Roofing today at <strong>206-398-5500</strong> for your complimentary roof inspection and estimate. We're ready to serve Tacoma and Pierce County.
+          Call Stark Roofing today at <strong>206-739-8232</strong> for your complimentary roof inspection and estimate. We're ready to serve Tacoma and Pierce County.
         </p>
       </div>
     </div>

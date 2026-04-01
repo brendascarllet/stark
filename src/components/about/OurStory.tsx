@@ -14,7 +14,7 @@ const OurStory = () => {
               After witnessing too many homeowners struggle with unreliable contractors and poor workmanship, our founder decided to build a company that would set the standard for quality in the roofing industry. Starting with just a small team of dedicated professionals, we've grown to become one of the most trusted names in residential and commercial roofing throughout the region.
             </p>
             <p className="text-charcoal/80">
-              Today, as a GAF Master Elite® Certified contractor, we continue to uphold the values that have guided us from the beginning. Our team of certified professionals takes pride in protecting homes and businesses with premium materials and expert installation techniques that are built to last.
+              Today, as a GAF Certified contractor, we continue to uphold the values that have guided us from the beginning. Our team of certified professionals takes pride in protecting homes and businesses with premium materials and expert installation techniques that are built to last.
             </p>
           </div>
           
