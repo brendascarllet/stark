@@ -1,0 +1,63 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './base.css';
+@import './components.css';
+@import './forms.css';
+@import './animations.css';
+@import './enhanced-animations.css';
+@import './components/calculator-animations.css';
+
+/* Global custom styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-slate-950;
+}
+
+.container {
+  @apply px-4 md:px-6;
+}
+
+.section-padding {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+.max-w-8xl {
+  max-width: 90rem;
+}
+
+/* Content Section Responsive Improvements */
+.content-section {
+  @apply p-4 md:p-6;
+}
+
+.content-section p {
+  @apply px-4 md:px-6 mb-4;
+}
+
+.content-section img {
+  @apply max-w-full h-auto block mx-auto rounded-lg shadow-md;
+}
+
+/* Ensure responsive text and image scaling */
+.content-section h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl mb-4;
+}
+
+.content-section img {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+/* Enhanced Contact Form Styles */
+.contact-form input,
+.contact-form textarea {
+  @apply w-full p-3 md:p-4 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-stark-red/30 focus:border-stark-red transition duration-300;
+}
+
+.contact-form button {
+  @apply w-full py-3 md:py-4 text-base md:text-lg bg-stark-red hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg;
+}

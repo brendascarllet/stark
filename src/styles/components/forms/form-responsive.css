@@ -1,0 +1,135 @@
+
+/* Responsive design for different screen sizes */
+
+/* Responsive design for larger screens */
+@media (min-width: 1440px) {
+  .custom-form {
+    padding: 45px 60px;
+    gap: 25px;
+  }
+  
+  .form-left h2 {
+    font-size: 48px;
+  }
+  
+  .form-fields {
+    gap: 20px;
+  }
+  
+  .form-input {
+    font-size: 17px;
+  }
+  
+  .form-button {
+    font-size: 18px;
+    padding: 24px 32px;
+  }
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1280px) {
+  .custom-form {
+    padding: 32px 35px;
+    border-radius: 55px;
+    gap: 25px;
+  }
+
+  .form-left h2 {
+    font-size: 36px;
+  }
+  
+  .form-fields {
+    gap: 15px;
+  }
+  
+  .pill-input {
+    padding: 18px 22px;
+    font-size: 15px;
+  }
+  
+  .form-button {
+    padding: 18px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .custom-form {
+    flex-direction: column;
+    border-radius: 45px;
+    padding: 35px;
+    gap: 25px;
+  }
+
+  .form-left {
+    text-align: center;
+    margin-bottom: 5px;
+    padding-right: 0;
+  }
+  
+  .form-left h2 {
+    font-size: 32px;
+    white-space: normal;
+  }
+
+  .form-fields {
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pill-input {
+    flex: 1 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+  
+  .form-button {
+    margin-top: 5px;
+    width: 100%;
+    justify-content: center;
+    padding: 18px 25px;
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 640px) {
+  .custom-form-container {
+    padding: 30px 15px;
+  }
+
+  .custom-form {
+    border-radius: 30px;
+    padding: 25px 20px;
+    gap: 20px;
+  }
+
+  .form-left h2 {
+    font-size: 28px;
+  }
+
+  .form-fields {
+    gap: 12px;
+  }
+
+  .pill-input {
+    flex: 1 0 100%;
+    max-width: 100%;
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+
+  .form-button {
+    padding: 16px 24px;
+    font-size: 15px;
+    width: 100%;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .form-input, .form-select {
+    flex: 1 0 calc(33% - 10px);
+    min-width: 0;
+  }
+}

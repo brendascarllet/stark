@@ -1,0 +1,33 @@
+
+.service-card {
+  @apply relative overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+.service-card:hover {
+  @apply transform translate-y-[-5px] shadow-lg;
+}
+
+.trust-badge {
+  @apply flex flex-col items-center justify-center p-4 bg-white rounded-md shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.glass-card {
+  @apply bg-white/90 backdrop-blur-sm border border-gray-200 rounded-xl shadow-sm transition-all duration-300;
+}
+
+.hover-card {
+  @apply transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1;
+}
+
+.service-all-link {
+  @apply relative overflow-hidden transition-all duration-500;
+}
+
+.service-all-link::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-full bg-white/10 transform -translate-x-full skew-x-12 transition-transform duration-700;
+}
+
+.service-all-link:hover::before {
+  @apply translate-x-[120%];
+}

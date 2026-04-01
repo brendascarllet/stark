@@ -1,0 +1,94 @@
+
+import React, { useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import VirtualAssistant from '@/components/finance/VirtualAssistant';
+import ScrollToTop from '@/components/ScrollToTop';
+import PageTransition from '@/components/PageTransition';
+import { useSEOMeta } from '@/hooks/useSEOMeta';
+
+// Import the refactored components
+import HeroSection from '@/components/gutter-repair/HeroSection';
+import HeroContactForm from '@/components/gutter-repair/HeroContactForm';
+import PromotionDetails from '@/components/gutter-repair/PromotionDetails';
+import FilterDetailsSection from '@/components/gutter-repair/FilterDetailsSection';
+import FilterBenefitsSection from '@/components/gutter-repair/FilterBenefitsSection';
+import CommonProblems from '@/components/gutter-repair/CommonProblems';
+import ProcessSection from '@/components/gutter-repair/ProcessSection';
+import CTASection from '@/components/gutter-repair/CTASection';
+import EmergencySection from '@/components/gutter-repair/EmergencySection';
+import FAQSection from '@/components/gutter-repair/FAQSection';
+import ContactSection from '@/components/gutter-repair/ContactSection';
+import FloatingContactBar from '@/components/gutter-repair/FloatingContactBar';
+
+const GutterRepair = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useSEOMeta({
+    title: 'Gutter Repair Services | Fix Leaking Gutters | Seattle',
+    description: 'Professional gutter repair in Seattle & Puget Sound. Fix leaks, clogs, sagging gutters. Same-week service. Free estimates. Call 206-398-5500.',
+    canonical: 'https://starkroofingrenovation.com/gutter-repair',
+    keywords: 'gutter repair Seattle, fix leaking gutter, gutter cleaning, gutter maintenance, gutter services',
+    ogTitle: 'Gutter Repair - Fast & Professional | Stark Roofing',
+    ogDescription: 'Expert gutter repair and cleaning. Fix leaks and protect your foundation.',
+    ogImage: 'https://starkroofingrenovation.com/crew-3.jpg',
+  });
+
+  return (
+    <PageTransition>
+      <div className="min-h-screen">
+        <Navbar />
+        
+        {/* Hero Section */}
+        <HeroSection />
+        
+        {/* Contact section after hero */}
+        <ContactSection />
+        
+        {/* Hero contact form directly after hero section */}
+        <div className="container mx-auto px-4 relative">
+          <HeroContactForm />
+        </div>
+        <div className="py-6"></div>
+        
+        {/* Promotion Details Section */}
+        <PromotionDetails />
+        
+        {/* Filter Details Section */}
+        <FilterDetailsSection />
+        
+        {/* Filter Benefits Section */}
+        <FilterBenefitsSection />
+        
+        {/* Common Problems Section */}
+        <CommonProblems />
+        
+        {/* Process Section */}
+        <ProcessSection />
+        
+        {/* Emergency Section */}
+        <EmergencySection />
+        
+        {/* FAQ Section */}
+        <FAQSection />
+        
+        {/* CTA Section */}
+        <CTASection />
+        
+        {/* Contact Section */}
+        <ContactSection />
+        
+        {/* Floating Contact Bar */}
+        <FloatingContactBar />
+        
+        <VirtualAssistant />
+        <ScrollToTop />
+        <Footer />
+      </div>
+    </PageTransition>
+  );
+};
+
+export default GutterRepair;

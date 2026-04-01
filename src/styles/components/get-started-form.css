@@ -1,0 +1,136 @@
+/* FORM STYLES */
+.get-started-form {
+  max-width: 1200px;
+  margin: 20px auto 30px auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 100;
+}
+
+.form-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-title {
+  color: #CC0000;
+  font-weight: 700;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-input {
+  padding: 14px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  width: 100%;
+  flex-grow: 1;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #CC0000;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.1);
+  background: #fff;
+  outline: none;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333333'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 15px;
+  padding-right: 45px;
+}
+
+.form-button {
+  background: #CC0000;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(204, 0, 0, 0.2);
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form-button:hover {
+  background: #990000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(204, 0, 0, 0.25);
+}
+
+/* Section positioning variants */
+.hero-form {
+  transform: none;
+  margin-top: 30px;
+}
+
+.section-form {
+  transform: none;
+  margin: 30px auto;
+}
+
+.contact-form {
+  transform: none;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* MOBILE STYLES */
+@media (max-width: 1024px) {
+  .get-started-form {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+  
+  .form-flex {
+    gap: 12px;
+  }
+  
+  .form-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .form-input, 
+  .form-select {
+    width: 100%;
+  }
+  
+  .form-button {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .form-input, 
+  .form-select {
+    flex: 1;
+  }
+  
+  .form-button {
+    width: auto;
+    margin-top: 0;
+  }
+}

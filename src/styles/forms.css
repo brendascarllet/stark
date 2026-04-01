@@ -1,0 +1,32 @@
+
+/**
+ * Forms CSS - Main import file
+ * Organized by form type and functionality for better maintainability
+ */
+
+/* Core Form Styles */
+@import './forms/base.css';
+
+/* Form Types */
+@import './forms/contact-form.css';
+@import './forms/enhanced-contact-form.css';
+
+/* Form Layouts */
+@import './forms/horizontal.css';
+@import './forms/custom-horizontal-form.css';
+@import './forms/get-started.css';
+
+/* Specialized Forms */
+@import './forms/stark.css';
+
+/* UI Components */
+@import './forms/emergency-bar.css';
+
+/* Mobile Optimizations */
+@import './components/forms/mobile-forms.css';
+
+/* This organizational structure makes it easier to:
+ * 1. Find specific form styles
+ * 2. Maintain related styles together
+ * 3. Add new form styles in appropriate categories
+ */

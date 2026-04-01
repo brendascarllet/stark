@@ -1,0 +1,36 @@
+
+/* Form Input Styles */
+.form-input {
+  padding: 22px 26px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  font-size: 16px;
+  background: #f9f9f9;
+  flex: 1;
+  min-width: 0; /* Prevents flexbox items from growing beyond container */
+  max-width: none; /* Removes the max-width constraint */
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.pill-input {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  flex-basis: 0;
+  flex-grow: 1;
+  font-size: 15px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #CC0000;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
+  background: #fff;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333333'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  background-size: 20px;
+}

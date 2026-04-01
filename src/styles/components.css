@@ -1,0 +1,27 @@
+
+/**
+ * Components CSS - Main import file
+ * Organized by component category for better maintainability
+ */
+
+/* Layout Components */
+@import './components/navigation.css';
+@import './components/hero.css';
+@import './components/sections.css';
+@import './components/section-spacing.css';
+
+/* UI Elements */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/tables.css';
+
+/* Interactive Elements */
+@import './components/transitions.css';
+@import './components/process-steps.css';
+
+/* Form Components */
+@import './components/get-started-form.css';
+
+@layer components {
+  /* This layer remains for any additional component styles that don't fit in the categories above */
+}

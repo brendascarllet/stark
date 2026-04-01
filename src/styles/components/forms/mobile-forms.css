@@ -1,0 +1,104 @@
+
+/* Mobile-specific form styles */
+
+@media (max-width: 768px) {
+  /* Get Started Form */
+  .get-started-form {
+    margin-top: -25px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .form-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-title {
+    font-size: 1.2rem;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .form-input, 
+  .form-select {
+    padding: 12px;
+    font-size: 15px;
+    min-width: 100%;
+    width: 100%;
+  }
+  
+  .form-button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  
+  /* Contact Form */
+  .custom-form {
+    padding: 20px 15px;
+    border-radius: 20px;
+  }
+  
+  .form-left h2 {
+    font-size: 24px;
+  }
+  
+  .pill-input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  /* Improve spacing for better touchability */
+  .mobile-nav-menu a,
+  .mobile-nav-menu button {
+    padding: 12px 0;
+    margin: 5px 0;
+  }
+  
+  /* Ensure form sections don't overflow */
+  .section-form {
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 380px) {
+  .form-title {
+    font-size: 1.1rem;
+  }
+  
+  .form-input, 
+  .form-select,
+  .form-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Fix for the 7-second rule banner on mobile */
+@media (max-width: 768px) {
+  #emergency-bar {
+    font-size: 0.85rem;
+    padding: 8px 0 !important;
+  }
+  
+  #emergency-bar .container {
+    padding: 0 10px;
+  }
+}
+
+/* Ensure touchable areas are at least 44x44px for accessibility */
+@media (max-width: 768px) {
+  button, 
+  a,
+  .form-button,
+  .form-input,
+  .form-select,
+  .mobile-menu-item {
+    min-height: 44px;
+  }
+}

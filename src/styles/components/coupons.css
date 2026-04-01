@@ -1,0 +1,17 @@
+
+/* Coupon Card Styles */
+.coupon-light-blue {
+  --coupon-color: #60A5FA;
+  --coupon-bg: #EFF6FF;
+  --coupon-border: rgba(96, 165, 250, 0.2);
+  --coupon-hover: #3B82F6;
+}
+
+.coupon-luxury-red {
+  --coupon-color: #8B0000;
+  --coupon-bg: #FFF1F0;
+  --coupon-border: rgba(139, 0, 0, 0.2);
+  --coupon-hover: #6B0000;
+}
+
+/* Add more custom coupon styling here if needed */

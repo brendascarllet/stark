@@ -1,0 +1,91 @@
+
+/* HORIZONTAL FORM STYLES */
+.custom-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+  background: transparent;
+  max-width: 1200px;
+  margin: -40px auto 40px auto;
+  position: relative;
+  z-index: 100;
+}
+
+.custom-form {
+  display: flex;
+  align-items: center;
+  background: var(--form-bg-color);
+  padding: 15px 20px;
+  border-radius: var(--form-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.form-left h2 {
+  color: var(--form-primary-color);
+  font-weight: bold;
+  font-size: 28px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.form-fields {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  flex: 1;
+  align-items: center;
+}
+
+.form-input {
+  padding: 12px 20px;
+  flex: 1 0 150px;
+  max-width: 180px;
+  box-sizing: border-box;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+/* Section spacing and z-index management */
+.section-24-7 {
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Availability section styling */
+.availability-section {
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .custom-form {
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .form-left {
+    text-align: center;
+  }
+
+  .form-fields {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .form-input,
+  .form-button {
+    max-width: 100%;
+    flex: 1 0 100%;
+  }
+}

@@ -1,0 +1,61 @@
+
+/* Enhanced Contact Form Styles */
+.bg-select-arrow {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333333'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-size: 18px;
+}
+
+.get-started-form {
+  position: relative;
+}
+
+.get-started-form input:focus,
+.get-started-form select:focus,
+.get-started-form textarea:focus {
+  box-shadow: 0 0 0 2px rgba(204, 0, 0, 0.1);
+  border-color: #CC0000;
+}
+
+.get-started-form button[type="submit"] {
+  background: linear-gradient(to bottom, #CC0000, #AA0000);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.get-started-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
+}
+
+.get-started-form button[type="submit"]::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.get-started-form button[type="submit"]:hover::after {
+  opacity: 1;
+}
+
+/* Emergency bar styling */
+#emergency-bar {
+  background: #CC0000 !important;
+  color: white !important;
+  padding: 10px 0 !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { background-color: #CC0000 !important; }
+  50% { background-color: #990000 !important; }
+  100% { background-color: #CC0000 !important; }
+}

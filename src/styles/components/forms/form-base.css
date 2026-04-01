@@ -1,0 +1,38 @@
+
+/* Base Form Container Styles */
+.custom-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px; 
+  background: transparent;
+  margin-bottom: 70px;
+  position: relative; 
+  z-index: 10;
+  width: 100%;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-form {
+  display: flex;
+  align-items: center;
+  background: #fff !important;
+  padding: 35px 45px;
+  border-radius: 70px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1800px;
+  gap: 30px;
+  box-sizing: border-box;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.enhanced-form {
+  transform: scale(1.02);
+}
+
+.custom-form:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+}

@@ -1,0 +1,63 @@
+
+import React, { useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { useSEOMeta } from '@/hooks/useSEOMeta';
+import HeroSection from '@/components/roof-cleaning/HeroSection';
+import PromotionDetails from '@/components/roof-cleaning/PromotionDetails';
+import BenefitsSection from '@/components/roof-cleaning/BenefitsSection';
+import ProcessSection from '@/components/roof-cleaning/ProcessSection';
+import CleaningEstimator from '@/components/roof-cleaning/CleaningEstimator';
+import BeforeAfterSection from '@/components/roof-cleaning/BeforeAfterSection';
+import FAQSection from '@/components/roof-cleaning/FAQSection';
+import ContactSection from '@/components/roof-cleaning/ContactSection';
+import VirtualAssistant from '@/components/finance/VirtualAssistant';
+import ScrollToTop from '@/components/ScrollToTop';
+import PageTransition from '@/components/PageTransition';
+import HeroContactForm from '@/components/roof-cleaning/HeroContactForm';
+import ContactFormSection from '@/components/roof-cleaning/ContactFormSection';
+
+const RoofCleaning = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useSEOMeta({
+    title: 'Professional Roof Cleaning Services | Seattle & Puget Sound',
+    description: 'Professional roof cleaning to remove moss, algae, and debris. Extends roof life. Improves curb appeal. Free estimates. Sammamish to Seattle. 206-398-5500.',
+    canonical: 'https://starkroofingrenovation.com/roof-cleaning',
+    keywords: 'roof cleaning Seattle, moss removal, roof algae cleaning, professional roof cleaning, roof maintenance',
+    ogTitle: 'Roof Cleaning - Extend Your Roof Life | Stark Roofing',
+    ogDescription: 'Professional roof cleaning removes moss and algae. Extends roof lifespan and improves curb appeal.',
+    ogImage: 'https://starkroofingrenovation.com/drone-5.jpg',
+  });
+
+  return (
+    <PageTransition>
+      <div className="min-h-screen">
+        <Navbar />
+        <HeroSection />
+        {/* Hero contact form directly after hero section */}
+        <div className="container mx-auto px-4 relative">
+          <HeroContactForm />
+        </div>
+        <div className="py-6"></div>
+        <PromotionDetails />
+        <BenefitsSection />
+        <ProcessSection />
+        <BeforeAfterSection />
+        <CleaningEstimator />
+        {/* Contact form after the calculator */}
+        <ContactFormSection />
+        <FAQSection />
+        {/* Main contact section at the end */}
+        <ContactSection />
+        <VirtualAssistant />
+        <ScrollToTop />
+        <Footer />
+      </div>
+    </PageTransition>
+  );
+};
+
+export default RoofCleaning;

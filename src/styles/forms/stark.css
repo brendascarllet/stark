@@ -1,0 +1,87 @@
+
+/* Stark Lead Form */
+.stark-lead-form {
+  max-width: 1100px;
+  margin: -40px auto 0 auto;
+  background: var(--form-bg-color);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 50;
+}
+
+.stark-form-grid {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.stark-form-title {
+  color: var(--form-primary-color);
+  font-weight: 800;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  padding-right: 15px;
+}
+
+.stark-form-input {
+  padding: 13px 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--form-radius);
+  width: 100%;
+  font-size: 15px;
+}
+
+.stark-form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+}
+
+.stark-form-button {
+  background: var(--form-primary-color);
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: var(--form-radius);
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-size: 15px;
+}
+
+.stark-form-button:hover {
+  background: #B20000;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1024px) {
+  .stark-lead-form {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .stark-form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stark-form-title {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+  
+  .stark-form-button {
+    justify-content: center;
+    margin-top: 5px;
+  }
+}

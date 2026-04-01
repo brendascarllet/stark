@@ -1,0 +1,42 @@
+
+.comparison-table th {
+  @apply py-3 px-4 md:py-4 md:px-6 bg-navy text-white font-semibold text-left;
+}
+
+.comparison-table td {
+  @apply py-3 px-4 md:py-4 md:px-6 border-b border-gray-200;
+}
+
+/* Mobile-specific table styles */
+@media (max-width: 640px) {
+  .comparison-table {
+    font-size: 0.875rem;
+  }
+  
+  .comparison-table th {
+    @apply py-2 px-3;
+  }
+  
+  .comparison-table td {
+    @apply py-2 px-3;
+  }
+}
+
+/* Add horizontal scroll indicator for mobile */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #CC0000;
+  border-radius: 20px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #990000;
+}

@@ -1,0 +1,67 @@
+
+/* BASE FORM STYLES */
+:root {
+  --form-primary-color: #CC0000;
+  --form-primary-hover: #990000;
+  --form-border-color: #ddd;
+  --form-bg-color: #fff;
+  --form-input-bg: #f9f9f9;
+  --form-radius: 50px;
+  --form-input-padding: 12px 15px;
+  --form-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Common Input Styles */
+.form-input {
+  padding: var(--form-input-padding);
+  border: 1px solid var(--form-border-color);
+  border-radius: var(--form-radius);
+  width: 100%;
+  flex-grow: 1;
+  background: var(--form-input-bg);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--form-primary-color);
+  box-shadow: 0 0 0 2px rgba(204, 0, 0, 0.1);
+}
+
+/* Select Styles */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333333'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+}
+
+/* Button Styles */
+.form-button {
+  background: var(--form-primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--form-radius);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.form-button:hover {
+  background: var(--form-primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Common Mobile Styles */
+@media (max-width: 1024px) {
+  .form-input, .form-select {
+    min-width: 100%;
+  }
+}

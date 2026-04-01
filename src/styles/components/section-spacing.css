@@ -1,0 +1,11 @@
+
+/* Section spacing adjustments */
+.premium-services-section {
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .premium-services-section {
+    margin-top: 30px;
+  }
+}

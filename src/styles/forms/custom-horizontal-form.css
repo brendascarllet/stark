@@ -1,0 +1,66 @@
+
+/* Custom Horizontal Form under Hero */
+.hero-contact-form {
+  max-width: 1200px;
+  margin: -40px auto 30px auto;
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.form-container-shadow {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Legacy styles for backward compatibility in case they're still used elsewhere */
+.hero-contact-form input, 
+.hero-contact-form textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.hero-contact-form form {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-contact-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero-contact-form .form-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+@media (min-width: 600px) {
+  .hero-contact-form .form-group {
+    width: 48%;
+  }
+}
+
+.hero-contact-form button {
+  margin-top: 1rem;
+  background-color: #CC0000;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero-contact-form button:hover {
+  background-color: #990000;
+}
