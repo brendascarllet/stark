@@ -155,7 +155,7 @@ export const printEstimate = (details: EstimateDetails): void => {
           
           <div class="footer">
             <p><strong>Note:</strong> This is an estimate only. Actual costs may vary based on site conditions and additional requirements identified during inspection.</p>
-            <p>For a detailed assessment, please contact our team at (555) 123-4567.</p>
+            <p>For a detailed assessment, please contact our team at (206) 739-8232.</p>
           </div>
           
           <div class="no-print" style="text-align: center; margin-top: 30px;">
@@ -244,7 +244,7 @@ export const downloadEstimatePDF = (details: EstimateDetails): void => {
     doc.setTextColor(102, 102, 102);
     doc.text("Note: This is an estimate only. Actual costs may vary based on site conditions", 105, footerY, { align: "center" });
     doc.text("and additional requirements identified during inspection.", 105, footerY + 7, { align: "center" });
-    doc.text("For a detailed assessment, please contact our team at (555) 123-4567.", 105, footerY + 17, { align: "center" });
+    doc.text("For a detailed assessment, please contact our team at (206) 739-8232.", 105, footerY + 17, { align: "center" });
     
     // Save the PDF
     doc.save(`Roof_Repair_Estimate_${today.replace(/\//g, '-')}.pdf`);

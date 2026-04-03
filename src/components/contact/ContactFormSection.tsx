@@ -62,7 +62,7 @@ const ContactFormSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <p className="text-navy/80">info@starkroofing.com</p>
+                    <p className="text-navy/80">office@starkroofingrenovation.com</p>
                   </div>
                 </div>
                 
@@ -73,9 +73,7 @@ const ContactFormSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Business Hours</h3>
-                    <p className="text-navy/80">Monday - Friday: 8am - 6pm</p>
-                    <p className="text-navy/80">Saturday: 9am - 4pm</p>
-                    <p className="text-navy/80">Sunday: Closed</p>
+                    <p className="text-navy/80">Available 24/7</p>
                   </div>
                 </div>
                 
@@ -86,8 +84,8 @@ const ContactFormSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Office Location</h3>
-                    <p className="text-navy/80">123 Roofing Way</p>
-                    <p className="text-navy/80">Seattle, WA 98101</p>
+                    <p className="text-navy/80">24243 SE 43rd Ct</p>
+                    <p className="text-navy/80">Sammamish, WA 98029</p>
                   </div>
                 </div>
               </div>

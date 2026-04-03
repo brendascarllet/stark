@@ -16,14 +16,14 @@ const ContactMapSection = () => {
           <div className="mb-8 text-center">
             <h2 className="text-3xl font-heading font-bold mb-4">Find Us</h2>
             <p className="text-lg text-charcoal/80 max-w-2xl mx-auto">
-              Our office is centrally located in Seattle, making it easy for us to reach customers throughout the Greater Seattle Area.
+              Our office is located in Sammamish, making it easy for us to reach customers throughout the Greater Seattle and Puget Sound area.
             </p>
           </div>
           
           <div className="rounded-xl overflow-hidden shadow-lg h-[400px] border border-gray-200">
             {/* Google Maps iframe - Replace with your own map embed code */}
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161668151!2d-122.48214752011411!3d47.6130284903115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1680986253598!5m2!1sen!2sus" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.5!2d-122.0355!3d47.6162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM2JzU4LjMiTiAxMjLCsDAyJzA3LjgiVw!5e0!3m2!1sen!2sus!4v1680986253598!5m2!1sen!2sus" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
