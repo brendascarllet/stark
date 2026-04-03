@@ -51,13 +51,13 @@ const WindowContactSection = () => {
                   </div>
                 </a>
                 
-                <a href="#" className="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all">
+                <a href="mailto:office@starkroofingrenovation.com" className="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all">
                   <div className="bg-stark-red p-2 rounded-full">
                     <MessageSquare className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-white/80">Live Chat</p>
-                    <p className="font-bold">Chat with a specialist</p>
+                    <p className="text-sm text-white/80">Email Us</p>
+                    <p className="font-bold">office@starkroofingrenovation.com</p>
                   </div>
                 </a>
               </div>

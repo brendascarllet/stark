@@ -160,15 +160,15 @@ const Footer = () => {
             © {currentYear} Stark Roofing & Renovation. All rights reserved.
           </p>
           <div className="flex space-x-4 md:space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-xs md:text-sm transition-colors">
+            <Link to="/contact" className="text-gray-400 hover:text-white text-xs md:text-sm transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xs md:text-sm transition-colors">
+            </Link>
+            <Link to="/contact" className="text-gray-400 hover:text-white text-xs md:text-sm transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xs md:text-sm transition-colors">
+            </Link>
+            <Link to="/services" className="text-gray-400 hover:text-white text-xs md:text-sm transition-colors">
               Sitemap
-            </a>
+            </Link>
           </div>
         </div>
       </div>
