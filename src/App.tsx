@@ -44,6 +44,10 @@ import Sammamish from './pages/Sammamish';
 import Bellevue from './pages/Bellevue';
 import Issaquah from './pages/Issaquah';
 
+// Blog
+import Blog from './pages/Blog';
+import BlogArticle from './pages/BlogArticle';
+
 function App() {
   // Initialize global entrance animations
   useEntranceAnimations();
@@ -89,6 +93,8 @@ function App() {
           <Route path="/metal-roofing" element={<MetalRoofing />} />
           <Route path="/asphalt-shingles" element={<AsphaltShingles />} />
           
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/quiz" element={<QuizFunnel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

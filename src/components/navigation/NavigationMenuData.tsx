@@ -68,5 +68,9 @@ export const getServicesItems = (): DropdownItem[] => [
   {
     to: "/warranty",
     label: "Warranty"
+  },
+  {
+    to: "/blog",
+    label: "Blog"
   }
 ];
