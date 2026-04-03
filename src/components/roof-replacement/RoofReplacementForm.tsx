@@ -34,19 +34,15 @@ const RoofReplacementForm = () => {
         source: 'Roof Replacement Form'
       };
 
-      // Send data to email using Formspree
-      // Replace 'YOUR_FORM_ID' with your actual form ID
-      const response = await fetch('https://formspree.io/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+      const { sendLeadEmail } = await import('@/utils/emailjs');
+      await sendLeadEmail({
+        name,
+        phone: phoneNumber,
+        email,
+        zip: zipCode,
+        service: roofType,
+        source: 'Roof Replacement Form',
       });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
 
       // Show success message
       toast.success("Request submitted successfully!", {

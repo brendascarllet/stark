@@ -63,8 +63,8 @@ export const useContactFormState = (): [ContactFormState, ContactFormActions] =>
     
     setIsSubmitting(true);
     try {
-      // Mock API call - would be replaced with real API endpoint
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { sendLeadEmail } = await import('@/utils/emailjs');
+      await sendLeadEmail({ name, email, phone, zip, source: window.location.pathname });
       toast.success("Thank you for your request!", {
         description: "We'll be in touch with you shortly."
       });

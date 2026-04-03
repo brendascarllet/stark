@@ -37,10 +37,16 @@ const ContactForm: React.FC = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
-    toast.success("We've received your information. Our team will contact you shortly!");
-    form.reset();
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const { sendLeadEmail } = await import('@/utils/emailjs');
+      await sendLeadEmail(values as Record<string, string>);
+      toast.success("We've received your information. Our team will contact you shortly!");
+      form.reset();
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error("There was a problem submitting your request. Please try again.");
+    }
   };
 
   return (

@@ -91,16 +91,16 @@ const BaseContactForm: React.FC<BaseContactFormProps> = ({
     }
   });
   const onSubmit = async (values: z.infer<typeof schema>) => {
-    console.log(values);
     try {
-      // Mock API call - would be replaced with actual API endpoint
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { sendLeadEmail } = await import('@/utils/emailjs');
+      await sendLeadEmail(values as Record<string, string>);
       toast.success(successMessage);
       if (onSubmitSuccess) {
         onSubmitSuccess();
       }
       form.reset();
     } catch (error) {
+      console.error('Form submission error:', error);
       toast.error("There was a problem submitting your request. Please try again.");
     }
   };

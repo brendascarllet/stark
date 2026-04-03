@@ -10,8 +10,8 @@ const ContactFormSection = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      // Mock submission - would connect to your backend API
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { sendLeadEmail } = await import('@/utils/emailjs');
+      await sendLeadEmail(data as Record<string, string>);
       toast.success("Your request has been submitted!", {
         description: "We'll contact you shortly to schedule your roof cleaning."
       });
