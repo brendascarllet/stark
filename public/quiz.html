@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<base href="/">
 <title>Stark Roofing & Renovation — Find Out Your Roof Cost in Seconds</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,6 +231,26 @@ html, body { height: 100%; font-family: var(--font-body); background: #0d1420; c
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>emailjs.init('ZRltQQTK2lkYAspj3');</script>
+
+<!-- Google Ads Conversion Tracking (gtag.js) -->
+<!-- INSTRUCTIONS: Replace AW-XXXXXXXXXX with your Google Ads account ID -->
+<!-- Find it in Google Ads → Tools → Conversions → Copy your Conversion ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-XXXXXXXXXX');
+
+  // Track quiz funnel events
+  function trackEvent(eventName, params) {
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', eventName, params || {});
+      }
+    } catch(e) { console.warn('Tracking error:', e); }
+  }
+</script>
 </head>
 <body>
 <div id="bg-layer"></div>
@@ -937,6 +958,7 @@ function updateBackBtn() {
 
 function startQuiz() {
   sfx('start');
+  trackEvent('quiz_start', {event_category: 'engagement', event_label: 'Quiz Funnel'});
   if(soundEnabled){try{getAudioCtx();beat=new DrumBeat();beat.start();}catch(e){}}
   goToScreen(1);
 }
@@ -953,7 +975,7 @@ function selectOpt(card, step) {
 
 // Input submits
 function submitName(){ var v=document.getElementById('inp-name').value.trim(); if(!v){shakeInput('inp-name');return;} answers.name=v; sfx('tap'); goToScreen(8); }
-function submitPhone(){ var v=document.getElementById('inp-phone').value.trim(); if(v.length<7){shakeInput('inp-phone');return;} answers.phone=v; sfx('tap'); savePartial(); goToScreen(9); }
+function submitPhone(){ var v=document.getElementById('inp-phone').value.trim(); if(v.length<7){shakeInput('inp-phone');return;} answers.phone=v; sfx('tap'); trackEvent('phone_captured', {event_category: 'engagement', event_label: 'Partial Lead'}); savePartial(); goToScreen(9); }
 function submitEmail(){ var v=document.getElementById('inp-email').value.trim(); if(!v.includes('@')){shakeInput('inp-email');return;} answers.email=v; sfx('tap'); goToScreen(10); }
 // ZIP is now screen 10 (first address screen)
 function submitZip(){ var v=document.getElementById('inp-zip').value.trim(); if(v.length<5){shakeInput('inp-zip');return;} answers.zip=v; sfx('tap'); goToScreen(11); }
@@ -968,6 +990,10 @@ function savePartial(){
   try{ var lead=Object.assign({},answers,{partial:true,timestamp:new Date().toISOString()}); var arr=JSON.parse(localStorage.getItem('stark_leads')||'[]').filter(function(x){return!(x.partial&&x.phone===answers.phone);}); arr.unshift(lead); localStorage.setItem('stark_leads',JSON.stringify(arr)); }catch(e){}
 }
 function submitLead(){
+  // Google Ads conversion — REPLACE AW-XXXXXXXXXX/CONVERSION_LABEL with your values
+  // Find label in Google Ads → Tools → Conversions → your conversion → Tag setup
+  trackEvent('conversion', {send_to: 'AW-XXXXXXXXXX/CONVERSION_LABEL', value: 50.0, currency: 'USD'});
+  trackEvent('quiz_complete', {event_category: 'conversion', event_label: 'Lead Submitted', value: 50});
   var lead=Object.assign({},answers,{partial:false,timestamp:new Date().toISOString(),source:document.referrer||'direct'});
   try{ var arr=JSON.parse(localStorage.getItem('stark_leads')||'[]').filter(function(x){return!(x.phone&&x.phone===answers.phone);}); arr.unshift(lead); localStorage.setItem('stark_leads',JSON.stringify(arr)); }catch(e){}
   try{ if(typeof emailjs!=='undefined'){ emailjs.send('service_74bf6sl','template_a5qe8zr',{from_name:lead.name||'',reply_to:lead.email||'',phone:lead.phone||'',service:lead.q1||'',address:[lead.street,lead.apt,lead.city,lead.state,lead.zip].filter(Boolean).join(', '),message:'Property: '+(lead.q2||'N/A')+'\nUrgency: '+(lead.q3||'N/A')+'\nRoof Condition: '+(lead.q4||'N/A')+'\nTrees: '+(lead.q5||'N/A')+'\nDiscount: '+(lead.q6||'N/A')+'\nSubmitted: '+lead.timestamp,source:document.referrer||'Quiz Funnel',page_url:window.location.href}).then(function(){console.log('EmailJS: Lead sent successfully');},function(err){console.error('EmailJS error:',err);}); } }catch(e){console.error('EmailJS exception:',e);}

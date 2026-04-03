@@ -10,7 +10,9 @@ export interface BlogPost {
   readTime: string;
 }
 
-export const blogPosts: BlogPost[] = [
+import { cityBlogPosts } from './cityBlogPosts';
+
+const corePosts: BlogPost[] = [
   {
     slug: "how-to-know-when-to-replace-your-roof-seattle",
     title: "7 Signs It's Time to Replace Your Roof in Seattle",
@@ -402,3 +404,5 @@ Stark Roofing & Renovation provides gutter repair, replacement, and guard instal
     `
   }
 ];
+
+export const blogPosts: BlogPost[] = [...corePosts, ...cityBlogPosts];
