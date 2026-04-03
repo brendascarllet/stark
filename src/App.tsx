@@ -23,6 +23,7 @@ import StormDamage from './pages/StormDamage';
 import Warranty from './pages/Warranty';
 import WindowReplacement from './pages/WindowReplacement';
 import NotFound from './pages/NotFound';
+import QuizFunnel from './pages/QuizFunnel';
 import PageTransition from './components/PageTransition';
 import { useEntranceAnimations } from './hooks/useEntranceAnimations';
 
@@ -84,6 +85,7 @@ function App() {
           <Route path="/metal-roofing" element={<MetalRoofing />} />
           <Route path="/asphalt-shingles" element={<AsphaltShingles />} />
           
+          <Route path="/quiz" element={<QuizFunnel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PageTransition>

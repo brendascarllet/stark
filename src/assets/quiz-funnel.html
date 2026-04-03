@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<base href="/">
+<title>Stark Roofing & Renovation — Find Out Your Roof Cost in Seconds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --red: #C0392B; --red-dark: #8B1A1A; --navy: #1A2744;
+  --gold: #F5A623; --green: #27AE60;
+  --font-head: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 16px; --radius-sm: 10px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.2);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.3);
+}
+html, body { height: 100%; font-family: var(--font-body); background: #0d1420; color: #fff; overflow: hidden; -webkit-font-smoothing: antialiased; }
+
+/* BG */
+#bg-layer {
+  position: fixed; inset: 0; z-index: 0;
+  background: url('stark_hero_bg.jpg') center/cover no-repeat,
+              url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  filter: brightness(0.30) saturate(0.7);
+  transition: background-image 0.8s ease;
+}
+
+/* TICKER */
+.ticker-wrap { position: fixed; top:0; left:0; right:0; z-index:100; background: linear-gradient(90deg,rgba(192,57,43,0.96),rgba(26,39,68,0.96)); padding:7px 0; overflow:hidden; height:36px; }
+.ticker-track { display:flex; width:max-content; animation: ticker 60s linear infinite; }
+.ticker-item { display:inline-flex; align-items:center; gap:8px; white-space:nowrap; padding:0 32px; font-family:var(--font-body); font-size:12px; font-weight:600; color:#fff; }
+.ticker-item .stars { color:#FFD700; letter-spacing:-1px; }
+.g-dot { display:inline-flex; align-items:center; justify-content:center; width:14px; height:14px; border-radius:50%; background:#fff; font-size:8px; font-weight:900; color:#4285F4; }
+@keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* APP */
+#app { position:relative; z-index:10; width:100%; height:100vh; display:flex; flex-direction:column; align-items:center; overflow:hidden; }
+
+/* PROGRESS */
+#progress-bar-wrap { position:fixed; top:36px; left:0; right:0; z-index:90; height:5px; background:rgba(255,255,255,0.12); display:none; }
+#progress-bar-fill { height:100%; background:linear-gradient(90deg,var(--red),var(--gold)); transition:width 0.5s cubic-bezier(.4,0,.2,1); border-radius:0 3px 3px 0; }
+
+/* SCREENS */
+.screen { position:absolute; top:0; left:0; right:0; bottom:0; display:flex; flex-direction:column; align-items:center; padding:36px 0 0; overflow-y:auto; overflow-x:hidden; opacity:0; pointer-events:none; transform:translateX(60px); transition:opacity 0.42s cubic-bezier(.4,0,.2,1), transform 0.42s cubic-bezier(.4,0,.2,1); -webkit-overflow-scrolling:touch; }
+.screen.active { opacity:1; pointer-events:all; transform:translateX(0); }
+.screen.exit-left { opacity:0; transform:translateX(-60px); }
+
+/* CARD WRAP */
+.card-wrap { width:100%; max-width:520px; padding:12px 16px 32px; display:flex; flex-direction:column; align-items:center; }
+
+/* MASCOT ROW */
+.mascot-row { display:flex; align-items:flex-end; gap:0; width:100%; max-width:460px; margin-bottom:10px; }
+.mascot-img { width:clamp(80px,22vw,115px); flex-shrink:0; filter:drop-shadow(0 6px 16px rgba(0,0,0,0.5)); animation:mascot-float 3.5s ease-in-out infinite; }
+@keyframes mascot-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+.speech-bubble { flex:1; background:#fff; border-radius:18px 18px 18px 4px; padding:14px 18px; margin-left:10px; margin-bottom:12px; position:relative; box-shadow:0 4px 20px rgba(0,0,0,0.22); font-family:var(--font-body); font-size:clamp(14px,3.8vw,16px); font-weight:600; line-height:1.45; color:#1A2744; }
+.speech-bubble::before { content:''; position:absolute; bottom:14px; left:-10px; border:10px solid transparent; border-right-color:#fff; border-left:0; }
+
+/* HEADINGS */
+.q-head { font-family:var(--font-head); font-size:clamp(20px,5.5vw,28px); font-weight:800; text-align:center; color:#fff; line-height:1.2; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:0 2px 8px rgba(0,0,0,0.5); }
+.q-sub { font-family:var(--font-body); font-size:clamp(13px,3.5vw,15px); color:rgba(255,255,255,0.72); text-align:center; margin-bottom:18px; line-height:1.5; }
+
+/* OPTION GRIDS (legacy, kept for any remaining grid screens) */
+.opt-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; }
+.opt-grid-5 { display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; }
+@media(min-width:480px){ .opt-grid-5{ grid-template-columns:repeat(3,1fr); } }
+
+/* OPTION CARDS — base (legacy grid style) */
+.opt-card { background:rgba(255,255,255,0.07); border:2px solid rgba(255,255,255,0.14); border-radius:var(--radius); padding:18px 12px 14px; display:flex; flex-direction:column; align-items:center; gap:8px; cursor:pointer; transition:all 0.22s cubic-bezier(.4,0,.2,1); -webkit-tap-highlight-color:transparent; min-height:110px; user-select:none; backdrop-filter:blur(6px); }
+.opt-card:active,.opt-card:hover { background:rgba(192,57,43,0.22); border-color:var(--red); transform:scale(1.03); }
+.opt-card.selected { background:var(--red); border-color:var(--gold); transform:scale(1.06); box-shadow:0 0 24px rgba(192,57,43,0.6); }
+.opt-card.selecting { animation:pulse-select 0.45s ease; }
+@keyframes pulse-select { 0%{transform:scale(1.06)} 50%{transform:scale(1.12)} 100%{transform:scale(1.06)} }
+.opt-icon { font-size:clamp(28px,8vw,40px); line-height:1; }
+.opt-title { font-family:var(--font-head); font-size:clamp(12px,3.2vw,14px); font-weight:700; text-align:center; color:#fff; line-height:1.3; }
+.opt-desc { font-family:var(--font-body); font-size:clamp(10px,2.5vw,11px); color:rgba(255,255,255,0.65); text-align:center; line-height:1.3; }
+.svg-icon { width:50px; height:50px; }
+.svg-icon-sm { width:40px; height:40px; }
+.svg-icon-lg { width:80px; height:68px; }
+
+/* ===== EMOJI LIST-ROW STYLE (quiz screens) ===== */
+.opt-list { display:flex; flex-direction:column; gap:10px; width:100%; }
+/* Override grid card style inside a list container */
+.opt-list .opt-card {
+  flex-direction:row; align-items:center; gap:14px;
+  min-height:0; padding:14px 16px; text-align:left;
+  background:rgba(18,18,28,0.75); border-radius:16px;
+  transform:none !important;
+}
+.opt-list .opt-card:hover { background:rgba(192,57,43,0.14); border-color:rgba(192,57,43,0.5); transform:none !important; }
+.opt-list .opt-card.selected { background:rgba(192,57,43,0.18); border-color:var(--red); box-shadow:0 0 18px rgba(192,57,43,0.35); transform:none !important; }
+/* Emoji icon box */
+.opt-emoji-box {
+  width:54px; height:54px; border-radius:13px;
+  background:rgba(255,255,255,0.09);
+  display:flex; align-items:center; justify-content:center;
+  font-size:28px; flex-shrink:0; transition:background 0.22s;
+}
+.opt-list .opt-card.selected .opt-emoji-box { background:rgba(192,57,43,0.32); }
+/* Text block */
+.opt-row-body { flex:1; min-width:0; }
+.opt-list .opt-card .opt-title { font-size:clamp(14px,4vw,16px); text-align:left; }
+.opt-list .opt-card .opt-desc { font-size:clamp(12px,3vw,13px); text-align:left; color:rgba(255,255,255,0.52); }
+/* Checkmark circle */
+.opt-check {
+  width:28px; height:28px; border-radius:50%;
+  border:2px solid rgba(255,255,255,0.2);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; color:rgba(255,255,255,0.25); font-size:14px;
+  transition:all 0.22s;
+}
+.opt-list .opt-card.selected .opt-check { background:var(--red); border-color:var(--red); color:#fff; }
+
+/* BACK / SOUND */
+.back-btn { position:fixed; top:calc(36px + 8px); left:14px; z-index:95; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); border-radius:50%; width:38px; height:38px; display:none; align-items:center; justify-content:center; cursor:pointer; font-size:18px; color:#fff; transition:all 0.2s; backdrop-filter:blur(4px); }
+.back-btn:hover { background:rgba(255,255,255,0.22); }
+.back-btn.visible { display:flex; }
+#sound-toggle { position:fixed; top:calc(36px+8px); right:14px; z-index:95; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:16px; color:#fff; backdrop-filter:blur(4px); }
+
+/* INPUTS */
+.input-wrap { width:100%; display:flex; flex-direction:column; gap:14px; }
+.field-label { font-family:var(--font-head); font-size:clamp(13px,3.5vw,15px); font-weight:700; color:rgba(255,255,255,0.85); margin-bottom:4px; }
+.field-input { width:100%; padding:16px 18px; border-radius:var(--radius-sm); border:2px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.08); color:#fff; font-family:var(--font-body); font-size:clamp(16px,4vw,18px); font-weight:600; outline:none; transition:border-color 0.2s, background 0.2s; -webkit-appearance:none; backdrop-filter:blur(4px); }
+.field-input::placeholder { color:rgba(255,255,255,0.38); }
+.field-input:focus { border-color:var(--gold); background:rgba(255,255,255,0.12); }
+.field-hint { font-size:12px; color:rgba(255,255,255,0.45); margin-top:4px; font-family:var(--font-body); }
+.two-col-input { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+
+/* BUTTONS */
+.cta-btn { width:100%; padding:18px; border-radius:var(--radius); background:linear-gradient(135deg,var(--red),var(--red-dark)); border:none; color:#fff; font-family:var(--font-head); font-size:clamp(16px,4.5vw,20px); font-weight:800; cursor:pointer; letter-spacing:0.01em; box-shadow:0 6px 24px rgba(192,57,43,0.5); text-transform:uppercase; -webkit-tap-highlight-color:transparent; animation:pulse-cta 2.5s ease-in-out infinite; }
+@keyframes pulse-cta { 0%,100%{box-shadow:0 6px 24px rgba(192,57,43,0.5)} 50%{box-shadow:0 8px 36px rgba(192,57,43,0.8)} }
+.cta-btn:active { transform:scale(0.97); }
+
+/* TRUST */
+.trust-pills { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:14px; }
+.trust-pill { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18); border-radius:20px; padding:6px 14px; font-family:var(--font-body); font-size:clamp(11px,3vw,12px); color:rgba(255,255,255,0.88); display:flex; align-items:center; gap:5px; backdrop-filter:blur(4px); }
+
+/* HERO */
+#screen-0 { justify-content:flex-start; padding-top:36px; }
+.hero-logo { width:clamp(90px,25vw,130px); margin:0 auto 10px; filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5)); }
+.hero-tagline { font-family:var(--font-head); font-size:clamp(26px,7vw,38px); font-weight:900; text-align:center; color:#fff; letter-spacing:-0.03em; line-height:1.1; text-shadow:0 3px 12px rgba(0,0,0,0.5); }
+.hero-tagline span { color:var(--red); }
+.hero-sub { font-family:var(--font-body); font-size:clamp(14px,3.8vw,17px); color:rgba(255,255,255,0.8); text-align:center; margin:8px 0 12px; line-height:1.5; max-width:380px; }
+
+/* IMPACT STRIP */
+.impact-strip { display:flex; width:100%; max-width:460px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); overflow:hidden; margin-bottom:12px; backdrop-filter:blur(6px); }
+.impact-item { flex:1; padding:12px 6px; text-align:center; border-right:1px solid rgba(255,255,255,0.1); }
+.impact-item:last-child { border-right:none; }
+.impact-num { font-family:var(--font-head); font-size:clamp(20px,5.5vw,28px); font-weight:900; color:var(--gold); line-height:1; }
+.impact-label { font-family:var(--font-body); font-size:clamp(9px,2.4vw,11px); color:rgba(255,255,255,0.65); margin-top:2px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; }
+
+/* GOOGLE BADGE */
+.google-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:30px; padding:7px 16px; margin-bottom:12px; backdrop-filter:blur(4px); }
+.g-logo { width:20px; height:20px; }
+.google-badge-text { font-family:var(--font-head); font-size:13px; font-weight:700; color:#fff; }
+.google-badge-stars { color:#FFD700; font-size:14px; letter-spacing:-1px; }
+
+/* HERO MASCOT */
+.hero-mascot-row { display:flex; align-items:flex-end; width:100%; max-width:460px; margin-bottom:14px; }
+.hero-mascot-img { width:clamp(90px,24vw,125px); flex-shrink:0; filter:drop-shadow(0 6px 20px rgba(0,0,0,0.5)); animation:mascot-float 3.5s ease-in-out infinite; cursor:pointer; }
+.hero-speech { flex:1; background:#fff; border-radius:18px 18px 18px 4px; padding:14px 16px; margin-left:10px; margin-bottom:8px; box-shadow:0 4px 20px rgba(0,0,0,0.22); position:relative; }
+.hero-speech::before { content:''; position:absolute; bottom:12px; left:-10px; border:10px solid transparent; border-right-color:#fff; border-left:0; }
+.hero-speech-title { font-family:var(--font-head); font-size:clamp(14px,3.8vw,16px); font-weight:800; color:var(--navy); line-height:1.2; margin-bottom:4px; }
+.hero-speech-sub { font-family:var(--font-body); font-size:clamp(12px,3.2vw,13px); color:#555; line-height:1.4; }
+
+/* START BTN */
+.start-btn { width:100%; max-width:460px; padding:20px; border-radius:var(--radius); background:linear-gradient(135deg,var(--red),var(--red-dark)); border:none; color:#fff; font-family:var(--font-head); font-size:clamp(16px,4.8vw,21px); font-weight:900; cursor:pointer; box-shadow:0 8px 32px rgba(192,57,43,0.55); text-transform:uppercase; animation:pulse-cta 2.5s ease-in-out infinite; -webkit-tap-highlight-color:transparent; letter-spacing:0.01em; }
+.start-btn:active { transform:scale(0.97); }
+.start-btn-sub { font-family:var(--font-body); font-size:11px; color:rgba(255,255,255,0.6); text-align:center; margin-top:8px; max-width:460px; }
+
+/* TOAST */
+#toast { position:fixed; bottom:80px; left:50%; transform:translateX(-50%) translateY(20px); background:rgba(39,174,96,0.95); color:#fff; padding:12px 24px; border-radius:30px; font-family:var(--font-head); font-size:15px; font-weight:700; opacity:0; transition:opacity 0.3s, transform 0.3s; z-index:200; white-space:nowrap; box-shadow:0 4px 20px rgba(0,0,0,0.3); }
+#toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+/* CONFETTI */
+.confetti-piece { position:fixed; border-radius:2px; animation:confetti-fall 2.5s ease-out forwards; z-index:300; pointer-events:none; }
+@keyframes confetti-fall { 0%{transform:translateY(-20px) rotate(0deg);opacity:1} 100%{transform:translateY(100vh) rotate(720deg);opacity:0} }
+
+/* URGENCY BADGE */
+.urgency-badge { background:linear-gradient(90deg,var(--red),var(--gold)); color:#fff; font-family:var(--font-head); font-size:clamp(11px,2.8vw,13px); font-weight:700; padding:6px 16px; border-radius:20px; text-align:center; text-transform:uppercase; letter-spacing:0.06em; animation:pulse-badge 1.8s ease-in-out infinite; }
+@keyframes pulse-badge { 0%,100%{opacity:1} 50%{opacity:0.75} }
+
+/* EXIT OVERLAYS */
+.exit-overlay { position:fixed; inset:0; z-index:500; background:rgba(0,0,0,0.82); display:none; align-items:center; justify-content:center; padding:20px; backdrop-filter:blur(4px); }
+.exit-overlay.show { display:flex; }
+.exit-card { background:var(--navy); border:2px solid var(--red); border-radius:20px; padding:28px 24px; max-width:380px; width:100%; text-align:center; box-shadow:var(--shadow-lg); }
+.exit-card h2 { font-family:var(--font-head); font-size:clamp(20px,5.5vw,26px); font-weight:900; color:#fff; margin-bottom:12px; line-height:1.2; }
+.exit-card p { font-family:var(--font-body); color:rgba(255,255,255,0.75); font-size:15px; margin-bottom:20px; line-height:1.5; }
+.exit-btn { width:100%; padding:16px; border-radius:var(--radius-sm); border:none; font-family:var(--font-head); font-size:15px; font-weight:700; cursor:pointer; margin-bottom:10px; -webkit-tap-highlight-color:transparent; }
+.exit-btn-primary { background:var(--red); color:#fff; }
+.exit-btn-secondary { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.75); border:1px solid rgba(255,255,255,0.2); }
+
+/* THANK YOU */
+.ty-logo { width:clamp(90px,24vw,120px); margin-bottom:12px; filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5)); }
+.ty-hero-img { width:100%; max-width:460px; height:180px; object-fit:cover; border-radius:var(--radius); margin:14px 0; box-shadow:var(--shadow); }
+.ty-heading { font-family:var(--font-head); font-size:clamp(26px,7vw,36px); font-weight:900; color:#fff; text-align:center; line-height:1.1; margin-bottom:8px; letter-spacing:-0.02em; text-shadow:0 3px 12px rgba(0,0,0,0.5); }
+.ty-heading span { color:var(--gold); }
+.ty-sub { font-family:var(--font-body); font-size:clamp(14px,3.8vw,16px); color:rgba(255,255,255,0.78); text-align:center; margin-bottom:18px; line-height:1.55; max-width:420px; }
+.ty-steps { width:100%; max-width:460px; display:flex; flex-direction:column; gap:10px; margin-bottom:18px; }
+.ty-step { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.14); border-radius:var(--radius-sm); padding:14px 16px; }
+.ty-step-num { width:36px; height:36px; border-radius:50%; background:var(--red); color:#fff; font-family:var(--font-head); font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.ty-step-text { font-family:var(--font-body); font-size:clamp(13px,3.5vw,15px); color:rgba(255,255,255,0.9); line-height:1.4; }
+.ty-step-text strong { display:block; font-family:var(--font-head); font-weight:700; color:#fff; margin-bottom:2px; }
+
+/* BRANDS */
+.brands-section { width:100%; max-width:460px; margin-bottom:20px; }
+.brands-title { font-family:var(--font-head); font-size:13px; font-weight:700; color:rgba(255,255,255,0.5); text-align:center; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px; }
+.brands-grid { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; align-items:center; background:rgba(255,255,255,0.06); border-radius:var(--radius); padding:14px; border:1px solid rgba(255,255,255,0.1); }
+.brand-img { height:32px; width:auto; max-width:90px; object-fit:contain; filter:brightness(0) invert(1) opacity(0.75); transition:opacity 0.2s; }
+
+/* REVIEWS */
+.ty-reviews { width:100%; max-width:460px; display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
+.review-card { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.14); border-radius:var(--radius-sm); padding:14px 16px; }
+.review-stars { color:#FFD700; font-size:14px; margin-bottom:6px; }
+.review-text { font-family:var(--font-body); font-size:clamp(12px,3.2vw,14px); color:rgba(255,255,255,0.82); line-height:1.5; font-style:italic; margin-bottom:8px; }
+.review-author { font-family:var(--font-head); font-size:12px; font-weight:700; color:rgba(255,255,255,0.55); display:flex; align-items:center; gap:6px; }
+.review-g-badge { display:inline-flex; align-items:center; gap:3px; background:rgba(255,255,255,0.1); border-radius:10px; padding:2px 7px; font-size:10px; }
+
+/* VOICE INDICATOR */
+.voice-indicator { display:inline-flex; align-items:center; gap:6px; font-family:var(--font-body); font-size:11px; color:rgba(255,255,255,0.5); margin-top:6px; }
+.voice-dot { width:6px; height:6px; border-radius:50%; background:var(--green); animation:voice-pulse 1s ease-in-out infinite; }
+@keyframes voice-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+
+/* MOBILE */
+@media(max-width:380px) { .card-wrap{padding:10px 12px 24px} .opt-card{padding:14px 8px 10px;min-height:95px} }
+@media(max-height:700px) { .hero-logo{width:80px;margin-bottom:6px} .impact-strip{margin-bottom:8px} .hero-sub{margin:6px 0 8px} }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('ZRltQQTK2lkYAspj3');</script>
+</head>
+<body>
+<div id="bg-layer"></div>
+
+<div class="ticker-wrap"><div class="ticker-track" id="ticker-track"></div></div>
+<div id="progress-bar-wrap"><div id="progress-bar-fill"></div></div>
+<button class="back-btn" id="back-btn" onclick="goBack()">&#8592;</button>
+<div id="sound-toggle" onclick="toggleSound()" title="Toggle sound">🔊</div>
+<div id="toast"></div>
+
+<div id="app">
+
+<!-- ===== SCREEN 0: HERO ===== -->
+<div class="screen active" id="screen-0">
+  <div class="card-wrap" style="padding-top:8px;">
+    <img src="stark_logo_badge.png" alt="Stark Roofing & Renovation" class="hero-logo" onerror="this.src='stark_mascot.png'">
+
+    <!-- #1 Rated badge -->
+    <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.38);border-radius:20px;padding:5px 16px;margin-bottom:12px;font-family:var(--font-head);font-size:11px;font-weight:700;color:#F5A623;letter-spacing:0.07em;text-transform:uppercase;">★ &nbsp;#1 Rated in Sammamish &amp; Seattle</div>
+
+    <!-- Main headline — matches screenshot style -->
+    <div class="hero-tagline" style="margin-bottom:2px;">Get Your <span>FREE</span><br>Roof Estimate</div>
+    <div class="hero-tagline" style="color:var(--red);font-size:clamp(26px,7.5vw,44px);margin-top:0;margin-bottom:10px;">in 60 Seconds! 🏠</div>
+
+    <div class="hero-sub">Join 2,000+ happy homeowners. No pressure, no commitment — just a fast, accurate quote from Washington's top-rated roofers.</div>
+
+    <div class="impact-strip">
+      <div class="impact-item">
+        <div class="impact-num" id="cnt-years">0</div>
+        <div class="impact-label">Years Experience</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-num" id="cnt-roofs">0</div>
+        <div class="impact-label">Roofs Done</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-num" id="cnt-stars">★★★★★</div>
+        <div class="impact-label">Google Rating</div>
+      </div>
+    </div>
+
+    <div class="google-badge">
+      <svg class="g-logo" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      <span class="google-badge-stars">★★★★★</span>
+      <span class="google-badge-text">5.0 Google · Family Owned &amp; Local</span>
+    </div>
+
+    <div class="hero-mascot-row">
+      <img src="stark_mascot.png" alt="Stark mascot" class="hero-mascot-img" onclick="speakMascot()" title="Click me!">
+      <div class="hero-speech">
+        <div class="hero-speech-title">Hey! Let's get your roof checked — fast &amp; free! 👋</div>
+        <div class="hero-speech-sub">90 seconds. No pressure. We'll send the right crew to you.</div>
+        <div class="voice-indicator" id="voice-ind" style="display:none;"><span class="voice-dot"></span> Speaking...</div>
+      </div>
+    </div>
+
+    <button class="start-btn" onclick="startQuiz()">Start My Free Estimate &nbsp;→</button>
+    <div class="start-btn-sub">✅ No obligation &nbsp;·&nbsp; 📞 60-min response &nbsp;·&nbsp; 🔒 100% Private</div>
+
+    <div class="trust-pills" style="margin-top:14px;">
+      <div class="trust-pill">🏠 Family Owned &amp; Local</div>
+      <div class="trust-pill">🏆 GAF Certified</div>
+      <div class="trust-pill">🛡️ Licensed &amp; Insured</div>
+      <div class="trust-pill">
+        <svg width="18" height="18" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <!-- Left arm -->
+          <rect x="1" y="14" width="10" height="2.5" rx="1.25" fill="rgba(255,255,255,0.7)"/>
+          <!-- Right arm -->
+          <rect x="25" y="14" width="10" height="2.5" rx="1.25" fill="rgba(255,255,255,0.7)"/>
+          <!-- Left rotor blur -->
+          <ellipse cx="6" cy="13.5" rx="6" ry="2.2" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.55)" stroke-width="1"/>
+          <!-- Right rotor blur -->
+          <ellipse cx="30" cy="13.5" rx="6" ry="2.2" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.55)" stroke-width="1"/>
+          <!-- Body -->
+          <rect x="12" y="12" width="12" height="8" rx="3" fill="white"/>
+          <!-- Red accent stripe -->
+          <rect x="12" y="14.5" width="12" height="2.5" fill="#C0392B"/>
+          <!-- Camera gimbal -->
+          <circle cx="18" cy="22" r="3" fill="rgba(255,255,255,0.9)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+          <circle cx="18" cy="22" r="1.4" fill="#1A2744"/>
+          <!-- Landing leg left -->
+          <line x1="14" y1="20" x2="13" y2="27" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="11" y1="27" x2="15" y2="27" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round"/>
+          <!-- Landing leg right -->
+          <line x1="22" y1="20" x2="23" y2="27" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="21" y1="27" x2="25" y2="27" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round"/>
+          <!-- LED blink dot -->
+          <circle cx="18" cy="13" r="1.2" fill="#F5A623"/>
+        </svg>
+        Free Drone Inspection
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 1: SERVICE ===== -->
+<div class="screen" id="screen-1">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">What do you need help with? I'll make sure we send the right crew!</div>
+    </div>
+    <div class="q-head">What kind of help do you need? 🤔</div>
+    <div class="q-sub">Pick the one that fits best — we handle it all!</div>
+    <div class="opt-list">
+
+        <div class="opt-card" onclick="selectOpt(this,1)">
+          <div class="opt-emoji-box">🏠</div>
+          <div class="opt-row-body"><div class="opt-title">Roof Replacement</div><div class="opt-desc">Full new roof installation</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt-card" onclick="selectOpt(this,1)">
+          <div class="opt-emoji-box">🔧</div>
+          <div class="opt-row-body"><div class="opt-title">Roof Repair</div><div class="opt-desc">Fix leaks, damage, or wear</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt-card" onclick="selectOpt(this,1)">
+          <div class="opt-emoji-box">🌧️</div>
+          <div class="opt-row-body"><div class="opt-title">Gutters</div><div class="opt-desc">Install, repair, or clean</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt-card" onclick="selectOpt(this,1)">
+          <div class="opt-emoji-box">🏗️</div>
+          <div class="opt-row-body"><div class="opt-title">Siding</div><div class="opt-desc">Vinyl, James Hardie &amp; more</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt-card" onclick="selectOpt(this,1)">
+          <div class="opt-emoji-box">🪟</div>
+          <div class="opt-row-body"><div class="opt-title">Windows</div><div class="opt-desc">Replacement &amp; installation</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt-card" onclick="selectOpt(this,1)">
+          <div class="opt-emoji-box">⚡</div>
+          <div class="opt-row-body"><div class="opt-title">Storm Damage</div><div class="opt-desc">Emergency &amp; insurance claims</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 2: PROPERTY ===== -->
+<div class="screen" id="screen-2">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Good choice! Tell me about the property — this helps us bring the right materials and crew size.</div>
+    </div>
+    <div class="q-head">What type of property? 🏘️</div>
+    <div class="q-sub">Select what best describes your home</div>
+    <div class="opt-list">
+
+        <div class="opt-card" onclick="selectOpt(this,2)">
+          <div class="opt-emoji-box">🏡</div>
+          <div class="opt-row-body"><div class="opt-title">Single Family</div><div class="opt-desc">Pitched asphalt / shingle roof</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt-card" onclick="selectOpt(this,2)">
+          <div class="opt-emoji-box">🏘️</div>
+          <div class="opt-row-body"><div class="opt-title">Multi-Family</div><div class="opt-desc">Duplex, triplex or more</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt-card" onclick="selectOpt(this,2)">
+          <div class="opt-emoji-box">🏢</div>
+          <div class="opt-row-body"><div class="opt-title">Commercial</div><div class="opt-desc">Flat roof / TPO membrane</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt-card" onclick="selectOpt(this,2)">
+          <div class="opt-emoji-box">🏠</div>
+          <div class="opt-row-body"><div class="opt-title">Mobile / Modular</div><div class="opt-desc">Metal seam / manufactured home</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 3: URGENCY ===== -->
+<div class="screen" id="screen-3">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Time matters — especially with Washington weather! How soon do you need us out there?</div>
+    </div>
+    <div class="q-head">How soon do you need us? ⏰</div>
+    <div class="q-sub">We'll prioritize your request accordingly</div>
+    <div class="opt-list">
+      <div class="opt-card" onclick="selectOpt(this,3)">
+        <div class="opt-emoji-box">🚨</div>
+        <div class="opt-row-body"><div class="opt-title">ASAP Emergency</div><div class="opt-desc">Active leak or storm damage</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,3)">
+        <div class="opt-emoji-box">📅</div>
+        <div class="opt-row-body"><div class="opt-title">Next Day</div><div class="opt-desc">Urgent but stable</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,3)">
+        <div class="opt-emoji-box">🗓️</div>
+        <div class="opt-row-body"><div class="opt-title">This Week</div><div class="opt-desc">Plan ahead, no rush yet</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,3)">
+        <div class="opt-emoji-box">☀️</div>
+        <div class="opt-row-body"><div class="opt-title">This Month</div><div class="opt-desc">Not a rush</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,3)">
+        <div class="opt-emoji-box">🔍</div>
+        <div class="opt-row-body"><div class="opt-title">Just Exploring</div><div class="opt-desc">Getting quotes, comparing options</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 4: ROOF CONDITION ===== -->
+<div class="screen" id="screen-4">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Our drone cameras catch everything — but your eyes know your home best. What's going on up there?</div>
+    </div>
+    <div class="q-head">What's happening with your roof? 🔍</div>
+    <div class="q-sub">Pick the best match for what you're seeing</div>
+    <div class="opt-list">
+      <div class="opt-card" onclick="selectOpt(this,4)">
+        <div class="opt-emoji-box">💧</div>
+        <div class="opt-row-body"><div class="opt-title">Active Leak</div><div class="opt-desc">Water getting inside</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,4)">
+        <div class="opt-emoji-box">🌪️</div>
+        <div class="opt-row-body"><div class="opt-title">Wind Damage</div><div class="opt-desc">Lifted or missing shingles</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,4)">
+        <div class="opt-emoji-box">⬇️</div>
+        <div class="opt-row-body"><div class="opt-title">Sagging / Sinking</div><div class="opt-desc">Structural concern</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,4)">
+        <div class="opt-emoji-box">🔩</div>
+        <div class="opt-row-body"><div class="opt-title">Flashing Issues</div><div class="opt-desc">Around chimney or vents</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,4)">
+        <div class="opt-emoji-box">⏳</div>
+        <div class="opt-row-body"><div class="opt-title">Aging / Worn Out</div><div class="opt-desc">Old or deteriorating</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,4)">
+        <div class="opt-emoji-box">✅</div>
+        <div class="opt-row-body"><div class="opt-title">Just an Inspection</div><div class="opt-desc">Everything seems OK</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 5: TREES ===== -->
+<div class="screen" id="screen-5">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Branches over the roof = debris, moisture, and damage. Let me know what your yard looks like!</div>
+    </div>
+    <div class="q-head">Any trees near your roof? 🌲</div>
+    <div class="q-sub">Pick what best describes your yard</div>
+    <div class="opt-list">
+      <div class="opt-card" onclick="selectOpt(this,5)">
+        <div class="opt-emoji-box">☀️</div>
+        <div class="opt-row-body"><div class="opt-title">No trees — clear yard</div><div class="opt-desc">Nothing near the roof, open area</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,5)">
+        <div class="opt-emoji-box">🌿</div>
+        <div class="opt-row-body"><div class="opt-title">Small bushes or shrubs</div><div class="opt-desc">Low plants, not reaching the roof</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,5)">
+        <div class="opt-emoji-box">🌲</div>
+        <div class="opt-row-body"><div class="opt-title">Trees nearby, not touching</div><div class="opt-desc">Trees in the yard but branches are clear</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,5)">
+        <div class="opt-emoji-box">🌳</div>
+        <div class="opt-row-body"><div class="opt-title">Branches over or touching the roof</div><div class="opt-desc">Limbs hang above or rub on the shingles</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 6: DISCOUNTS ===== -->
+<div class="screen" id="screen-6">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">We're proud to give back to our community — let me check if you qualify for a special discount!</div>
+    </div>
+    <div class="q-head">Do you qualify for a discount? 🎖️</div>
+    <div class="q-sub">Stark Roofing proudly serves those who serve our community</div>
+    <div class="opt-list">
+      <div class="opt-card" onclick="selectOpt(this,6)">
+        <div class="opt-emoji-box">🎖️</div>
+        <div class="opt-row-body"><div class="opt-title">Military / Veteran</div><div class="opt-desc">Active duty or veteran</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,6)">
+        <div class="opt-emoji-box">👴</div>
+        <div class="opt-row-body"><div class="opt-title">Senior (65+)</div><div class="opt-desc">Age-based discount</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,6)">
+        <div class="opt-emoji-box">🚒</div>
+        <div class="opt-row-body"><div class="opt-title">First Responder</div><div class="opt-desc">Fire, Police, EMS</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,6)">
+        <div class="opt-emoji-box">🌩️</div>
+        <div class="opt-row-body"><div class="opt-title">Storm Emergency</div><div class="opt-desc">Free drone inspection included</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+      <div class="opt-card" onclick="selectOpt(this,6)">
+        <div class="opt-emoji-box">👋</div>
+        <div class="opt-row-body"><div class="opt-title">None of the Above</div><div class="opt-desc">Still get a free estimate!</div></div>
+        <div class="opt-check">✓</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 7: NAME ===== -->
+<div class="screen" id="screen-7">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Almost done! First — who should we address this quote to? 😊</div>
+    </div>
+    <div class="q-head">What's your name?</div>
+    <div class="q-sub">So we know who we're talking to</div>
+    <div class="input-wrap">
+      <div><div class="field-label">Your Full Name</div><input class="field-input" type="text" id="inp-name" placeholder="e.g. Sarah Johnson" autocomplete="name" inputmode="text" onkeydown="if(event.key==='Enter')submitName()"><div class="field-hint">We'll use this to personalize your estimate</div></div>
+      <button class="cta-btn" onclick="submitName()">Continue &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 8: PHONE ===== -->
+<div class="screen" id="screen-8">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Great to meet you! What number should we call or text you at?</div>
+    </div>
+    <div class="q-head">What's your phone number?</div>
+    <div class="q-sub">We'll text you a confirmation right away</div>
+    <div class="input-wrap">
+      <div><div class="field-label">Mobile or Home Phone</div><input class="field-input" type="tel" id="inp-phone" placeholder="(360) 555-0123" autocomplete="tel" inputmode="tel" onkeydown="if(event.key==='Enter')submitPhone()"><div class="field-hint">🔒 Your number is private — we never sell your info</div></div>
+      <button class="cta-btn" onclick="submitPhone()">Continue &rarr;</button>
+      <div class="urgency-badge">⚡ Most homeowners hear back in under 60 minutes</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 9: EMAIL ===== -->
+<div class="screen" id="screen-9">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Perfect! And the best email for your written estimate?</div>
+    </div>
+    <div class="q-head">What's your email?</div>
+    <div class="q-sub">Your detailed estimate will be sent here</div>
+    <div class="input-wrap">
+      <div><div class="field-label">Email Address</div><input class="field-input" type="email" id="inp-email" placeholder="you@example.com" autocomplete="email" inputmode="email" onkeydown="if(event.key==='Enter')submitEmail()"><div class="field-hint">📧 Receive your free estimate + inspection report via email</div></div>
+      <button class="cta-btn" onclick="submitEmail()">Continue &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 10: ZIP (first!) ===== -->
+<div class="screen" id="screen-10">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Quick — what's your ZIP code? This helps me check we serve your area and look up local permit history!</div>
+    </div>
+    <div class="q-head">Your ZIP Code?</div>
+    <div class="q-sub">Let's confirm we're in your neighborhood</div>
+    <div class="input-wrap">
+      <div><div class="field-label">ZIP Code</div><input class="field-input" type="text" id="inp-zip" placeholder="98101" autocomplete="postal-code" inputmode="numeric" maxlength="5" onkeydown="if(event.key==='Enter')submitZip()"><div class="field-hint">🗺️ Verifies your service area and pulls local permit history</div></div>
+      <button class="cta-btn" onclick="submitZip()">Continue &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 11: STREET ADDRESS ===== -->
+<div class="screen" id="screen-11">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Almost there! Your street address helps us dispatch the closest crew to you.</div>
+    </div>
+    <div class="q-head">What's your street address?</div>
+    <div class="q-sub">So we can route the right crew to you</div>
+    <div class="input-wrap">
+      <div><div class="field-label">Street Address</div><input class="field-input" type="text" id="inp-street" placeholder="123 Main Street" autocomplete="address-line1" inputmode="text" onkeydown="if(event.key==='Enter')submitStreet()"></div>
+      <div><div class="field-label">Apt / Suite (optional)</div><input class="field-input" type="text" id="inp-apt" placeholder="Apt 4B" autocomplete="address-line2" inputmode="text"><div class="field-hint">🏠 Used only for crew routing — never shared</div></div>
+      <button class="cta-btn" onclick="submitStreet()">Continue &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 12: CITY / STATE ===== -->
+<div class="screen" id="screen-12">
+  <div class="card-wrap">
+    <div class="mascot-row">
+      <img src="stark_mascot.png" alt="mascot" class="mascot-img">
+      <div class="speech-bubble">Last step — city and state, and we're done! I'll have your estimate ready! 🎉</div>
+    </div>
+    <div class="q-head">City &amp; State?</div>
+    <div class="q-sub">We proudly serve all of Washington State</div>
+    <div class="input-wrap">
+      <div class="two-col-input">
+        <div><div class="field-label">City</div><input class="field-input" type="text" id="inp-city" placeholder="Seattle" autocomplete="address-level2" inputmode="text"></div>
+        <div><div class="field-label">State</div><input class="field-input" type="text" id="inp-state" placeholder="WA" maxlength="2" autocomplete="address-level1" inputmode="text" style="text-transform:uppercase"></div>
+      </div>
+      <button class="cta-btn" onclick="submitCityState()">🎉 Get My Free Estimate!</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 13: THANK YOU ===== -->
+<div class="screen" id="screen-13">
+  <div class="card-wrap" style="padding-top:10px;">
+    <img src="stark_logo_badge.png" alt="Stark Roofing" class="ty-logo" onerror="this.src='stark_mascot.png'">
+    <div class="ty-heading">You're All Set,<br><span id="ty-name-display">Friend</span>! 🎉</div>
+    <div class="ty-sub">Your free roof assessment is confirmed! Brenda and the Stark team will be in touch shortly.</div>
+
+    <img src="stark_hero_bg.jpg" alt="Stark roofing crew" class="ty-hero-img" onerror="this.src='stark_roof_aerial.jpg'">
+
+    <div class="ty-steps">
+      <div class="ty-step"><div class="ty-step-num">1</div><div class="ty-step-text"><strong>📞 Expect a Call Within 60 Min</strong>Our team reviews every lead personally. We'll call and text to confirm your appointment.</div></div>
+      <div class="ty-step"><div class="ty-step-num">2</div><div class="ty-step-text"><strong>🚁 Free Drone Roof Inspection</strong>We fly our drone over your roof and deliver a complete photo report — zero cost to you.</div></div>
+      <div class="ty-step"><div class="ty-step-num">3</div><div class="ty-step-text"><strong>📋 Written Estimate, No Pressure</strong>Detailed, honest quote via email with no hidden fees and zero pressure to commit.</div></div>
+    </div>
+
+    <!-- 30+ Years Badge -->
+    <div style="background:linear-gradient(135deg,#C0392B,#8B1A1A);border-radius:var(--radius);padding:18px 20px;width:100%;max-width:460px;text-align:center;margin-bottom:18px;box-shadow:0 6px 28px rgba(192,57,43,0.45);">
+      <div style="font-family:var(--font-head);font-size:clamp(32px,9vw,46px);font-weight:900;color:#FFD700;line-height:1;">30+</div>
+      <div style="font-family:var(--font-head);font-size:clamp(14px,4vw,18px);font-weight:800;color:#fff;margin-top:2px;">YEARS OF EXPERIENCE</div>
+      <div style="font-family:var(--font-body);font-size:13px;color:rgba(255,255,255,0.78);margin-top:8px;line-height:1.5;">Family-owned &amp; local. Serving Washington since the 1990s.<br>Zero compromises on quality or service.</div>
+    </div>
+
+    <!-- Brand Logos (text badges — no broken images) -->
+    <div class="brands-section">
+      <div class="brands-title">Certified with Washington's Top Brands</div>
+      <div class="brands-grid" style="gap:12px;">
+        <div style="display:flex;align-items:center;gap:6px;font-family:var(--font-head);font-size:13px;font-weight:800;color:rgba(255,255,255,0.85);letter-spacing:0.02em;padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;border:1px solid rgba(255,255,255,0.15);">🏆 GAF Certified</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:var(--font-head);font-size:13px;font-weight:800;color:rgba(255,255,255,0.85);letter-spacing:0.02em;padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;border:1px solid rgba(255,255,255,0.15);">🛡️ CertainTeed</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:var(--font-head);font-size:13px;font-weight:800;color:rgba(255,255,255,0.85);letter-spacing:0.02em;padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;border:1px solid rgba(255,255,255,0.15);">✅ Malarkey Certified</div>
+      </div>
+    </div>
+
+    <!-- Reviews (sourced from Angi verified reviews) -->
+    <div style="font-family:var(--font-head);font-size:13px;font-weight:700;color:rgba(255,255,255,0.5);text-align:center;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">What Washington Homeowners Say</div>
+    <div class="ty-reviews">
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"Brenda is an absolute professional and really knows her stuff. She took care of our gutter project quickly, professionally, and at a fair price. A minor issue came up and it was resolved right away."</div><div class="review-author"><span>— Verified Homeowner, Sammamish WA</span><span class="review-g-badge"><svg width="10" height="10" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Angi</span></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"Brenda was professional, punctual, and detail-oriented. The crew worked efficiently, completed the roof replacement on schedule, and the new roof looks fantastic. Highly recommend Stark Roofing!"</div><div class="review-author"><span>— Verified Homeowner, Eastside WA</span><span class="review-g-badge"><svg width="10" height="10" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Angi</span></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"Stark Roofing is committed to excellence and upholds integrity. They made our concerns the basis of their business. Emergency service was fast, warranty coverage is solid, and the estimate was free."</div><div class="review-author"><span>— Verified Homeowner, Seattle WA</span><span class="review-g-badge"><svg width="10" height="10" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Angi</span></div></div>
+    </div>
+
+    <div class="trust-pills" style="margin-bottom:20px;">
+      <div class="trust-pill">🏠 Family Owned &amp; Local</div>
+      <div class="trust-pill">🏆 30+ Years</div>
+      <div class="trust-pill">⭐ 5-Star Google</div>
+      <div class="trust-pill">🛡️ Licensed &amp; Insured</div>
+    </div>
+
+    <div class="hero-mascot-row" style="max-width:460px;width:100%;">
+      <img src="stark_mascot.png" alt="mascot" class="hero-mascot-img" style="width:88px;">
+      <div class="hero-speech"><div class="hero-speech-title">We'll be in touch soon! 🤙</div><div class="hero-speech-sub">Snap a quick photo of any visible damage — it'll help us hit the ground running when we call!</div></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<!-- EXIT OVERLAYS -->
+<div class="exit-overlay" id="exit-1">
+  <div class="exit-card"><div style="font-size:44px;margin-bottom:10px;">⚠️</div><h2>Wait — Don't leave without your free estimate!</h2><p>You're only 60 seconds away. Brenda personally reviews every request!</p><button class="exit-btn exit-btn-primary" onclick="closeExit(1)">✅ Stay &amp; Finish — It's Free</button><button class="exit-btn exit-btn-secondary" onclick="progressExit(1)">I'll come back later</button></div>
+</div>
+<div class="exit-overlay" id="exit-2">
+  <div class="exit-card"><div style="font-size:44px;margin-bottom:10px;">🚨</div><h2>Storm season = roofing spots fill up fast!</h2><p>We already have your info — just 2 more quick questions and you're completely done!</p><button class="exit-btn exit-btn-primary" onclick="closeExit(2)">🏠 Finish My Assessment</button><button class="exit-btn exit-btn-secondary" onclick="progressExit(2)">Skip for now</button></div>
+</div>
+<div class="exit-overlay" id="exit-3">
+  <div class="exit-card"><div style="font-size:44px;margin-bottom:10px;">📞</div><h2>We saved your progress — we'll follow up!</h2><p>Brenda's team will reach out via phone and text using the info you've already shared.</p><button class="exit-btn exit-btn-primary" onclick="closeExit(3); goToScreen(currentScreen)">↩️ Actually, I'll Finish Now</button><button class="exit-btn exit-btn-secondary" onclick="closeExit(3)">OK, contact me later</button></div>
+</div>
+
+<script>
+var currentScreen = 0, answers = {}, soundEnabled = true, audioCtx = null, exitAttempt = 0, beat = null, TOTAL_Q = 12;
+
+// Per-screen backgrounds (loads in user's browser — no VM restrictions)
+var BG = {
+  // HERO — barn-home exterior
+  0: 'stark_hero_bg.jpg||https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80',
+  // Service screen — dark metal roof cedar home
+  1: 'stark_service_bg.jpg||https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80',
+  // Property type — Pacific NW shingle roof aerial
+  2: 'stark_shingle_roof.jpg||https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80',
+  // Urgency — roofer nailing shingles, crew in action
+  3: 'Christina-Richards-1170x780.jpg||https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80',
+  // Roof condition — close-up dark shingle roof with PNW trees
+  4: 'home-design.jpg||https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80',
+  // Trees near roof — person on roof surrounded by PNW forest
+  5: '2025-12-02.webp||https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1920&q=80',
+  // Discounts — premium brick home with shingle + metal roof
+  6: 'stark_bg_s6.jpg||https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80',
+  // Name — dark standing-seam metal roof with stone chimney, PNW pines
+  7: 'stark_bg_s7.jpg||https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80',
+  // Phone — GAF crew actively installing Timberline shingles
+  8: 'stark_bg_s8.jpg||https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80',
+  // Email — beautiful blue standing-seam metal roof
+  9: 'stark_bg_s5.jpg||https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1920&q=80',
+  // ZIP code — aerial drone view, lakefront home with trees
+  10: 'exterior-aerial-9-scaled.webp||https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80',
+  // Street address — blue standing-seam metal roof
+  11: 'stark_bg_s5.jpg||https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80',
+  // City/State — dark shingles close-up
+  12: 'stark_bg_s12.jpg||https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80',
+  // Thank you — aerial drone shot, beautiful PNW lakefront home
+  13: 'exterior-aerial-9-scaled.webp||https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80',
+};
+var LOCAL_BG = 'stark_hero_bg.jpg';
+
+function setBg(screenNum) {
+  var bg = document.getElementById('bg-layer');
+  var entry = BG[screenNum] || LOCAL_BG;
+  var url1, url2;
+  if (entry.indexOf('||') !== -1) {
+    var parts = entry.split('||');
+    url1 = parts[0]; url2 = parts[1];
+  } else {
+    url1 = entry; url2 = null;
+  }
+  // Set full background shorthand so size+position are always cover/center
+  bg.style.background = url2
+    ? "url('" + url1 + "') center/cover no-repeat, url('" + url2 + "') center/cover no-repeat"
+    : "url('" + url1 + "') center/cover no-repeat";
+  // Re-apply filter since background shorthand resets it in some browsers
+  bg.style.filter = 'brightness(0.30) saturate(0.7)';
+}
+
+// Reviews ticker
+var REVIEWS = [
+  '"Brenda is an absolute professional — fast response, honest quote, perfect install!"',
+  '"Best roofing company in Washington. Used them twice. Worth every penny."',
+  '"Storm damage handled within hours. Crew was respectful and thorough. 10/10!"',
+  '"Free drone inspection showed us issues we didn\'t even know existed. Amazing!"',
+  '"30 years of experience really shows — they know roofs like nobody else in WA."',
+  '"Completed our full reroof in 2 days. Clean site, quality materials, great warranty."',
+  '"Brenda personally followed up after the job. Rare customer service nowadays!"',
+  '"Licensed, insured, and incredibly fast. Stark is the real deal — highly recommend!"',
+  '"They caught a flashing problem our previous roofer missed. Saved us from a huge leak!"',
+  '"The drone inspection alone was worth calling. Photos, report, and honest advice."',
+];
+(function(){
+  var t = document.getElementById('ticker-track');
+  var all = REVIEWS.concat(REVIEWS);
+  t.innerHTML = all.map(function(r){ return '<div class="ticker-item"><span class="g-dot">G</span><span class="stars">★★★★★</span><span>'+r+'</span></div>'; }).join('');
+})();
+
+// Counters
+function animateCounter(el, target, suffix, isStars) {
+  if (isStars) { el.textContent = '★★★★★'; return; }
+  suffix = suffix || '';
+  var start = null, dur = 1800;
+  function step(ts) {
+    if (!start) start = ts;
+    var p = Math.min((ts-start)/dur, 1);
+    var e = 1 - Math.pow(1-p, 3);
+    el.textContent = Math.floor(e*target) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(step);
+}
+setTimeout(function(){
+  animateCounter(document.getElementById('cnt-years'), 30, '+');
+  animateCounter(document.getElementById('cnt-roofs'), 2500, '+');
+  animateCounter(document.getElementById('cnt-stars'), 0, '', true);
+}, 500);
+
+// ===== MASCOT VOICE (Web Speech API) =====
+function speakMascot() {
+  if (!window.speechSynthesis) return;
+  speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance("Hey! Let's get your roof checked — fast and free!");
+  u.rate = 0.92; u.pitch = 1.12; u.volume = 0.88;
+  var voices = speechSynthesis.getVoices();
+  var preferred = voices.find(function(v){
+    return v.name==='Samantha'||v.name==='Karen'||v.name==='Daniel'||v.name==='Google US English'||(v.lang==='en-US'&&v.localService);
+  });
+  if (preferred) u.voice = preferred;
+  var ind = document.getElementById('voice-ind');
+  if (ind) ind.style.display = 'inline-flex';
+  u.onend = function(){ if(ind) ind.style.display='none'; };
+  speechSynthesis.speak(u);
+}
+// Auto-speak on load after voices ready
+if (window.speechSynthesis) {
+  function tryAutoSpeak() {
+    setTimeout(speakMascot, 1800);
+  }
+  if (speechSynthesis.getVoices().length > 0) { tryAutoSpeak(); }
+  else { speechSynthesis.onvoiceschanged = function(){ speechSynthesis.onvoiceschanged=null; tryAutoSpeak(); }; }
+}
+
+// Audio context
+function getAudioCtx() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  return audioCtx;
+}
+// === HOOK BEAT v2 — trap/hip-hop, punchy 808, melodic hook ===
+function DrumBeat() {
+  this.c = getAudioCtx(); this.bpm = 94; this.running = false;
+  this.master = this.c.createGain(); this.master.gain.value = 0.07;
+  this.comp = this.c.createDynamicsCompressor();
+  this.comp.threshold.value = -14; this.comp.ratio.value = 5;
+  this.comp.attack.value = 0.003; this.comp.release.value = 0.12;
+  this.master.connect(this.comp); this.comp.connect(this.c.destination);
+}
+DrumBeat.prototype.kick = function(t,v){ v=v||1; var o=this.c.createOscillator(),g=this.c.createGain(); o.connect(g);g.connect(this.master); o.frequency.setValueAtTime(160,t);o.frequency.exponentialRampToValueAtTime(38,t+0.28); g.gain.setValueAtTime(v*1.3,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.42); o.start(t);o.stop(t+0.45); };
+DrumBeat.prototype.snare = function(t,v){ v=v||1; var buf=this.c.createBuffer(1,this.c.sampleRate*0.22,this.c.sampleRate),d=buf.getChannelData(0); for(var i=0;i<d.length;i++)d[i]=Math.random()*2-1; var s=this.c.createBufferSource(),f=this.c.createBiquadFilter(),g=this.c.createGain(); f.type='bandpass';f.frequency.value=2400;f.Q.value=0.6; s.buffer=buf;s.connect(f);f.connect(g);g.connect(this.master); g.gain.setValueAtTime(v*0.8,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.19); s.start(t);s.stop(t+0.22); var o2=this.c.createOscillator(),g2=this.c.createGain(); o2.type='triangle';o2.frequency.value=210; o2.connect(g2);g2.connect(this.master); g2.gain.setValueAtTime(v*0.22,t);g2.gain.exponentialRampToValueAtTime(0.001,t+0.06); o2.start(t);o2.stop(t+0.08); };
+DrumBeat.prototype.hat = function(t,v,open){ v=v||0.22; var dur=open?0.22:0.038; var buf=this.c.createBuffer(1,this.c.sampleRate*dur,this.c.sampleRate),d=buf.getChannelData(0); for(var i=0;i<d.length;i++)d[i]=Math.random()*2-1; var s=this.c.createBufferSource(),f=this.c.createBiquadFilter(),g=this.c.createGain(); f.type='highpass';f.frequency.value=9000; s.buffer=buf;s.connect(f);f.connect(g);g.connect(this.master); g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.001,t+dur); s.start(t);s.stop(t+dur+0.01); };
+DrumBeat.prototype.bass = function(t,freq,dur,v){ v=v||0.55; var o=this.c.createOscillator(),g=this.c.createGain(); o.type='sine';o.frequency.value=freq; o.connect(g);g.connect(this.master); g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.001,t+dur); o.start(t);o.stop(t+dur+0.01); };
+DrumBeat.prototype.note = function(t,freq,dur,v){ v=v||0.1; var o=this.c.createOscillator(),g=this.c.createGain(); o.type='triangle';o.frequency.value=freq; o.connect(g);g.connect(this.master); g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.001,t+dur*0.8); o.start(t);o.stop(t+dur); };
+DrumBeat.prototype.bar = function(t){
+  var self=this,b=60/this.bpm,s=b/4;
+  // KICK — trap: 1 . . . | 1 . . . | 1 . 1 . | . . . .
+  this.kick(t+s*0,1.0); this.kick(t+s*4,1.0); this.kick(t+s*8,0.9); this.kick(t+s*10,0.65);
+  // SNARE on 2 and 4 + ghost
+  this.snare(t+s*4,0.9); this.snare(t+s*12,0.9); this.snare(t+s*14,0.2);
+  // HATS — rolling 16ths, trap-style velocity + open hat on "and of 2"
+  for(var i=0;i<16;i++){
+    var hv=(i%2===0)?0.32:0.14;
+    if(i===7) this.hat(t+s*i,0.38,true);
+    else if(i>=8&&i%2===1) this.hat(t+s*i,hv*1.7);
+    else this.hat(t+s*i,hv);
+  }
+  // 808 BASS RIFF — E minor pentatonic (E2=82,A2=110,B2=123,G2=98,D2=73)
+  var bl=[[82,s*2,0.72],[82,s*1,0.5],[110,s*2,0.68],[82,s*1,0.5],[73,s*2,0.65],[82,s*1,0.5],[110,s*2,0.68],[123,s*3,0.72]];
+  var bp=0; bl.forEach(function(n){ self.bass(t+bp,n[0],n[1]*0.92,n[2]); bp+=n[1]; });
+  // MELODY HOOK — bright pluck, E minor pentatonic riff on beat 3
+  var ml=[{f:330,st:s*8,d:s*1.5,v:0.11},{f:440,st:s*10,d:s*1.5,v:0.10},{f:494,st:s*12,d:s*2.2,v:0.13},{f:440,st:s*14,d:s*1.5,v:0.09},{f:330,st:s*15,d:s*1.2,v:0.09}];
+  ml.forEach(function(n){ self.note(t+n.st,n.f,n.d,n.v); });
+  if(this.running) setTimeout(function(){ self.bar(self.c.currentTime); },(b*4-0.06)*1000);
+};
+DrumBeat.prototype.start = function(){ if(this.running)return; this.running=true; this.bar(this.c.currentTime+0.05); };
+DrumBeat.prototype.stop = function(){ this.running=false; try{this.master.gain.setTargetAtTime(0,this.c.currentTime,0.3);}catch(e){} };
+
+function sfx(type) {
+  if (!soundEnabled) return;
+  try {
+    var c=getAudioCtx(), m=c.createGain(); m.gain.value=0.055; m.connect(c.destination);
+    var t=c.currentTime;
+    function tone(freq,dur,vol){ var o=c.createOscillator(),g=c.createGain(); o.type='sine';o.frequency.value=freq; o.connect(g);g.connect(m); g.gain.setValueAtTime(vol||0.7,t);g.gain.exponentialRampToValueAtTime(0.001,t+dur); o.start(t);o.stop(t+dur); }
+    if(type==='tap') tone(500,0.09);
+    else if(type==='slide'){ var o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.setValueAtTime(280,t);o.frequency.linearRampToValueAtTime(460,t+0.14);o.connect(g);g.connect(m);g.gain.setValueAtTime(0.5,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.16);o.start(t);o.stop(t+0.16); }
+    else if(type==='back'){ var o2=c.createOscillator(),g2=c.createGain();o2.type='sine';o2.frequency.setValueAtTime(380,t);o2.frequency.linearRampToValueAtTime(220,t+0.12);o2.connect(g2);g2.connect(m);g2.gain.setValueAtTime(0.4,t);g2.gain.exponentialRampToValueAtTime(0.001,t+0.14);o2.start(t);o2.stop(t+0.14); }
+    else if(type==='start'){ [0,0.1,0.2].forEach(function(d,i){var o3=c.createOscillator(),g3=c.createGain();o3.type='sine';o3.frequency.value=[350,450,580][i];o3.connect(g3);g3.connect(m);g3.gain.setValueAtTime(0.45,t+d);g3.gain.exponentialRampToValueAtTime(0.001,t+d+0.14);o3.start(t+d);o3.stop(t+d+0.15);}); }
+    else if(type==='win'){ [0,0.1,0.2,0.35,0.5].forEach(function(d,i){var o4=c.createOscillator(),g4=c.createGain();o4.type='sine';o4.frequency.value=[400,500,600,700,900][i];o4.connect(g4);g4.connect(m);g4.gain.setValueAtTime(0.55,t+d);g4.gain.exponentialRampToValueAtTime(0.001,t+d+0.18);o4.start(t+d);o4.stop(t+d+0.2);}); }
+  } catch(e){}
+}
+
+function toggleSound() {
+  soundEnabled = !soundEnabled;
+  document.getElementById('sound-toggle').textContent = soundEnabled ? '🔊' : '🔇';
+  if (!soundEnabled && beat) beat.stop();
+  else if (soundEnabled && beat && currentScreen > 0) { beat.running=false; beat=new DrumBeat(); beat.start(); }
+}
+
+// Navigation
+function goToScreen(n) {
+  var prev=document.getElementById('screen-'+currentScreen), next=document.getElementById('screen-'+n);
+  if (!next) return;
+  prev.classList.remove('active'); prev.classList.add('exit-left');
+  setTimeout(function(){prev.classList.remove('exit-left');}, 450);
+  next.classList.add('active'); next.scrollTop=0;
+  currentScreen = n;
+  setBg(n);
+  updateProgress(); updateBackBtn(); sfx('slide');
+  setTimeout(function(){ var inp=next.querySelector('.field-input'); if(inp)inp.focus(); }, 470);
+}
+function goBack() { if(currentScreen<=1)return; sfx('back'); goToScreen(currentScreen-1); }
+function updateProgress() {
+  var w=document.getElementById('progress-bar-wrap'), f=document.getElementById('progress-bar-fill');
+  if(currentScreen===0||currentScreen===13){w.style.display='none';return;}
+  w.style.display='block'; f.style.width=Math.min((currentScreen/TOTAL_Q)*100,100)+'%';
+}
+function updateBackBtn() {
+  var b=document.getElementById('back-btn');
+  if(currentScreen>1&&currentScreen<13) b.classList.add('visible'); else b.classList.remove('visible');
+}
+
+function startQuiz() {
+  sfx('start');
+  if(soundEnabled){try{getAudioCtx();beat=new DrumBeat();beat.start();}catch(e){}}
+  goToScreen(1);
+}
+
+function selectOpt(card, step) {
+  card.parentElement.querySelectorAll('.opt-card').forEach(function(c){c.classList.remove('selected','selecting');});
+  card.classList.add('selected','selecting');
+  sfx('tap');
+  var title=card.querySelector('.opt-title');
+  answers['q'+step] = title ? title.textContent.trim() : 'Selected';
+  showToast('✅ Got it!');
+  setTimeout(function(){goToScreen(step+1);}, 500);
+}
+
+// Input submits
+function submitName(){ var v=document.getElementById('inp-name').value.trim(); if(!v){shakeInput('inp-name');return;} answers.name=v; sfx('tap'); goToScreen(8); }
+function submitPhone(){ var v=document.getElementById('inp-phone').value.trim(); if(v.length<7){shakeInput('inp-phone');return;} answers.phone=v; sfx('tap'); savePartial(); goToScreen(9); }
+function submitEmail(){ var v=document.getElementById('inp-email').value.trim(); if(!v.includes('@')){shakeInput('inp-email');return;} answers.email=v; sfx('tap'); goToScreen(10); }
+// ZIP is now screen 10 (first address screen)
+function submitZip(){ var v=document.getElementById('inp-zip').value.trim(); if(v.length<5){shakeInput('inp-zip');return;} answers.zip=v; sfx('tap'); goToScreen(11); }
+// Street is screen 11
+function submitStreet(){ var v=document.getElementById('inp-street').value.trim(); if(!v){shakeInput('inp-street');return;} answers.street=v; answers.apt=document.getElementById('inp-apt').value.trim(); sfx('tap'); goToScreen(12); }
+// City/State is screen 12 — final step, then submit
+function submitCityState(){ var city=document.getElementById('inp-city').value.trim(); if(!city){shakeInput('inp-city');return;} answers.city=city; answers.state=document.getElementById('inp-state').value.trim().toUpperCase()||'WA'; sfx('win'); submitLead(); }
+
+function shakeInput(id){ var el=document.getElementById(id); el.style.borderColor='#C0392B'; el.style.transform='translateX(-8px)'; setTimeout(function(){el.style.transform='translateX(8px)';},70); setTimeout(function(){el.style.transform='';},140); setTimeout(function(){el.style.borderColor='';},700); el.focus(); }
+
+function savePartial(){
+  try{ var lead=Object.assign({},answers,{partial:true,timestamp:new Date().toISOString()}); var arr=JSON.parse(localStorage.getItem('stark_leads')||'[]').filter(function(x){return!(x.partial&&x.phone===answers.phone);}); arr.unshift(lead); localStorage.setItem('stark_leads',JSON.stringify(arr)); }catch(e){}
+}
+function submitLead(){
+  var lead=Object.assign({},answers,{partial:false,timestamp:new Date().toISOString(),source:document.referrer||'direct'});
+  try{ var arr=JSON.parse(localStorage.getItem('stark_leads')||'[]').filter(function(x){return!(x.phone&&x.phone===answers.phone);}); arr.unshift(lead); localStorage.setItem('stark_leads',JSON.stringify(arr)); }catch(e){}
+  try{ if(typeof emailjs!=='undefined'){ emailjs.send('service_74bf6sl','template_a5qe8zr',{from_name:lead.name||'',reply_to:lead.email||'',phone:lead.phone||'',service:lead.q1||'',address:[lead.street,lead.apt,lead.city,lead.state,lead.zip].filter(Boolean).join(', '),message:'Property: '+(lead.q2||'N/A')+'\nUrgency: '+(lead.q3||'N/A')+'\nRoof Condition: '+(lead.q4||'N/A')+'\nTrees: '+(lead.q5||'N/A')+'\nDiscount: '+(lead.q6||'N/A')+'\nSubmitted: '+lead.timestamp,source:document.referrer||'Quiz Funnel',page_url:window.location.href}).then(function(){console.log('EmailJS: Lead sent successfully');},function(err){console.error('EmailJS error:',err);}); } }catch(e){console.error('EmailJS exception:',e);}
+  var fn=(answers.name||'Friend').split(' ')[0];
+  document.getElementById('ty-name-display').textContent=fn;
+  launchConfetti(); if(beat)beat.stop(); goToScreen(13);
+}
+
+function launchConfetti(){
+  var colors=['#C0392B','#F5A623','#27AE60','#4A90D9','#fff','#FFD700'];
+  for(var i=0;i<60;i++){ (function(i){ setTimeout(function(){ var el=document.createElement('div'); el.className='confetti-piece'; el.style.cssText='left:'+(Math.random()*100)+'vw;top:-10px;background:'+colors[Math.floor(Math.random()*colors.length)]+';width:'+(6+Math.random()*10)+'px;height:'+(6+Math.random()*10)+'px;border-radius:'+(Math.random()>0.5?'50%':'2px')+';animation-delay:'+(Math.random()*0.5)+'s;animation-duration:'+(2+Math.random()*1.5)+'s;'; document.body.appendChild(el); setTimeout(function(){el.remove();},4000); },i*38); })(i); }
+}
+
+var toastTimer;
+function showToast(msg){ var t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(function(){t.classList.remove('show');},1800); }
+
+// Exit intent
+function showExit(n){ if(currentScreen===0||currentScreen===13)return; document.getElementById('exit-'+n).classList.add('show'); }
+function closeExit(n){ document.getElementById('exit-'+n).classList.remove('show'); }
+function progressExit(n){ closeExit(n); exitAttempt++; if(exitAttempt<3&&currentScreen>0&&currentScreen<13){ setTimeout(function(){showExit(Math.min(exitAttempt+1,3));},9000); } }
+document.addEventListener('mouseleave',function(e){ if(e.clientY<0&&exitAttempt===0&&currentScreen>0&&currentScreen<13){exitAttempt++;showExit(1);} });
+document.addEventListener('visibilitychange',function(){ if(document.hidden&&exitAttempt===0&&currentScreen>0&&currentScreen<13){exitAttempt++;savePartial();} });
+window.addEventListener('popstate',function(){ if(currentScreen>0&&currentScreen<13&&exitAttempt<3){exitAttempt++;showExit(Math.min(exitAttempt,3));history.pushState(null,null,location.href);} });
+history.pushState(null,null,location.href);
+
+// State uppercase
+var si=document.getElementById('inp-state'); if(si)si.addEventListener('input',function(){this.value=this.value.toUpperCase();});
+// ZIP numeric
+var zi=document.getElementById('inp-zip'); if(zi)zi.addEventListener('input',function(){this.value=this.value.replace(/\D/g,'').slice(0,5);});
+
+// Set initial background
+setBg(0);
+</script>
+</body>
+</html>
