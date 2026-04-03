@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
+import ReviewSchema from '@/components/shared/ReviewSchema';
 
 interface Testimonial {
   name: string;
@@ -29,6 +30,7 @@ const TestimonialsSection: React.FC = () => {
 
   return (
     <section className="section-padding bg-gray-100">
+      <ReviewSchema reviews={testimonials} />
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-title text-center">Trusted by Washington's Most Discerning Homeowners</h2>
         <p className="section-subtitle text-center">

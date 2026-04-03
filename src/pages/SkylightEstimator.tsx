@@ -6,11 +6,21 @@ import SkylightHero from '@/components/skylight-estimator/SkylightHero';
 import EstimatorContainer from '@/components/skylight-estimator/EstimatorContainer';
 import WhyChooseSection from '@/components/skylight-estimator/WhyChooseSection';
 import ContactSection from '@/components/skylight-estimator/ContactSection';
+import { useSEOMeta } from '@/hooks/useSEOMeta';
 
 const SkylightEstimator = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useSEOMeta({
+    title: 'Skylight Cost Calculator | Free Estimate | Stark Roofing Seattle',
+    description: 'Calculate your skylight installation cost instantly. Free online estimator for Seattle & Puget Sound homeowners. Velux skylights with expert flashing. Call (206) 739-8232.',
+    canonical: 'https://starkroofingrenovation.com/skylight-estimator',
+    keywords: 'skylight cost calculator, skylight installation cost, Velux skylight price, skylight estimate Seattle',
+    ogTitle: 'Skylight Cost Calculator | Stark Roofing & Renovation',
+    ogDescription: 'Get an instant skylight installation cost estimate. Free, no obligation.',
+  });
 
   return (
     <div className="min-h-screen">

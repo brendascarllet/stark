@@ -41,6 +41,8 @@ import Kirkland from './pages/Kirkland';
 import Everett from './pages/Everett';
 import Tacoma from './pages/Tacoma';
 import Sammamish from './pages/Sammamish';
+import Bellevue from './pages/Bellevue';
+import Issaquah from './pages/Issaquah';
 
 function App() {
   // Initialize global entrance animations
@@ -75,6 +77,8 @@ function App() {
           <Route path="/service-area/kirkland" element={<Kirkland />} />
           <Route path="/service-area/everett" element={<Everett />} />
           <Route path="/service-area/tacoma" element={<Tacoma />} />
+          <Route path="/service-area/bellevue" element={<Bellevue />} />
+          <Route path="/service-area/issaquah" element={<Issaquah />} />
           <Route path="/roof-cleaning" element={<RoofCleaning />} />
           <Route path="/storm-damage" element={<StormDamage />} />
           <Route path="/warranty" element={<Warranty />} />

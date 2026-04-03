@@ -21,10 +21,13 @@ const Footer = () => {
             </p>
             
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="text-white hover:text-stark-red transition-colors">
+              <a href="https://www.google.com/maps/place/Stark+Roofing+%26+Renovation" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors" aria-label="Google Maps">
+                <MapPin size={iconSize} />
+              </a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors">
                 <Facebook size={iconSize} />
               </a>
-              <a href="#" className="text-white hover:text-stark-red transition-colors">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors">
                 <Instagram size={iconSize} />
               </a>
             </div>
@@ -59,16 +62,16 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={isMobile ? 14 : 16} className="mr-1 md:mr-2" />
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={isMobile ? 14 : 16} className="mr-1 md:mr-2" />
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -78,34 +81,34 @@ const Footer = () => {
             <h4 className="text-base md:text-lg font-heading font-semibold">Our Services</h4>
             <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                <Link to="/roof-replacement" className="text-gray-300 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={isMobile ? 14 : 16} className="mr-1 md:mr-2" />
                   Roof Replacement
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                <Link to="/gutter-replacement" className="text-gray-300 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={isMobile ? 14 : 16} className="mr-1 md:mr-2" />
-                  Gutter Replacement and Filters
-                </a>
+                  Gutter Replacement
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                <Link to="/roof-repair" className="text-gray-300 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={isMobile ? 14 : 16} className="mr-1 md:mr-2" />
                   Roof Repair
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                <Link to="/storm-damage" className="text-gray-300 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={isMobile ? 14 : 16} className="mr-1 md:mr-2" />
                   Storm Damage Repair
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                <Link to="/siding-installation" className="text-gray-300 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={isMobile ? 14 : 16} className="mr-1 md:mr-2" />
                   Siding Installation
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/window-replacement" className="text-gray-300 hover:text-primary-purple transition-colors flex items-center group">
@@ -122,9 +125,9 @@ const Footer = () => {
             <div className="space-y-2 md:space-y-3 text-sm md:text-base">
               <div className="flex items-start">
                 <MapPin size={isMobile ? 16 : 20} className="mr-2 md:mr-3 mt-1 flex-shrink-0 text-stark-red" />
-                <p className="text-gray-300">
-                  Kirkland, WA
-                </p>
+                <a href="https://www.google.com/maps/place/Stark+Roofing+%26+Renovation" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                  Sammamish, WA 98029
+                </a>
               </div>
               <div className="flex items-center">
                 <Phone size={isMobile ? 16 : 20} className="mr-2 md:mr-3 flex-shrink-0 text-stark-red" />
@@ -144,7 +147,7 @@ const Footer = () => {
             }} whileTap={{
               scale: 0.95
             }} className="inline-block">
-                <a href="#" className="btn-primary inline-block text-sm md:text-base py-2 md:py-3 px-4 md:px-6">Get Free Estimate</a>
+                <Link to="/contact" className="btn-primary inline-block text-sm md:text-base py-2 md:py-3 px-4 md:px-6">Get Free Estimate</Link>
               </motion.div>
             </div>
           </div>

@@ -5,11 +5,21 @@ import Footer from '@/components/Footer';
 import ContactForm from '@/components/services/ContactForm';
 import GutterEstimatorCalculator from '@/components/gutter-estimator/GutterEstimatorCalculator';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
+import { useSEOMeta } from '@/hooks/useSEOMeta';
 
 const GutterEstimator = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useSEOMeta({
+    title: 'Gutter Cost Calculator | Free Estimate | Stark Roofing Seattle',
+    description: 'Calculate your gutter replacement cost instantly. Free online estimator for Seattle & Puget Sound homeowners. Seamless gutters, gutter guards, and more. Call (206) 739-8232.',
+    canonical: 'https://starkroofingrenovation.com/gutter-estimator',
+    keywords: 'gutter cost calculator, gutter replacement cost, seamless gutter estimate, gutter installation price Seattle',
+    ogTitle: 'Gutter Cost Calculator | Stark Roofing & Renovation',
+    ogDescription: 'Get an instant gutter replacement cost estimate. Free, no obligation.',
+  });
   
   return <div className="min-h-screen">
       <Navbar />

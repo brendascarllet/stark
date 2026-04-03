@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import ScrollToTop from '@/components/ScrollToTop';
+import { useSEOMeta } from '@/hooks/useSEOMeta';
 
 // Import refactored components
 import HeroSection from '@/components/roof-estimator/HeroSection';
@@ -15,13 +16,22 @@ const RoofEstimator = () => {
   useEffect(() => {
     // First scroll to top
     window.scrollTo(0, 0);
-    
+
     // Then immediately scroll to the estimator section
     const estimatorSection = document.getElementById('estimator');
     if (estimatorSection) {
       estimatorSection.scrollIntoView({ behavior: 'auto' });
     }
   }, []);
+
+  useSEOMeta({
+    title: 'Roof Cost Calculator | Free Estimate | Stark Roofing Seattle',
+    description: 'Calculate your roof replacement cost in seconds. Free online estimator for Seattle & Puget Sound homeowners. Get an instant ballpark price, then schedule your free in-person estimate. Call (206) 739-8232.',
+    canonical: 'https://starkroofingrenovation.com/roof-estimator',
+    keywords: 'roof cost calculator, roof replacement cost Seattle, how much does a new roof cost, roofing estimate, roof price estimator',
+    ogTitle: 'Roof Cost Calculator | Stark Roofing & Renovation',
+    ogDescription: 'Get an instant roof replacement cost estimate for your Seattle-area home. Free, no obligation.',
+  });
 
   return (
     <div className="min-h-screen">
