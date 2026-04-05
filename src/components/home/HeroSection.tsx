@@ -18,7 +18,7 @@ interface Slide {
 
 const YT_ID = 'GnZgvVnHnA8'; // Lake Washington & Seattle Skyline drone film
 
-const SLIDES: Slide[] = [
+const DEFAULT_SLIDES: Slide[] = [
   // INTRO – local MP4 drone clip (hero opener)
   { url: '/hero-drone-1.mp4', type: 'video', caption: "WA State's #1 Roofing Crew", alt: 'Drone aerial of Stark roofing crew' },
 
@@ -41,6 +41,15 @@ const SLIDES: Slide[] = [
   { url: '/drone-7.jpg', type: 'image', caption: 'Your Roof. Our Reputation.',          alt: 'Drone shot 7' },
 ];
 
+// Load slides from localStorage (set via /admin/hero) or use defaults
+function loadSlides(): Slide[] {
+  try {
+    const saved = localStorage.getItem('stark-hero-slides');
+    if (saved) return JSON.parse(saved);
+  } catch { /* ignore */ }
+  return DEFAULT_SLIDES;
+}
+
 // ─── Cinematic intro overlay ────────────────────────────────────────────────────
 const INTRO_LINES = [
   { text: 'WASHINGTON STATE', delay: 0.2, className: 'text-xs md:text-sm tracking-[0.5em] text-white/60 font-light uppercase' },
@@ -51,6 +60,7 @@ const INTRO_LINES = [
 
 // ─── Component ──────────────────────────────────────────────────────────────────
 const HeroSection: React.FC = () => {
+  const [slides] = useState<Slide[]>(loadSlides);
   const [currentIndex, setCurrentIndex]   = useState(0);
   const [introPhase, setIntroPhase]       = useState<'cinematic' | 'hero'>('cinematic');
   const [musicPlaying, setMusicPlaying]   = useState(false);
@@ -83,19 +93,19 @@ const HeroSection: React.FC = () => {
   const advance = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex(i => (i + 1) % SLIDES.length);
+    setCurrentIndex(i => (i + 1) % slides.length);
     setTimeout(() => setIsTransitioning(false), 800);
-  }, [isTransitioning]);
+  }, [isTransitioning, slides.length]);
 
   useEffect(() => {
     if (introPhase !== 'hero' || videoPaused) return;
-    const slide = SLIDES[currentIndex];
+    const s = slides[currentIndex];
     // Videos auto-advance when they end (handled by onEnded); images use 3-second timer;
     // YouTube slides use segment duration timer
-    if (slide.type === 'image') {
+    if (s.type === 'image') {
       timerRef.current = setTimeout(advance, 3000);
-    } else if (slide.type === 'youtube') {
-      const duration = ((slide.ytEnd ?? 30) - (slide.ytStart ?? 0)) * 1000;
+    } else if (s.type === 'youtube') {
+      const duration = ((s.ytEnd ?? 30) - (s.ytStart ?? 0)) * 1000;
       timerRef.current = setTimeout(advance, duration);
     }
     return () => { if (timerRef.current) clearTimeout(timerRef.current); };
@@ -113,7 +123,7 @@ const HeroSection: React.FC = () => {
     }
   };
 
-  const slide = SLIDES[currentIndex];
+  const slide = slides[currentIndex];
 
   // ─── RENDER ─────────────────────────────────────────────────────────────────
   return (
@@ -168,7 +178,7 @@ const HeroSection: React.FC = () => {
               transition={{ delay: 0.3, duration: 1.5 }}
             >
               <img
-                src="/stark-logo-black.png"
+                src="/stark-logo-rebrand.png"
                 alt="Stark Roofing"
                 className="w-[60vw] max-w-lg object-contain"
                 style={{ filter: 'brightness(0.9) saturate(0.6)' }}
@@ -183,7 +193,7 @@ const HeroSection: React.FC = () => {
               transition={{ delay: 0.1, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             >
               <img
-                src="/stark-logo-black.png"
+                src="/stark-logo-rebrand.png"
                 alt="Stark Roofing"
                 className="w-32 md:w-44 mx-auto object-contain drop-shadow-[0_0_40px_rgba(220,38,38,0.4)]"
               />
@@ -233,7 +243,7 @@ const HeroSection: React.FC = () => {
       ══════════════════════════════════════════════════════════ */}
       {/* Parallax wrapper */}
       <motion.div className="absolute inset-0 w-full h-full" style={{ y: bgY }}>
-        {SLIDES.map((s, i) => (
+        {slides.map((s, i) => (
           <div
             key={i}
             className="absolute inset-0 w-full h-full transition-opacity duration-700"
@@ -400,7 +410,7 @@ const HeroSection: React.FC = () => {
       {/* ── Slide dot indicators ───────────────────────────────── */}
       {introPhase === 'hero' && (
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-2">
-          {SLIDES.map((_, i) => (
+          {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => { if (!isTransitioning) { setCurrentIndex(i); setIsTransitioning(true); setTimeout(() => setIsTransitioning(false), 800); } }}
