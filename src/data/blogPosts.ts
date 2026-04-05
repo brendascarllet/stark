@@ -412,7 +412,7 @@ const newSEOPosts: BlogPost[] = [
     excerpt: "What does a roof replacement really cost in the Seattle area? Get transparent pricing ranges, material comparisons, and learn what drives roofing costs in the Puget Sound.",
     date: "2026-04-04",
     author: "Stark Roofing Team",
-    image: "/drone-2.jpg",
+    image: "/blog-seo-1.jpg",
     keywords: "roof replacement cost Seattle, how much does a new roof cost Seattle, roofing prices Seattle 2026, roof replacement estimate Puget Sound, new roof cost Washington",
     readTime: "7 min read",
     content: `
@@ -502,7 +502,7 @@ Every roof is different. The only way to get an accurate price is a professional
     excerpt: "Hiring the wrong roofer can cost you thousands. Learn the 8 things every Washington homeowner should verify before signing a roofing contract.",
     date: "2026-04-03",
     author: "Stark Roofing Team",
-    image: "/drone-4.jpg",
+    image: "/blog-seo-2.jpg",
     keywords: "how to choose roofing contractor, best roofer near me Washington, roofing contractor red flags, licensed roofer Seattle, roofing scams to avoid",
     readTime: "6 min read",
     content: `
@@ -609,7 +609,7 @@ We're a Washington State licensed and GAF certified contractor based in Sammamis
     excerpt: "Not all roofers can offer the same warranty — even using the same shingles. Learn why GAF certification matters and how it protects your investment for decades.",
     date: "2026-04-02",
     author: "Stark Roofing Team",
-    image: "/drone-6.jpg",
+    image: "/blog-seo-3.jpg",
     keywords: "GAF certified contractor near me, GAF warranty explained, what is GAF certification, GAF certified vs non certified roofer, roofing warranty Washington",
     readTime: "6 min read",
     content: `
@@ -703,7 +703,7 @@ We also offer free drone inspections so you can see your roof's condition before
     excerpt: "Should you patch it or replace it? Learn the decision framework that Seattle roofers use to help homeowners avoid wasting money on the wrong choice.",
     date: "2026-03-30",
     author: "Stark Roofing Team",
-    image: "/drone-3.jpg",
+    image: "/blog-seo-4.jpg",
     keywords: "roof repair vs replacement, should I repair or replace my roof, roof repair cost vs replacement cost, when to replace roof Seattle, roof repair worth it",
     readTime: "6 min read",
     content: `
@@ -790,7 +790,7 @@ At Stark Roofing, we provide free drone inspections that give you a high-definit
     excerpt: "Winter is over — but the damage might already be done. Use this 12-point spring checklist to catch roof problems before they become expensive emergencies.",
     date: "2026-03-28",
     author: "Stark Roofing Team",
-    image: "/drone-5.jpg",
+    image: "/blog-seo-5.jpg",
     keywords: "spring roof inspection checklist, PNW roof maintenance, spring roof check Seattle, roof inspection after winter, seasonal roof maintenance Pacific Northwest",
     readTime: "5 min read",
     content: `
