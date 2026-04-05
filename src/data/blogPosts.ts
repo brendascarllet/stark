@@ -405,4 +405,509 @@ Stark Roofing & Renovation provides gutter repair, replacement, and guard instal
   }
 ];
 
-export const blogPosts: BlogPost[] = [...corePosts, ...cityBlogPosts];
+const newSEOPosts: BlogPost[] = [
+  {
+    slug: "how-much-does-new-roof-cost-seattle-2026",
+    title: "How Much Does a New Roof Cost in Seattle in 2026? Complete Price Guide",
+    excerpt: "What does a roof replacement really cost in the Seattle area? Get transparent pricing ranges, material comparisons, and learn what drives roofing costs in the Puget Sound.",
+    date: "2026-04-04",
+    author: "Stark Roofing Team",
+    image: "/drone-2.jpg",
+    keywords: "roof replacement cost Seattle, how much does a new roof cost Seattle, roofing prices Seattle 2026, roof replacement estimate Puget Sound, new roof cost Washington",
+    readTime: "7 min read",
+    content: `
+## What Seattle Homeowners Actually Pay for a New Roof in 2026
+
+If you're Googling "how much does a new roof cost in Seattle," you want a straight answer — not a sales pitch. Here's what homeowners across the Puget Sound are actually paying in 2026, based on real project data.
+
+### The Short Answer
+
+Most Seattle-area homeowners pay between **$15,000 and $30,000** for a complete asphalt shingle roof replacement. The average falls around **$20,000–$22,000** for a standard 2,000 sq ft home.
+
+But that range is wide for a reason — your actual cost depends on several factors specific to your home.
+
+### What Drives the Cost of Your Roof
+
+**1. Roof Size (Measured in Squares)**
+
+Roofers measure in "squares" — one square equals 100 sq ft of roof area. A typical Seattle-area home has 20–25 squares of roofing depending on the pitch and overhangs. More squares = more materials and labor.
+
+**2. Roof Pitch (Steepness)**
+
+A steep roof takes longer to install and requires more safety equipment. Standard pitch roofs (4/12 to 7/12) are the most affordable. Steep roofs (8/12 and above) add a premium to both labor and time.
+
+**3. Material Choice**
+
+This is where you have the most control over cost:
+
+- **3-tab asphalt shingles** — Most affordable, 15–20 year lifespan
+- **Architectural shingles (GAF Timberline HDZ)** — Best value, 25–30 year lifespan, wind resistance up to 130 MPH
+- **Premium designer shingles (GAF Grand Sequoia)** — Luxury appearance, 30+ year lifespan
+- **Metal roofing (standing seam)** — Highest upfront cost, 50+ year lifespan
+
+**4. Tear-Off and Disposal**
+
+Removing your old roof is a significant cost. Multiple layers of old shingles increase disposal fees. Most jurisdictions in King County require tear-off before re-roofing.
+
+**5. Roof Condition**
+
+If your roof deck (plywood underneath) has water damage or rot, it needs replacing before new shingles go on. This is common in the Pacific Northwest due to our moisture-heavy climate. Damaged plywood adds cost, but skipping it would be like putting new paint over rotten wood.
+
+**6. Complexity**
+
+Dormers, valleys, skylights, chimneys, and multiple roof planes all add complexity. A simple ranch-style roof costs less than a multi-level home with several features.
+
+### Seattle Cost Breakdown by Material
+
+| Material | Price Range per SQ FT | Typical Total (2,000 sq ft home) |
+|----------|----------------------|----------------------------------|
+| 3-Tab Asphalt | $5.50–$7.50 | $11,000–$15,000 |
+| Architectural (GAF HDZ) | $7.00–$10.00 | $14,000–$20,000 |
+| Premium Designer | $9.00–$13.00 | $18,000–$26,000 |
+| Standing Seam Metal | $12.00–$18.00 | $24,000–$36,000 |
+
+### Why Seattle Costs More Than the National Average
+
+Seattle-area roofing costs run 10–25% above the national average because of:
+
+- **Higher labor rates** — skilled tradespeople command competitive wages in the Puget Sound
+- **Weather requirements** — proper underlayment, ice and water shield, and ventilation are essential (not optional) in our climate
+- **Permit costs** — King County and local municipalities require permits and inspections
+- **Disposal costs** — landfill and disposal fees in Washington are higher than many states
+
+### How to Get the Best Value (Not Just the Lowest Price)
+
+The cheapest bid isn't always the best deal. Here's what actually protects your investment:
+
+1. **Choose a GAF certified contractor** — unlocks the strongest manufacturer warranties (non-certified installers can only offer the basic warranty)
+2. **Get at least 3 written estimates** — compare scope, not just price
+3. **Ask about the full system** — underlayment, starter strips, ridge caps, and ventilation all matter
+4. **Check the labor warranty** — materials are only as good as the installation
+5. **Ask about financing** — spreading the cost makes it easier to choose quality over cutting corners
+
+### Financing Your New Roof
+
+A new roof is one of the best investments you can make in your home — it protects everything underneath. We offer flexible financing options so you can get the roof your home needs without the full upfront burden.
+
+## Get Your Free Drone Inspection
+
+Every roof is different. The only way to get an accurate price is a professional inspection of your specific home. At Stark Roofing & Renovation, we provide free drone inspections with detailed reports and transparent, itemized pricing — no hidden fees, no pressure.
+
+**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We proudly serve King County, Snohomish County, Pierce County, and Kittitas County.
+    `
+  },
+  {
+    slug: "how-to-choose-roofing-contractor-washington",
+    title: "How to Choose the Right Roofing Contractor in Washington State (Without Getting Burned)",
+    excerpt: "Hiring the wrong roofer can cost you thousands. Learn the 8 things every Washington homeowner should verify before signing a roofing contract.",
+    date: "2026-04-03",
+    author: "Stark Roofing Team",
+    image: "/drone-4.jpg",
+    keywords: "how to choose roofing contractor, best roofer near me Washington, roofing contractor red flags, licensed roofer Seattle, roofing scams to avoid",
+    readTime: "6 min read",
+    content: `
+## Your Roof Is Too Important for the Wrong Contractor
+
+A roof replacement is one of the largest home improvement investments you'll make — typically $15,000 to $30,000 in the Seattle area. Hiring the wrong contractor can turn that investment into a nightmare: leaks within months, voided warranties, disappearing companies, or permits never pulled.
+
+Here are the 8 things every Washington homeowner should check before hiring a roofer:
+
+### 1. Verify Their Washington State Contractor License
+
+This is non-negotiable. Washington State requires all contractors to be registered with the Department of Labor & Industries (L&I). You can verify any contractor's license at the L&I website.
+
+**What to check:**
+- License is current and active (not expired or suspended)
+- The business name matches who you're talking to
+- No unresolved complaints
+
+**Red flag:** Any contractor who says they don't need a license, or hesitates to provide their license number.
+
+### 2. Confirm They Carry Insurance
+
+Your contractor must carry:
+
+- **General liability insurance** — protects your property if something goes wrong during the job
+- **Workers' compensation** — protects you if a worker is injured on your property
+
+Ask for a certificate of insurance and call the insurance company to verify it's current. If a contractor without workers' comp has an employee get injured on your roof, you could be held liable.
+
+**Red flag:** "We're covered, don't worry about it" without producing documentation.
+
+### 3. Look for Manufacturer Certifications
+
+Not all roofers are equal in the eyes of shingle manufacturers. Being a **GAF certified contractor** requires meeting strict installation standards, maintaining insurance, and committing to ongoing training.
+
+**Why this matters for you:** Only certified contractors can offer the manufacturer's strongest warranties. A non-certified installer using the same shingles can only offer the basic limited warranty — a significant difference in long-term protection.
+
+### 4. Check Their Track Record
+
+Look at:
+
+- **Google reviews** — read the detailed reviews, not just the star rating
+- **Better Business Bureau** — check for complaints and resolution history
+- **How long they've been in business** — roofing companies that cut corners don't last
+- **Photos of completed work** — ask to see recent projects, ideally in your area
+
+**Red flag:** A company with no online presence, very few reviews, or all reviews posted in a suspiciously short timeframe.
+
+### 5. Get a Detailed Written Estimate
+
+A professional estimate should include:
+
+- **Specific materials** — brand, product line, and color (not just "architectural shingles")
+- **Scope of work** — tear-off, underlayment, flashing, ridge caps, starter strips, ventilation
+- **Timeline** — expected start date and duration
+- **Warranty details** — both manufacturer and labor warranties
+- **Permit and inspection** — confirmation that permits will be pulled
+- **Payment schedule** — clear terms, never full payment upfront
+
+**Red flag:** A vague estimate that says "re-roof house — $12,000" with no material specs or scope details.
+
+### 6. Ask About Permits
+
+Roof replacements in King County, Snohomish County, and Pierce County all require building permits. A legitimate contractor handles this as part of the project.
+
+**Why it matters:** Work done without permits can create major problems when you sell your home. Inspectors can require unpermitted work to be torn out and redone.
+
+**Red flag:** "We don't need a permit for this" or "It's faster if we skip the permit."
+
+### 7. Never Pay in Full Upfront
+
+Standard payment structure for roofing projects:
+
+- **Deposit:** 10–30% to secure materials and scheduling
+- **Progress payment:** After major milestones (optional for smaller jobs)
+- **Final payment:** Upon completion and your satisfaction
+
+**Red flag:** Demanding full payment before work begins, or cash-only with no receipt.
+
+### 8. Watch for Storm Chaser Warning Signs
+
+After every major storm in the Puget Sound, out-of-state contractors flood the area going door-to-door. Be cautious of:
+
+- Unsolicited door-to-door visits claiming they "noticed damage from the street"
+- High-pressure tactics to sign immediately
+- Out-of-state license plates on their trucks
+- No local office or phone number
+- Offering to "cover your deductible" (this is insurance fraud)
+
+## The Bottom Line
+
+A good roofer will happily provide their license, insurance, references, and a detailed estimate. They won't pressure you, and they'll answer your questions patiently. The 30 minutes you spend verifying these 8 things can save you thousands in problems down the road.
+
+## Why Homeowners Choose Stark Roofing
+
+We're a Washington State licensed and GAF certified contractor based in Sammamish, WA. We're fully insured, pull permits on every project, and back our work with quality craftsmanship. We also offer free drone inspections so you can see your roof's condition in high-definition detail before making any decisions.
+
+**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We serve King County, Snohomish County, Pierce County, and Kittitas County.
+    `
+  },
+  {
+    slug: "gaf-certified-vs-non-certified-roofer-warranty",
+    title: "GAF Certified vs. Non-Certified Roofer: Why Your Warranty Depends on It",
+    excerpt: "Not all roofers can offer the same warranty — even using the same shingles. Learn why GAF certification matters and how it protects your investment for decades.",
+    date: "2026-04-02",
+    author: "Stark Roofing Team",
+    image: "/drone-6.jpg",
+    keywords: "GAF certified contractor near me, GAF warranty explained, what is GAF certification, GAF certified vs non certified roofer, roofing warranty Washington",
+    readTime: "6 min read",
+    content: `
+## Same Shingles, Very Different Warranties
+
+Here's something most homeowners don't realize: two roofers can install the exact same GAF Timberline HDZ shingles on your home, but the warranty you receive can be dramatically different depending on who does the work.
+
+The difference comes down to one thing: **GAF certification.**
+
+### What Is GAF Certification?
+
+GAF is North America's largest roofing manufacturer. They created a certification program for roofing contractors who meet their standards for installation quality, business practices, and customer satisfaction.
+
+To become GAF certified, a contractor must:
+
+- Be properly licensed and insured in their state
+- Complete GAF training on proper installation techniques
+- Demonstrate a proven track record of quality work
+- Maintain good standing with customers and the industry
+- Commit to ongoing education on GAF products and methods
+
+Not every roofer qualifies — and that's the point. GAF puts their name behind contractors they trust to install their products correctly.
+
+### The Warranty Difference (This Is the Big One)
+
+| Warranty Feature | Non-Certified Installer | GAF Certified Installer |
+|-----------------|------------------------|------------------------|
+| Shingle defect coverage | Yes (limited) | Yes (lifetime limited) |
+| Workmanship coverage | None from GAF | Yes — backed by GAF |
+| Wind damage coverage | Limited | Enhanced (130 MPH with HDZ) |
+| Transferable to new owner | Limited | Yes — adds resale value |
+| Tear-off coverage | No | Yes (for qualifying systems) |
+
+**The critical difference:** When a non-certified roofer installs your roof, GAF only covers manufacturing defects in the shingles themselves. If the roof leaks because of an installation error — improper flashing, bad nail placement, inadequate ventilation — that's between you and the roofer. And if that roofer goes out of business? You're on your own.
+
+With a GAF certified contractor, **GAF itself backs the workmanship.** That means even if something happens to the contractor, your warranty is still protected by one of the largest building materials companies in North America.
+
+### The GAF Roofing System: Why It Matters
+
+GAF certified contractors install the **complete GAF roofing system**, which includes:
+
+- **Starter Strip Plus** — seals the critical first row against wind uplift
+- **Timberline HDZ Shingles** — the main protective layer with StainGuard Plus
+- **Cobra Attic Ventilation** — proper airflow extends shingle life
+- **FeltBuster Synthetic Felt** — moisture barrier under shingles
+- **WeatherWatch or StormGuard** — ice and water shield in vulnerable areas
+- **TimberCrest or Z-Ridge** — durable ridge cap shingles
+
+When all these components work together, you get maximum protection and the strongest warranty. Mix and match with off-brand components, and GAF won't offer the enhanced warranty.
+
+### Why This Matters in the Pacific Northwest
+
+Seattle's climate is one of the hardest on roofing systems in the country. Between constant rain, moss growth, wind events, and freeze-thaw cycles, installation quality matters as much as material quality.
+
+Common installation mistakes that aren't covered under basic warranties but ARE covered with GAF certified workmanship warranties:
+
+- **Incorrect nail placement** — nails too high or too low compromise wind resistance
+- **Missing or improper underlayment** — critical in our rainy climate
+- **Poor flashing around penetrations** — chimneys, vents, and skylights are common leak points
+- **Inadequate ventilation** — causes moisture buildup, ice dams, and premature shingle failure
+- **Wrong starter strip installation** — leaves the roof edge vulnerable to wind uplift
+
+### How to Verify GAF Certification
+
+You can verify any contractor's GAF certification status on GAF's website. If a contractor claims to be certified but can't be verified online, ask them to show you their current certification documentation.
+
+### The Real-World Impact
+
+Think of it this way: your roof protects a home worth $500,000 to $1,000,000+ in the Puget Sound area. The difference between a basic shingle warranty and a comprehensive system warranty backed by GAF is the difference between hoping your roof holds up and knowing it's guaranteed.
+
+### Questions to Ask Your Contractor
+
+1. "Are you GAF certified?"
+2. "Can I verify your certification on GAF's website?"
+3. "Which GAF warranty can you offer with your certification level?"
+4. "Will you install the complete GAF roofing system, or just the shingles?"
+5. "Will you register my warranty with GAF upon completion?"
+
+## Stark Roofing Is a GAF Certified Contractor
+
+Every roof we install comes with enhanced warranty protection backed directly by GAF. We install the complete GAF roofing system — not just the shingles — so you get the strongest coverage available.
+
+We also offer free drone inspections so you can see your roof's condition before making a decision.
+
+**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We proudly serve King County, Snohomish County, Pierce County, and Kittitas County.
+    `
+  },
+  {
+    slug: "roof-replacement-vs-repair-seattle-guide",
+    title: "Roof Replacement vs. Roof Repair: A Seattle Homeowner's Guide to the Right Decision",
+    excerpt: "Should you patch it or replace it? Learn the decision framework that Seattle roofers use to help homeowners avoid wasting money on the wrong choice.",
+    date: "2026-03-30",
+    author: "Stark Roofing Team",
+    image: "/drone-3.jpg",
+    keywords: "roof repair vs replacement, should I repair or replace my roof, roof repair cost vs replacement cost, when to replace roof Seattle, roof repair worth it",
+    readTime: "6 min read",
+    content: `
+## The Most Expensive Roofing Mistake: Choosing Wrong
+
+Every homeowner with a roof problem faces the same question: **repair or replace?** Choose wrong and you either waste money patching a roof that's going to fail anyway, or you replace a roof that only needed a simple fix.
+
+Here's the framework professional roofers use to make this call:
+
+### When Repair Makes Sense
+
+**Repair is the right choice when:**
+
+- **Your roof is under 15 years old** and the damage is isolated
+- **Damage covers less than 30%** of the total roof area
+- **The issue is a specific event** — a fallen branch, a single leak around a pipe boot, or a few missing shingles after a windstorm
+- **The roof deck (plywood) is solid** — no rot, no sagging
+
+**Common repairs and typical costs:**
+
+| Repair Type | Typical Cost Range |
+|-------------|-------------------|
+| Missing/damaged shingles (small area) | $300–$800 |
+| Pipe boot replacement | $250–$500 |
+| Flashing repair (chimney/wall) | $400–$1,000 |
+| Small leak repair | $400–$1,200 |
+| Valley repair | $500–$1,500 |
+
+### When Replacement Is the Better Investment
+
+**Replace when:**
+
+- **Your roof is 20+ years old** — even if it looks okay from the ground, aging shingles are unreliable
+- **Damage covers more than 30%** of the roof — patching this much costs nearly as much as replacing
+- **You're seeing systemic problems** — widespread granule loss, multiple leak points, sagging sections
+- **The roof deck has rot** in multiple areas — this means moisture has been penetrating for a long time
+- **You've had 2+ repairs in the last 3 years** — recurring problems signal end-of-life
+- **Your energy bills are climbing** — a failing roof loses insulation performance
+- **Moss has caused extensive damage** — common in the Pacific Northwest
+
+### The "Throwing Good Money After Bad" Trap
+
+Here's the math that catches homeowners:
+
+Say your roof is 22 years old and develops a leak. A repair costs $1,200. Six months later, another leak — $800. The following year, wind damage — $1,500. Within 3 years you've spent $3,500+ on a roof that still needs replacing.
+
+That $3,500 could have gone toward a new roof that would last another 25–30 years.
+
+**The rule of thumb:** If repair costs exceed 30% of replacement cost, or if your roof is past 75% of its expected lifespan, replacement is almost always the better financial decision.
+
+### Pacific Northwest Considerations
+
+Seattle's climate adds unique factors to the repair vs. replace decision:
+
+**Moss damage** — If moss has been growing for years and has lifted shingles or damaged the underlayment, cleaning alone won't fix the underlying problem. The shingles are permanently compromised.
+
+**Moisture exposure** — Our 37+ inches of annual rainfall means even small vulnerabilities become big problems fast. A repair that might last 5 years in Arizona could fail within 1 year in Seattle.
+
+**Winter storms** — If your roof barely survived last winter's storms, it won't get stronger. Proactive replacement before fall is smarter than emergency replacement during the rainy season.
+
+### What About Layering (Installing Over Existing Shingles)?
+
+Some contractors offer to install new shingles over your existing roof to save money. We don't recommend this because:
+
+- **It hides problems** — damaged decking, rot, and mold underneath go undetected
+- **It voids some warranties** — many manufacturers require tear-off for full warranty coverage
+- **It adds weight** — two layers of shingles stress the structure, especially with Pacific Northwest rain and snow
+- **It shortens lifespan** — heat trapped between layers causes the new shingles to age faster
+
+A proper tear-off and inspection of the roof deck is always worth the investment.
+
+### The Free Drone Inspection: Your Best First Step
+
+The honest answer to "repair or replace?" requires looking at your specific roof. Photos from the ground aren't enough — a professional needs to inspect the shingles up close, check the flashing, look for soft spots in the deck, and assess the overall system.
+
+At Stark Roofing, we provide free drone inspections that give you a high-definition view of your roof's condition. If your roof can be repaired, we'll tell you. If it needs replacing, we'll explain why and give you a detailed estimate. We don't push replacements when a $500 repair solves the problem.
+
+**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We serve King County, Snohomish County, Pierce County, and Kittitas County.
+    `
+  },
+  {
+    slug: "spring-roof-inspection-checklist-pacific-northwest-2026",
+    title: "Spring Roof Inspection Checklist for Pacific Northwest Homeowners (2026)",
+    excerpt: "Winter is over — but the damage might already be done. Use this 12-point spring checklist to catch roof problems before they become expensive emergencies.",
+    date: "2026-03-28",
+    author: "Stark Roofing Team",
+    image: "/drone-5.jpg",
+    keywords: "spring roof inspection checklist, PNW roof maintenance, spring roof check Seattle, roof inspection after winter, seasonal roof maintenance Pacific Northwest",
+    readTime: "5 min read",
+    content: `
+## Winter Is Over — What Did It Do to Your Roof?
+
+The Pacific Northwest winter of 2025–2026 brought rain, wind, and freezing temperatures that tested every roof in the region. Now that spring is here, it's the perfect time to assess the damage before problems get worse.
+
+Here's the 12-point checklist our team uses when inspecting roofs after winter:
+
+### What You Can Check from the Ground (No Ladder Needed)
+
+**1. Missing or Damaged Shingles**
+
+Walk around your home and look at every visible roof surface. Look for:
+- Bare spots where shingles are missing
+- Shingles that are flipped up, curling, or buckled
+- Shingle pieces in your yard or gutters
+
+Winter windstorms are the #1 cause of missing shingles in the Puget Sound.
+
+**2. Sagging Roof Line**
+
+Stand back and look at your roof line from the street. It should be straight. Any dipping, sagging, or waviness could indicate structural damage from moisture or snow load.
+
+**3. Gutter Condition**
+
+Check your gutters for:
+- Sections pulling away from the fascia board
+- Visible rust, cracks, or holes
+- Debris overflow from winter buildup
+- Downspouts disconnected or aimed at your foundation
+
+**4. Granules in Gutters and Downspouts**
+
+After you clean your gutters (do this first!), look at the debris. Heavy concentrations of dark, sand-like granules mean your shingles are deteriorating faster than normal. Some granule loss is normal — heavy deposits are a warning sign.
+
+**5. Moss and Algae Growth**
+
+Spring is when moss becomes most visible. Look for:
+- Thick green moss on north-facing or shaded sections
+- Dark streaks (algae) across the shingle surface
+- Moss growing between shingle edges (sign it's lifting them)
+
+Pacific Northwest roofs are especially vulnerable — our mild, wet springs accelerate moss growth.
+
+**6. Flashing Visible from Ground Level**
+
+Look at any metal flashing you can see around chimneys, walls, or vent pipes. Is it:
+- Pulling away or bent?
+- Rusted or corroded?
+- Missing entirely?
+
+Damaged flashing is the most common source of roof leaks.
+
+### What to Check Inside Your Home
+
+**7. Attic Inspection**
+
+If you can safely access your attic, look for:
+- **Water stains** on the underside of the roof deck — brown or dark marks indicate past or active leaks
+- **Daylight showing through** — if you see light, water can get in
+- **Mold or mildew smell** — indicates persistent moisture problems
+- **Insulation condition** — wet or compressed insulation has lost its effectiveness
+
+**8. Ceiling and Wall Stains**
+
+Check ceilings in every room, especially:
+- Under bathrooms on upper floors
+- Near chimneys and vents
+- Along exterior walls
+- In closets you don't check often
+
+New water stains that appeared over winter are urgent — they mean water is getting in somewhere.
+
+### What a Professional Should Check
+
+These items require getting on the roof — which we don't recommend for homeowners without proper safety equipment:
+
+**9. Shingle Adhesion and Nail Pops**
+
+Freeze-thaw cycles cause "nail pops" — nails that work their way up through the shingle surface. These create leak points and are invisible from the ground.
+
+**10. Pipe Boots and Vent Seals**
+
+The rubber boots around plumbing vents crack and deteriorate over time. Winter accelerates this. A cracked pipe boot is a guaranteed future leak.
+
+**11. Valley and Ridge Condition**
+
+Valleys (where two roof planes meet) and ridges (the top peak) take the most abuse from water flow and wind. A professional checks for proper sealing, wear, and shingle condition in these critical areas.
+
+**12. Ventilation System**
+
+Proper roof ventilation prevents moisture buildup, ice dams, and premature shingle aging. A professional checks that intake (soffit) and exhaust (ridge) vents are unblocked and functioning.
+
+### Your Spring Action Plan
+
+After going through this checklist:
+
+- **All clear?** Great — schedule your next check for fall (October) before the rains return
+- **Minor issues (1-2 items)?** Schedule a professional drone inspection to assess severity
+- **Multiple concerns?** Call a roofer for a comprehensive inspection — catching problems now saves thousands later
+
+### Why Spring Is the Best Time for Roof Work
+
+Spring in the Pacific Northwest offers the best conditions for roof work:
+
+- **Dry enough for installation** — sealants and adhesives need moderate temperatures
+- **Before the summer rush** — roofers are less booked in spring than summer, meaning faster scheduling
+- **Ahead of next winter** — any problems get fixed before the next rainy season
+
+## Schedule Your Free Drone Inspection
+
+Stark Roofing & Renovation provides free drone inspections across King County, Snohomish County, Pierce County, and Kittitas County. Our GAF certified team will check every item on this list and provide you with high-definition photos and an honest assessment.
+
+**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).**
+    `
+  }
+];
+
+export const blogPosts: BlogPost[] = [...corePosts, ...cityBlogPosts, ...newSEOPosts];
