@@ -420,11 +420,9 @@ const newSEOPosts: BlogPost[] = [
 
 If you're Googling "how much does a new roof cost in Seattle," you want a straight answer — not a sales pitch. Here's what homeowners across the Puget Sound are actually paying in 2026, based on real project data.
 
-### The Short Answer
+### Why There's No "One-Size-Fits-All" Price
 
-Most Seattle-area homeowners pay between **$15,000 and $30,000** for a complete asphalt shingle roof replacement. The average falls around **$20,000–$22,000** for a standard 2,000 sq ft home.
-
-But that range is wide for a reason — your actual cost depends on several factors specific to your home.
+Every roof is different. Anyone who quotes you a hard number without actually seeing your home is guessing — and usually low-balling to get the appointment. The real cost depends on several factors specific to your home.
 
 ### What Drives the Cost of Your Roof
 
@@ -456,15 +454,6 @@ If your roof deck (plywood underneath) has water damage or rot, it needs replaci
 **6. Complexity**
 
 Dormers, valleys, skylights, chimneys, and multiple roof planes all add complexity. A simple ranch-style roof costs less than a multi-level home with several features.
-
-### Seattle Cost Breakdown by Material
-
-| Material | Price Range per SQ FT | Typical Total (2,000 sq ft home) |
-|----------|----------------------|----------------------------------|
-| 3-Tab Asphalt | $5.50–$7.50 | $11,000–$15,000 |
-| Architectural (GAF HDZ) | $7.00–$10.00 | $14,000–$20,000 |
-| Premium Designer | $9.00–$13.00 | $18,000–$26,000 |
-| Standing Seam Metal | $12.00–$18.00 | $24,000–$36,000 |
 
 ### Why Seattle Costs More Than the National Average
 
@@ -508,7 +497,7 @@ Every roof is different. The only way to get an accurate price is a professional
     content: `
 ## Your Roof Is Too Important for the Wrong Contractor
 
-A roof replacement is one of the largest home improvement investments you'll make — typically $15,000 to $30,000 in the Seattle area. Hiring the wrong contractor can turn that investment into a nightmare: leaks within months, voided warranties, disappearing companies, or permits never pulled.
+A roof replacement is one of the largest home improvement investments you'll make. Hiring the wrong contractor can turn that investment into a nightmare: leaks within months, voided warranties, disappearing companies, or permits never pulled.
 
 Here are the 8 things every Washington homeowner should check before hiring a roofer:
 
@@ -562,7 +551,7 @@ A professional estimate should include:
 - **Permit and inspection** — confirmation that permits will be pulled
 - **Payment schedule** — clear terms, never full payment upfront
 
-**Red flag:** A vague estimate that says "re-roof house — $12,000" with no material specs or scope details.
+**Red flag:** A vague estimate with a single lump-sum number and no material specs or scope details.
 
 ### 6. Ask About Permits
 
@@ -678,7 +667,7 @@ You can verify any contractor's GAF certification status on GAF's website. If a 
 
 ### The Real-World Impact
 
-Think of it this way: your roof protects a home worth $500,000 to $1,000,000+ in the Puget Sound area. The difference between a basic shingle warranty and a comprehensive system warranty backed by GAF is the difference between hoping your roof holds up and knowing it's guaranteed.
+Think of it this way: your roof protects one of your largest investments — your home. The difference between a basic shingle warranty and a comprehensive system warranty backed by GAF is the difference between hoping your roof holds up and knowing it's guaranteed.
 
 ### Questions to Ask Your Contractor
 
@@ -722,15 +711,13 @@ Here's the framework professional roofers use to make this call:
 - **The issue is a specific event** — a fallen branch, a single leak around a pipe boot, or a few missing shingles after a windstorm
 - **The roof deck (plywood) is solid** — no rot, no sagging
 
-**Common repairs and typical costs:**
+**Common targeted repairs include:**
 
-| Repair Type | Typical Cost Range |
-|-------------|-------------------|
-| Missing/damaged shingles (small area) | $300–$800 |
-| Pipe boot replacement | $250–$500 |
-| Flashing repair (chimney/wall) | $400–$1,000 |
-| Small leak repair | $400–$1,200 |
-| Valley repair | $500–$1,500 |
+- Missing or damaged shingles in a small area
+- Pipe boot replacement
+- Flashing repair around chimneys or walls
+- Small isolated leak repair
+- Valley repair
 
 ### When Replacement Is the Better Investment
 
@@ -746,13 +733,11 @@ Here's the framework professional roofers use to make this call:
 
 ### The "Throwing Good Money After Bad" Trap
 
-Here's the math that catches homeowners:
+Here's the trap that catches homeowners:
 
-Say your roof is 22 years old and develops a leak. A repair costs $1,200. Six months later, another leak — $800. The following year, wind damage — $1,500. Within 3 years you've spent $3,500+ on a roof that still needs replacing.
+Your aging roof develops a leak. You pay for a repair. Six months later, another leak in a different spot. The following year, wind damage takes more shingles. Within a few years you've spent enough on patches that it would have paid for a real chunk of a brand-new roof — and you still need to replace it.
 
-That $3,500 could have gone toward a new roof that would last another 25–30 years.
-
-**The rule of thumb:** If repair costs exceed 30% of replacement cost, or if your roof is past 75% of its expected lifespan, replacement is almost always the better financial decision.
+**The rule of thumb:** If repair costs exceed 30% of replacement cost, or if your roof is past 75% of its expected lifespan, replacement is almost always the better long-term decision.
 
 ### Pacific Northwest Considerations
 
@@ -779,7 +764,7 @@ A proper tear-off and inspection of the roof deck is always worth the investment
 
 The honest answer to "repair or replace?" requires looking at your specific roof. Photos from the ground aren't enough — a professional needs to inspect the shingles up close, check the flashing, look for soft spots in the deck, and assess the overall system.
 
-At Stark Roofing, we provide free drone inspections that give you a high-definition view of your roof's condition. If your roof can be repaired, we'll tell you. If it needs replacing, we'll explain why and give you a detailed estimate. We don't push replacements when a $500 repair solves the problem.
+At Stark Roofing, we provide free drone inspections that give you a high-definition view of your roof's condition. If your roof can be repaired, we'll tell you. If it needs replacing, we'll explain why and give you a detailed estimate. We don't push replacements when a simple repair solves the problem.
 
 **Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We serve King County, Snohomish County, Pierce County, and Kittitas County.
     `
