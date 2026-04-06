@@ -719,6 +719,8 @@ Here's the framework professional roofers use to make this call:
 - Small isolated leak repair
 - Valley repair
 
+Most professional roof repairs in the Puget Sound start at **$800 and run up to around $3,900** depending on the scope, accessibility, and materials needed. Anything below that range is usually a band-aid that won't last through another PNW winter.
+
 ### When Replacement Is the Better Investment
 
 **Replace when:**
