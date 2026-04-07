@@ -70,7 +70,7 @@ If you noticed any of these signs, the best next step is a free professional roo
     excerpt: "Rain, wind, moss, and humidity — PNW weather demands the right roofing material. Compare asphalt shingles, metal roofing, and more for your Seattle-area home.",
     date: "2026-03-25",
     author: "Stark Roofing Team",
-    image: "/drone-3.jpg",
+    image: "/blog-materials.jpg",
     keywords: "best roofing materials Seattle, roofing materials Pacific Northwest, GAF shingles vs metal roof, asphalt shingles Seattle, metal roofing Washington",
     readTime: "6 min read",
     content: `
@@ -146,7 +146,7 @@ Every home is different. The best way to choose is to get a professional assessm
     excerpt: "Step-by-step guide for Washington homeowners on filing a roof damage insurance claim after a storm. Learn what to document, when to call, and how we can help.",
     date: "2026-03-18",
     author: "Stark Roofing Team",
-    image: "/drone-6.jpg",
+    image: "/blog-storm-damage.jpg",
     keywords: "roof insurance claim Washington, storm damage roof repair Seattle, hail damage roof insurance, how to file roof insurance claim, roof damage claim process",
     readTime: "7 min read",
     content: `
@@ -243,7 +243,7 @@ At Stark Roofing & Renovation, we've helped hundreds of Puget Sound homeowners n
     excerpt: "Moss is one of the biggest threats to roofs in the Pacific Northwest. Learn why it's dangerous, how to remove it safely, and how to prevent it from coming back.",
     date: "2026-03-10",
     author: "Stark Roofing Team",
-    image: "/drone-5.jpg",
+    image: "/blog-moss.jpg",
     keywords: "moss removal roof Seattle, moss on roof damage, roof moss prevention Pacific Northwest, how to remove moss from roof, moss treatment roof Washington",
     readTime: "5 min read",
     content: `
@@ -315,7 +315,7 @@ Stark Roofing & Renovation provides professional roof cleaning services across t
     excerpt: "Clogged gutters cause foundation damage, basement flooding, and roof leaks. Here's how Seattle homeowners should maintain their gutters year-round.",
     date: "2026-03-03",
     author: "Stark Roofing Team",
-    image: "/drone-4.jpg",
+    image: "/blog-gutters.jpg",
     keywords: "gutter maintenance Seattle, gutter cleaning Pacific Northwest, clogged gutters damage, gutter repair Seattle, when to replace gutters, gutter guards Seattle",
     readTime: "5 min read",
     content: `
