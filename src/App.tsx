@@ -48,6 +48,9 @@ import Issaquah from './pages/Issaquah';
 import Blog from './pages/Blog';
 import BlogArticle from './pages/BlogArticle';
 
+// Admin
+import AdminHero from './pages/AdminHero';
+
 function App() {
   // Initialize global entrance animations
   useEntranceAnimations();
@@ -96,6 +99,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/quiz" element={<QuizFunnel />} />
+          <Route path="/admin/hero" element={<AdminHero />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PageTransition>

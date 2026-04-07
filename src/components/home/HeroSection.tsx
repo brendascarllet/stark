@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { resolveMediaUrl, isIdbRef } from '../../lib/heroStorage';
 
 // ─── Slide data ────────────────────────────────────────────────────────────────
 interface Slide {
@@ -22,23 +23,16 @@ const DEFAULT_SLIDES: Slide[] = [
   // INTRO – local MP4 drone clip (hero opener)
   { url: '/hero-drone-1.mp4', type: 'video', caption: "WA State's #1 Roofing Crew", alt: 'Drone aerial of Stark roofing crew' },
 
-  // YouTube segment 1 – Lake Washington aerial (t=5–40s, ~35s)
-  { type: 'youtube', ytId: YT_ID, ytStart: 5,   ytEnd: 40,  caption: 'Serving Greater Seattle & Beyond',         alt: 'Aerial Lake Washington Seattle' },
-  { url: '/drone-1.jpg', type: 'image', caption: 'Aerial Precision. Every Time.',   alt: 'Drone shot project 1' },
+  // YouTube – Lake Washington aerial (short clip)
+  { type: 'youtube', ytId: YT_ID, ytStart: 5, ytEnd: 10, caption: 'Serving Greater Seattle & Beyond', alt: 'Aerial Lake Washington Seattle' },
 
-  // YouTube segment 2 – Bellevue skyline + lakeside homes (t=55–85s, ~30s)
-  { type: 'youtube', ytId: YT_ID, ytStart: 55,  ytEnd: 85,  caption: 'Pacific Northwest — Built to Last',         alt: 'Bellevue skyline drone' },
-  { url: '/crew-1.jpg', type: 'image', caption: 'Safety-First. Results-Always.', alt: 'Crew on roof 1' },
-
-  // YouTube segment 3 – Lake Washington + Seattle skyline (t=100–130s, ~30s)
-  { type: 'youtube', ytId: YT_ID, ytStart: 100, ytEnd: 130, caption: 'Lake Washington · Seattle · Bellevue',      alt: 'Lake Washington Seattle skyline' },
-  { url: '/drone-4.jpg', type: 'image', caption: 'Serving Greater Seattle & Beyond', alt: 'Drone shot project 4' },
-  { url: '/crew-2.jpg', type: 'image', caption: 'Licensed · Bonded · Insured',       alt: 'Crew on roof 2' },
-
-  // YouTube segment 4 – Overhead freeway + lake (t=147–175s, ~28s)
-  { type: 'youtube', ytId: YT_ID, ytStart: 147, ytEnd: 175, caption: 'Connected to Every Corner of the Puget Sound', alt: 'Aerial Seattle freeway lake' },
-  { url: '/drone-6.jpg', type: 'image', caption: 'Built to Outlast Pacific NW Weather', alt: 'Drone shot 6' },
-  { url: '/drone-7.jpg', type: 'image', caption: 'Your Roof. Our Reputation.',          alt: 'Drone shot 7' },
+  // Custom uploaded clips & photos (Brenda's edits — Apr 2026)
+  { url: '/hero-custom-1.m4v', type: 'video', caption: 'Stark Crew in Action',           alt: 'Stark roofing crew on the job' },
+  { url: '/hero-custom-2.jpg', type: 'image', caption: 'Aerial Precision. Every Time.', alt: 'Drone aerial roofing project' },
+  { url: '/hero-custom-3.jpg', type: 'image', caption: 'Safety-First. Results-Always.', alt: 'Stark crew on roof' },
+  { url: '/hero-custom-4.m4v', type: 'video', caption: 'Built to Last',                  alt: 'Stark roofing video' },
+  { url: '/hero-custom-5.jpg', type: 'image', caption: 'Serving Greater Seattle & Beyond', alt: 'Drone shot roofing project' },
+  { url: '/hero-custom-6.jpg', type: 'image', caption: 'Licensed · Bonded · Insured',    alt: 'Stark crew on roof' },
 ];
 
 // Load slides from localStorage (set via /admin/hero) or use defaults
@@ -60,8 +54,34 @@ const INTRO_LINES = [
 
 // ─── Component ──────────────────────────────────────────────────────────────────
 const HeroSection: React.FC = () => {
-  const [slides] = useState<Slide[]>(loadSlides);
+  const [slides, setSlides] = useState<Slide[]>(loadSlides);
   const [currentIndex, setCurrentIndex]   = useState(0);
+
+  // Resolve any idb:// references to object URLs (for uploaded media)
+  useEffect(() => {
+    const initial = loadSlides();
+    const hasIdb = initial.some(s => isIdbRef(s.url));
+    if (!hasIdb) {
+      setSlides(initial);
+      return;
+    }
+    let revoked: string[] = [];
+    (async () => {
+      const resolved = await Promise.all(
+        initial.map(async s => {
+          if (isIdbRef(s.url)) {
+            const url = await resolveMediaUrl(s.url);
+            if (url) revoked.push(url);
+            return { ...s, url };
+          }
+          return s;
+        })
+      );
+      setSlides(resolved);
+    })();
+    return () => { revoked.forEach(u => URL.revokeObjectURL(u)); };
+  }, []);
+
   const [introPhase, setIntroPhase]       = useState<'cinematic' | 'hero'>('cinematic');
   const [musicPlaying, setMusicPlaying]   = useState(false);
   const [showMusicHint, setShowMusicHint] = useState(false);
@@ -103,7 +123,7 @@ const HeroSection: React.FC = () => {
     // Videos auto-advance when they end (handled by onEnded); images use 3-second timer;
     // YouTube slides use segment duration timer
     if (s.type === 'image') {
-      timerRef.current = setTimeout(advance, 3000);
+      timerRef.current = setTimeout(advance, 5000);
     } else if (s.type === 'youtube') {
       const duration = ((s.ytEnd ?? 30) - (s.ytStart ?? 0)) * 1000;
       timerRef.current = setTimeout(advance, duration);
@@ -419,6 +439,18 @@ const HeroSection: React.FC = () => {
             />
           ))}
         </div>
+      )}
+
+      {/* ── Edit Hero button (dev only) ────────────────────────── */}
+      {introPhase === 'hero' && typeof window !== 'undefined' &&
+        (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && (
+          <a
+            href="/admin/hero"
+            className="absolute top-20 left-4 z-40 flex items-center gap-2 px-3 py-2 rounded-full bg-red-600/90 hover:bg-red-500 backdrop-blur-sm border border-white/20 text-white text-xs font-bold shadow-lg transition-colors"
+            title="Edit hero videos & photos"
+          >
+            ✏️ EDIT HERO
+          </a>
       )}
 
       {/* ── Music toggle ───────────────────────────────────────── */}
