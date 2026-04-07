@@ -16,20 +16,17 @@ interface Slide {
 
 const STORAGE_KEY = 'stark-hero-slides';
 
-/* ── Default slides (same as HeroSection.tsx) ─────────────────────────────── */
+/* ── Default slides (must match HeroSection.tsx DEFAULT_SLIDES) ───────────── */
 const YT_ID = 'GnZgvVnHnA8';
 const DEFAULT_SLIDES: Slide[] = [
-  { url: '/hero-drone-1.mp4', type: 'video', caption: "WA State's #1 Roofing Crew", alt: 'Drone aerial of Stark roofing crew' },
-  { type: 'youtube', ytId: YT_ID, ytStart: 5, ytEnd: 40, caption: 'Serving Greater Seattle & Beyond', alt: 'Aerial Lake Washington Seattle' },
-  { url: '/drone-1.jpg', type: 'image', caption: 'Aerial Precision. Every Time.', alt: 'Drone shot project 1' },
-  { type: 'youtube', ytId: YT_ID, ytStart: 55, ytEnd: 85, caption: 'Pacific Northwest — Built to Last', alt: 'Bellevue skyline drone' },
-  { url: '/crew-1.jpg', type: 'image', caption: 'Safety-First. Results-Always.', alt: 'Crew on roof 1' },
-  { type: 'youtube', ytId: YT_ID, ytStart: 100, ytEnd: 130, caption: 'Lake Washington · Seattle · Bellevue', alt: 'Lake Washington Seattle skyline' },
-  { url: '/drone-4.jpg', type: 'image', caption: 'Serving Greater Seattle & Beyond', alt: 'Drone shot project 4' },
-  { url: '/crew-2.jpg', type: 'image', caption: 'Licensed · Bonded · Insured', alt: 'Crew on roof 2' },
-  { type: 'youtube', ytId: YT_ID, ytStart: 147, ytEnd: 175, caption: 'Connected to Every Corner of the Puget Sound', alt: 'Aerial Seattle freeway lake' },
-  { url: '/drone-6.jpg', type: 'image', caption: 'Built to Outlast Pacific NW Weather', alt: 'Drone shot 6' },
-  { url: '/drone-7.jpg', type: 'image', caption: 'Your Roof. Our Reputation.', alt: 'Drone shot 7' },
+  { url: '/hero-drone-1.mp4',  type: 'video', caption: "WA State's #1 Roofing Crew",         alt: 'Drone aerial of Stark roofing crew' },
+  { type: 'youtube', ytId: YT_ID, ytStart: 5, ytEnd: 10, caption: 'Serving Greater Seattle & Beyond', alt: 'Aerial Lake Washington Seattle' },
+  { url: '/hero-custom-1.webp', type: 'image', caption: 'Aerial Precision. Every Time.',     alt: 'Stark roofing aerial' },
+  { url: '/hero-custom-2.m4v',  type: 'video', caption: 'Stark Crew in Action',              alt: 'Stark roofing video' },
+  { url: '/hero-custom-3.webp', type: 'image', caption: 'Safety-First. Results-Always.',    alt: 'Stark crew on roof' },
+  { url: '/hero-custom-4.jpg',  type: 'image', caption: 'Serving Greater Seattle & Beyond', alt: 'Stark roofing project' },
+  { url: '/hero-custom-6.webp', type: 'image', caption: 'Built to Outlast Pacific NW Weather', alt: 'Stark roofing crew' },
+  { url: '/hero-custom-5.jpg',  type: 'image', caption: 'Licensed · Bonded · Insured',      alt: 'Stark crew on roof' },
 ];
 
 /* ── Helper: extract YouTube ID from any URL format ───────────────────────── */

@@ -26,13 +26,13 @@ const DEFAULT_SLIDES: Slide[] = [
   // YouTube – Lake Washington aerial (short clip)
   { type: 'youtube', ytId: YT_ID, ytStart: 5, ytEnd: 10, caption: 'Serving Greater Seattle & Beyond', alt: 'Aerial Lake Washington Seattle' },
 
-  // Custom uploaded clips & photos (Brenda's edits — Apr 2026)
-  { url: '/hero-custom-1.m4v', type: 'video', caption: 'Stark Crew in Action',           alt: 'Stark roofing crew on the job' },
-  { url: '/hero-custom-2.jpg', type: 'image', caption: 'Aerial Precision. Every Time.', alt: 'Drone aerial roofing project' },
-  { url: '/hero-custom-3.jpg', type: 'image', caption: 'Safety-First. Results-Always.', alt: 'Stark crew on roof' },
-  { url: '/hero-custom-4.m4v', type: 'video', caption: 'Built to Last',                  alt: 'Stark roofing video' },
-  { url: '/hero-custom-5.jpg', type: 'image', caption: 'Serving Greater Seattle & Beyond', alt: 'Drone shot roofing project' },
-  { url: '/hero-custom-6.jpg', type: 'image', caption: 'Licensed · Bonded · Insured',    alt: 'Stark crew on roof' },
+  // Custom uploaded photos & video (Brenda's edits — Apr 2026)
+  { url: '/hero-custom-1.webp', type: 'image', caption: 'Aerial Precision. Every Time.',     alt: 'Stark roofing aerial' },
+  { url: '/hero-custom-2.m4v',  type: 'video', caption: 'Stark Crew in Action',              alt: 'Stark roofing video' },
+  { url: '/hero-custom-3.webp', type: 'image', caption: 'Safety-First. Results-Always.',    alt: 'Stark crew on roof' },
+  { url: '/hero-custom-4.jpg',  type: 'image', caption: 'Serving Greater Seattle & Beyond', alt: 'Stark roofing project' },
+  { url: '/hero-custom-6.webp', type: 'image', caption: 'Built to Outlast Pacific NW Weather', alt: 'Stark roofing crew' },
+  { url: '/hero-custom-5.jpg',  type: 'image', caption: 'Licensed · Bonded · Insured',      alt: 'Stark crew on roof' },
 ];
 
 // Load slides from localStorage (set via /admin/hero) or use defaults
@@ -123,7 +123,7 @@ const HeroSection: React.FC = () => {
     // Videos auto-advance when they end (handled by onEnded); images use 3-second timer;
     // YouTube slides use segment duration timer
     if (s.type === 'image') {
-      timerRef.current = setTimeout(advance, 5000);
+      timerRef.current = setTimeout(advance, 8000);
     } else if (s.type === 'youtube') {
       const duration = ((s.ytEnd ?? 30) - (s.ytStart ?? 0)) * 1000;
       timerRef.current = setTimeout(advance, duration);
@@ -270,13 +270,22 @@ const HeroSection: React.FC = () => {
             style={{ opacity: i === currentIndex && introPhase === 'hero' ? 1 : 0, zIndex: i === currentIndex ? 1 : 0 }}
           >
             {s.type === 'video' ? (
-              <video
-                ref={i === 0 ? videoRef : undefined}
-                src={s.url}
-                className="w-full h-full object-cover"
-                autoPlay muted playsInline
-                onEnded={advance}
-              />
+              /* Only mount the <video> when this slide is active so it
+                 plays from the beginning each time it's reached */
+              i === currentIndex && introPhase === 'hero' ? (
+                <video
+                  key={`video-${i}`}
+                  ref={i === 0 ? videoRef : undefined}
+                  src={s.url}
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  playsInline
+                  onEnded={advance}
+                />
+              ) : (
+                <div className="absolute inset-0 bg-gray-900" />
+              )
             ) : s.type === 'youtube' ? (
               /* Full-bleed YouTube background — only mounted when active */
               i === currentIndex && introPhase === 'hero' ? (
