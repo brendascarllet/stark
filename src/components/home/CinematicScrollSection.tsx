@@ -27,7 +27,7 @@ const CHAPTERS = [
     headline: 'WE SHOW UP',
     sub: 'On time. In full gear. Every single job.',
     body: 'Every Stark crew member arrives with the right safety equipment and the experience to back it up. No shortcuts. No excuses.',
-    image: '/crew-1.jpg',
+    image: '/hero-custom-3.webp',
     accent: '#ef4444', // red
   },
   {
@@ -35,7 +35,7 @@ const CHAPTERS = [
     headline: 'AERIAL PRECISION',
     sub: 'Drone-inspected. Detail-obsessed.',
     body: 'We use aerial drone inspection on every major project — giving you photos your competitors can\'t even offer.',
-    image: '/drone-2.jpg',
+    image: '/hero-custom-1.webp',
     accent: '#3b82f6', // blue
   },
   {
@@ -43,7 +43,7 @@ const CHAPTERS = [
     headline: 'GAF MASTER ELITE®',
     sub: 'Top 3% of roofers in the entire country.',
     body: 'This certification isn\'t handed out. It\'s earned. Stark is among the most trusted GAF installers in Washington State.',
-    image: '/drone-4.jpg',
+    image: '/hero-custom-4.jpg',
     accent: '#f59e0b', // amber
   },
   {
@@ -51,7 +51,7 @@ const CHAPTERS = [
     headline: 'ZERO LEAKS',
     sub: 'We treat your home like our own.',
     body: 'From Seattle to Snohomish, our lifetime workmanship warranty means if it ever leaks — we\'re back. No charge. No argument.',
-    image: '/crew-3.jpg',
+    image: '/hero-custom-5.jpg',
     accent: '#10b981', // emerald
   },
   {
@@ -59,7 +59,7 @@ const CHAPTERS = [
     headline: 'GET YOUR FREE QUOTE',
     sub: 'Takes 60 seconds. Saves you thousands.',
     body: 'Join 500+ Washington homeowners who chose Stark. Call (206) 739-8232 or fill out our estimate form — we\'ll respond within the hour.',
-    image: '/drone-6.jpg',
+    image: '/hero-custom-6.webp',
     accent: '#ef4444',
     cta: true,
   },
