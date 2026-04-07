@@ -15,20 +15,22 @@ interface Slide {
   ytStart?: number;
   /** End time in seconds */
   ytEnd?: number;
+  /** Max play duration in seconds for local videos (overrides full length) */
+  playDuration?: number;
 }
 
 const YT_ID = 'GnZgvVnHnA8'; // Lake Washington & Seattle Skyline drone film
 
 const DEFAULT_SLIDES: Slide[] = [
   // INTRO – local MP4 drone clip (hero opener)
-  { url: '/hero-drone-1.mp4', type: 'video', caption: "WA State's #1 Roofing Crew", alt: 'Drone aerial of Stark roofing crew' },
+  { url: '/hero-drone-1.mp4', type: 'video', caption: "Your #1 Roofing Crew", alt: 'Drone aerial of Stark roofing crew' },
 
   // YouTube – Lake Washington aerial (short clip)
   { type: 'youtube', ytId: YT_ID, ytStart: 5, ytEnd: 10, caption: 'Serving Greater Seattle & Beyond', alt: 'Aerial Lake Washington Seattle' },
 
   // Custom uploaded photos & video (Brenda's edits — Apr 2026)
   { url: '/hero-custom-1.webp', type: 'image', caption: 'Aerial Precision. Every Time.',     alt: 'Stark roofing aerial' },
-  { url: '/hero-custom-2.m4v',  type: 'video', caption: 'Stark Crew in Action',              alt: 'Stark roofing video' },
+  { url: '/hero-custom-2.m4v',  type: 'video', caption: 'Stark Crew in Action',              alt: 'Stark roofing video', playDuration: 4 },
   { url: '/hero-custom-3.webp', type: 'image', caption: 'Safety-First. Results-Always.',    alt: 'Stark crew on roof' },
   { url: '/hero-custom-4.jpg',  type: 'image', caption: 'Serving Greater Seattle & Beyond', alt: 'Stark roofing project' },
   { url: '/hero-custom-6.webp', type: 'image', caption: 'Built to Outlast Pacific NW Weather', alt: 'Stark roofing crew' },
@@ -46,7 +48,6 @@ function loadSlides(): Slide[] {
 
 // ─── Cinematic intro overlay ────────────────────────────────────────────────────
 const INTRO_LINES = [
-  { text: 'WASHINGTON STATE', delay: 0.2, className: 'text-xs md:text-sm tracking-[0.5em] text-white/60 font-light uppercase' },
   { text: 'STARK',            delay: 0.6, className: 'text-[clamp(4rem,14vw,11rem)] font-extrabold tracking-widest text-white leading-none font-heading' },
   { text: 'ROOFING &',        delay: 0.9, className: 'text-[clamp(1.8rem,5vw,4rem)] font-bold tracking-[0.2em] text-white/90 font-heading' },
   { text: 'RENOVATION',       delay: 1.1, className: 'text-[clamp(1.8rem,5vw,4rem)] font-bold tracking-[0.2em] text-white/90 font-heading' },
@@ -56,6 +57,8 @@ const INTRO_LINES = [
 const HeroSection: React.FC = () => {
   const [slides, setSlides] = useState<Slide[]>(loadSlides);
   const [currentIndex, setCurrentIndex]   = useState(0);
+  // Track which slide we just left so its media stays mounted during fade-out
+  const [previousIndex, setPreviousIndex] = useState<number | null>(null);
 
   // Resolve any idb:// references to object URLs (for uploaded media)
   useEffect(() => {
@@ -109,27 +112,33 @@ const HeroSection: React.FC = () => {
     return () => clearTimeout(t);
   }, []);
 
-  // ── Slide timer (3-second rule) ──────────────────────────────────────────────
+  // ── Slide timer & advance ────────────────────────────────────────────────────
   const advance = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
+    setPreviousIndex(currentIndex);                       // remember outgoing slide
     setCurrentIndex(i => (i + 1) % slides.length);
-    setTimeout(() => setIsTransitioning(false), 800);
-  }, [isTransitioning, slides.length]);
+    setTimeout(() => {
+      setIsTransitioning(false);
+      setPreviousIndex(null);                             // unmount old slide after fade
+    }, 1200);                                             // matches CSS fade duration
+  }, [isTransitioning, slides.length, currentIndex]);
 
   useEffect(() => {
     if (introPhase !== 'hero' || videoPaused) return;
     const s = slides[currentIndex];
-    // Videos auto-advance when they end (handled by onEnded); images use 3-second timer;
-    // YouTube slides use segment duration timer
+    // Local videos auto-advance via onEnded UNLESS they have a playDuration cap.
+    // Images use 8-second timer, YouTube uses segment duration.
     if (s.type === 'image') {
       timerRef.current = setTimeout(advance, 8000);
     } else if (s.type === 'youtube') {
       const duration = ((s.ytEnd ?? 30) - (s.ytStart ?? 0)) * 1000;
       timerRef.current = setTimeout(advance, duration);
+    } else if (s.type === 'video' && s.playDuration) {
+      timerRef.current = setTimeout(advance, s.playDuration * 1000);
     }
     return () => { if (timerRef.current) clearTimeout(timerRef.current); };
-  }, [currentIndex, introPhase, videoPaused, advance]);
+  }, [currentIndex, introPhase, videoPaused, advance, slides]);
 
   // ── Music toggle ─────────────────────────────────────────────────────────────
   const toggleMusic = () => {
@@ -263,18 +272,22 @@ const HeroSection: React.FC = () => {
       ══════════════════════════════════════════════════════════ */}
       {/* Parallax wrapper */}
       <motion.div className="absolute inset-0 w-full h-full" style={{ y: bgY }}>
-        {slides.map((s, i) => (
+        {slides.map((s, i) => {
+          const isActive   = i === currentIndex && introPhase === 'hero';
+          const isPrevious = i === previousIndex;
+          // Mount media if active OR previous (so fade-out has something to fade from)
+          const shouldMount = isActive || isPrevious;
+          return (
           <div
             key={i}
-            className="absolute inset-0 w-full h-full transition-opacity duration-700"
-            style={{ opacity: i === currentIndex && introPhase === 'hero' ? 1 : 0, zIndex: i === currentIndex ? 1 : 0 }}
+            className="absolute inset-0 w-full h-full transition-opacity duration-[1200ms] ease-in-out"
+            style={{ opacity: isActive ? 1 : 0, zIndex: isActive ? 2 : isPrevious ? 1 : 0 }}
           >
             {s.type === 'video' ? (
-              /* Only mount the <video> when this slide is active so it
-                 plays from the beginning each time it's reached */
-              i === currentIndex && introPhase === 'hero' ? (
+              /* Only mount the <video> when this slide is active or fading out */
+              shouldMount ? (
                 <video
-                  key={`video-${i}`}
+                  key={`video-${i}-${currentIndex === i ? 'on' : 'off'}`}
                   ref={i === 0 ? videoRef : undefined}
                   src={s.url}
                   className="w-full h-full object-cover"
@@ -288,7 +301,7 @@ const HeroSection: React.FC = () => {
               )
             ) : s.type === 'youtube' ? (
               /* Full-bleed YouTube background — only mounted when active */
-              i === currentIndex && introPhase === 'hero' ? (
+              shouldMount ? (
                 <div className="absolute inset-0 overflow-hidden bg-black">
                   <iframe
                     src={`https://www.youtube.com/embed/${s.ytId}?start=${s.ytStart ?? 0}&end=${s.ytEnd ?? 999}&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&playsinline=1`}
@@ -325,7 +338,8 @@ const HeroSection: React.FC = () => {
             <div className="absolute inset-0"
               style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.65) 100%)' }} />
           </div>
-        ))}
+          );
+        })}
       </motion.div>
 
       {/* ── Hero text content ──────────────────────────────────── */}
@@ -369,9 +383,8 @@ const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, scaleX: 1 }}
                 transition={{ duration: 0.7, delay: 0.45 }}
               >
-                <div className="h-px w-16 bg-red-500/60" />
-                <span className="text-white/60 text-xs tracking-[0.35em] uppercase">Washington State</span>
-                <div className="h-px w-16 bg-red-500/60" />
+                <div className="h-px w-24 bg-red-500/60" />
+                <div className="h-px w-24 bg-red-500/60" />
               </motion.div>
 
               {/* Subtitle badges */}
