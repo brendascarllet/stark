@@ -7,7 +7,7 @@ const SeattleLocation = () => {
       <div>
         <h2 className="text-3xl font-bold mb-4">Roofing Services in Seattle, WA</h2>
         <p className="text-lg text-gray-700 mb-4">
-          Stark Roofing & Renovation is your trusted local roofing contractor in Seattle. With over a decade of experience serving Seattle homeowners and commercial properties, we've built our reputation on quality workmanship, transparent pricing, and exceptional customer service.
+          Stark Roofing & Renovation is your trusted roofing contractor for Seattle. With over 30 years of roofing experience and more than 2,000 completed roofs across the Puget Sound, we've built our reputation on quality workmanship, transparent pricing, and exceptional customer service.
         </p>
       </div>
 
@@ -30,7 +30,7 @@ const SeattleLocation = () => {
         <h3 className="text-2xl font-semibold mb-3">Why Choose Stark Roofing in Seattle?</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
           <li><strong>GAF Certified</strong> - Factory-trained installers using premium GAF materials</li>
-          <li><strong>Local Expertise</strong> - 10+ years serving Seattle and Puget Sound</li>
+          <li><strong>Decades of Expertise</strong> - 30+ years of roofing experience and 2,000+ completed roofs across the Puget Sound</li>
           <li><strong>Free Estimates</strong> - No-obligation, detailed roof inspections</li>
           <li><strong>Transparent Pricing</strong> - Competitive rates with financing options available</li>
           <li><strong>Quality Guarantee</strong> - Comprehensive warranty on all work</li>
@@ -59,7 +59,7 @@ const SeattleLocation = () => {
       city="Seattle"
       state="WA"
       region="Greater Seattle"
-      description="Peak District roofing specialists with 10+ years of Seattle experience."
+      description="Trusted Seattle roofing contractor with 30+ years of experience and 2,000+ completed roofs across the Puget Sound."
       content={content}
       heroImage="drone-1.jpg"
       keywords="roofing contractor Seattle, roof repair Seattle WA, roof replacement Seattle, roofer Seattle, GAF certified Seattle"

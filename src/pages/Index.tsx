@@ -9,7 +9,6 @@ import HorizontalContactForm from '@/components/home/HorizontalContactForm';
 import TrustBadgesSection from '@/components/home/TrustBadgesSection';
 import ServicesOverviewSection from '@/components/home/ServicesOverviewSection';
 import PremiumServicesSection from '@/components/home/PremiumServicesSection';
-import PromotionCoupons from '@/components/home/PromotionCoupons';
 import ShowcaseSection from '@/components/home/ShowcaseSection';
 import ComparisonSection from '@/components/home/ComparisonSection';
 import CTASection from '@/components/home/CTASection';
@@ -72,11 +71,7 @@ const Index = () => {
       <AnimatedSection animation="slide-up">
         <PremiumServicesSection />
       </AnimatedSection>
-      
-      <AnimatedSection animation="fade" delay={100}>
-        <PromotionCoupons />
-      </AnimatedSection>
-      
+
       <AnimatedSection animation="slide-up">
         <ShowcaseSection />
       </AnimatedSection>

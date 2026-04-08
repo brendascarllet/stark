@@ -7,14 +7,14 @@ const LynnwoodLocation = () => {
       <div>
         <h2 className="text-3xl font-bold mb-4">Roofing Services in Lynnwood, WA</h2>
         <p className="text-lg text-gray-700 mb-4">
-          Stark Roofing & Renovation is based right here in Lynnwood! Our office and operations hub are located at 626 199th PL SW, Lynnwood. As local Lynnwood roofers, we're proud to serve our community and surrounding areas with top-tier roofing and renovation services.
+          Stark Roofing & Renovation proudly serves Lynnwood and the surrounding Snohomish County area from our Sammamish headquarters. Our crews dispatch across the Puget Sound to deliver top-tier roofing, gutter, and renovation services to Lynnwood homeowners and businesses.
         </p>
       </div>
 
       <div>
         <h3 className="text-2xl font-semibold mb-3">Lynnwood Roofing Services</h3>
         <p className="text-gray-700 mb-4">
-          From our Lynnwood headquarters, we serve:
+          Roofing services we provide in Lynnwood:
         </p>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
           <li><strong>Residential Roof Replacement</strong> - GAF premium shingles for lasting protection</li>
@@ -27,21 +27,21 @@ const LynnwoodLocation = () => {
       </div>
 
       <div>
-        <h3 className="text-2xl font-semibold mb-3">Local Lynnwood Advantages</h3>
+        <h3 className="text-2xl font-semibold mb-3">Why Lynnwood Homeowners Choose Stark Roofing</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
-          <li><strong>Same-Day Emergency Response</strong> - Based in Lynnwood means faster service</li>
+          <li><strong>Fast Response to Lynnwood</strong> - Crews dispatched daily across the Puget Sound</li>
           <li><strong>GAF Certified</strong> - Factory-trained, quality-assured installers</li>
           <li><strong>Free Roof Inspections</strong> - Expert EagleView drone assessments</li>
           <li><strong>Flexible Financing</strong> - Payment options to fit your budget</li>
           <li><strong>Transparent Estimates</strong> - Honest, competitive pricing</li>
-          <li><strong>Community Trust</strong> - 10+ years serving Lynnwood families</li>
+          <li><strong>Family-Owned Trust</strong> - Reputation built on quality work and customer care</li>
         </ul>
       </div>
 
       <div>
-        <h3 className="text-2xl font-semibold mb-3">Serving All of Greater Seattle from Lynnwood</h3>
+        <h3 className="text-2xl font-semibold mb-3">Serving Lynnwood from Our Sammamish Headquarters</h3>
         <p className="text-gray-700 mb-4">
-          While based in Lynnwood, we proudly serve Seattle, Bothell, Redmond, Kirkland, Everett, Tacoma, and all of the Greater Seattle area. No job is too big or too small.
+          Based in Sammamish, we proudly serve Lynnwood, Seattle, Bothell, Redmond, Kirkland, Everett, Tacoma, and all of the Greater Seattle area. No job is too big or too small.
         </p>
       </div>
 
@@ -49,7 +49,7 @@ const LynnwoodLocation = () => {
         <h3 className="text-2xl font-semibold mb-3">Schedule Your Free Estimate Today</h3>
         <p className="text-gray-700 mb-4">
           <strong>Stark Roofing & Renovation</strong><br />
-          626 199th PL SW, Lynnwood, WA 98036<br />
+          24243 SE 43rd Ct, Sammamish, WA 98029<br />
           Phone: <strong>206-739-8232</strong><br />
           Email: office@starkroofingrenovation.com
         </p>
@@ -62,7 +62,7 @@ const LynnwoodLocation = () => {
       city="Lynnwood"
       state="WA"
       region="Greater Seattle"
-      description="Local roofing contractors based in Lynnwood with expert service across the Puget Sound."
+      description="Roofing contractors based in Sammamish, proudly serving Lynnwood and the Puget Sound."
       content={content}
       heroImage="drone-2.jpg"
       keywords="roofing contractor Lynnwood, roof repair Lynnwood WA, roofer Lynnwood, roof replacement Lynnwood"

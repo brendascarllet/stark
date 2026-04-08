@@ -33,7 +33,7 @@ const KirklandLocation = () => {
           <li><strong>Free Professional Inspection</strong> - Drone assessment with detailed report</li>
           <li><strong>Transparent Estimates</strong> - Fair, competitive pricing</li>
           <li><strong>Financing Available</strong> - Flexible payment plans</li>
-          <li><strong>Local Experience</strong> - Serving Kirkland for 10+ years</li>
+          <li><strong>Local Experience</strong> - 30+ years of roofing experience and 2,000+ completed roofs across the Puget Sound</li>
           <li><strong>Warranty Coverage</strong> - Full protection on workmanship</li>
         </ul>
       </div>

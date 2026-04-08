@@ -21,13 +21,13 @@ const Footer = () => {
             </p>
             
             <div className="flex space-x-4 pt-2">
-              <a href="https://www.google.com/maps/place/Stark+Roofing+%26+Renovation" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors" aria-label="Google Maps">
+              <a href="https://share.google/Rpy060wkZgSL2brj4" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors" aria-label="Google Business Profile">
                 <MapPin size={iconSize} />
               </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61575621317731" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors" aria-label="Facebook">
                 <Facebook size={iconSize} />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors">
+              <a href="https://www.instagram.com/renovationstarkroofing/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-stark-red transition-colors" aria-label="Instagram">
                 <Instagram size={iconSize} />
               </a>
             </div>

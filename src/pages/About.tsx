@@ -32,11 +32,11 @@ const About = () => {
       <Navbar />
       <ServicePageHero
         title="About Stark Roofing"
-        subtitle="Family-owned, GAF certified, and proud to serve the Greater Seattle area since day one."
-        badge="GAF Certified"
+        subtitle="Family-owned, GAF Certified, and personally led by owner Brenda Scarllet — bringing 30+ years of roofing experience and 2,000+ completed roofs to homeowners across the Puget Sound. We treat every home like our own."
+        badge="GAF Certified · 30+ Years · 2,000+ Roofs"
         bgImage="/crew-1.jpg"
         breadcrumb="About Us"
-        ctaLabel="Meet the Team"
+        ctaLabel="Meet Brenda"
         ctaHref="#our-story"
         secondaryCta={{ label: 'Get a Free Estimate', href: '#contact' }}
         accentColor="#dc2626"

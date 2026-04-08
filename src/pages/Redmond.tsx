@@ -33,7 +33,7 @@ const RedmondLocation = () => {
           <li><strong>Expert Inspections</strong> - Drone-assisted roof assessments</li>
           <li><strong>Competitive Pricing</strong> - Transparent, honest estimates</li>
           <li><strong>Flexible Financing</strong> - Payment options for every budget</li>
-          <li><strong>Local Expertise</strong> - 10+ years serving Greater Seattle</li>
+          <li><strong>Local Expertise</strong> - 30+ years of roofing experience and 2,000+ completed roofs across the Puget Sound</li>
           <li><strong>Quality Guarantee</strong> - Comprehensive warranty coverage</li>
         </ul>
       </div>

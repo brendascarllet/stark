@@ -33,7 +33,7 @@ const EverettLocation = () => {
           <li><strong>Expert Assessment</strong> - Drone-assisted roof inspections</li>
           <li><strong>Fair Pricing</strong> - Competitive, transparent estimates</li>
           <li><strong>Financing Options</strong> - Flexible payment plans available</li>
-          <li><strong>Years of Experience</strong> - Serving Greater Seattle 10+ years</li>
+          <li><strong>Years of Experience</strong> - 30+ years in roofing with 2,000+ completed roofs across the Puget Sound</li>
           <li><strong>Warranty Protection</strong> - Comprehensive coverage on all work</li>
         </ul>
       </div>
