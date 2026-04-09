@@ -27,7 +27,7 @@ const CHAPTERS = [
     headline: 'WE SHOW UP',
     sub: 'On time. In full gear. Every single job.',
     body: 'Every Stark crew member arrives with the right safety equipment and the experience to back it up. No shortcuts. No excuses.',
-    image: '/hero-custom-3.webp',
+    image: '/hero2-1.webp',
     accent: '#ef4444', // red
   },
   {
@@ -35,7 +35,7 @@ const CHAPTERS = [
     headline: 'AERIAL PRECISION',
     sub: 'Drone-inspected. Detail-obsessed.',
     body: 'We use aerial drone inspection on every major project — giving you photos your competitors can\'t even offer.',
-    image: '/hero-custom-1.webp',
+    image: '/hero2-2.webp',
     accent: '#3b82f6', // blue
   },
   {
@@ -43,7 +43,7 @@ const CHAPTERS = [
     headline: '30+ YEARS STRONG',
     sub: '2,000+ roofs. Three decades. One standard.',
     body: 'With 30+ years of hands-on roofing experience and over 2,000 completed roofs across the Puget Sound, Stark has earned its reputation the only way that matters — one home at a time.',
-    image: '/hero-custom-4.jpg',
+    image: '/hero2-3.webp',
     accent: '#f59e0b', // amber
   },
   {
@@ -51,7 +51,7 @@ const CHAPTERS = [
     headline: 'ZERO LEAKS',
     sub: 'We treat your home like our own.',
     body: 'From Seattle to Snohomish, our lifetime workmanship warranty means if it ever leaks — we\'re back. No charge. No argument.',
-    image: '/hero-custom-5.jpg',
+    image: '/hero2-4.webp',
     accent: '#10b981', // emerald
   },
   {
@@ -59,7 +59,7 @@ const CHAPTERS = [
     headline: 'GET YOUR FREE QUOTE',
     sub: 'Takes 60 seconds. Saves you thousands.',
     body: 'Join 500+ Washington homeowners who chose Stark. Call (206) 739-8232 or fill out our estimate form — we\'ll respond within the hour.',
-    image: '/hero-custom-6.webp',
+    image: '/hero2-5.webp',
     accent: '#ef4444',
     cta: true,
   },
