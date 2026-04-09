@@ -1,3 +1,7 @@
+# Stark Roofing & Renovation — robots.txt
+# https://starkroofingrenovation.com
+
+# Search engines
 User-agent: Googlebot
 Allow: /
 
@@ -10,8 +14,54 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# AI assistants — explicitly allowed so we can be quoted in AI answers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Everything else
 User-agent: *
 Allow: /
 
-Sitemap: https://www.starkroofingrenovation.com/sitemap.xml
-
+Sitemap: https://starkroofingrenovation.com/sitemap.xml

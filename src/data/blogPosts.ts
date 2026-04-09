@@ -420,6 +420,10 @@ const newSEOPosts: BlogPost[] = [
 
 If you're Googling "how much does a new roof cost in Seattle," you want a straight answer — not a sales pitch. Here's what homeowners across the Puget Sound are actually paying in 2026, based on real project data.
 
+### The Honest Range for 2026
+
+Most full asphalt-shingle roof replacements in the Greater Seattle area run between **$10,350 and $25,300** in 2026, based on what real Puget Sound homeowners are paying. Where your home falls in that range depends on size, roof pitch, tear-off layers, deck condition, and material choice. Premium materials like GAF Grand Sequoia or standing-seam metal go above the top of that range.
+
 ### Why There's No "One-Size-Fits-All" Price
 
 Every roof is different. Anyone who quotes you a hard number without actually seeing your home is guessing — and usually low-balling to get the appointment. The real cost depends on several factors specific to your home.

@@ -7,7 +7,7 @@ const FAQSection = () => {
   const faqItems = [
     {
       question: "How much does a new roof cost in Seattle?",
-      answer: "Roof replacement costs in the Seattle and Puget Sound area depend on home size, roof complexity, and material choice. We provide free, no-obligation estimates with transparent pricing. Call (206) 739-8232 or request a quote online."
+      answer: "Most full asphalt-shingle roof replacements in the Greater Seattle area run between $10,350 and $25,300, depending on home size, roof pitch, tear-off layers, and deck condition. Premium materials like Grand Sequoia or standing-seam metal cost more. We provide free, no-obligation written estimates — no flat-rate phone quotes. Call (206) 739-8232 or request a quote online."
     },
     {
       question: "Do you offer free roof inspections?",
