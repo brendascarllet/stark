@@ -10,12 +10,9 @@ import RoofRepair from './pages/RoofRepair';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Finance from './pages/Finance';
-import RoofEstimator from './pages/RoofEstimator';
 import GutterReplacement from './pages/GutterReplacement';
 import GutterRepair from './pages/GutterRepair';
-import GutterEstimator from './pages/GutterEstimator';
 import Skylights from './pages/Skylights';
-import SkylightEstimator from './pages/SkylightEstimator';
 import SidingInstallation from './pages/SidingInstallation';
 import CommercialRoofing from './pages/CommercialRoofing';
 import RoofCleaning from './pages/RoofCleaning';
@@ -66,12 +63,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/finance" element={<Finance />} />
-          <Route path="/roof-estimator" element={<RoofEstimator />} />
           <Route path="/gutter-replacement" element={<GutterReplacement />} />
           <Route path="/gutter-repair" element={<GutterRepair />} />
-          <Route path="/gutter-estimator" element={<GutterEstimator />} />
           <Route path="/skylights" element={<Skylights />} />
-          <Route path="/skylight-estimator" element={<SkylightEstimator />} />
           <Route path="/siding-installation" element={<SidingInstallation />} />
           <Route path="/commercial-roofing" element={<CommercialRoofing />} />
 

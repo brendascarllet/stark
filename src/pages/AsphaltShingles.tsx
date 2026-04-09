@@ -6,7 +6,6 @@ import { useSEOMeta } from '@/hooks/useSEOMeta';
 import ScrollToTop from '@/components/ScrollToTop';
 import HorizontalContactForm from '@/components/home/HorizontalContactForm';
 import ContactSection from '@/components/roof-replacement/ContactSection';
-import AsphaltCalculator from '@/components/asphalt-shingles/AsphaltCalculator';
 import FinancingSection from '@/components/asphalt-shingles/FinancingSection';
 import HeroSection from '@/components/asphalt-shingles/HeroSection';
 import OverviewSection from '@/components/asphalt-shingles/OverviewSection';
@@ -36,10 +35,7 @@ const AsphaltShingles = () => {
       <HeroSection />
 
       <HorizontalContactForm />
-      
-      {/* Calculator Section - Added between hero and overview for maximum visibility */}
-      <AsphaltCalculator />
-      
+
       {/* Overview Section */}
       <OverviewSection />
       

@@ -49,7 +49,7 @@ const HeroSection = () => {
           </div>
           
           <div className="animate-fade-in flex flex-wrap gap-4 justify-center" style={{ animationDelay: '400ms' }}>
-            <a href="#estimator" className="btn-primary flex items-center bg-emerald-600 hover:bg-emerald-700">
+            <a href="#schedule-form" className="btn-primary flex items-center bg-emerald-600 hover:bg-emerald-700">
               <Shield size={18} className="mr-2" />
               Get Free Estimate
             </a>

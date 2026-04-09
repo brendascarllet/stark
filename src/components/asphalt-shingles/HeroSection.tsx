@@ -22,8 +22,8 @@ const HeroSection: React.FC = () => {
           <div className="animate-fade-in" style={{
           animationDelay: '400ms'
         }}>
-            <a href="#calculator" className="btn-primary">
-              Calculate Your Cost →
+            <a href="#contact" className="btn-primary">
+              Get a Free Estimate →
             </a>
           </div>
         </div>

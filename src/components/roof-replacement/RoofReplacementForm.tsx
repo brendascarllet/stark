@@ -56,8 +56,8 @@ const RoofReplacementForm = () => {
       setZipCode('');
       setRoofType('asphalt');
 
-      // Redirect to the cost estimator page
-      navigate('/roof-estimator');
+      // Redirect to the contact page
+      navigate('/contact');
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error("There was a problem submitting your request. Please try again later.");
@@ -121,7 +121,7 @@ const RoofReplacementForm = () => {
           </select>
           
           <button type="submit" className="form-button" disabled={isSubmitting}>
-            {isSubmitting ? 'Submitting...' : 'Cost Estimator'} <ArrowRight size={18} />
+            {isSubmitting ? 'Submitting...' : 'Get Free Estimate'} <ArrowRight size={18} />
           </button>
         </div>
       </form>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Wallet, Calculator, BadgeCheck } from 'lucide-react';
+import { Wallet, Mail, BadgeCheck } from 'lucide-react';
 
 const FinancingSection: React.FC = () => {
   return (
@@ -52,11 +52,11 @@ const FinancingSection: React.FC = () => {
               >
                 <Wallet size={18} /> Explore Financing Options
               </Link>
-              <Link 
-                to="#calculator" 
+              <Link
+                to="/contact"
                 className="btn-secondary inline-flex items-center justify-center gap-2"
               >
-                <Calculator size={18} /> Calculate Your Cost
+                <Mail size={18} /> Get a Free Estimate
               </Link>
             </div>
           </motion.div>

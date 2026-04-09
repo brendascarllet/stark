@@ -26,7 +26,7 @@ export const scrollPrompts = [{
 }, {
   id: 'testimonials',
   threshold: 75,
-  message: "Get a personalized roof quote in 60 seconds!",
-  link: "/roof-estimator",
+  message: "Get a free, no-obligation quote from our team.",
+  link: "/contact",
   actionText: "Free Quote"
 }];

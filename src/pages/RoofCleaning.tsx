@@ -7,7 +7,6 @@ import HeroSection from '@/components/roof-cleaning/HeroSection';
 import PromotionDetails from '@/components/roof-cleaning/PromotionDetails';
 import BenefitsSection from '@/components/roof-cleaning/BenefitsSection';
 import ProcessSection from '@/components/roof-cleaning/ProcessSection';
-import CleaningEstimator from '@/components/roof-cleaning/CleaningEstimator';
 import BeforeAfterSection from '@/components/roof-cleaning/BeforeAfterSection';
 import FAQSection from '@/components/roof-cleaning/FAQSection';
 import ContactSection from '@/components/roof-cleaning/ContactSection';
@@ -46,8 +45,6 @@ const RoofCleaning = () => {
         <BenefitsSection />
         <ProcessSection />
         <BeforeAfterSection />
-        <CleaningEstimator />
-        {/* Contact form after the calculator */}
         <ContactFormSection />
         <FAQSection />
         {/* Main contact section at the end */}

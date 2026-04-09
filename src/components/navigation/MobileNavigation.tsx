@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Wallet, Calculator, Droplets, Percent, Home, Wrench, Layers, Info, Mail, Cloud } from 'lucide-react';
+import { Phone, Wallet, Droplets, Percent, Home, Wrench, Layers, Info, Mail, Cloud } from 'lucide-react';
 import MobileMenuTrigger from './MobileMenuTrigger';
 import MobileMenuItem from './MobileMenuItem';
 import MobileSubmenu from './MobileSubmenu';
@@ -34,11 +34,6 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
       to: "/roof-cleaning",
       label: "Roof Cleaning",
       icon: <Droplets size={iconSize} className="mr-2" />
-    },
-    {
-      to: "/roof-estimator",
-      label: "Cost Estimator",
-      icon: <Calculator size={iconSize} className="mr-2" />
     }
   ];
 
@@ -52,11 +47,6 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
       to: "/gutter-repair",
       label: "Repair Promotion",
       icon: <Percent size={iconSize} className="mr-2" />
-    },
-    {
-      to: "/gutter-estimator",
-      label: "Cost Estimator",
-      icon: <Calculator size={iconSize} className="mr-2" />
     }
   ];
 
@@ -65,11 +55,6 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
       to: "/skylights",
       label: "Skylights Overview",
       icon: <Cloud size={iconSize} className="mr-2" />
-    },
-    {
-      to: "/skylight-estimator",
-      label: "Cost Estimator",
-      icon: <Calculator size={iconSize} className="mr-2" />
     }
   ];
 

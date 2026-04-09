@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Wallet, Calculator, Droplets, Percent, Home, Wrench, Layers } from 'lucide-react';
+import { Phone, Wallet, Droplets, Percent, Home, Wrench, Layers } from 'lucide-react';
 import { DropdownItem } from './NavDropdown';
 
 export const getRoofingItems = (): DropdownItem[] => [
@@ -18,11 +18,6 @@ export const getRoofingItems = (): DropdownItem[] => [
     to: "/roof-cleaning",
     icon: <Droplets size={14} className="mr-2" />,
     label: "Roof Cleaning"
-  },
-  {
-    to: "/roof-estimator",
-    icon: <Calculator size={14} className="mr-2" />,
-    label: "Cost Estimator"
   }
 ];
 
@@ -36,11 +31,6 @@ export const getGutterItems = (): DropdownItem[] => [
     to: "/gutter-repair",
     icon: <Percent size={14} className="mr-2" />,
     label: "Repair Promotion"
-  },
-  {
-    to: "/gutter-estimator",
-    icon: <Calculator size={14} className="mr-2" />,
-    label: "Cost Estimator"
   }
 ];
 
@@ -48,11 +38,6 @@ export const getSkylightItems = (): DropdownItem[] => [
   {
     to: "/skylights",
     label: "Skylights Overview"
-  },
-  {
-    to: "/skylight-estimator",
-    icon: <Calculator size={14} className="mr-2" />,
-    label: "Price Estimator"
   }
 ];
 

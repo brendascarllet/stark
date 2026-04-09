@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { Sun, Check, Shield, Calculator } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Sun, Check, Shield } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -27,10 +26,6 @@ const HeroSection = () => {
             <a href="#contact" className="btn-primary">
               Get a Free Estimate →
             </a>
-            <Link to="/skylight-estimator" className="btn-secondary flex items-center">
-              <Calculator size={18} className="mr-2" />
-              Price Estimator
-            </Link>
           </div>
         </div>
       </div>

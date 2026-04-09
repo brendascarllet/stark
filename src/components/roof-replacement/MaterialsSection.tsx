@@ -96,9 +96,9 @@ const MaterialsSection = () => {
                   Learn About Our Warranty
                 </Button>
               </Link>
-              <Link to="/roof-estimator">
+              <Link to="/contact">
                 <Button className="bg-stark-red text-white hover:bg-stark-red/90">
-                  Get a Cost Estimate
+                  Get a Free Estimate
                 </Button>
               </Link>
             </div>
