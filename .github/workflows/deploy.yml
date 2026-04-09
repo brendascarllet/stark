@@ -32,10 +32,19 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Build production bundle
+    - name: Cache Puppeteer browsers
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/puppeteer
+        key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+    - name: Install Puppeteer browser
+      run: npx puppeteer browsers install chrome
+
+    - name: Build + prerender all routes to static HTML
       run: npm run build
 
-    - name: Create 404.html for SPA routing
+    - name: Create 404.html fallback for unknown URLs
       run: cp dist/index.html dist/404.html
 
     - name: Setup Pages
