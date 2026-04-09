@@ -20,6 +20,7 @@ interface Slide {
 }
 
 const YT_ID = 'GnZgvVnHnA8'; // Lake Washington & Seattle Skyline drone film
+const SLIDE_DURATION_MS = 3500; // every slide advances after 3.5s
 
 const DEFAULT_SLIDES: Slide[] = [
   // INTRO – local MP4 drone clip (hero opener)
@@ -126,19 +127,11 @@ const HeroSection: React.FC = () => {
 
   useEffect(() => {
     if (introPhase !== 'hero' || videoPaused) return;
-    const s = slides[currentIndex];
-    // Local videos auto-advance via onEnded UNLESS they have a playDuration cap.
-    // Images use 8-second timer, YouTube uses segment duration.
-    if (s.type === 'image') {
-      timerRef.current = setTimeout(advance, 8000);
-    } else if (s.type === 'youtube') {
-      const duration = ((s.ytEnd ?? 30) - (s.ytStart ?? 0)) * 1000;
-      timerRef.current = setTimeout(advance, duration);
-    } else if (s.type === 'video' && s.playDuration) {
-      timerRef.current = setTimeout(advance, s.playDuration * 1000);
-    }
+    // Every slide — image, video, or YouTube — advances after SLIDE_DURATION_MS.
+    // Local videos may also fire onEnded earlier (handled by the <video> element).
+    timerRef.current = setTimeout(advance, SLIDE_DURATION_MS);
     return () => { if (timerRef.current) clearTimeout(timerRef.current); };
-  }, [currentIndex, introPhase, videoPaused, advance, slides]);
+  }, [currentIndex, introPhase, videoPaused, advance]);
 
   // ── Music toggle ─────────────────────────────────────────────────────────────
   const toggleMusic = () => {
