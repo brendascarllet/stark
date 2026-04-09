@@ -40,9 +40,9 @@ const CHAPTERS = [
   },
   {
     number: '03',
-    headline: 'GAF MASTER ELITE®',
-    sub: 'Top 3% of roofers in the entire country.',
-    body: 'This certification isn\'t handed out. It\'s earned. Stark is among the most trusted GAF installers in Washington State.',
+    headline: '30+ YEARS STRONG',
+    sub: '2,000+ roofs. Three decades. One standard.',
+    body: 'With 30+ years of hands-on roofing experience and over 2,000 completed roofs across the Puget Sound, Stark has earned its reputation the only way that matters — one home at a time.',
     image: '/hero-custom-4.jpg',
     accent: '#f59e0b', // amber
   },
