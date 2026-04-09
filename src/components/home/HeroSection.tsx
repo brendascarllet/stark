@@ -89,7 +89,6 @@ const HeroSection: React.FC = () => {
   const [introPhase, setIntroPhase]       = useState<'cinematic' | 'hero'>('cinematic');
   const [musicPlaying, setMusicPlaying]   = useState(false);
   const [showMusicHint, setShowMusicHint] = useState(false);
-  const [videoPaused, setVideoPaused]     = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const videoRef    = useRef<HTMLVideoElement>(null);
@@ -126,12 +125,12 @@ const HeroSection: React.FC = () => {
   }, [isTransitioning, slides.length, currentIndex]);
 
   useEffect(() => {
-    if (introPhase !== 'hero' || videoPaused) return;
+    if (introPhase !== 'hero') return;
     // Every slide — image, video, or YouTube — advances after SLIDE_DURATION_MS.
     // Local videos may also fire onEnded earlier (handled by the <video> element).
     timerRef.current = setTimeout(advance, SLIDE_DURATION_MS);
     return () => { if (timerRef.current) clearTimeout(timerRef.current); };
-  }, [currentIndex, introPhase, videoPaused, advance]);
+  }, [currentIndex, introPhase, advance]);
 
   // ── Music toggle ─────────────────────────────────────────────────────────────
   const toggleMusic = () => {
