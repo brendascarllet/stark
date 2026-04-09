@@ -1,8 +1,6 @@
 
 import React from 'react';
 import { Sun } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Calculator } from 'lucide-react';
 
 const OverviewSection = () => {
   return (
@@ -12,19 +10,15 @@ const OverviewSection = () => {
           <div>
             <h2 className="section-title">Bring Natural Light Into Your Home</h2>
             <p className="text-charcoal/80 mb-6">
-              Our premium skylight installation services offer an exceptional way to enhance your home with natural light. We provide expert installation of high-quality skylights from trusted manufacturers like VELUX, ensuring perfect fit and optimal performance.
+              Our premium skylight installation services offer an exceptional way to enhance your home with natural light. We work with the full <strong>VELUX</strong> residential lineup — including their <strong>solar-powered automatic skylights with built-in rain sensors</strong> that close themselves when a storm rolls in.
             </p>
             <p className="text-charcoal/80 mb-6">
-              Whether you're looking to brighten a dark hallway, add a stunning focal point to your living room, or improve energy efficiency, our skylights are the perfect solution for transforming your space.
+              Whether you're brightening a dark hallway, adding a focal point to your kitchen, or venting a steamy bathroom, we'll match you with the right model and install it so it lasts — backed by both the VELUX No Leak warranty and our own workmanship guarantee.
             </p>
             <div className="flex items-center gap-2 text-stark-red mb-4">
               <Sun size={20} />
-              <span className="font-medium">Energy-efficient designs available</span>
+              <span className="font-medium">VELUX Certified · 30+ years installing in Seattle weather</span>
             </div>
-            <Link to="/skylight-estimator" className="inline-flex items-center text-stark-red hover:text-stark-redHover font-medium">
-              <Calculator size={18} className="mr-2" />
-              Calculate your skylight cost
-            </Link>
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg">
             <img 

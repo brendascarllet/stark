@@ -1,26 +1,17 @@
-
 import React from 'react';
-import GetStartedForm from '@/components/shared/GetStartedForm';
-import { motion } from 'framer-motion';
+import QuickQuoteSection from '@/components/shared/QuickQuoteSection';
 
+/**
+ * About page lead-capture section.
+ * Defaults to Free Inspection — most About-page visitors are still in research mode.
+ */
 const HorizontalContactForm = () => {
   return (
-    <section className="relative z-30">
-      <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-        >
-          <GetStartedForm 
-            title="Learn More About Us" 
-            buttonText="Get In Touch"
-            formColor="red"
-            formPosition="hero"
-          />
-        </motion.div>
-      </div>
-    </section>
+    <QuickQuoteSection
+      title="Meet Us In Person — Free Inspection"
+      subtitle="30 minutes, on your roof, no pressure. Pick a time below."
+      defaultService="inspection"
+    />
   );
 };
 

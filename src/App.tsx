@@ -13,6 +13,7 @@ import Finance from './pages/Finance';
 import GutterReplacement from './pages/GutterReplacement';
 import GutterRepair from './pages/GutterRepair';
 import Skylights from './pages/Skylights';
+import VeluxLineup from './pages/VeluxLineup';
 import SidingInstallation from './pages/SidingInstallation';
 import CommercialRoofing from './pages/CommercialRoofing';
 import RoofCleaning from './pages/RoofCleaning';
@@ -66,6 +67,7 @@ function App() {
           <Route path="/gutter-replacement" element={<GutterReplacement />} />
           <Route path="/gutter-repair" element={<GutterRepair />} />
           <Route path="/skylights" element={<Skylights />} />
+          <Route path="/skylights/velux-lineup" element={<VeluxLineup />} />
           <Route path="/siding-installation" element={<SidingInstallation />} />
           <Route path="/commercial-roofing" element={<CommercialRoofing />} />
 

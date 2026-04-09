@@ -1,26 +1,17 @@
-
 import React from 'react';
-import GetStartedForm from '@/components/shared/GetStartedForm';
-import { motion } from 'framer-motion';
+import QuickQuoteSection from '@/components/shared/QuickQuoteSection';
 
+/**
+ * Roof Repair page lead-capture section.
+ * Pre-selects "Roof Repair" so visitors skip step 1.
+ */
 const HorizontalContactForm = () => {
   return (
-    <section className="relative z-30 py-6 md:py-8 lg:py-10">
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-20">
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-        >
-          <GetStartedForm 
-            title="Get Your Roof Repair Quote" 
-            buttonText="Free Estimate"
-            formColor="red"
-            formPosition="section"
-          />
-        </motion.div>
-      </div>
-    </section>
+    <QuickQuoteSection
+      title="Book Your Roof Repair"
+      subtitle="Leak, missing shingles, or storm damage? Pick a time — we'll be out fast."
+      defaultService="roof-repair"
+    />
   );
 };
 

@@ -1,27 +1,18 @@
-
 import React from 'react';
-import GetStartedForm from '@/components/shared/GetStartedForm';
-import { motion } from 'framer-motion';
+import QuickQuoteSection from '@/components/shared/QuickQuoteSection';
 
+/**
+ * Roof Cleaning page lead-capture section.
+ * Defaults to Free Inspection (we don't have a dedicated "cleaning" service in the booking form).
+ */
 const HorizontalContactForm = () => {
   return (
-    <section id="schedule-form" className="relative z-30">
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-20">
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="form-container-shadow"
-        >
-          <GetStartedForm 
-            title="Schedule Roof Cleaning" 
-            buttonText="Get Free Quote"
-            formColor="blue"
-            formPosition="hero"
-          />
-        </motion.div>
-      </div>
-    </section>
+    <QuickQuoteSection
+      id="schedule-form"
+      title="Schedule Your Roof Cleaning"
+      subtitle="Free inspection first — we'll show you exactly what needs cleaning."
+      defaultService="inspection"
+    />
   );
 };
 
