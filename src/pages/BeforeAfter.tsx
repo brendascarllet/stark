@@ -17,16 +17,16 @@ interface Project {
 
 const projects: Project[] = [
   {
-    image: '/gallery/roof-replacement-before-after-sammamish-wa.jpg',
+    image: '/gallery/roof-replacement-before-after-kirkland-wa.jpg',
     title: 'Full Roof Tear-Off & Shingle Replacement',
-    location: 'Sammamish, WA',
+    location: 'Kirkland, WA',
     description:
       'Complete tear-off of damaged shingles down to the decking, followed by new GAF Timberline HDZ architectural shingles with proper ventilation and ice & water shield.',
   },
   {
-    image: '/gallery/residential-roof-replacement-bellevue-wa.jpg',
+    image: '/gallery/residential-roof-replacement-sammamish-wa.jpg',
     title: 'Residential Roof Replacement',
-    location: 'Bellevue, WA',
+    location: 'Sammamish, WA',
     description:
       'Multi-slope residential re-roof with new architectural shingles. Upgraded flashing and ridge vents for better airflow and long-term protection.',
   },
@@ -38,16 +38,16 @@ const projects: Project[] = [
       'Weathered shingles replaced across a complex multi-hip roof layout. New shingles, step flashing, and sealed penetrations for a watertight finish.',
   },
   {
-    image: '/gallery/steep-slope-roof-installation-kirkland-wa.jpg',
-    title: 'Steep-Slope Roof Installation',
-    location: 'Kirkland, WA',
+    image: '/gallery/roof-replacement-before-after-issaquah-wa.jpg',
+    title: 'Roof Replacement with Dormer Detail',
+    location: 'Issaquah, WA',
     description:
-      'Old roofing removed and new architectural shingles installed on a steep-slope roof with detailed dormer work and precision flashing.',
+      'Full shingle replacement with new architectural shingles and detailed dormer flashing. Old roofing removed and replaced with a clean, watertight finish.',
   },
   {
-    image: '/gallery/roof-tearoff-skylight-installation-issaquah-wa.jpg',
+    image: '/gallery/roof-tearoff-skylight-installation-woodinville-wa.jpg',
     title: 'Full Tear-Off & Re-Roof with Skylights',
-    location: 'Issaquah, WA',
+    location: 'Woodinville, WA',
     description:
       'Complete tear-off down to the joists, new insulation and decking, ice & water shield, and GAF shingles installed around skylights.',
   },
@@ -77,7 +77,7 @@ const BeforeAfter = () => {
       <section className="relative pt-32 pb-16 md:pt-36 md:pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/gallery/roof-replacement-after-sammamish-wa.jpg"
+            src="/gallery/roof-replacement-after-kirkland-wa.jpg"
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover"
