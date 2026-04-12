@@ -29,8 +29,8 @@ export const getGutterItems = (): DropdownItem[] => [
   },
   {
     to: "/gutter-repair",
-    icon: <Percent size={14} className="mr-2" />,
-    label: "Repair Promotion"
+    icon: <Wrench size={14} className="mr-2" />,
+    label: "Gutter Repair"
   }
 ];
 

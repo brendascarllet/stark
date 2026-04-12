@@ -45,8 +45,8 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
     },
     {
       to: "/gutter-repair",
-      label: "Repair Promotion",
-      icon: <Percent size={iconSize} className="mr-2" />
+      label: "Gutter Repair",
+      icon: <Wrench size={iconSize} className="mr-2" />
     }
   ];
 
