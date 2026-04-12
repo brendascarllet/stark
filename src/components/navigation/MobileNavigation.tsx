@@ -152,7 +152,7 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
               onClick={toggleMobileMenu}
             >
               <Camera size={iconSize} className="inline mr-2" />
-              Before &amp; After
+              Our Projects
             </MobileMenuItem>
 
             <MobileMenuItem

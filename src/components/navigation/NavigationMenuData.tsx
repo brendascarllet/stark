@@ -49,7 +49,7 @@ export const getServicesItems = (): DropdownItem[] => [
   {
     to: "/before-after",
     icon: <Camera size={14} className="mr-2" />,
-    label: "Before & After"
+    label: "Our Projects"
   },
   {
     to: "/about",
