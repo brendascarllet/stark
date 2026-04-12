@@ -1,9 +1,60 @@
 {
-  "fetchedAt": null,
-  "placeId": null,
+  "fetchedAt": "2026-04-12T05:07:25.310Z",
+  "placeId": "ChIJX1WVKBX45CsRv1nt82Lmv6I",
   "businessName": "Stark Roofing & Renovation",
-  "rating": null,
-  "userRatingCount": null,
-  "reviews": [],
-  "source": "none"
+  "rating": 5,
+  "userRatingCount": 33,
+  "reviews": [
+    {
+      "author": "PKH",
+      "authorUrl": "https://www.google.com/maps/contrib/107722590346480335212/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKw54Lm-88dhqhWJWOEbrrTqSotEil0CsCpI3sGkoKBC4Hiow=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "I had a great experience with Brenda and the team at Stark Roofing. I love how my new roof looks!\nLast year’s windstorm left missing shingles, so I reached out to Brenda since she’s locally based in Sammamish. She promptly came out and helped inspect the roof from both outside and inside the attic, where she discovered numerous sections of the roof have molded from long-standing leaks. That’s when I realized it was time to replace the 20+ year-old roof before water started damaging the insulation and drywall.\nBrenda was outstanding: honest, prompt, professional, and incredibly attentive to my concerns. She thoroughly assessed everything and smartly recommended replacing only the damaged plywood sections (rather than the entire roof), which saved significant unnecessary expense while completely resolving the issues.\nFrom the day we identified the problems to the start of work, it took just 3 days. The crew then completed the tear-down and full installation in another 4 days. The entire project was finished right before the next heavy rainstorm the following week. The crew was friendly, diligent, and professional.\nHuge thanks to Brenda and the entire team for their great work and care. I highly recommend Stark Roofing to anyone in the Eastside area needing reliable roof repairs or replacement!",
+      "languageCode": "en",
+      "publishTime": "2026-03-02T06:58:25.999128484Z",
+      "relativeTime": "a month ago"
+    },
+    {
+      "author": "Andrea Hutton",
+      "authorUrl": "https://www.google.com/maps/contrib/111255624098098193067/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a/ACg8ocI3rrwvSFDkuc7p1g2pZtviKgbw0XDM8hUFJX_DwQrbH74Tyw=s128-c0x00000000-cc-rp-mo-ba4",
+      "rating": 5,
+      "text": "Brenda was at my house 15 minutes after I called her to assess the damage. What a capable, knowledgeable, and motivated local business owner.  She got up on the roof, consulted with her foreman and had an immediate, more than reasonable, estimate. They added my project on to an already full business day. The result is that the interior of my house and attic was 100% spared from water damage. Shout out to the ever kind and persistent foreman Bryan who drove from his last project in Tacoma to Sammamish in 2 and a half hour traffic due to flooding. He arrived at 8 PM and Brenda held up lights to illuminate the work area. Absolutely nobody else would have worked that hard to keep their promise. Plus they are lovely to be around, even after a long day. I watched the repair because I am in love with my new roof and it was done correctly and efficiently. 20/10 rating and they are honest and trustworthy :)",
+      "languageCode": "en",
+      "publishTime": "2025-12-16T17:16:57.212159423Z",
+      "relativeTime": "3 months ago"
+    },
+    {
+      "author": "Randy Roa",
+      "authorUrl": "https://www.google.com/maps/contrib/103460865094490020509/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a-/ALV-UjXok3z9Sd5pN1Y8IFwH01YBNspPPuC149m0m0aTVxwhxKZD61Zk=s128-c0x00000000-cc-rp-mo-ba2",
+      "rating": 5,
+      "text": "I highly recommend Stark Roofing & Renovation. Brenda was amazing throughout the entire process. She communicated clearly, was very professional, and made everything smooth from start to finish.\n\nI’m a contractor myself, so I understand the level of quality that good work requires. I know when things are done right, and they definitely exceeded my expectations. The workmanship was excellent and the price was very fair.\n\nAs someone in the construction industry, I highly recommend Brenda and the team at Stark Roofing & Renovation.",
+      "languageCode": "en",
+      "publishTime": "2026-03-05T22:00:44.104906321Z",
+      "relativeTime": "a month ago"
+    },
+    {
+      "author": "Jonathan Jacobs",
+      "authorUrl": "https://www.google.com/maps/contrib/117635564837762673449/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKMH_71XhM7CuKR9NswwcP5ZrypCPDoTJlPONMbVr-hG8umrw=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "We had Stark Construction replace our roof, gutters, and skylights, and the results are fantastic. Everything looks great and the quality of the work really shows.\nBrenda was excellent to work with. She delivered exactly what she promised, was always prompt, and kept us informed throughout the project. The regular status updates and photos of the progress made a big difference and gave us a lot of confidence that everything was being done right.\nI would definitely recommend Stark Construction.",
+      "languageCode": "en",
+      "publishTime": "2026-02-12T21:51:31.339075478Z",
+      "relativeTime": "a month ago"
+    },
+    {
+      "author": "Paul Zelk",
+      "authorUrl": "https://www.google.com/maps/contrib/105404509800627801844/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a-/ALV-UjVBQfojtol6gKas21SSRxpLQ7c5bvsp1nRwzvw5n47H2A1n-Lu6=s128-c0x00000000-cc-rp-mo-ba2",
+      "rating": 5,
+      "text": "We recently had our roof replaced and couldn’t be happier with the results! From start to finish, Brenda was professional, punctual, and very detail-oriented. She took the time to explain the process, helped us choose the best materials, and kept the job site clean every day.\n\nThe crew worked efficiently and completed the project right on schedule. The new roof not only looks fantastic but also gives us peace of mind knowing it was installed with high-quality craftsmanship.\n\nI highly recommend Stark Roofing to anyone needing a roof replacement—you’ll get honest communication, fair pricing, and outstanding results!",
+      "languageCode": "en",
+      "publishTime": "2025-08-17T20:10:17.373311123Z",
+      "relativeTime": "7 months ago"
+    }
+  ],
+  "source": "google-places-api-new"
 }

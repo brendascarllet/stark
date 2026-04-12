@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/fetch-google-reviews.mjs",
+    "prebuild": "node --env-file=.env.local scripts/fetch-google-reviews.mjs 2>/dev/null || node scripts/fetch-google-reviews.mjs",
     "build": "vite build && node scripts/prerender.mjs",
     "build:dev": "vite build --mode development",
     "build:nopr": "vite build",
     "prerender": "node scripts/prerender.mjs",
-    "fetch-reviews": "node scripts/fetch-google-reviews.mjs",
+    "fetch-reviews": "node --env-file=.env.local scripts/fetch-google-reviews.mjs 2>/dev/null || node scripts/fetch-google-reviews.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
