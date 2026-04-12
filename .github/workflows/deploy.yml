@@ -32,14 +32,15 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Cache Puppeteer browsers
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/puppeteer
-        key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+    - name: Install Chrome system dependencies
+      run: npx puppeteer browsers install chrome && npx @puppeteer/browsers install chrome-headless-shell@stable --path ~/.cache/puppeteer || true
+      env:
+        PUPPETEER_SKIP_DOWNLOAD: 'false'
 
-    - name: Install Puppeteer browser
-      run: npx puppeteer browsers install chrome
+    - name: Install system libs for headless Chrome
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y -qq libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2 libatspi2.0-0 libxshmfence1 2>/dev/null || sudo apt-get install -y -qq libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2 libatspi2.0-0 libxshmfence1 2>/dev/null || true
 
     - name: Build + prerender all routes to static HTML
       env:
