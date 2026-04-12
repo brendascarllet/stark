@@ -17,37 +17,37 @@ interface Project {
 
 const projects: Project[] = [
   {
-    image: '/gallery/project-1.jpg',
+    image: '/gallery/roof-replacement-before-after-sammamish-wa.jpg',
     title: 'Full Roof Tear-Off & Shingle Replacement',
-    location: 'Seattle, WA',
+    location: 'Sammamish, WA',
     description:
       'Complete tear-off of damaged shingles down to the decking, followed by new GAF Timberline HDZ architectural shingles with proper ventilation and ice & water shield.',
   },
   {
-    image: '/gallery/project-2.jpg',
+    image: '/gallery/residential-roof-replacement-bellevue-wa.jpg',
     title: 'Residential Roof Replacement',
-    location: 'Puget Sound, WA',
+    location: 'Bellevue, WA',
     description:
       'Multi-slope residential re-roof with new architectural shingles. Upgraded flashing and ridge vents for better airflow and long-term protection.',
   },
   {
-    image: '/gallery/project-3.jpg',
-    title: 'Complex Multi-Hip Roof Re-Roof',
-    location: 'Greater Seattle, WA',
+    image: '/gallery/architectural-shingle-reroof-redmond-wa.jpg',
+    title: 'Architectural Shingle Re-Roof',
+    location: 'Redmond, WA',
     description:
       'Weathered shingles replaced across a complex multi-hip roof layout. New shingles, step flashing, and sealed penetrations for a watertight finish.',
   },
   {
-    image: '/gallery/project-4.jpg',
-    title: 'Steep-Slope Shingle Installation',
-    location: 'Eastside, WA',
+    image: '/gallery/steep-slope-roof-installation-kirkland-wa.jpg',
+    title: 'Steep-Slope Roof Installation',
+    location: 'Kirkland, WA',
     description:
       'Old roofing removed and new architectural shingles installed on a steep-slope roof with detailed dormer work and precision flashing.',
   },
   {
-    image: '/gallery/project-5.jpg',
-    title: 'Full Deck Tear-Off & Re-Roof with Skylights',
-    location: 'Seattle Metro, WA',
+    image: '/gallery/roof-tearoff-skylight-installation-issaquah-wa.jpg',
+    title: 'Full Tear-Off & Re-Roof with Skylights',
+    location: 'Issaquah, WA',
     description:
       'Complete tear-off down to the joists, new insulation and decking, ice & water shield, and GAF shingles installed around skylights.',
   },
@@ -77,7 +77,7 @@ const BeforeAfter = () => {
       <section className="relative pt-32 pb-16 md:pt-36 md:pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/gallery/drone-replacement-1-after.jpg"
+            src="/gallery/roof-replacement-after-sammamish-wa.jpg"
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover"

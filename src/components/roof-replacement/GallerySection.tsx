@@ -13,29 +13,29 @@ const GallerySection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
             <img
-              src="/gallery/drone-replacement-1-after.jpg"
-              alt="Completed shingle roof replacement — aerial drone view"
+              src="/gallery/roof-replacement-after-sammamish-wa.jpg"
+              alt="Roof replacement completed in Sammamish WA — GAF certified contractor"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
             <img
-              src="/gallery/drone-replacement-4-after.jpg"
-              alt="Finished re-roof with skylights — aerial drone view"
+              src="/gallery/roof-tearoff-after-issaquah-wa.jpg"
+              alt="Roof tear-off and skylight installation in Issaquah WA"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
             <img
-              src="/gallery/drone-replacement-5-after.jpg"
-              alt="Residential shingle roof replacement — aerial drone view"
+              src="/gallery/residential-roof-after-bellevue-wa.jpg"
+              alt="Residential roof replacement in Bellevue WA — drone aerial view"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
             <img
-              src="/gallery/drone-replacement-3-after.jpg"
-              alt="Steep-slope roof with new architectural shingles — aerial drone view"
+              src="/gallery/steep-slope-roof-after-kirkland-wa.jpg"
+              alt="Steep-slope architectural shingle roof in Kirkland WA"
               className="w-full h-full object-cover"
             />
           </div>
