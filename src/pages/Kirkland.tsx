@@ -61,7 +61,7 @@ const KirklandLocation = () => {
       region="Greater Seattle"
       description="Expert roofing contractors serving Kirkland with GAF-certified quality and local expertise."
       content={content}
-      heroImage="drone-5.jpg"
+      heroImage="/hero-custom-5.jpg"
       keywords="roofing contractor Kirkland, roof repair Kirkland WA, roofer Kirkland, roof replacement Kirkland"
     />
   );

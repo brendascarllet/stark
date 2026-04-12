@@ -59,15 +59,7 @@ const Index = () => {
 
       {/* ── Apple/Instagram-reel scroll storytelling ── */}
       <CinematicScrollSection />
-      
-      <motion.div
-        initial={{ y: 30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.6 }}
-      >
-        <HorizontalContactForm />
-      </motion.div>
-      
+
       <AnimatedSection animation="slide-up">
         <PremiumServicesSection />
       </AnimatedSection>
@@ -75,10 +67,21 @@ const Index = () => {
       <AnimatedSection animation="slide-up">
         <ShowcaseSection />
       </AnimatedSection>
-      
+
       <AnimatedSection animation="fade">
         <ServicesOverviewSection />
       </AnimatedSection>
+
+      {/* Lead-capture form — placed AFTER the cinematic story + services overview
+          so visitors see what we offer before we ask them to book. */}
+      <motion.div
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.6 }}
+      >
+        <HorizontalContactForm />
+      </motion.div>
       
       <AnimatedSection animation="slide-up">
         <ComparisonSection />

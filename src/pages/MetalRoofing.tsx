@@ -13,6 +13,7 @@ import HeroCarousel from '@/components/HeroCarousel';
 import { metalRoofingHeroMedia } from '@/components/metal-roofing/HeroCarouselMedia';
 import FinancingSection from '@/components/metal-roofing/FinancingSection';
 import EmergencyServiceBar from '@/components/navigation/EmergencyServiceBar';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const MetalRoofing = () => {
   useEffect(() => {
@@ -26,28 +27,30 @@ const MetalRoofing = () => {
     keywords: 'metal roofing, metal roof installation, standing seam roofing, durable roofing, modern roofing',
     ogTitle: 'Metal Roofing - Durable & Long-Lasting | Stark Roofing',
     ogDescription: 'Premium metal roofing systems. Durable, energy-efficient, and built to last 30+ years.',
-    ogImage: 'https://starkroofingrenovation.com/drone-2.jpg',
+    ogImage: 'https://starkroofingrenovation.com/metal-roofing-hero.jpg',
   });
   
   return (
     <>
+      <ServiceSchema
+        name="Metal Roofing"
+        description="Professional metal roofing installation. Durable, energy-efficient, and beautiful. 30+ year lifespan. Free estimates. Seattle & Puget Sound. 206-739-8232."
+        url="https://starkroofingrenovation.com/metal-roofing"
+      />
       <div id="stark-master-header">
         <Navbar />
         <EmergencyServiceBar />
       </div>
-      
+
       <ServicePageHero
         title="Premium Metal Roofing"
         subtitle="Modern, energy-efficient metal roofing that outlasts Pacific NW weather for 50+ years with minimal maintenance."
         badge="50-Year Warranty Available"
-        bgImage="/drone-3.jpg"
+        bgImage="/metal-roofing-hero.jpg"
         breadcrumb="Metal Roofing"
-        accentColor="#3b82f6"
         secondaryCta={{ label: "View Metal Options", href: "#materials" }}
       />
 
-      <HorizontalContactForm />
-      
       {/* Overview Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
@@ -188,7 +191,10 @@ const MetalRoofing = () => {
           </div>
         </div>
       </section>
-      
+
+      {/* Lead-capture form — placed AFTER benefits so visitors are warmed up. */}
+      <HorizontalContactForm />
+
       {/* New Financing Section */}
       <FinancingSection />
       

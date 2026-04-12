@@ -61,7 +61,7 @@ const SeattleLocation = () => {
       region="Greater Seattle"
       description="Trusted Seattle roofing contractor with 30+ years of experience and 2,000+ completed roofs across the Puget Sound."
       content={content}
-      heroImage="drone-1.jpg"
+      heroImage="/hero-custom-7.webp"
       keywords="roofing contractor Seattle, roof repair Seattle WA, roof replacement Seattle, roofer Seattle, GAF certified Seattle"
     />
   );

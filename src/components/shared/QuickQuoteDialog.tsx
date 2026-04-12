@@ -43,11 +43,12 @@ const QuickQuoteDialog: React.FC<QuickQuoteDialogProps> = ({
     return (
       <Drawer open={open} onOpenChange={onOpenChange}>
         <DrawerContent className="max-h-[92vh]">
-          <DrawerHeader className="text-left">
+          <DrawerHeader className="text-left flex-shrink-0">
             <DrawerTitle className="text-navy">{title}</DrawerTitle>
             <DrawerDescription>{description}</DrawerDescription>
           </DrawerHeader>
-          <div className="flex flex-col flex-1 overflow-hidden">
+          {/* Form scrolls inside the drawer naturally */}
+          <div className="overflow-y-auto overscroll-contain">
             <QuickQuoteForm defaultService={defaultService} onSuccess={handleSuccess} />
           </div>
         </DrawerContent>
@@ -57,14 +58,13 @@ const QuickQuoteDialog: React.FC<QuickQuoteDialogProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg p-0 gap-0 overflow-hidden max-h-[90vh] flex flex-col">
-        <DialogHeader className="px-6 pt-6 pb-2">
+      {/* DialogContent itself scrolls when form content exceeds 90vh */}
+      <DialogContent className="max-w-lg p-0 gap-0 max-h-[90vh] overflow-y-auto">
+        <DialogHeader className="px-6 pt-6 pb-2 sticky top-0 bg-white z-10 border-b border-gray-100">
           <DialogTitle className="text-navy text-2xl">{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>
         </DialogHeader>
-        <div className="flex flex-col flex-1 overflow-hidden">
-          <QuickQuoteForm defaultService={defaultService} onSuccess={handleSuccess} />
-        </div>
+        <QuickQuoteForm defaultService={defaultService} onSuccess={handleSuccess} />
       </DialogContent>
     </Dialog>
   );

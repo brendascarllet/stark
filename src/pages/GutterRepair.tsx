@@ -20,6 +20,7 @@ import EmergencySection from '@/components/gutter-repair/EmergencySection';
 import FAQSection from '@/components/gutter-repair/FAQSection';
 import ContactSection from '@/components/gutter-repair/ContactSection';
 import FloatingContactBar from '@/components/gutter-repair/FloatingContactBar';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const GutterRepair = () => {
   useEffect(() => {
@@ -38,9 +39,14 @@ const GutterRepair = () => {
 
   return (
     <PageTransition>
+      <ServiceSchema
+        name="Gutter Repair"
+        description="Professional gutter repair in Seattle & Puget Sound. Fix leaks, clogs, sagging gutters. Same-week service. Free estimates. Call 206-739-8232."
+        url="https://starkroofingrenovation.com/gutter-repair"
+      />
       <div className="min-h-screen">
         <Navbar />
-        
+
         {/* Hero Section */}
         <HeroSection />
         

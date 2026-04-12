@@ -61,7 +61,7 @@ const RedmondLocation = () => {
       region="Greater Seattle"
       description="Professional roofing contractors in Redmond serving the Puget Sound with quality, GAF-certified services."
       content={content}
-      heroImage="drone-4.jpg"
+      heroImage="/hero-custom-redmond.webp"
       keywords="roofing contractor Redmond, roof repair Redmond WA, roofer Redmond, roof replacement Redmond"
     />
   );

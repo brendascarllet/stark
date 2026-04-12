@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Star, Award } from 'lucide-react';
+import { Shield, Star, Award, CheckCircle2 } from 'lucide-react';
 import QuickQuoteForm from './QuickQuoteForm';
 
 interface QuickQuoteSectionProps {
@@ -78,11 +78,17 @@ const QuickQuoteSection: React.FC<QuickQuoteSectionProps> = ({
               <span className="flex items-center gap-1.5">
                 <Star size={14} className="text-stark-red fill-stark-red" /> 2,000+ Roofs
               </span>
+              <span className="text-charcoal/30">•</span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 size={14} className="text-stark-red" /> Licensed &amp; Bonded WA
+              </span>
             </div>
           </div>
 
-          {/* The form card */}
-          <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden">
+          {/* The form card — overflow-visible so the form's natural height is honored.
+              Min-height keeps the card visually grounded even when the form is on
+              its short step (step 1 is the smallest). */}
+          <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-gray-100 min-h-[480px]">
             <QuickQuoteForm defaultService={defaultService} />
           </div>
 

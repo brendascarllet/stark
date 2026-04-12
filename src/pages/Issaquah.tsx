@@ -61,7 +61,7 @@ const IssaquahLocation = () => {
       region="Greater Seattle"
       description="Local roofing contractor serving Issaquah from our Sammamish headquarters. GAF certified, fast response."
       content={content}
-      heroImage="drone-5.jpg"
+      heroImage="/hero-custom-issaquah.webp"
       keywords="roofing contractor Issaquah, roof repair Issaquah WA, roofer Issaquah, roof replacement Issaquah, Issaquah roofing company"
     />
   );

@@ -72,7 +72,7 @@ const SammamishLocation = () => {
       region="Greater Seattle"
       description="Local roofing contractors based in Sammamish with expert service across the Puget Sound."
       content={content}
-      heroImage="drone-1.jpg"
+      heroImage="/hero-custom-sammamish.webp"
       keywords="roofing contractor Sammamish, roof repair Sammamish WA, roofer Sammamish, roof replacement Sammamish"
     />
   );

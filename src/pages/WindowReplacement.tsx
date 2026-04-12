@@ -8,8 +8,10 @@ import WindowOverviewSection from '@/components/window-replacement/WindowOvervie
 import WindowTypesSection from '@/components/window-replacement/WindowTypesSection';
 import WindowBenefitsSection from '@/components/window-replacement/WindowBenefitsSection';
 import WindowProcessSection from '@/components/window-replacement/WindowProcessSection';
+import WindowFAQSection from '@/components/window-replacement/WindowFAQSection';
 import WindowContactSection from '@/components/window-replacement/WindowContactSection';
 import ScrollToTop from '@/components/ScrollToTop';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 import { motion } from 'framer-motion';
 
 const WindowReplacement = () => {
@@ -18,29 +20,41 @@ const WindowReplacement = () => {
   }, []);
 
   useSEOMeta({
-    title: 'Window Replacement & Installation | Energy-Efficient | Seattle',
-    description: 'Professional window replacement in Seattle & Puget Sound. Energy-efficient windows. Improve comfort and curb appeal. Free estimates. 206-739-8232.',
+    title: 'Andersen Window Replacement Seattle | Energy Star | Stark Roofing',
+    description:
+      'Andersen window replacement across Greater Seattle. We replace 1960s aluminum and single-pane with Energy Star Most Efficient units. Save up to $583/yr + $600 federal tax credit. (206) 739-8232.',
     canonical: 'https://starkroofingrenovation.com/window-replacement',
-    keywords: 'window replacement Seattle, replacement windows, energy efficient windows, new windows, window installation',
-    ogTitle: 'Window Replacement - Energy Efficient | Stark Roofing',
-    ogDescription: 'Professional replacement windows. Energy efficient, beautiful, and durable.',
+    keywords:
+      'andersen window replacement seattle, energy star windows bellevue, replace single pane windows, andersen 100 series, andersen 400 series, washington bedroom egress code',
+    ogTitle: 'Andersen Window Replacement — Built for Seattle Winters | Stark Roofing',
+    ogDescription:
+      'Andersen Energy Star windows installed by certified Stark Roofing crews. Stop the condensation, the drafts, and the heat loss.',
     ogImage: 'https://starkroofingrenovation.com/crew-1.jpg',
   });
 
   return (
-    <motion.div 
+    <motion.div
       className="min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <ServiceSchema
+        name="Window Replacement"
+        description="Andersen window replacement across Greater Seattle. We replace 1960s aluminum and single-pane with Energy Star Most Efficient units. Save up to $583/yr + $600 federal tax credit. (206) 739-8232."
+        url="https://starkroofingrenovation.com/window-replacement"
+      />
       <Navbar />
       <WindowHeroSection />
       <WindowOverviewSection />
       <WindowTypesSection />
       <WindowBenefitsSection />
       <WindowProcessSection />
-      <WindowContactSection />
+      <WindowFAQSection />
+      {/* Booking form anchored so the hero CTA scrolls here. */}
+      <div id="book-windows">
+        <WindowContactSection />
+      </div>
       <ScrollToTop />
       <Footer />
     </motion.div>

@@ -1,90 +1,149 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { ChevronRight, Phone, Shield, Award, Star } from 'lucide-react';
+
+/**
+ * Roof Replacement page hero.
+ * Custom hero (replaces the generic ServicePageHero) so we can:
+ *   - showcase a real Pacific Northwest craftsman with a prominent dark roof
+ *   - keep ONE booking CTA + ONE phone CTA
+ *   - lead with the WA-specific value (GAF + 2,000 roofs + 30+ years)
+ */
 const HeroSection = () => {
-  return <section className="relative">
-      <div className="h-[500px] md:h-[600px] overflow-hidden relative">
-        <img src="/lovable-uploads/5d8f9c57-4fc2-43e2-bbb9-4732f51bfba9.png" alt="Professional roof replacement" className="w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/90 to-navy/40" />
-        
-        <motion.div className="absolute inset-0 flex items-center justify-center" initial={{
-        opacity: 0,
-        y: 30
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.8,
-        delay: 0.2,
-        ease: [0.25, 0.1, 0.25, 1.0]
-      }}>
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            
-            
-            <motion.h1 initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            delay: 0.7
-          }} className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
-              Professional Roof Replacement
-            </motion.h1>
-            
-            <motion.p initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            delay: 0.9
-          }} className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Expert installation, premium materials, and ironclad warranties for your home's most important protection
-            </motion.p>
-            
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            delay: 1.1
-          }} className="flex flex-wrap gap-4 justify-center">
-              <a href="#contact" className="btn-primary bg-stark-red hover:bg-stark-red/90 text-white px-6 py-3 rounded-full flex items-center gap-2 group transition-all duration-300 transform hover:scale-105">
-                Get a Free Estimate
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="#financing" className="btn-secondary border-white/70 text-white hover:bg-white hover:text-navy px-6 py-3 rounded-full">
-                View Financing Options
-              </a>
-            </motion.div>
-          </div>
-        </motion.div>
-        
-        <motion.div className="absolute bottom-0 left-0 w-full" initial={{
-        opacity: 0
-      }} animate={{
-        opacity: 1
-      }} transition={{
-        duration: 1,
-        delay: 1.5
-      }}>
-          <div className="container mx-auto px-4 md:px-6 pb-6">
-            <div className="flex flex-wrap justify-center gap-3 md:gap-8">
-              
-              
-              
-            </div>
-          </div>
-        </motion.div>
+  return (
+    <section
+      id="roof-replacement-hero"
+      className="relative overflow-hidden pt-28 md:pt-32 pb-14 md:pb-20"
+    >
+      {/* Background image with dark overlay.
+          roof-replacement-hero.jpg = craftsman home with prominent dark gabled
+          roof, surrounded by Douglas fir trees, classic Pacific NW. */}
+      <div className="absolute inset-0">
+        <img
+          src="/roof-replacement-hero.jpg"
+          alt="Pacific Northwest craftsman home with new GAF roof installed by Stark Roofing"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/35" />
       </div>
-    </section>;
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        {/* Breadcrumb */}
+        <motion.div
+          className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <a href="/" className="hover:text-white/80 transition-colors">Home</a>
+          <ChevronRight className="w-3 h-3" />
+          <span className="text-white/70">Roof Replacement</span>
+        </motion.div>
+
+        <div className="max-w-2xl text-white">
+          {/* GAF certified badge */}
+          <motion.div
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-stark-red/20 border border-stark-red/40 backdrop-blur-sm mb-5"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.5 }}
+          >
+            <Award size={13} className="text-stark-red" />
+            GAF Certified Installer
+          </motion.div>
+
+          {/* Headline */}
+          <motion.h1
+            className="font-heading font-extrabold leading-[1.05] tracking-tight mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25, duration: 0.6 }}
+          >
+            <span className="block text-4xl md:text-5xl lg:text-6xl">
+              Your Last Roof.
+            </span>
+            <span className="block text-4xl md:text-5xl lg:text-6xl text-stark-red">
+              Done Right.
+            </span>
+          </motion.h1>
+
+          {/* Accent bar */}
+          <motion.div
+            className="h-1 bg-stark-red rounded-full mb-5"
+            initial={{ width: 0 }}
+            animate={{ width: 64 }}
+            transition={{ delay: 0.55, duration: 0.5 }}
+          />
+
+          {/* Subheadline */}
+          <motion.p
+            className="text-base md:text-lg text-white/85 mb-7 leading-relaxed max-w-xl"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.65, duration: 0.55 }}
+          >
+            GAF Timberline HDZ. Synthetic underlayment. Ice &amp; water shield where it
+            counts. Installed by a crew that's done this 2,000+ times across the Puget
+            Sound. One trip up the ladder, decades of peace of mind.
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            className="flex flex-col sm:flex-row gap-3 mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.85, duration: 0.55 }}
+          >
+            <motion.a
+              href="#book-replacement"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-stark-red text-white font-bold text-base rounded-full shadow-2xl"
+              whileHover={{ scale: 1.04, boxShadow: '0 0 35px rgba(220,38,38,0.5)' }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Book My Free Estimate
+              <ChevronRight className="w-5 h-5" />
+            </motion.a>
+            <motion.a
+              href="tel:+12067398232"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold text-base rounded-full border border-white/25 backdrop-blur-sm transition-colors"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <Phone className="w-5 h-5" />
+              (206) 739-8232
+            </motion.a>
+          </motion.div>
+
+          {/* Trust badges row */}
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.05, duration: 0.5 }}
+          >
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+              <Award size={18} className="text-stark-red flex-shrink-0" />
+              <span className="text-sm text-white/90 font-medium leading-tight">
+                GAF Certified
+              </span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+              <Star size={18} className="text-stark-red fill-stark-red flex-shrink-0" />
+              <span className="text-sm text-white/90 font-medium leading-tight">
+                2,000+ Roofs · 30+ Yrs
+              </span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+              <Shield size={18} className="text-stark-red flex-shrink-0" />
+              <span className="text-sm text-white/90 font-medium leading-tight">
+                Lifetime Ltd Warranty
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default HeroSection;

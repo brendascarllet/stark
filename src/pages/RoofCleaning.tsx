@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 import HeroSection from '@/components/roof-cleaning/HeroSection';
-import PromotionDetails from '@/components/roof-cleaning/PromotionDetails';
 import BenefitsSection from '@/components/roof-cleaning/BenefitsSection';
 import ProcessSection from '@/components/roof-cleaning/ProcessSection';
 import BeforeAfterSection from '@/components/roof-cleaning/BeforeAfterSection';
@@ -15,6 +14,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import PageTransition from '@/components/PageTransition';
 import HeroContactForm from '@/components/roof-cleaning/HeroContactForm';
 import ContactFormSection from '@/components/roof-cleaning/ContactFormSection';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const RoofCleaning = () => {
   useEffect(() => {
@@ -33,6 +33,11 @@ const RoofCleaning = () => {
 
   return (
     <PageTransition>
+      <ServiceSchema
+        name="Roof Cleaning"
+        description="Professional roof cleaning to remove moss, algae, and debris. Extends roof life. Improves curb appeal. Free estimates. Sammamish to Seattle. 206-739-8232."
+        url="https://starkroofingrenovation.com/roof-cleaning"
+      />
       <div className="min-h-screen">
         <Navbar />
         <HeroSection />
@@ -41,7 +46,6 @@ const RoofCleaning = () => {
           <HeroContactForm />
         </div>
         <div className="py-6"></div>
-        <PromotionDetails />
         <BenefitsSection />
         <ProcessSection />
         <BeforeAfterSection />

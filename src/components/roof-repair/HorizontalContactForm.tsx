@@ -8,6 +8,7 @@ import QuickQuoteSection from '@/components/shared/QuickQuoteSection';
 const HorizontalContactForm = () => {
   return (
     <QuickQuoteSection
+      id="schedule-form"
       title="Book Your Roof Repair"
       subtitle="Leak, missing shingles, or storm damage? Pick a time — we'll be out fast."
       defaultService="roof-repair"

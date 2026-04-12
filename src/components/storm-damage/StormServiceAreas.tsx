@@ -25,7 +25,7 @@ const StormServiceAreas = () => {
               </div>
               
               <p className="text-charcoal/80 mb-6">
-                As a local Washington contractor, we know the unique weather patterns and building requirements of the Pacific Northwest like the back of our hand. From intense windstorms to heavy rain and occasional hail, we've seen it all and fixed it all.
+                As a local Washington contractor, we know the unique weather patterns and building requirements of the Pacific Northwest like the back of our hand. From November windstorms dropping Douglas firs onto roofs to atmospheric river rain finding every weak spot, we've seen it all and fixed it all.
               </p>
               
               <p className="text-charcoal/80 mb-6">

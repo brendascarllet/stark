@@ -1,85 +1,180 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Clock, ShieldCheck, Award } from 'lucide-react';
+import { ChevronRight, Clock, Shield, Phone } from 'lucide-react';
 
+/**
+ * Storm Damage page hero.
+ * Two-column layout: bold headline + booking CTA on the left,
+ * the Stark mascot promo graphic on the right.
+ *
+ * Replaces the generic ServicePageHero on the storm-damage page so we can:
+ *   - showcase Brenda's branded mascot art instead of a stock drone shot
+ *   - keep ONE primary booking CTA + ONE phone CTA (no triple-call clutter)
+ *   - lead with WA-specific threats (windstorms, falling trees) instead of "hail"
+ */
 const StormHero = () => {
   return (
-    <section className="hero-overlay relative pt-32 pb-20 md:py-32">
-      <img 
-        src="/lovable-uploads/3754c069-841c-4eb4-b2b5-99f0a2cd02c9.png" 
-        alt="New black shingle roof with stone facade" 
-        className="absolute inset-0 w-full h-full object-cover"
+    <section
+      id="storm-hero"
+      className="relative overflow-hidden bg-gradient-to-br from-navy via-navy to-[#0a1530] pt-28 md:pt-32 pb-12 md:pb-16"
+    >
+      {/* Background pattern accents */}
+      <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 20% 30%, white 1px, transparent 1px), radial-gradient(circle at 80% 70%, white 1px, transparent 1px)',
+            backgroundSize: '40px 40px',
+          }}
+        />
+      </div>
+      {/* Red diagonal accent on the right edge */}
+      <div
+        className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20"
+        style={{
+          background: 'linear-gradient(135deg, transparent 0%, #dc2626 100%)',
+        }}
+        aria-hidden="true"
       />
-      
-      {/* Dark overlay to improve text readability */}
-      <div className="absolute inset-0 bg-navy/60"></div>
-      
-      <div className="container mx-auto px-4 md:px-6 relative z-20">
-        <div className="max-w-3xl">
-          <motion.h1 
-            className="text-4xl md:text-5xl font-heading font-bold text-white mb-2"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Washington Storm Damage Roof Repair
-          </motion.h1>
-          <motion.div 
-            className="bg-stark-red text-white inline-block px-4 py-2 rounded-md font-bold text-lg md:text-xl mb-6"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ 
-              duration: 0.5, 
-              delay: 0.3,
-              repeat: Infinity,
-              repeatType: "reverse",
-              repeatDelay: 1
-            }}
-          >
-            Emergency Repair Service
-          </motion.div>
-          <motion.p 
-            className="text-xl text-white/90 mb-8 max-w-2xl"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
-            Immediate response for storm-damaged roofs. Our experts quickly identify and repair damage from wind, hail, and debris to protect your home.
-          </motion.p>
 
-          {/* Hero Trust Badges */}
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        {/* Breadcrumb */}
+        <motion.div
+          className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <a href="/" className="hover:text-white/80 transition-colors">
+            Home
+          </a>
+          <ChevronRight className="w-3 h-3" />
+          <span className="text-white/70">Storm Damage</span>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* ── LEFT: Copy + CTAs ── */}
+          <div className="text-white">
+            {/* Pulsing live alert badge */}
+            <motion.div
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-stark-red/20 border border-stark-red/40 backdrop-blur-sm mb-5"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.5 }}
+            >
+              <span className="w-2 h-2 rounded-full bg-stark-red animate-pulse" />
+              24/7 Emergency Response
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h1
+              className="font-heading font-extrabold leading-[1.05] tracking-tight mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.6 }}
+            >
+              <span className="block text-4xl md:text-5xl lg:text-6xl">
+                Tree Down on
+              </span>
+              <span className="block text-4xl md:text-5xl lg:text-6xl text-stark-red">
+                Your Roof?
+              </span>
+            </motion.h1>
+
+            {/* Accent line */}
+            <motion.div
+              className="h-1 bg-stark-red rounded-full mb-5"
+              initial={{ width: 0 }}
+              animate={{ width: 64 }}
+              transition={{ delay: 0.55, duration: 0.5 }}
+            />
+
+            {/* Subheadline */}
+            <motion.p
+              className="text-base md:text-lg text-white/85 mb-7 max-w-xl leading-relaxed"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.65, duration: 0.55 }}
+            >
+              Windstorms drop trees and limbs on Seattle roofs every winter. We tarp
+              fast, document everything for your insurance, and rebuild it right —
+              no out-of-pocket on most claims.
+            </motion.p>
+
+            {/* CTAs — ONE primary, ONE phone. No triple-call clutter. */}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-3 mb-7"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85, duration: 0.55 }}
+            >
+              <motion.a
+                href="#book-inspection"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-stark-red text-white font-bold text-base rounded-full shadow-2xl"
+                whileHover={{ scale: 1.04, boxShadow: '0 0 35px rgba(220,38,38,0.5)' }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Book My Free Inspection
+                <ChevronRight className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="tel:+12067398232"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold text-base rounded-full border border-white/25 backdrop-blur-sm transition-colors"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <Phone className="w-5 h-5" />
+                (206) 739-8232
+              </motion.a>
+            </motion.div>
+
+            {/* Trust strip */}
+            <motion.div
+              className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/75"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.05, duration: 0.5 }}
+            >
+              <span className="flex items-center gap-1.5">
+                <Clock size={16} className="text-stark-red" /> 24/7 Tarp & Stabilize
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Shield size={16} className="text-stark-red" /> We Handle Insurance
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Shield size={16} className="text-stark-red" /> GAF Certified
+              </span>
+            </motion.div>
+          </div>
+
+          {/* ── RIGHT: Stark mascot promo image ── */}
           <motion.div
-            className="flex flex-wrap gap-4 mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
+            className="relative max-w-lg lg:max-w-none mx-auto w-full"
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.7, ease: 'easeOut' }}
           >
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md flex items-center">
-              <Clock className="text-stark-red mr-2" size={20} />
-              <span className="text-white font-medium">24/7 Emergency Response</span>
+            <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)] ring-1 ring-white/10">
+              <img
+                src="/storm-stark-mascot.jpg"
+                alt="Stark Roofing & Renovation — Free drone inspection, free estimates"
+                className="w-full h-auto block"
+                loading="eager"
+              />
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md flex items-center">
-              <ShieldCheck className="text-stark-red mr-2" size={20} />
-              <span className="text-white font-medium">Insurance Claim Help</span>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md flex items-center">
-              <Award className="text-stark-red mr-2" size={20} />
-              <span className="text-white font-medium">GAF Certified Contractor</span>
-            </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <a href="#assessment" className="btn-primary">
-              Get Emergency Roof Assessment →
-            </a>
+            {/* Floating $ saved badge */}
+            <motion.div
+              className="absolute -bottom-4 -left-4 md:-left-6 bg-white text-navy px-4 py-3 rounded-xl shadow-2xl border-2 border-stark-red"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.5 }}
+            >
+              <div className="text-xs uppercase tracking-wide text-charcoal/60 font-semibold">
+                Average claim
+              </div>
+              <div className="text-2xl font-bold text-stark-red">$0 out of pocket</div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

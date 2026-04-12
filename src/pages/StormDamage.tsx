@@ -2,9 +2,8 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ServicePageHero from '@/components/shared/ServicePageHero';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
-// Original: import StormHero from '@/components/storm-damage/StormHero';
+import StormHero from '@/components/storm-damage/StormHero';
 import EmergencyNotice from '@/components/storm-damage/EmergencyNotice';
 import StormThreatsSection from '@/components/storm-damage/StormThreatsSection';
 import TrustTriggers from '@/components/storm-damage/TrustTriggers';
@@ -19,6 +18,7 @@ import StormInsuranceSection from '@/components/storm-damage/StormInsuranceSecti
 import StormServiceAreas from '@/components/storm-damage/StormServiceAreas';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import ScrollToTop from '@/components/ScrollToTop';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const StormDamage = () => {
   useEffect(() => {
@@ -26,29 +26,34 @@ const StormDamage = () => {
   }, []);
 
   useSEOMeta({
-    title: 'Emergency Storm Damage Repair | 24/7 Service | Seattle',
-    description: 'Emergency storm damage repair. Roof damage, hail damage, wind damage. 24/7 emergency response. Insurance claim assistance. Seattle & Puget Sound. 206-739-8232.',
+    title: 'Storm Damage Roof Repair Seattle | 24/7 Emergency | Stark Roofing',
+    description:
+      'Tree down on your roof? Wind damage? We tarp fast, handle your insurance claim, and rebuild it right. 24/7 emergency response across Greater Seattle. (206) 739-8232.',
     canonical: 'https://starkroofingrenovation.com/storm-damage',
-    keywords: 'storm damage repair, roof hail damage, wind damage roof, emergency roof repair, storm damage contractor',
-    ogTitle: 'Storm Damage Repair - 24/7 Emergency Service | Stark Roofing',
-    ogDescription: 'Emergency storm damage repair. We respond 24/7. Insurance claim assistance available.',
-    ogImage: 'https://starkroofingrenovation.com/drone-6.jpg',
+    keywords:
+      'storm damage roof repair seattle, tree fell on roof seattle, wind damage roof, emergency roof tarp, insurance claim roof seattle',
+    ogTitle: 'Storm Damage Roof Repair — 24/7 Emergency Service | Stark Roofing',
+    ogDescription:
+      "We tarp fast, document for your insurance, and rebuild it right. Most claims = $0 out of pocket.",
+    ogImage: 'https://starkroofingrenovation.com/storm-stark-mascot.jpg',
   });
 
   return (
     <div className="min-h-screen">
-      <Navbar />
-      <ServicePageHero
-        title="Storm Damage Repair"
-        subtitle="Emergency response across Greater Seattle. We work directly with your insurance — fast estimates, zero hassle."
-        badge="24/7 Emergency Response"
-        bgImage="/drone-6.jpg"
-        breadcrumb="Storm Damage"
-        ctaLabel="Emergency Estimate"
-        accentColor="#dc2626"
-        secondaryCta={{ label: "📞 Call Now — (206) 739-8232", href: "tel:2067398232" }}
+      <ServiceSchema
+        name="Storm Damage Roof Repair"
+        serviceType="Emergency Roofing Service"
+        description="Tree down on your roof? Wind damage? We tarp fast, handle your insurance claim, and rebuild it right. 24/7 emergency response across Greater Seattle. (206) 739-8232."
+        url="https://starkroofingrenovation.com/storm-damage"
       />
+      <Navbar />
+      <StormHero />
       <EmergencyNotice />
+      {/* Booking form anchored right under the hero/emergency strip so the
+          hero CTA "Book My Free Inspection" actually scrolls to a form. */}
+      <div id="book-inspection">
+        <StormContactSection />
+      </div>
       <StormThreatsSection />
       <StormDamageProcess />
       <StormDamageRestoration />
@@ -59,7 +64,6 @@ const StormDamage = () => {
       <StormTestimonialsSection />
       <StormFAQSection />
       <StormCTA />
-      <StormContactSection />
       <VirtualAssistant />
       <ScrollToTop />
       <Footer />

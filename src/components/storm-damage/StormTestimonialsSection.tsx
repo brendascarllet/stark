@@ -1,7 +1,6 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import HorizontalContactForm from '@/components/shared/HorizontalContactForm';
 interface StormTestimonial {
   name: string;
   location: string;
@@ -21,10 +20,10 @@ const StormTestimonialsSection = () => {
   }, {
     name: "Sarah Johnson",
     location: "Kirkland, WA",
-    quote: "When hail damaged our fairly new roof, I was devastated. Stark not only helped us navigate the insurance claim process but matched our existing shingles perfectly. You can't even tell where the repairs were made!",
+    quote: "A neighbor's cedar came down on our garage roof during the November windstorm. Stark had a tarp on it the same evening, walked our State Farm adjuster through every photo, and matched our shingles so perfectly you can't even see where the repair ended. Couldn't have asked for better.",
     date: "November 2024",
     rating: 5,
-    serviceType: "Hail Damage Restoration"
+    serviceType: "Wind & Tree Damage"
   }, {
     name: "David Wilson",
     location: "Redmond, WA",

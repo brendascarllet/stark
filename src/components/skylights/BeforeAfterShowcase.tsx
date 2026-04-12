@@ -7,8 +7,13 @@ import BeforeAfterSlider from '@/components/BeforeAfterSlider';
  * Before/after showcase: drag the slider to see how a skylight transforms
  * a dark room. Uses the existing BeforeAfterSlider component.
  *
- * Image paths are placeholders — Brenda should swap these for real photos
- * of her installs (a dark room photo + same room with skylight installed).
+ * Image paths point to /skylights/before-after/ — Brenda generates matched
+ * pairs in Gemini/Imagen and drops them in public/skylights/before-after/
+ * with the exact filenames below. No code change needed once files exist.
+ *
+ * Until those real files are dropped in, these paths will 404 and show
+ * gray boxes (which is honest). Better than fake "before/after" pairs
+ * that don't actually match.
  */
 
 type Pair = {
@@ -23,22 +28,22 @@ const PAIRS: Pair[] = [
   {
     id: 'bedroom',
     label: 'Master Bedroom',
-    before: '/lovable-uploads/2821b129-1a0b-4714-9322-0ac209cc85ac.png',
-    after: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.png',
-    caption: 'Bellevue master bedroom — dark and cave-like before, flooded with morning light after.',
+    before: '/skylights/before-after/bedroom-before.jpg',
+    after: '/skylights/before-after/bedroom-after.jpg',
+    caption: 'Bellevue master bedroom — dim and cave-like before, flooded with morning light after.',
   },
   {
     id: 'kitchen',
     label: 'Kitchen Island',
-    before: '/lovable-uploads/f6057036-c7fd-4c02-8d16-ed9c3bad8e5f.png',
-    after: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.png',
+    before: '/skylights/before-after/kitchen-before.jpg',
+    after: '/skylights/before-after/kitchen-after.jpg',
     caption: 'Sammamish kitchen — relied on overhead can lights, now lit naturally all day.',
   },
   {
     id: 'hallway',
     label: 'Upstairs Hallway',
-    before: '/lovable-uploads/34257d11-a88c-4148-9c8e-04aff77fef5d.png',
-    after: '/lovable-uploads/2821b129-1a0b-4714-9322-0ac209cc85ac.png',
+    before: '/skylights/before-after/hallway-before.jpg',
+    after: '/skylights/before-after/hallway-after.jpg',
     caption: 'Issaquah hallway — needed a light switch in the middle of the day, now never does.',
   },
 ];

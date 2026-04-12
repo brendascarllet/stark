@@ -1,61 +1,76 @@
-
 import React from 'react';
-import { Leaf, Zap, Shield, BarChart } from 'lucide-react';
+import { Leaf, Droplets, Shield, DollarSign } from 'lucide-react';
 
 const BenefitsSection = () => {
   return (
     <section className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="section-title text-center">Benefits of Our Gutters Systems</h2>
-        <p className="section-subtitle text-center">
-          Designed for performance, durability, and peace of mind
+        <h2 className="section-title text-center">What You Actually Get</h2>
+        <p className="section-subtitle text-center max-w-3xl mx-auto">
+          Not just shiny new gutters — fewer headaches, fewer repair bills, and a roof that
+          dries out properly after every storm.
         </p>
-        
+
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
           <div className="flex items-start">
-            <div className="bg-stark-red/10 p-3 rounded-full mr-4">
+            <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
               <Leaf className="h-6 w-6 text-stark-red" />
             </div>
             <div>
-              <h3 className="text-lg font-heading font-bold text-navy mb-2">Maintenance-Free</h3>
+              <h3 className="text-lg font-heading font-bold text-navy mb-2">
+                Stop Climbing the Ladder Every Fall
+              </h3>
               <p className="text-charcoal/80">
-                Our leaf protection systems eliminate the need for regular gutter cleaning, saving you time and keeping you safe from ladder accidents.
+                Real micro-mesh leaf protection means no more $300 gutter cleanings — and no
+                more standing on a wet ladder in November trying to scoop out fir needles.
               </p>
             </div>
           </div>
-          
+
           <div className="flex items-start">
-            <div className="bg-stark-red/10 p-3 rounded-full mr-4">
-              <Zap className="h-6 w-6 text-stark-red" />
+            <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+              <Droplets className="h-6 w-6 text-stark-red" />
             </div>
             <div>
-              <h3 className="text-lg font-heading font-bold text-navy mb-2">Superior Water Flow</h3>
+              <h3 className="text-lg font-heading font-bold text-navy mb-2">
+                Atmospheric River Capacity
+              </h3>
               <p className="text-charcoal/80">
-                Our gutter systems are designed to handle even the heaviest rainfall, preventing overflow and ensuring proper water diversion.
+                6" K-style gutters and 3x4" downspouts move 40% more water than the
+                builder-grade 5" / 2x3" combo on most Seattle homes — so the next 3-inch
+                rain event doesn't end up running down your siding.
               </p>
             </div>
           </div>
-          
+
           <div className="flex items-start">
-            <div className="bg-stark-red/10 p-3 rounded-full mr-4">
+            <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
               <Shield className="h-6 w-6 text-stark-red" />
             </div>
             <div>
-              <h3 className="text-lg font-heading font-bold text-navy mb-2">Long-Lasting Protection</h3>
+              <h3 className="text-lg font-heading font-bold text-navy mb-2">
+                Foundation &amp; Siding Protection
+              </h3>
               <p className="text-charcoal/80">
-                Built with premium materials and backed by industry-leading warranties, our gutter systems provide decades of reliable performance.
+                Properly sized, properly sloped gutters carry water 4 feet away from your
+                foundation — preventing crawl-space flooding, soggy crawls, and the rot that
+                shows up under your siding two years later.
               </p>
             </div>
           </div>
-          
+
           <div className="flex items-start">
-            <div className="bg-stark-red/10 p-3 rounded-full mr-4">
-              <BarChart className="h-6 w-6 text-stark-red" />
+            <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+              <DollarSign className="h-6 w-6 text-stark-red" />
             </div>
             <div>
-              <h3 className="text-lg font-heading font-bold text-navy mb-2">Increased Home Value</h3>
+              <h3 className="text-lg font-heading font-bold text-navy mb-2">
+                Resale-Ready Curb Appeal
+              </h3>
               <p className="text-charcoal/80">
-                Quality gutter systems are a valuable selling point that can increase your home's resale value by protecting its structural integrity.
+                Color-matched seamless aluminum looks straight off the architectural plan.
+                Buyers and home inspectors notice — and no inspector report flags a "gutter
+                replacement recommended" that kills your asking price.
               </p>
             </div>
           </div>

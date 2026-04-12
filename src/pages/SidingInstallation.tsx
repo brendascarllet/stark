@@ -7,6 +7,7 @@ import { useSEOMeta } from '@/hooks/useSEOMeta';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const SidingInstallation = () => {
   useEffect(() => {
@@ -25,8 +26,13 @@ const SidingInstallation = () => {
 
   return (
     <div className="min-h-screen">
+      <ServiceSchema
+        name="Siding Installation"
+        description="Professional siding installation in Seattle & Puget Sound. James Hardie & premium materials. Transform your home. Free estimates. Call 206-739-8232."
+        url="https://starkroofingrenovation.com/siding-installation"
+      />
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="hero-overlay relative pt-32 pb-20 md:py-32">
         <img 

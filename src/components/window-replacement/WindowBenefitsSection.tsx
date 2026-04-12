@@ -1,65 +1,83 @@
-
 import React from 'react';
-import { TrendingUp, Thermometer, Volume2, Shield, Leaf, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { TrendingDown, Thermometer, Volume2, Award, Leaf, Home } from 'lucide-react';
+
+/**
+ * Window Benefits — replaces generic "energy efficient!" copy with real numbers
+ * sourced from Energy Star and DOE that homeowners can actually verify.
+ */
+const benefits = [
+  {
+    icon: TrendingDown,
+    title: '$101–$583/yr in savings',
+    body: "Energy Star's official figure for replacing single-pane windows with certified ones. Averages ~12% off your total household energy bill. Higher in older Seattle homes with original aluminum frames.",
+    cite: 'Energy Star (energystar.gov)',
+  },
+  {
+    icon: Award,
+    title: '$600 federal tax credit',
+    body: "Energy Star Most Efficient windows (U-factor ≤ 0.22) qualify for the federal 25C tax credit through 2032 — up to $600 per year on qualifying window expenses. Ask us which Andersen series qualifies before you buy.",
+    cite: 'IRS 25C Tax Credit',
+  },
+  {
+    icon: Thermometer,
+    title: 'No more cold spots or sweat',
+    body: "Modern triple-glazed Low-E units stop the indoor surface from going below dew point — which is the actual reason your old windows drip. Your November bedroom stops feeling like a freezer wall.",
+    cite: 'U.S. Department of Energy',
+  },
+  {
+    icon: Volume2,
+    title: '~50% less outside noise',
+    body: 'Dual- and triple-pane laminated glass cuts traffic, lawnmower, and aircraft noise by roughly half (on the STC scale). Big deal if you live near 405, I-90, Sea-Tac flight paths, or a busy arterial.',
+    cite: 'STC sound rating',
+  },
+  {
+    icon: Home,
+    title: 'Bedroom egress code compliance',
+    body: 'WA State requires bedroom emergency egress windows ≥5.7 sq ft net clear opening, 24"H × 20"W minimum, sill ≤44" off the floor. Old basement and original 1960s bedroom windows often fail this — insurance and home inspectors notice.',
+    cite: 'IRC R310 / WA Residential Code',
+  },
+  {
+    icon: Leaf,
+    title: '40% reclaimed wood (100 Series)',
+    body: 'Andersen\'s Fibrex composite is 40% reclaimed wood fiber salvaged from their own manufacturing. If sustainability matters to you, the 100 Series gives the lowest embodied-carbon footprint of any Andersen line.',
+    cite: 'Andersen Fibrex',
+  },
+];
 
 const WindowBenefitsSection = () => {
-  const benefits = [
-    {
-      icon: <TrendingUp className="h-10 w-10 text-stark-red" />,
-      title: "Energy Efficiency",
-      description: "Modern windows significantly reduce energy costs with superior insulation and UV protection."
-    },
-    {
-      icon: <Thermometer className="h-10 w-10 text-stark-red" />,
-      title: "Improved Comfort",
-      description: "Eliminate drafts and cold spots while maintaining consistent indoor temperatures year-round."
-    },
-    {
-      icon: <Volume2 className="h-10 w-10 text-stark-red" />,
-      title: "Noise Reduction",
-      description: "High-quality windows provide excellent sound insulation from outside noise pollution."
-    },
-    {
-      icon: <Shield className="h-10 w-10 text-stark-red" />,
-      title: "Enhanced Security",
-      description: "Advanced locking mechanisms and impact-resistant glass improve home security."
-    },
-    {
-      icon: <Leaf className="h-10 w-10 text-stark-red" />,
-      title: "Low Maintenance",
-      description: "Today's windows require minimal upkeep with easy-clean features and durable materials."
-    },
-    {
-      icon: <Home className="h-10 w-10 text-stark-red" />,
-      title: "Increased Value",
-      description: "Window replacement typically offers one of the highest returns on investment for home improvements."
-    }
-  ];
-
   return (
     <section className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="section-title text-center">Benefits of Premium Windows</h2>
-        <p className="section-subtitle text-center">
-          Investing in high-quality window replacement delivers substantial benefits for comfort, aesthetics, and long-term value
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {benefits.map((benefit, index) => (
-            <motion.div 
-              key={index}
-              className="glass-card p-6 flex flex-col items-center text-center"
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="section-title">Why It's Worth It</h2>
+          <p className="section-subtitle">
+            Real numbers from Energy Star, the DOE, and the IRS — not contractor
+            marketing fluff. Here's what new windows actually do for a Western
+            Washington home.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {benefits.map(({ icon: Icon, title, body, cite }, i) => (
+            <motion.div
+              key={title}
+              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-stark-red/30 transition-all"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
             >
-              <div className="bg-stark-red/10 p-4 rounded-full mb-4">
-                {benefit.icon}
+              <div className="bg-stark-red/10 p-3 rounded-full inline-block mb-4">
+                <Icon className="h-6 w-6 text-stark-red" />
               </div>
-              <h3 className="text-xl font-heading font-bold text-navy mb-2">{benefit.title}</h3>
-              <p className="text-charcoal/80">{benefit.description}</p>
+              <h3 className="text-lg font-heading font-bold text-navy mb-2 leading-tight">
+                {title}
+              </h3>
+              <p className="text-sm text-charcoal/80 leading-relaxed mb-3">{body}</p>
+              <p className="text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
+                Source: {cite}
+              </p>
             </motion.div>
           ))}
         </div>

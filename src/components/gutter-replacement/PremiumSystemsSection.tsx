@@ -1,112 +1,96 @@
-
 import React from 'react';
+import { Check } from 'lucide-react';
 
 const PremiumSystemsSection = () => {
   return (
-    <section className="section-padding bg-gray-100">
+    <section id="systems" className="section-padding bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="section-title text-center">Our Premium Gutters Systems</h2>
-        <p className="section-subtitle text-center">
-          Quality materials and expert installation for lasting protection
+        <h2 className="section-title text-center">Our Gutter Systems</h2>
+        <p className="section-subtitle text-center max-w-3xl mx-auto">
+          Two products, both built for the Pacific Northwest. We don't sell anything we
+          wouldn't put on Brenda's own house.
         </p>
-        
+
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Seamless Aluminum */}
           <div className="bg-white rounded-xl overflow-hidden shadow-md">
             <div className="relative h-64">
-              <img 
-                src="/lovable-uploads/7bcfdf0b-8eba-4883-ac40-89fd466bbdd3.png" 
-                alt="Seamless Gutters" 
+              <img
+                src="/lovable-uploads/7bcfdf0b-8eba-4883-ac40-89fd466bbdd3.png"
+                alt="Seamless aluminum gutters installed by Stark Roofing"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-70"></div>
-              <div className="absolute bottom-4 left-4">
-                <h3 className="text-2xl font-heading font-bold text-white">Seamless Gutters</h3>
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="inline-block bg-stark-red text-white text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full mb-2">
+                  Most popular
+                </span>
+                <h3 className="text-2xl font-heading font-bold text-white">
+                  Seamless Aluminum Gutters
+                </h3>
               </div>
             </div>
             <div className="p-6">
+              <p className="text-charcoal/70 text-sm mb-4">
+                Custom-cut on a truck-mounted brake right in front of your house — no
+                joints, no leaks, no weak spots.
+              </p>
               <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="mr-2 mt-1 text-stark-red">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5"/>
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/80">Custom-fabricated on-site to fit your home perfectly</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-2 mt-1 text-stark-red">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5"/>
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/80">No seams means reduced leaking potential</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-2 mt-1 text-stark-red">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5"/>
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/80">Heavy-duty aluminum construction (0.032" thickness)</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-2 mt-1 text-stark-red">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5"/>
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/80">Available in multiple colors to complement your home</p>
-                </li>
+                {[
+                  'Cut to your home\'s exact length on-site (zero seams = zero leaks)',
+                  'Heavy-gauge .032" aluminum (most installers use .025" — thinner)',
+                  '6" K-style standard for WA homes (handles 40% more water than 5")',
+                  '3x4" downspouts (vs. the standard 2x3") so they don\'t clog',
+                  '20+ designer colors color-matched to your trim',
+                ].map((line, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <Check className="text-stark-red flex-shrink-0 mt-0.5" size={18} />
+                    <span className="text-charcoal/80 text-sm leading-snug">{line}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
-          
+
+          {/* Leaf Protection */}
           <div className="bg-white rounded-xl overflow-hidden shadow-md">
             <div className="relative h-64">
-              <img 
-                src="/lovable-uploads/ddec2c5a-6ff0-40f9-b708-bdaf727993c8.png" 
-                alt="Leaf Protection Systems" 
+              <img
+                src="/lovable-uploads/ddec2c5a-6ff0-40f9-b708-bdaf727993c8.png"
+                alt="Leaf protection system that blocks pine needles and Douglas fir cones"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-70"></div>
-              <div className="absolute bottom-4 left-4">
-                <h3 className="text-2xl font-heading font-bold text-white">Leaf Protection Systems</h3>
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="inline-block bg-navy text-white text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full mb-2">
+                  Pine-needle proof
+                </span>
+                <h3 className="text-2xl font-heading font-bold text-white">
+                  Leaf &amp; Needle Protection
+                </h3>
               </div>
             </div>
             <div className="p-6">
+              <p className="text-charcoal/70 text-sm mb-4">
+                Most leaf guards stop maple leaves but let pine needles straight through.
+                Ours doesn't — and we'll show you the test in person.
+              </p>
               <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="mr-2 mt-1 text-stark-red">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5"/>
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/80">Prevents leaves, pine needles, and debris from clogging gutters</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-2 mt-1 text-stark-red">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5"/>
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/80">Self-cleaning design significantly reduces maintenance</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-2 mt-1 text-stark-red">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5"/>
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/80">Patented design allows water to flow freely while blocking debris</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-2 mt-1 text-stark-red">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5"/>
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/80">Lifetime warranty against clogging</p>
-                </li>
+                {[
+                  'Micro-mesh small enough to block Douglas fir needles &amp; cones',
+                  'Stainless mesh — won\'t rust like cheap aluminum guards',
+                  'Slips under existing shingles (no roof warranty issues)',
+                  'No more $300 fall &amp; spring gutter cleaning bills',
+                  'Lifetime no-clog warranty backed by Stark + manufacturer',
+                ].map((line, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <Check className="text-stark-red flex-shrink-0 mt-0.5" size={18} />
+                    <span
+                      className="text-charcoal/80 text-sm leading-snug"
+                      dangerouslySetInnerHTML={{ __html: line }}
+                    />
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

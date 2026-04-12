@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
-import ServicePageHero from '@/components/shared/ServicePageHero';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 
 // Import the refactored components
@@ -19,7 +18,7 @@ import EmergencyBanner from '@/components/roof-repair/EmergencyBanner';
 import SectionEmergencyBanner from '@/components/roof-repair/SectionEmergencyBanner';
 import FloatingContactBar from '@/components/roof-repair/FloatingContactBar';
 import ScrollToTop from '@/components/ScrollToTop';
-import RepairCalculator from '@/components/roof-repair/RepairCalculator';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const RoofRepair = () => {
   useEffect(() => {
@@ -38,37 +37,34 @@ const RoofRepair = () => {
 
   return (
     <div className="min-h-screen">
+      <ServiceSchema
+        name="Roof Repair"
+        serviceType="Roofing Repair"
+        description="Professional roof repair in Seattle & Puget Sound. Leaks, missing shingles, storm damage. Same-week service available. GAF certified. Call 206-739-8232."
+        url="https://starkroofingrenovation.com/roof-repair"
+      />
       <Navbar />
-      
+
       {/* Emergency Banner */}
       <EmergencyBanner />
       
-      <ServicePageHero
-        title="Roof Repair"
-        subtitle="Fast, permanent fixes — leaks, missing shingles, flashing, and storm damage. Same-week service across the Seattle metro."
-        badge="Same-Week Service Available"
-        bgImage="/crew-2.jpg"
-        breadcrumb="Roof Repair"
-        accentColor="#f59e0b"
-        secondaryCta={{ label: "View Common Repairs", href: "#issues" }}
-      />
-      
-      {/* Horizontal Contact Form - Added below Hero Section */}
-      <HorizontalContactForm />
-      
+      {/* Repair-specific Hero (split layout, urgency-forward) */}
+      <HeroSection />
+
       {/* Overview Section */}
       <OverviewSection />
-      
+
       {/* Common Repair Issues */}
       <CommonIssuesSection />
-      
+
+      {/* Lead-capture form moved BELOW the overview + common issues so visitors
+          first understand what we fix, then are asked to book. */}
+      <HorizontalContactForm />
+
       {/* Process Section */}
       <ProcessSection />
-      
-      {/* Repair Calculator - Moved after Process Section */}
-      <RepairCalculator />
-      
-      {/* Section Emergency Banner - Positioned after Repair Calculator */}
+
+      {/* Section Emergency Banner */}
       <SectionEmergencyBanner />
       
       {/* FAQ Section */}

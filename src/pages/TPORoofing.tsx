@@ -9,6 +9,7 @@ import HorizontalContactForm from '@/components/home/HorizontalContactForm';
 import ContactSection from '@/components/roof-replacement/ContactSection';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const TPORoofing = () => {
   useEffect(() => {
@@ -27,8 +28,13 @@ const TPORoofing = () => {
   
   return (
     <>
+      <ServiceSchema
+        name="TPO Roofing"
+        description="Professional TPO roofing for flat roofs. Durable, energy-efficient solutions. Commercial & residential. Free estimates. Sammamish to Seattle. 206-739-8232."
+        url="https://starkroofingrenovation.com/tpo-roofing"
+      />
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="hero-overlay relative pt-32 pb-20 md:py-32">
         <img 
@@ -55,8 +61,6 @@ const TPORoofing = () => {
         </div>
       </section>
 
-      <HorizontalContactForm />
-      
       {/* Overview Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
@@ -197,7 +201,10 @@ const TPORoofing = () => {
           </div>
         </div>
       </section>
-      
+
+      {/* Lead-capture form — placed AFTER benefits so visitors are warmed up. */}
+      <HorizontalContactForm />
+
       {/* Installation Process */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">

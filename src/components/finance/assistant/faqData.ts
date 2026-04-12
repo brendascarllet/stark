@@ -9,7 +9,7 @@ export const faqResponses = {
   "service areas": "We service all of King, Pierce, and Snohomish counties including Seattle, Tacoma, Bellevue, and Everett.",
   "free estimate": "Yes! Our estimates are always free and include a thorough inspection of your property.",
   "insurance": "We work directly with all major insurance companies and can help with your claim process.",
-  "materials": "We offer premium shingle brands like GAF, Owens Corning, and CertainTeed, plus metal roofing options."
+  "materials": "We offer premium shingle brands like GAF, Malarkey, IKO, and CertainTeed, plus metal roofing options."
 };
 
 export const scrollPrompts = [{

@@ -62,7 +62,7 @@ const BellevueLocation = () => {
       region="Greater Seattle"
       description="Expert roofing contractors serving Bellevue and the Eastside with GAF-certified quality and 25-year warranties."
       content={content}
-      heroImage="drone-3.jpg"
+      heroImage="/hero-custom-3.webp"
       keywords="roofing contractor Bellevue, roof repair Bellevue WA, roofer Bellevue, roof replacement Bellevue, Bellevue roofing company"
     />
   );

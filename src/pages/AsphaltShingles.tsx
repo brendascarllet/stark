@@ -11,6 +11,7 @@ import HeroSection from '@/components/asphalt-shingles/HeroSection';
 import OverviewSection from '@/components/asphalt-shingles/OverviewSection';
 import FeaturesSection from '@/components/asphalt-shingles/FeaturesSection';
 import CTASection from '@/components/asphalt-shingles/CTASection';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const AsphaltShingles = () => {
   useEffect(() => {
@@ -29,22 +30,29 @@ const AsphaltShingles = () => {
 
   return (
     <>
+      <ServiceSchema
+        name="Asphalt Shingle Roofing"
+        description="Professional asphalt shingle roofing. GAF Timberline HDZ and premium materials. Reliable & affordable. Free estimates. Seattle & Puget Sound. 206-739-8232."
+        url="https://starkroofingrenovation.com/asphalt-shingles"
+      />
       <Navbar />
-      
+
       {/* Hero Section */}
       <HeroSection />
 
-      <HorizontalContactForm />
-
       {/* Overview Section */}
       <OverviewSection />
-      
+
       {/* Features Section */}
       <FeaturesSection />
-      
+
+      {/* Lead-capture form moved BELOW the overview + features so visitors
+          first understand the product, then are asked to book. */}
+      <HorizontalContactForm />
+
       {/* CTA Section */}
       <CTASection />
-      
+
       {/* Financing Section */}
       <FinancingSection />
       

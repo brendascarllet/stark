@@ -61,7 +61,7 @@ const EverettLocation = () => {
       region="Greater Seattle"
       description="Professional roofing contractors in Everett with GAF-certified expertise and local knowledge."
       content={content}
-      heroImage="drone-6.jpg"
+      heroImage="/hero-custom-everett.webp"
       keywords="roofing contractor Everett, roof repair Everett WA, roofer Everett, roof replacement Everett"
     />
   );

@@ -6,36 +6,40 @@ import FAQSchema from '@/components/shared/FAQSchema';
 const StormFAQSection = () => {
   const faqItems = [
     {
-      question: "How soon should I get my roof inspected after a hailstorm?",
-      answer: "You should schedule a professional roof inspection as soon as possible after a hailstorm. Hail damage can compromise your roof's integrity and lead to water infiltration, even if leaks aren't immediately apparent. Most insurance policies also have time limits for filing storm damage claims."
+      question: "A tree just fell on my roof — what do I do right now?",
+      answer: "Step 1: get everyone out of the affected room and stay clear of any sagging ceilings. Step 2: don't try to remove the tree yourself — that often makes the hole bigger. Step 3: call us at (206) 739-8232 and we'll get a tarp on it the same day, then start documenting everything for your insurance claim. We don't charge for the emergency tarp-up on jobs we end up fixing."
     },
     {
-      question: "Will my insurance cover hail damage to my roof?",
-      answer: "Most homeowner's insurance policies cover hail damage, subject to your deductible. However, coverage can vary based on your specific policy, the age of your roof, and other factors. At Stark Roofing, we work directly with insurance companies to help navigate the claims process and ensure you receive the coverage you're entitled to."
+      question: "Does Washington really get enough storm damage to need a specialist?",
+      answer: "Hail is rare here, but our windstorms aren't. Bomb cyclones and atmospheric rivers regularly push 50–70+ MPH gusts through the Puget Sound, and we have a LOT of tall, shallow-rooted Douglas fir, hemlock, and cedar. Every winter we get hundreds of trees down on roofs across King and Snohomish counties — plus countless cases of lifted shingles, ridge damage, and ice-dam leaks. We've been fixing it for 30+ years."
+    },
+    {
+      question: "Will my insurance cover wind and tree damage to my roof?",
+      answer: "Yes — wind, falling-tree, and storm damage are covered by virtually every standard Washington homeowner's policy, subject to your deductible. The catch is documentation. Insurance companies look for any reason to deny or underpay, which is why we photograph everything, write the detailed scope, and meet your adjuster on the roof. We handle the whole claims process end-to-end for you."
     },
     {
       question: "How much does storm damage roof repair cost in Seattle?",
-      answer: "Storm damage repair costs depend on the extent of damage — from minor hail damage repairs to major storm damage requiring partial or full replacement. The good news: most storm damage is covered by your homeowner's insurance. We provide free storm damage inspections and help with the entire claims process. Call (206) 739-8232 for a free assessment."
+      answer: "It depends on the scope — anywhere from a few hundred dollars for replacing torn shingles up to a full re-roof if a large tree compromised the decking. The important number: on most legitimate storm claims our customers pay nothing beyond their deductible. We provide free storm damage inspections and walk you through the claim. Call (206) 739-8232."
     },
     {
       question: "How long does storm damage repair typically take?",
-      answer: "The timeline varies depending on the extent of damage, but most storm damage repairs or replacements can be completed within 1–3 days once materials are on site. Insurance approval, material availability, and weather conditions can affect the overall timeline. We prioritize emergency situations to prevent further damage to your home."
+      answer: "Emergency tarping happens the same day or next morning. Permanent repairs and full replacements usually take 1–3 days on the roof once materials are on site and the insurance approval is in. We prioritize emergencies — if water is actively coming into your home, we drop everything."
     },
     {
       question: "Can I stay in my home during roof repairs?",
-      answer: "In most cases, yes. Roof repairs or replacement can be noisy, but you can typically remain in your home during the process. Our crews work efficiently to minimize disruption. In cases of extensive damage where interior repairs are also needed, temporary relocation might be necessary."
+      answer: "In almost every case, yes. Re-roofing is noisy but the work happens above you. The only exception is when a tree has compromised structure inside the home and the framers need to open up ceilings — in that case we'll talk through whether a hotel is safer for a few days."
     },
     {
-      question: "What if I don't repair hail damage right away?",
-      answer: "Delaying repairs can lead to more significant problems over time. Hail damage compromises the protective layer of your roof, allowing water to penetrate during subsequent rain — especially during Seattle's rainy season. This can lead to leaks, structural damage, mold growth, and insulation damage, all of which are more expensive to repair than addressing the initial hail damage promptly."
+      question: "What if I wait — is it really that urgent?",
+      answer: "In Western Washington, yes. A small puncture or lifted shingle area that you 'don't want to deal with right now' meets the next atmospheric river and turns into soaked insulation, mold inside the wall cavity, and rotted decking — all of which cost dramatically more than the original repair. Most insurance policies also have time limits for filing storm claims, so the meter is running on coverage too."
     },
     {
       question: "Do you help file insurance claims for storm damage?",
-      answer: "Absolutely. We handle the entire insurance claims process for you — from the initial free inspection and documentation with photos, to meeting with your adjuster on-site and negotiating fair coverage. Our team has extensive experience working with all major insurance carriers in Washington State. Call (206) 739-8232 to get started."
+      answer: "Absolutely — this is most of what we do on the storm side. We handle the entire process: free inspection, photo documentation, written scope, meeting your adjuster on-site, and negotiating fair coverage. Our team has extensive experience working with every major insurance carrier in Washington State. Call (206) 739-8232 to get started."
     },
     {
       question: "What areas do you serve for emergency storm damage repair?",
-      answer: "We provide emergency storm damage roof repair across the entire Puget Sound region, including Seattle, Bellevue, Redmond, Kirkland, Tacoma, Everett, Bothell, Lynnwood, Sammamish, and surrounding communities. We offer same-week service for storm emergencies."
+      answer: "We provide emergency storm damage roof repair across the entire Puget Sound region, including Seattle, Bellevue, Redmond, Kirkland, Sammamish, Issaquah, Tacoma, Everett, Bothell, Lynnwood, and surrounding communities throughout King, Snohomish, and Pierce counties."
     }
   ];
 

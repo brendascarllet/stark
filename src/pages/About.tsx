@@ -2,15 +2,14 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ServicePageHero from '@/components/shared/ServicePageHero';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
+import AboutHeroWithForm from '@/components/about/AboutHeroWithForm';
 import OurStory from '@/components/about/OurStory';
 import CoreValues from '@/components/about/CoreValues';
 import Certifications from '@/components/about/Certifications';
 import AboutCTA from '@/components/about/AboutCTA';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import ScrollToTop from '@/components/ScrollToTop';
-import HorizontalContactForm from '@/components/about/HorizontalContactForm';
 
 const About = () => {
   useEffect(() => {
@@ -24,24 +23,13 @@ const About = () => {
     keywords: 'about Stark Roofing, GAF certified roofer, family business, roofing contractor Seattle',
     ogTitle: 'About Stark Roofing - Trusted Local Roofing Experts',
     ogDescription: 'GAF certified roofing contractor serving Seattle & Puget Sound with family values.',
-    ogImage: 'https://starkroofingrenovation.com/crew-1.jpg',
+    ogImage: 'https://starkroofingrenovation.com/brenda-scarllet-owner.jpg',
   });
 
   return (
     <div className="min-h-screen">
       <Navbar />
-      <ServicePageHero
-        title="About Stark Roofing"
-        subtitle="Family-owned, GAF Certified, and personally led by owner Brenda Scarllet — bringing 30+ years of roofing experience and 2,000+ completed roofs to homeowners across the Puget Sound. We treat every home like our own."
-        badge="GAF Certified · 30+ Years · 2,000+ Roofs"
-        bgImage="/crew-1.jpg"
-        breadcrumb="About Us"
-        ctaLabel="Meet Brenda"
-        ctaHref="#our-story"
-        secondaryCta={{ label: 'Get a Free Estimate', href: '#contact' }}
-        accentColor="#dc2626"
-      />
-      <HorizontalContactForm />
+      <AboutHeroWithForm />
       <OurStory />
       <CoreValues />
       <Certifications />

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -12,7 +13,6 @@ import {
   Layers,
   HelpCircle,
   ArrowLeft,
-  ArrowRight,
   Check,
   Shield,
   Calendar as CalendarIcon,
@@ -23,7 +23,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
-import { sendLeadEmailAndSms } from '@/utils/emailjs';
+import { sendLeadEmailAndSms, sendCustomerConfirmation } from '@/utils/emailjs';
+import { submitBooking, fetchBusySlots, type BusySlot } from '@/utils/bookingBackend';
 
 const SERVICES = [
   { value: 'roof-replacement', label: 'Roof Replacement', icon: Home, sub: 'Full re-roof — 25 to 50 yr warranty' },
@@ -52,6 +53,8 @@ const ALL_TIME_SLOTS = [
 
 // Saturday cap: last bookable slot is 3:00 PM. After that, customer calls.
 const SATURDAY_LAST_HOUR = 15;
+
+const pad2 = (n: number) => (n < 10 ? `0${n}` : `${n}`);
 
 function getSlotsForDate(date: Date | undefined) {
   if (!date) return ALL_TIME_SLOTS;
@@ -101,8 +104,13 @@ interface QuickQuoteFormProps {
 }
 
 const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSuccess }) => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  // Slots already booked on Brenda's Google Calendar — fetched once when the
+  // user reaches the schedule step. Falls back to empty (= all slots free)
+  // if no backend is configured.
+  const [busySlots, setBusySlots] = useState<BusySlot[]>([]);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -127,6 +135,10 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
 
   const watchedService = form.watch('service');
   const watchedDate = form.watch('appointmentDate');
+  const watchedStreet = form.watch('street');
+  const watchedCity = form.watch('city');
+  const watchedZip = form.watch('zip');
+  const watchedTime = form.watch('appointmentTime');
 
   // Per-step field lists for partial validation
   const stepFields: Record<number, (keyof FormValues)[]> = {
@@ -144,6 +156,62 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
   };
 
   const goBack = () => setStep((s) => Math.max(1, s - 1));
+
+  // ── AUTO-ADVANCE — no "Next" button needed ──
+  // Step 1: when the user picks a service, jump to step 2 (short delay so they
+  // see the red highlight first).
+  // Step 3: when the user picks a time slot, jump to step 4.
+  // We track the *value that triggered* the last auto-advance so going Back
+  // and looking around doesn't immediately bounce them forward again — only a
+  // *new* selection will advance.
+  const lastAdvancedService = useRef<string | null>(null);
+  const lastAdvancedTime = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (step !== 1) return;
+    if (!watchedService) return;
+    if (lastAdvancedService.current === watchedService) return;
+    lastAdvancedService.current = watchedService;
+    const t = setTimeout(() => setStep(2), 280);
+    return () => clearTimeout(t);
+  }, [step, watchedService]);
+
+  useEffect(() => {
+    if (step !== 3) return;
+    if (!watchedDate || !watchedTime) return;
+    const key = `${watchedDate?.toISOString()}|${watchedTime}`;
+    if (lastAdvancedTime.current === key) return;
+    lastAdvancedTime.current = key;
+    const t = setTimeout(() => setStep(4), 280);
+    return () => clearTimeout(t);
+  }, [step, watchedDate, watchedTime]);
+
+  // Step 2 has 3 text fields, so it can't auto-advance on a single click.
+  // Instead, when all 3 address fields are clearly valid (street ≥ 3, city ≥ 2,
+  // zip = 5 digits), surface a single big "Continue" button at the bottom of
+  // step 2 — it's not a "Next" button in the wizard footer, it's a CTA.
+  const step2Valid =
+    (watchedStreet || '').trim().length >= 3 &&
+    (watchedCity || '').trim().length >= 2 &&
+    /^\d{5}$/.test((watchedZip || '').trim());
+
+  // ── Fetch already-booked slots from Google Calendar when the user reaches
+  // the schedule step. Single fetch per form lifecycle. If the backend isn't
+  // configured yet (APPS_SCRIPT_URL empty), this just returns []. ──
+  const busyFetched = useRef(false);
+  useEffect(() => {
+    if (step !== 3) return;
+    if (busyFetched.current) return;
+    busyFetched.current = true;
+    fetchBusySlots(21).then((slots) => setBusySlots(slots));
+  }, [step]);
+
+  // Helper: is this date+time slot already booked on the calendar?
+  const isSlotBusy = (date: Date | undefined, timeLabel: string) => {
+    if (!date || busySlots.length === 0) return false;
+    const ymd = `${date.getFullYear()}-${pad2(date.getMonth() + 1)}-${pad2(date.getDate())}`;
+    return busySlots.some((s) => s.date === ymd && s.time === timeLabel);
+  };
 
   // Disable past dates, today (no same-day bookings), and Sundays
   const disabledDays = (date: Date) => {
@@ -176,7 +244,7 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
         ? format(values.appointmentDate, 'EEEE, MMM d, yyyy')
         : '';
 
-      await sendLeadEmailAndSms({
+      const sharedPayload = {
         name: values.name,
         email: values.email,
         phone: values.phone,
@@ -188,14 +256,59 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
         appointmentTime: values.appointmentTime,
         message: extras.join(' | '),
         source: window.location.pathname,
+      };
+
+      // ── 1. Try the calendar backend FIRST so we can detect a double booking ──
+      // and refuse to submit if the slot is already taken.
+      const bookingResult = await submitBooking({
+        ...sharedPayload,
+        appointmentDate: values.appointmentDate
+          ? values.appointmentDate.toISOString()
+          : appointmentDateStr,
       });
+
+      if (bookingResult.conflict) {
+        toast.error('That time slot was just booked by someone else — please pick another.');
+        // Bounce them back to the schedule step and clear the time
+        form.setValue('appointmentTime', '');
+        // Refresh busy list so the slot disappears immediately
+        fetchBusySlots(21).then(setBusySlots);
+        setStep(3);
+        return;
+      }
+
+      // ── 2. Send the office lead alert (email + Brenda's SMS) — must succeed ──
+      await sendLeadEmailAndSms(sharedPayload);
+
+      // ── 3. Send the customer their friendly confirmation email — best-effort ──
+      try {
+        await sendCustomerConfirmation(sharedPayload);
+      } catch (custErr) {
+        console.warn(
+          'Customer confirmation email failed (lead still saved):',
+          custErr,
+        );
+      }
 
       setSubmitted(true);
       toast.success("Got it! We'll reach out shortly.");
-      // Give the user a beat to see the success state, then let parent close.
-      setTimeout(() => {
-        onSuccess?.();
-      }, 2200);
+
+      // Close any parent modal first, then navigate to the dedicated
+      // /thank-you landing page (with the appointment details in router state).
+      onSuccess?.();
+      navigate('/thank-you', {
+        state: {
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          service: serviceLabel,
+          street: values.street,
+          city: values.city,
+          zip: values.zip,
+          appointmentDate: appointmentDateStr,
+          appointmentTime: values.appointmentTime,
+        },
+      });
     } catch (err) {
       console.error('QuickQuoteForm submission error:', err);
       toast.error('Something went wrong. Please call (206) 739-8232 or try again.');
@@ -233,11 +346,14 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
   }
 
   // ============ FORM ============
+  // Note: layout uses natural content height (no h-full / flex-1) so the
+  // form works in BOTH the modal context AND when rendered inline inside
+  // QuickQuoteSection. Modal scrolling is handled by DialogContent itself.
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col h-full"
+        className="flex flex-col"
       >
         {/* Persistent reassurance strip — shown on every step */}
         <div className="flex items-center justify-center gap-3 px-6 pt-3 pb-1 text-[11px] text-charcoal/70 font-medium flex-wrap">
@@ -261,7 +377,7 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
           <span className="ml-2 text-xs text-charcoal/60 font-medium">Step {step} of {TOTAL_STEPS}</span>
         </div>
 
-        <div className="flex-1 overflow-y-auto px-6 pb-4">
+        <div className="px-6 pb-4">
           {/* ============ STEP 1: SERVICE ============ */}
           {step === 1 && (
             <div className="space-y-4">
@@ -518,13 +634,18 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
                         <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
                           {slots.map(({ value, label }) => {
                             const selected = field.value === value;
+                            const busy = isSlotBusy(watchedDate, value);
                             return (
                               <button
                                 key={value}
                                 type="button"
-                                onClick={() => field.onChange(value)}
-                                className={`px-2 py-2 rounded-lg border-2 text-sm font-medium transition-all ${
-                                  selected
+                                disabled={busy}
+                                onClick={() => !busy && field.onChange(value)}
+                                title={busy ? 'Already booked — pick another time' : undefined}
+                                className={`px-2 py-2 rounded-lg border-2 text-sm font-medium transition-all relative ${
+                                  busy
+                                    ? 'border-gray-200 bg-gray-100 text-gray-400 line-through cursor-not-allowed'
+                                    : selected
                                     ? 'border-stark-red bg-stark-red/5 text-stark-red'
                                     : 'border-gray-200 bg-white text-charcoal/80 hover:border-gray-300'
                                 }`}
@@ -534,6 +655,13 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
                             );
                           })}
                         </div>
+                        {busySlots.length > 0 && watchedDate &&
+                         slots.every(({ value }) => isSlotBusy(watchedDate, value)) && (
+                          <p className="text-[11px] text-amber-700 mt-1.5 bg-amber-50 border border-amber-200 rounded px-2 py-1.5">
+                            All times are taken on this day. Please pick another day or call{' '}
+                            <a href="tel:+12067398232" className="font-semibold underline">(206) 739-8232</a>
+                          </p>
+                        )}
                         {isSaturday ? (
                           <p className="text-[11px] text-amber-700 mt-1.5 bg-amber-50 border border-amber-200 rounded px-2 py-1.5">
                             <strong>Saturday:</strong> only morning slots online. For after 3 PM, please call{' '}
@@ -653,30 +781,56 @@ const QuickQuoteForm: React.FC<QuickQuoteFormProps> = ({ defaultService, onSucce
           )}
         </div>
 
-        {/* Sticky footer with nav buttons */}
-        <div className="border-t bg-white px-6 py-4 space-y-3">
-          <div className="flex gap-3">
-            {step > 1 && (
-              <Button type="button" variant="outline" onClick={goBack} className="flex-1">
-                <ArrowLeft size={16} className="mr-1" /> Back
-              </Button>
-            )}
-            {step < TOTAL_STEPS ? (
-              <Button type="button" variant="stark-red" onClick={goNext} className="flex-1">
-                Next <ArrowRight size={16} className="ml-1" />
-              </Button>
-            ) : (
-              <Button type="submit" variant="stark-red" className="flex-1" disabled={form.formState.isSubmitting}>
-                {form.formState.isSubmitting ? 'Sending...' : 'Confirm My Appointment'}
-              </Button>
-            )}
+        {/* ── Step-2 inline Continue button (only when address is fully valid) ──
+            Step 1 and 3 auto-advance on click, so they don't need a button.
+            Step 4 has the final Submit button below. */}
+        {step === 2 && (
+          <div className="px-6 pb-4">
+            <Button
+              type="button"
+              variant="stark-red"
+              onClick={goNext}
+              disabled={!step2Valid}
+              className="w-full text-base py-6"
+            >
+              {step2Valid ? 'Continue to Pick a Time' : 'Fill in your address to continue'}
+            </Button>
           </div>
+        )}
+
+        {/* ── Step-4 final submit button ── */}
+        {step === 4 && (
+          <div className="px-6 pb-4">
+            <Button
+              type="submit"
+              variant="stark-red"
+              className="w-full text-base py-6"
+              disabled={form.formState.isSubmitting}
+            >
+              {form.formState.isSubmitting ? 'Sending...' : 'Confirm My Appointment'}
+            </Button>
+          </div>
+        )}
+
+        {/* ── Footer: small Back link + trust strip. No "Next" button anywhere. ── */}
+        <div className="border-t bg-white px-6 py-3 space-y-2">
+          {step > 1 && (
+            <button
+              type="button"
+              onClick={goBack}
+              className="flex items-center gap-1 text-xs text-charcoal/60 hover:text-charcoal mx-auto"
+            >
+              <ArrowLeft size={12} /> Back
+            </button>
+          )}
 
           {/* Trust strip */}
           <div className="flex items-center justify-center gap-3 text-[11px] text-charcoal/60 flex-wrap">
             <span className="flex items-center gap-1"><Shield size={12} /> GAF Certified</span>
             <span>•</span>
             <span>30+ Years</span>
+            <span>•</span>
+            <span>2,000+ Roofs</span>
             <span>•</span>
             <span>Licensed &amp; Bonded WA</span>
           </div>

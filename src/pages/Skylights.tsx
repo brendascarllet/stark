@@ -16,6 +16,7 @@ import PricingComparison from '@/components/skylights/PricingComparison';
 import SkylightFAQSection from '@/components/skylights/SkylightFAQSection';
 import ContactCTA from '@/components/skylights/ContactCTA';
 import QuickQuoteButton from '@/components/shared/QuickQuoteButton';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const Skylights = () => {
   useEffect(() => {
@@ -34,6 +35,11 @@ const Skylights = () => {
 
   return (
     <div className="min-h-screen">
+      <ServiceSchema
+        name="Skylight Installation"
+        description="Professional skylight installation in Seattle & Puget Sound. Velux certified. Bring natural light safely. Expert flashing. Free estimates. 206-739-8232."
+        url="https://starkroofingrenovation.com/skylights"
+      />
       <Navbar />
       <ServicePageHero
         title="Skylight Installation"

@@ -81,12 +81,14 @@ const LocationPage: React.FC<LocationPageProps> = ({
         ctaHref="#contact"
         accentColor="#dc2626"
       />
-      <HorizontalContactForm />
       <div className="w-full py-12 lg:py-16 px-4">
         <div className="max-w-3xl mx-auto">
           {content}
         </div>
       </div>
+      {/* Lead-capture form — placed AFTER the local content so visitors first
+          see why we serve their area, then are asked to book. */}
+      <HorizontalContactForm />
       <VirtualAssistant />
       <ScrollToTop />
       <Footer />

@@ -29,7 +29,10 @@ const Contact = () => {
       <Navbar />
       
       <ContactHero />
-      <ContactFormSection />
+      {/* Anchored so the hero "Book Online" card scrolls to the form. */}
+      <div id="book-contact">
+        <ContactFormSection />
+      </div>
       <ContactMapSection />
       
       <ScrollToTop />

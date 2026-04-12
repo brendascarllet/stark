@@ -37,57 +37,104 @@ const ContactFormSection = () => {
               viewport={{ once: true }}
             >
               <div className="mb-10">
-                <h2 className="text-3xl font-heading font-bold mb-6">Contact Information</h2>
-                <p className="text-lg text-charcoal/80 mb-8">
-                  Have a question or ready to start your project? Reach out to us using any of the methods below.
+                <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+                  Here's What Happens After You Hit Send
+                </h2>
+                <p className="text-lg text-charcoal/80 leading-relaxed">
+                  We're a small Sammamish team, not a national call-center franchise.
+                  Every form, call, and text is read personally by Lilian or Mayara —
+                  usually within minutes during office hours.
                 </p>
               </div>
-              
-              <div className="space-y-8">
-                {/* Phone */}
+
+              {/* Three customer promises */}
+              <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-stark-red/10 p-3 rounded-full mr-4">
-                    <Phone className="w-6 h-6 text-stark-red" />
+                  <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+                    <span className="block w-6 h-6 text-stark-red font-bold text-center leading-6">
+                      1
+                    </span>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                    <p className="text-navy/80">(206) 739-8232</p>
+                    <h3 className="text-lg font-semibold mb-1 text-navy">
+                      We text you back within minutes
+                    </h3>
+                    <p className="text-charcoal/75 text-sm leading-relaxed">
+                      During office hours we reply faster than email — usually in under
+                      15 minutes. After hours, we get to you first thing the next morning.
+                    </p>
                   </div>
                 </div>
-                
-                {/* Email */}
+
                 <div className="flex items-start">
-                  <div className="bg-stark-red/10 p-3 rounded-full mr-4">
-                    <Mail className="w-6 h-6 text-stark-red" />
+                  <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+                    <span className="block w-6 h-6 text-stark-red font-bold text-center leading-6">
+                      2
+                    </span>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <p className="text-navy/80">office@starkroofingrenovation.com</p>
+                    <h3 className="text-lg font-semibold mb-1 text-navy">
+                      Free in-home estimate, no high-pressure pitch
+                    </h3>
+                    <p className="text-charcoal/75 text-sm leading-relaxed">
+                      We come measure, take photos, and email you a written quote —
+                      usually the same day. No pressure, no door-to-door tactics, no
+                      "today-only" deals.
+                    </p>
                   </div>
                 </div>
-                
-                {/* Hours */}
+
                 <div className="flex items-start">
-                  <div className="bg-stark-red/10 p-3 rounded-full mr-4">
-                    <Clock className="w-6 h-6 text-stark-red" />
+                  <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+                    <span className="block w-6 h-6 text-stark-red font-bold text-center leading-6">
+                      3
+                    </span>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Business Hours</h3>
-                    <p className="text-navy/80">Available 24/7</p>
+                    <h3 className="text-lg font-semibold mb-1 text-navy">
+                      Your info stays here
+                    </h3>
+                    <p className="text-charcoal/75 text-sm leading-relaxed">
+                      We never sell or share your phone or email with lead generators.
+                      Used only to confirm your appointment and your project.
+                    </p>
                   </div>
                 </div>
-                
-                {/* Location */}
-                <div className="flex items-start">
-                  <div className="bg-stark-red/10 p-3 rounded-full mr-4">
-                    <MapPin className="w-6 h-6 text-stark-red" />
+              </div>
+
+              {/* Compact contact details strip */}
+              <div className="mt-10 pt-8 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a
+                  href="tel:+12067398232"
+                  className="flex items-start gap-3 hover:text-stark-red transition-colors"
+                >
+                  <Phone className="w-5 h-5 text-stark-red flex-shrink-0 mt-0.5" />
+                  <div className="text-sm">
+                    <div className="font-semibold text-navy">Call or Text</div>
+                    <div className="text-charcoal/70">(206) 739-8232</div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1">Office Location</h3>
-                    <p className="text-navy/80">24243 SE 43rd Ct</p>
-                    <p className="text-navy/80">Sammamish, WA 98029</p>
+                </a>
+                <div className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-stark-red flex-shrink-0 mt-0.5" />
+                  <div className="text-sm">
+                    <div className="font-semibold text-navy">Office Hours</div>
+                    <div className="text-charcoal/70">Mon–Fri 7a–7p · Sat 8a–4p</div>
+                    <div className="text-charcoal/60 text-xs mt-0.5">Emergency line 24/7</div>
                   </div>
                 </div>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=24243+SE+43rd+Ct,+Sammamish,+WA+98029"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 hover:text-stark-red transition-colors"
+                >
+                  <MapPin className="w-5 h-5 text-stark-red flex-shrink-0 mt-0.5" />
+                  <div className="text-sm">
+                    <div className="font-semibold text-navy">HQ</div>
+                    <div className="text-charcoal/70">24243 SE 43rd Ct</div>
+                    <div className="text-charcoal/70">Sammamish, WA 98029</div>
+                  </div>
+                </a>
               </div>
             </motion.div>
           </div>

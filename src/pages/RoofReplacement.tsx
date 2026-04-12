@@ -3,8 +3,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ServicePageHero from '@/components/shared/ServicePageHero';
-// Original hero kept for reference: import HeroSection from '@/components/roof-replacement/HeroSection';
+import HeroSection from '@/components/roof-replacement/HeroSection';
 import OverviewSection from '@/components/roof-replacement/OverviewSection';
 import ProcessSection from '@/components/sections/ProcessSection';
 import MaterialsSection from '@/components/roof-replacement/MaterialsSection';
@@ -22,6 +21,7 @@ import { useSEOMeta } from '@/hooks/useSEOMeta';
 import AnimatedSection from '@/components/AnimatedSection';
 import EmergencyServiceBar from '@/components/navigation/EmergencyServiceBar';
 import FAQSection from '@/components/roof-replacement/FAQSection';
+import ServiceSchema from '@/components/shared/ServiceSchema';
 
 const RoofReplacement = () => {
   useEffect(() => {
@@ -30,13 +30,16 @@ const RoofReplacement = () => {
   
   // Set SEO meta tags
   useSEOMeta({
-    title: 'Expert Roof Replacement Services | GAF Certified | Stark Roofing Seattle',
-    description: 'Professional roof replacement services in Seattle & Puget Sound. GAF certified installers. Premium materials. Free estimates. Lifetime warranty available.',
+    title: 'Roof Replacement Seattle | GAF Certified | 2,000+ Roofs | Stark Roofing',
+    description:
+      'GAF Timberline HDZ roof replacement across Greater Seattle & Puget Sound. 30+ years, 2,000+ roofs, lifetime limited warranty. Free in-home estimate. (206) 739-8232.',
     canonical: 'https://starkroofingrenovation.com/roof-replacement',
-    keywords: 'roof replacement, new roof installation, roofing contractor Seattle, GAF certified roofer, residential roof replacement',
-    ogTitle: 'Roof Replacement - Stark Roofing | Seattle',
-    ogDescription: 'Expert roof replacement using premium GAF materials. Serving Seattle & Puget Sound.',
-    ogImage: 'https://starkroofingrenovation.com/drone-1.jpg',
+    keywords:
+      'roof replacement seattle, GAF certified installer, new roof bellevue, gaf timberline HDZ, residential roof replacement puget sound',
+    ogTitle: 'Roof Replacement — Your Last Roof, Done Right | Stark Roofing',
+    ogDescription:
+      "GAF Timberline HDZ, synthetic underlayment, ice & water shield where it counts. 2,000+ roofs across the Puget Sound.",
+    ogImage: 'https://starkroofingrenovation.com/roof-replacement-hero.jpg',
   });
   
   // Initialize animations
@@ -44,29 +47,25 @@ const RoofReplacement = () => {
   
   return (
     <>
+      <ServiceSchema
+        name="Roof Replacement"
+        description="GAF Timberline HDZ roof replacement across Greater Seattle & Puget Sound. 30+ years, 2,000+ roofs, lifetime limited warranty. Free in-home estimate. (206) 739-8232."
+        url="https://starkroofingrenovation.com/roof-replacement"
+      />
       <div id="stark-master-header">
         <Navbar />
         <EmergencyServiceBar />
       </div>
-      
-      <ServicePageHero
-        title="Roof Replacement"
-        subtitle="Expert installation using premium GAF materials — built to handle everything Washington weather throws at it."
-        badge="GAF Certified"
-        bgImage="/drone-1.jpg"
-        breadcrumb="Roof Replacement"
-        secondaryCta={{ label: "View Our Work", href: "#gallery" }}
-      />
-      
-      <HorizontalContactForm />
-      
+
+      <HeroSection />
+
       <AnimatedSection
         animation="slide-up"
         className="relative z-10"
       >
         <OverviewSection />
       </AnimatedSection>
-      
+
       <AnimatedSection
         animation="fade"
         delay={200}
@@ -74,7 +73,13 @@ const RoofReplacement = () => {
       >
         <PremiumRoofingSection />
       </AnimatedSection>
-      
+
+      {/* Lead-capture form — anchored so the hero "Book My Free Estimate"
+          button actually scrolls to it. */}
+      <div id="book-replacement">
+        <HorizontalContactForm />
+      </div>
+
       {/* Added WhyChooseUsSection here as it fits better with roof replacement */}
       <AnimatedSection
         animation="slide-up"

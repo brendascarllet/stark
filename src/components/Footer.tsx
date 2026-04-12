@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ChevronRight, Facebook, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Logo from './Logo';
+import PartnerLogos from './PartnerLogos';
 import { useIsMobile } from '@/hooks/use-mobile';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -152,6 +153,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        <PartnerLogos />
 
         <hr className="border-gray-700 my-8 md:my-10" />
 
