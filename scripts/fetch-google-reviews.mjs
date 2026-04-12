@@ -26,6 +26,20 @@ const ROOT = resolve(SCRIPT_DIR, '..');
 const OUTPUT_PATH = resolve(ROOT, 'src/data/googleReviews.json');
 const FIELD_MASK = 'id,displayName,rating,userRatingCount,reviews';
 
+// Load .env.local if it exists (for local development).
+// On CI, env vars are set by the GitHub Actions workflow's env: block,
+// so this is a no-op there. We only set vars that aren't already set
+// so CI secrets always take priority.
+const envLocalPath = resolve(ROOT, '.env.local');
+if (existsSync(envLocalPath)) {
+  for (const line of readFileSync(envLocalPath, 'utf8').split('\n')) {
+    const match = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
+    if (match && !process.env[match[1]]) {
+      process.env[match[1]] = match[2].trim();
+    }
+  }
+}
+
 function log(msg) {
   console.log(`[fetch-google-reviews] ${msg}`);
 }
