@@ -44,15 +44,16 @@ jobs:
     - name: Vite build
       run: npm run build
 
-    # ── Step 3: Prerender with Puppeteer (non-fatal) ──
-    # If prerender fails, the SPA still deploys with 404.html fallback.
-    # All critical schema/meta is in the static index.html <head> already.
+    # ── Step 3: Prerender with Puppeteer ──
+    - name: Install Puppeteer system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libatk1.0-0 libatk-bridge2.0-0 libcups2 libxdamage1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2t64 libnspr4 libnss3 libgbm1
+
     - name: Install Puppeteer browser
-      continue-on-error: true
       run: npx puppeteer browsers install chrome
 
     - name: Prerender static HTML
-      continue-on-error: true
       run: node scripts/prerender.mjs
 
     # ── Deploy ──
