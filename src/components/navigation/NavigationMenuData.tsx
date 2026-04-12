@@ -47,7 +47,7 @@ export const getServicesItems = (): DropdownItem[] => [
     label: "All Services"
   },
   {
-    to: "/before-after",
+    to: "/our-projects",
     icon: <Camera size={14} className="mr-2" />,
     label: "Our Projects"
   },

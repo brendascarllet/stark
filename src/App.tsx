@@ -107,6 +107,7 @@ function App() {
           <Route path="/metal-roofing" element={<MetalRoofing />} />
           <Route path="/asphalt-shingles" element={<AsphaltShingles />} />
           
+          <Route path="/our-projects" element={<BeforeAfter />} />
           <Route path="/before-after" element={<BeforeAfter />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />

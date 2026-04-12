@@ -147,7 +147,7 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
             </MobileMenuItem>
 
             <MobileMenuItem
-              to="/before-after"
+              to="/our-projects"
               className="text-xl font-medium text-white hover:text-stark-red transition-colors py-2"
               onClick={toggleMobileMenu}
             >
