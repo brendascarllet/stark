@@ -3,30 +3,32 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { 
-  Form, 
-  FormControl, 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormMessage 
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   fullName: z.string().min(2, { message: "Please enter your name" }),
   email: z.string().email({ message: "Please enter a valid email" }),
   phone: z.string().min(10, { message: "Please enter a valid phone number" }),
   message: z.string().optional(),
-  address: z.string().min(5, { message: "Please enter your address" }),
-  zipCode: z.string().min(5, { message: "Please enter a valid zip code" }),
+  address: z.string().min(5, { message: "Please enter your street address" }),
+  zipCode: z.string().regex(/^\d{5}$/, { message: "Please enter a valid 5-digit zip code" }),
 });
 
 const ContactForm: React.FC = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    mode: "onBlur",
     defaultValues: {
       fullName: "",
       email: "",
@@ -39,13 +41,15 @@ const ContactForm: React.FC = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const { sendLeadEmail } = await import('@/utils/emailjs');
-      await sendLeadEmail(values as Record<string, string>);
-      toast.success("We've received your information. Our team will contact you shortly!");
+      const { sendLeadEmailAndSms } = await import('@/utils/emailjs');
+      await sendLeadEmailAndSms(values as Record<string, string>);
+      toast.success("Got it! Brenda or someone from her team will reach out within 2 business hours.", {
+        duration: 6000,
+      });
       form.reset();
     } catch (error) {
       console.error('Form submission error:', error);
-      toast.error("There was a problem submitting your request. Please try again.");
+      toast.error("Something went wrong — please call (206) 739-8232 and we'll take your info by phone.");
     }
   };
 
@@ -59,9 +63,10 @@ const ContactForm: React.FC = () => {
             <FormItem>
               <FormLabel className="text-navy font-medium">Full Name*</FormLabel>
               <FormControl>
-                <Input 
-                  placeholder="Your name" 
-                  className="bg-white border-gray-300 focus:border-navy" 
+                <Input
+                  placeholder="Jane Homeowner"
+                  autoComplete="name"
+                  className="bg-white border-gray-300 focus:border-navy"
                   {...field}
                 />
               </FormControl>
@@ -69,19 +74,21 @@ const ContactForm: React.FC = () => {
             </FormItem>
           )}
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-navy font-medium">Email Address*</FormLabel>
+                <FormLabel className="text-navy font-medium">Email*</FormLabel>
                 <FormControl>
-                  <Input 
-                    type="email" 
-                    placeholder="Your email" 
-                    className="bg-white border-gray-300 focus:border-navy" 
+                  <Input
+                    type="email"
+                    inputMode="email"
+                    autoComplete="email"
+                    placeholder="you@example.com"
+                    className="bg-white border-gray-300 focus:border-navy"
                     {...field}
                   />
                 </FormControl>
@@ -89,18 +96,22 @@ const ContactForm: React.FC = () => {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-navy font-medium">Phone Number*</FormLabel>
+                <FormLabel className="text-navy font-medium">
+                  Phone* <span className="text-xs font-normal text-gray-500">(we text faster than we email)</span>
+                </FormLabel>
                 <FormControl>
-                  <Input 
-                    type="tel" 
-                    placeholder="Your phone number" 
-                    className="bg-white border-gray-300 focus:border-navy" 
+                  <Input
+                    type="tel"
+                    inputMode="tel"
+                    autoComplete="tel"
+                    placeholder="(206) 000-0000"
+                    className="bg-white border-gray-300 focus:border-navy"
                     {...field}
                   />
                 </FormControl>
@@ -109,7 +120,7 @@ const ContactForm: React.FC = () => {
             )}
           />
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <FormField
             control={form.control}
@@ -118,9 +129,10 @@ const ContactForm: React.FC = () => {
               <FormItem>
                 <FormLabel className="text-navy font-medium">Property Address*</FormLabel>
                 <FormControl>
-                  <Input 
-                    placeholder="Your address" 
-                    className="bg-white border-gray-300 focus:border-navy" 
+                  <Input
+                    placeholder="123 Alder St"
+                    autoComplete="street-address"
+                    className="bg-white border-gray-300 focus:border-navy"
                     {...field}
                   />
                 </FormControl>
@@ -128,17 +140,21 @@ const ContactForm: React.FC = () => {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="zipCode"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-navy font-medium">Zip Code*</FormLabel>
+                <FormLabel className="text-navy font-medium">Zip*</FormLabel>
                 <FormControl>
-                  <Input 
-                    placeholder="Your zip code" 
-                    className="bg-white border-gray-300 focus:border-navy" 
+                  <Input
+                    type="text"
+                    inputMode="numeric"
+                    autoComplete="postal-code"
+                    maxLength={5}
+                    placeholder="98101"
+                    className="bg-white border-gray-300 focus:border-navy"
                     {...field}
                   />
                 </FormControl>
@@ -147,17 +163,19 @@ const ContactForm: React.FC = () => {
             )}
           />
         </div>
-        
+
         <FormField
           control={form.control}
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-navy font-medium">Additional Comments</FormLabel>
+              <FormLabel className="text-navy font-medium">
+                What&apos;s going on with your roof? <span className="text-xs font-normal text-gray-500">(optional)</span>
+              </FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Tell us about your project needs..." 
-                  className="bg-white border-gray-300 focus:border-navy" 
+                <Textarea
+                  placeholder="Example: noticed stains on my bedroom ceiling after last weekend's windstorm"
+                  className="bg-white border-gray-300 focus:border-navy"
                   rows={3}
                   {...field}
                 />
@@ -168,14 +186,21 @@ const ContactForm: React.FC = () => {
         />
 
         <div className="mt-2">
-          <button 
-            type="submit" 
-            className="btn-primary w-full py-3"
+          <button
+            type="submit"
+            disabled={form.formState.isSubmitting}
+            className="btn-primary w-full py-3 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            Schedule My Free Inspection
+            {form.formState.isSubmitting ? (
+              <>
+                <Loader2 size={18} className="animate-spin" /> Sending…
+              </>
+            ) : (
+              "Schedule My Free Inspection"
+            )}
           </button>
-          <p className="text-xs text-gray-500 mt-3 text-center">
-            By submitting this form, you are giving consent to be contacted about our services.
+          <p className="text-xs text-gray-600 mt-3 text-center leading-relaxed">
+            ✓ Free, no obligation &nbsp; ✓ Response within 2 business hours &nbsp; ✓ We never share your info
           </p>
         </div>
       </form>

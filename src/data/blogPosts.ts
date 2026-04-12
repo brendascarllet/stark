@@ -486,7 +486,7 @@ A new roof is one of the best investments you can make in your home — it prote
 
 Every roof is different. The only way to get an accurate price is a professional inspection of your specific home. At Stark Roofing & Renovation, we provide free drone inspections with detailed reports and transparent, itemized pricing — no hidden fees, no pressure.
 
-**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We proudly serve King County, Snohomish County, Pierce County, and Kittitas County.
+**Call (206) 739-8232 or [request a free drone inspection](/contact).** We proudly serve King County, Snohomish County, Pierce County, and Kittitas County.
     `
   },
   {
@@ -593,7 +593,7 @@ A good roofer will happily provide their license, insurance, references, and a d
 
 We're a Washington State licensed and GAF certified contractor based in Sammamish, WA. We're fully insured, pull permits on every project, and back our work with quality craftsmanship. We also offer free drone inspections so you can see your roof's condition in high-definition detail before making any decisions.
 
-**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We serve King County, Snohomish County, Pierce County, and Kittitas County.
+**Call (206) 739-8232 or [request a free drone inspection](/contact).** We serve King County, Snohomish County, Pierce County, and Kittitas County.
     `
   },
   {
@@ -687,7 +687,7 @@ Every roof we install comes with enhanced warranty protection backed directly by
 
 We also offer free drone inspections so you can see your roof's condition before making a decision.
 
-**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We proudly serve King County, Snohomish County, Pierce County, and Kittitas County.
+**Call (206) 739-8232 or [request a free drone inspection](/contact).** We proudly serve King County, Snohomish County, Pierce County, and Kittitas County.
     `
   },
   {
@@ -772,7 +772,7 @@ The honest answer to "repair or replace?" requires looking at your specific roof
 
 At Stark Roofing, we provide free drone inspections that give you a high-definition view of your roof's condition. If your roof can be repaired, we'll tell you. If it needs replacing, we'll explain why and give you a detailed estimate. We don't push replacements when a simple repair solves the problem.
 
-**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).** We serve King County, Snohomish County, Pierce County, and Kittitas County.
+**Call (206) 739-8232 or [request a free drone inspection](/contact).** We serve King County, Snohomish County, Pierce County, and Kittitas County.
     `
   },
   {
@@ -896,7 +896,7 @@ Spring in the Pacific Northwest offers the best conditions for roof work:
 
 Stark Roofing & Renovation provides free drone inspections across King County, Snohomish County, Pierce County, and Kittitas County. Our GAF certified team will check every item on this list and provide you with high-definition photos and an honest assessment.
 
-**Call (206) 739-8232, [take our quick quiz](/quiz), or [request a free drone inspection](/contact).**
+**Call (206) 739-8232 or [request a free drone inspection](/contact).**
     `
   }
 ];

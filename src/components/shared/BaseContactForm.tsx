@@ -68,10 +68,11 @@ const BaseContactForm: React.FC<BaseContactFormProps> = ({
   schema = defaultContactFormSchema,
   className = "",
   buttonVariant = "stark-red",
-  successMessage = "Thank you! We'll be in touch soon."
+  successMessage = "Got it! Brenda or someone from her team will reach out within 2 business hours."
 }) => {
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
+    mode: "onBlur",
     defaultValues: {
       name: "",
       email: "",
@@ -92,16 +93,16 @@ const BaseContactForm: React.FC<BaseContactFormProps> = ({
   });
   const onSubmit = async (values: z.infer<typeof schema>) => {
     try {
-      const { sendLeadEmail } = await import('@/utils/emailjs');
-      await sendLeadEmail(values as Record<string, string>);
-      toast.success(successMessage);
+      const { sendLeadEmailAndSms } = await import('@/utils/emailjs');
+      await sendLeadEmailAndSms(values as Record<string, string>);
+      toast.success(successMessage, { duration: 6000 });
       if (onSubmitSuccess) {
         onSubmitSuccess();
       }
       form.reset();
     } catch (error) {
       console.error('Form submission error:', error);
-      toast.error("There was a problem submitting your request. Please try again.");
+      toast.error("Something went wrong — please call (206) 739-8232 and we'll take your info by phone.");
     }
   };
   return <>
@@ -115,40 +116,40 @@ const BaseContactForm: React.FC<BaseContactFormProps> = ({
         }) => <FormItem>
                 <FormLabel>Full Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your full name" {...field} />
+                  <Input placeholder="Jane Homeowner" autoComplete="name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>} />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField control={form.control} name="email" render={({
             field
           }) => <FormItem>
-                  <FormLabel>Email Address</FormLabel>
+                  <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="Email address" {...field} />
+                    <Input type="email" inputMode="email" autoComplete="email" placeholder="you@example.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>} />
-            
+
             <FormField control={form.control} name="phone" render={({
             field
           }) => <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>Phone <span className="text-xs font-normal text-gray-500">(we text faster than email)</span></FormLabel>
                   <FormControl>
-                    <Input type="tel" placeholder="Phone number" {...field} />
+                    <Input type="tel" inputMode="tel" autoComplete="tel" placeholder="(206) 000-0000" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>} />
           </div>
-          
+
           {showZipCode && <FormField control={form.control} name="zip" render={({
           field
         }) => (
             <FormItem>
               <FormLabel>Zip Code</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your zip code" {...field} />
+                <Input type="text" inputMode="numeric" autoComplete="postal-code" maxLength={5} placeholder="98101" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -195,19 +196,19 @@ const BaseContactForm: React.FC<BaseContactFormProps> = ({
           {showMessage && <FormField control={form.control} name="message" render={({
           field
         }) => <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>What&apos;s going on with your roof? <span className="text-xs font-normal text-gray-500">(optional)</span></FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Tell us about your project or questions..." className="min-h-[120px]" {...field} />
+                    <Textarea placeholder="Example: noticed stains on my bedroom ceiling after last weekend's windstorm" className="min-h-[120px]" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>} />}
-          
+
           <Button type="submit" variant={buttonVariant} size="full" disabled={form.formState.isSubmitting}>
-            {form.formState.isSubmitting ? "Submitting..." : buttonText}
+            {form.formState.isSubmitting ? "Sending…" : buttonText}
           </Button>
-          
-          <p className="text-xs text-gray-500 mt-2 text-center">
-            By submitting this form, you agree to be contacted about our services.
+
+          <p className="text-xs text-gray-600 mt-2 text-center leading-relaxed">
+            ✓ Free, no obligation &nbsp; ✓ Response within 2 business hours &nbsp; ✓ We never share your info
           </p>
         </form>
       </Form>

@@ -21,7 +21,7 @@ import StormDamage from './pages/StormDamage';
 import Warranty from './pages/Warranty';
 import WindowReplacement from './pages/WindowReplacement';
 import NotFound from './pages/NotFound';
-import QuizFunnel from './pages/QuizFunnel';
+import ThankYou from './pages/ThankYou';
 import PageTransition from './components/PageTransition';
 import { useEntranceAnimations } from './hooks/useEntranceAnimations';
 
@@ -82,6 +82,18 @@ function App() {
           <Route path="/service-area/tacoma" element={<Tacoma />} />
           <Route path="/service-area/bellevue" element={<Bellevue />} />
           <Route path="/service-area/issaquah" element={<Issaquah />} />
+
+          {/* Short city URLs */}
+          <Route path="/seattle" element={<Seattle />} />
+          <Route path="/bellevue" element={<Bellevue />} />
+          <Route path="/redmond" element={<Redmond />} />
+          <Route path="/kirkland" element={<Kirkland />} />
+          <Route path="/sammamish" element={<Sammamish />} />
+          <Route path="/issaquah" element={<Issaquah />} />
+          <Route path="/everett" element={<Everett />} />
+          <Route path="/lynnwood" element={<Lynnwood />} />
+          <Route path="/bothell" element={<Bothell />} />
+          <Route path="/tacoma" element={<Tacoma />} />
           <Route path="/roof-cleaning" element={<RoofCleaning />} />
           <Route path="/storm-damage" element={<StormDamage />} />
           <Route path="/warranty" element={<Warranty />} />
@@ -94,7 +106,7 @@ function App() {
           
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
-          <Route path="/quiz" element={<QuizFunnel />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/admin/hero" element={<AdminHero />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
