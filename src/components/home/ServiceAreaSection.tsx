@@ -19,7 +19,7 @@ const ServiceAreaSection: React.FC = () => {
           >
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100">
               <img 
-                src="/lovable-uploads/1fdb5c0c-5cfa-4535-9e2b-5cdadff4d44a.png" 
+                src="/lovable-uploads/1fdb5c0c-5cfa-4535-9e2b-5cdadff4d44a.webp" 
                 alt="Stark Roofing Service Area Map - Greater Seattle Area" 
                 className="w-full h-auto object-contain"
               />

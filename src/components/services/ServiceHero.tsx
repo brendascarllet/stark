@@ -5,7 +5,7 @@ const ServiceHero = () => {
   return (
     <section className="hero-overlay relative pt-32 pb-20 md:py-32">
       <img 
-        src="/lovable-uploads/914cc0c5-2671-4ac1-9f5b-ba2bf58fb412.png" 
+        src="/lovable-uploads/914cc0c5-2671-4ac1-9f5b-ba2bf58fb412.webp" 
         alt="Professional Asphalt Shingle Roof" 
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

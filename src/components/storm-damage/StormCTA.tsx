@@ -9,7 +9,7 @@ const StormCTA = () => {
     <section id="assessment" className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/f2d778a8-6a06-4b67-b818-0efd8075593e.png"
+          src="/lovable-uploads/f2d778a8-6a06-4b67-b818-0efd8075593e.webp"
           alt="Seattle skyline with Space Needle and Mount Rainier"
           className="w-full h-full object-cover"
         />

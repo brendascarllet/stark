@@ -69,7 +69,7 @@ const MODELS: Model[] = [
       'Stairwells where wiring is hard to reach',
       'Re-roof retrofits over existing shingles',
     ],
-    image: '/lovable-uploads/2821b129-1a0b-4714-9322-0ac209cc85ac.png',
+    image: '/lovable-uploads/2821b129-1a0b-4714-9322-0ac209cc85ac.webp',
     imageAlt: 'VELUX VSS solar powered fresh air skylight installed in vaulted ceiling',
     featured: true,
   },
@@ -100,7 +100,7 @@ const MODELS: Model[] = [
       'Commercial low-slope buildings',
       'Homes where the original curb is solid',
     ],
-    image: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.png',
+    image: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.webp',
     imageAlt: 'VELUX VCS curb mounted solar skylight',
   },
   {
@@ -131,7 +131,7 @@ const MODELS: Model[] = [
       'Full remodels with open ceilings',
       'Smart-home enthusiasts',
     ],
-    image: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.png',
+    image: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.webp',
     imageAlt: 'VELUX VSE electric venting skylight in modern kitchen',
   },
   {
@@ -162,7 +162,7 @@ const MODELS: Model[] = [
       'Budget-conscious projects',
       'Secondary skylight in a multi-skylight install',
     ],
-    image: '/lovable-uploads/f6057036-c7fd-4c02-8d16-ed9c3bad8e5f.png',
+    image: '/lovable-uploads/f6057036-c7fd-4c02-8d16-ed9c3bad8e5f.webp',
     imageAlt: 'VELUX VS manual venting skylight',
   },
   {
@@ -194,7 +194,7 @@ const MODELS: Model[] = [
       'New construction & full re-roofing',
       'Anywhere you only need light, not airflow',
     ],
-    image: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.png',
+    image: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.webp',
     imageAlt: 'VELUX FS deck-mounted fixed skylight',
   },
   {
@@ -224,7 +224,7 @@ const MODELS: Model[] = [
       'Low-slope and flat roofs',
       'Commercial buildings',
     ],
-    image: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.png',
+    image: '/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.webp',
     imageAlt: 'VELUX FCM curb mounted fixed skylight',
   },
   {
@@ -257,7 +257,7 @@ const MODELS: Model[] = [
       'Hallways and laundry rooms',
       'Tight attic spaces between trusses',
     ],
-    image: '/lovable-uploads/34257d11-a88c-4148-9c8e-04aff77fef5d.png',
+    image: '/lovable-uploads/34257d11-a88c-4148-9c8e-04aff77fef5d.webp',
     imageAlt: 'VELUX SUN TUNNEL tubular skylight in bathroom ceiling',
   },
 ];
@@ -279,7 +279,7 @@ const VeluxLineup = () => {
     ogTitle: 'The Complete VELUX Skylight Lineup We Install',
     ogDescription:
       'Solar, electric, manual, fixed, and tubular VELUX skylights — full specs and warranty details.',
-    ogImage: 'https://starkroofingrenovation.com/skylight-hero.png',
+    ogImage: 'https://starkroofingrenovation.com/skylight-hero.webp',
   });
 
   return (
@@ -290,7 +290,7 @@ const VeluxLineup = () => {
         title="The VELUX Lineup"
         subtitle="Every residential VELUX skylight we install — with the real specs, sizes, and glass technology you need to choose the right one."
         badge="VELUX Certified Installer"
-        bgImage="/skylight-hero.png"
+        bgImage="/skylight-hero.webp"
         breadcrumb="Skylights › VELUX Lineup"
         ctaLabel="Get a Free Estimate"
         ctaHref="#contact"

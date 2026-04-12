@@ -16,7 +16,7 @@ const FilterDetailsSection = () => {
             className="relative"
           >
             <img 
-              src="/lovable-uploads/94706dc5-2fc6-4423-ba6a-0137845afbff.png" 
+              src="/lovable-uploads/94706dc5-2fc6-4423-ba6a-0137845afbff.webp" 
               alt="Modern home with clean white gutters at sunset" 
               className="w-full h-64 object-cover object-center rounded-lg shadow-lg"
             />

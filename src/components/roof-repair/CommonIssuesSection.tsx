@@ -6,19 +6,19 @@ const CommonIssuesSection = () => {
     {
       title: "Leaking Roofs",
       description: "We identify and fix the root cause of leaks, preventing water damage to your home's interior and structure.",
-      imageSrc: "/lovable-uploads/30573f65-a31e-4f14-ae48-0205642490f6.png",
+      imageSrc: "/lovable-uploads/30573f65-a31e-4f14-ae48-0205642490f6.webp",
       imageAlt: "Water damage on ceiling showing bubbling and discoloration"
     },
     {
       title: "Damaged Shingles",
       description: "Replace missing, cracked, or curling shingles to maintain your roof's integrity and appearance.",
-      imageSrc: "/lovable-uploads/f5329a02-5ee7-454b-a9ff-02143843517e.png",
+      imageSrc: "/lovable-uploads/f5329a02-5ee7-454b-a9ff-02143843517e.webp",
       imageAlt: "Damaged roof shingles and flashing near chimney"
     },
     {
       title: "Flashing & Seal Failures",
       description: "Repair damaged flashing around chimneys, vents, and skylights to prevent water infiltration.",
-      imageSrc: "/lovable-uploads/2bd40120-145a-48d0-bb60-21bd988b0f8d.png",
+      imageSrc: "/lovable-uploads/2bd40120-145a-48d0-bb60-21bd988b0f8d.webp",
       imageAlt: "Rusty roof flashing with visible damage around chimney"
     }
   ];

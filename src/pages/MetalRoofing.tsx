@@ -27,7 +27,7 @@ const MetalRoofing = () => {
     keywords: 'metal roofing, metal roof installation, standing seam roofing, durable roofing, modern roofing',
     ogTitle: 'Metal Roofing - Durable & Long-Lasting | Stark Roofing',
     ogDescription: 'Premium metal roofing systems. Durable, energy-efficient, and built to last 30+ years.',
-    ogImage: 'https://starkroofingrenovation.com/metal-roofing-hero.jpg',
+    ogImage: 'https://starkroofingrenovation.com/metal-roofing-hero.webp',
   });
   
   return (
@@ -46,7 +46,7 @@ const MetalRoofing = () => {
         title="Premium Metal Roofing"
         subtitle="Modern, energy-efficient metal roofing that outlasts Pacific NW weather for 50+ years with minimal maintenance."
         badge="50-Year Warranty Available"
-        bgImage="/metal-roofing-hero.jpg"
+        bgImage="/metal-roofing-hero.webp"
         breadcrumb="Metal Roofing"
         secondaryCta={{ label: "View Metal Options", href: "#materials" }}
       />
@@ -71,7 +71,7 @@ const MetalRoofing = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/5ea5b3b8-72f3-4e18-b9c5-0ce95d7896c9.png" 
+                src="/lovable-uploads/5ea5b3b8-72f3-4e18-b9c5-0ce95d7896c9.webp" 
                 alt="Standing Seam Metal Roof" 
                 className="w-full h-auto"
               />

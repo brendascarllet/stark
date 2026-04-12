@@ -19,7 +19,7 @@ const corePosts: BlogPost[] = [
     excerpt: "Seattle homeowners face unique roofing challenges. Learn the warning signs that mean it's time for a new roof before small problems become expensive emergencies.",
     date: "2026-04-01",
     author: "Stark Roofing Team",
-    image: "/drone-1.jpg",
+    image: "/drone-1.webp",
     keywords: "when to replace roof Seattle, signs you need new roof, roof replacement signs, how long does a roof last Seattle, roof lifespan Pacific Northwest",
     readTime: "5 min read",
     content: `
@@ -70,7 +70,7 @@ If you noticed any of these signs, the best next step is a free professional roo
     excerpt: "Rain, wind, moss, and humidity — PNW weather demands the right roofing material. Compare asphalt shingles, metal roofing, and more for your Seattle-area home.",
     date: "2026-03-25",
     author: "Stark Roofing Team",
-    image: "/blog-materials.jpg",
+    image: "/blog-materials.webp",
     keywords: "best roofing materials Seattle, roofing materials Pacific Northwest, GAF shingles vs metal roof, asphalt shingles Seattle, metal roofing Washington",
     readTime: "6 min read",
     content: `
@@ -146,7 +146,7 @@ Every home is different. The best way to choose is to get a professional assessm
     excerpt: "Step-by-step guide for Washington homeowners on filing a roof damage insurance claim after a storm. Learn what to document, when to call, and how we can help.",
     date: "2026-03-18",
     author: "Stark Roofing Team",
-    image: "/blog-storm-damage.jpg",
+    image: "/blog-storm-damage.webp",
     keywords: "roof insurance claim Washington, storm damage roof repair Seattle, hail damage roof insurance, how to file roof insurance claim, roof damage claim process",
     readTime: "7 min read",
     content: `
@@ -243,7 +243,7 @@ At Stark Roofing & Renovation, we've helped hundreds of Puget Sound homeowners n
     excerpt: "Moss is one of the biggest threats to roofs in the Pacific Northwest. Learn why it's dangerous, how to remove it safely, and how to prevent it from coming back.",
     date: "2026-03-10",
     author: "Stark Roofing Team",
-    image: "/blog-moss.jpg",
+    image: "/blog-moss.webp",
     keywords: "moss removal roof Seattle, moss on roof damage, roof moss prevention Pacific Northwest, how to remove moss from roof, moss treatment roof Washington",
     readTime: "5 min read",
     content: `
@@ -315,7 +315,7 @@ Stark Roofing & Renovation provides professional roof cleaning services across t
     excerpt: "Clogged gutters cause foundation damage, basement flooding, and roof leaks. Here's how Seattle homeowners should maintain their gutters year-round.",
     date: "2026-03-03",
     author: "Stark Roofing Team",
-    image: "/blog-gutters.jpg",
+    image: "/blog-gutters.webp",
     keywords: "gutter maintenance Seattle, gutter cleaning Pacific Northwest, clogged gutters damage, gutter repair Seattle, when to replace gutters, gutter guards Seattle",
     readTime: "5 min read",
     content: `
@@ -412,7 +412,7 @@ const newSEOPosts: BlogPost[] = [
     excerpt: "What does a roof replacement really cost in the Seattle area? Get transparent pricing ranges, material comparisons, and learn what drives roofing costs in the Puget Sound.",
     date: "2026-04-04",
     author: "Stark Roofing Team",
-    image: "/blog-seo-1.jpg",
+    image: "/blog-seo-1.webp",
     keywords: "roof replacement cost Seattle, how much does a new roof cost Seattle, roofing prices Seattle 2026, roof replacement estimate Puget Sound, new roof cost Washington",
     readTime: "7 min read",
     content: `
@@ -495,7 +495,7 @@ Every roof is different. The only way to get an accurate price is a professional
     excerpt: "Hiring the wrong roofer can cost you thousands. Learn the 8 things every Washington homeowner should verify before signing a roofing contract.",
     date: "2026-04-03",
     author: "Stark Roofing Team",
-    image: "/blog-seo-2.jpg",
+    image: "/blog-seo-2.webp",
     keywords: "how to choose roofing contractor, best roofer near me Washington, roofing contractor red flags, licensed roofer Seattle, roofing scams to avoid",
     readTime: "6 min read",
     content: `
@@ -602,7 +602,7 @@ We're a Washington State licensed and GAF certified contractor based in Sammamis
     excerpt: "Not all roofers can offer the same warranty — even using the same shingles. Learn why GAF certification matters and how it protects your investment for decades.",
     date: "2026-04-02",
     author: "Stark Roofing Team",
-    image: "/blog-seo-3.jpg",
+    image: "/blog-seo-3.webp",
     keywords: "GAF certified contractor near me, GAF warranty explained, what is GAF certification, GAF certified vs non certified roofer, roofing warranty Washington",
     readTime: "6 min read",
     content: `
@@ -696,7 +696,7 @@ We also offer free drone inspections so you can see your roof's condition before
     excerpt: "Should you patch it or replace it? Learn the decision framework that Seattle roofers use to help homeowners avoid wasting money on the wrong choice.",
     date: "2026-03-30",
     author: "Stark Roofing Team",
-    image: "/blog-seo-4.jpg",
+    image: "/blog-seo-4.webp",
     keywords: "roof repair vs replacement, should I repair or replace my roof, roof repair cost vs replacement cost, when to replace roof Seattle, roof repair worth it",
     readTime: "6 min read",
     content: `
@@ -781,7 +781,7 @@ At Stark Roofing, we provide free drone inspections that give you a high-definit
     excerpt: "Winter is over — but the damage might already be done. Use this 12-point spring checklist to catch roof problems before they become expensive emergencies.",
     date: "2026-03-28",
     author: "Stark Roofing Team",
-    image: "/blog-seo-5.jpg",
+    image: "/blog-seo-5.webp",
     keywords: "spring roof inspection checklist, PNW roof maintenance, spring roof check Seattle, roof inspection after winter, seasonal roof maintenance Pacific Northwest",
     readTime: "5 min read",
     content: `

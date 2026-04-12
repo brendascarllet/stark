@@ -48,7 +48,7 @@ const OverviewSection = () => {
           <div className="w-full md:w-1/2">
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/98c822d1-6bab-4b93-9d02-4afb2ed7bde5.png" 
+                src="/lovable-uploads/98c822d1-6bab-4b93-9d02-4afb2ed7bde5.webp" 
                 alt="Professional roofer repairing damaged shingles" 
                 className="w-full h-auto"
               />

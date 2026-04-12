@@ -77,7 +77,7 @@ const FeaturedFixedSkylight = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-amber-200/50 aspect-[4/5]">
               <img
-                src="/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.png"
+                src="/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.webp"
                 alt="VELUX fixed skylight with solar powered blackout blind installed in modern bedroom"
                 className="w-full h-full object-cover"
               />

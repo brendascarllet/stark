@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { useSEOMeta } from '@/hooks/useSEOMeta';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/services/ContactForm';
@@ -21,29 +22,20 @@ import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import ScrollToTop from '@/components/ScrollToTop';
 import AnimatedSection from '@/components/AnimatedSection';
 import HomeFAQSection from '@/components/home/FAQSection';
-import BeforeAfterGallery from '@/components/home/BeforeAfterGallery';
 import { motion } from 'framer-motion';
 
 const Index = () => {
+  useSEOMeta({
+    title: 'Stark Roofing & Renovation | Roofer Near Me | Seattle, Bellevue & Puget Sound WA',
+    description: 'Looking for a roofer near you? Stark Roofing & Renovation is a bilingual, GAF Certified contractor serving Seattle, Bellevue, Sammamish, Redmond, Kirkland, Tacoma & all of Puget Sound. Free estimates: (206) 739-8232.',
+    canonical: 'https://starkroofingrenovation.com/',
+    ogTitle: 'Stark Roofing & Renovation | Roofer Near Me in Seattle, Bellevue & Puget Sound WA',
+    ogDescription: 'Bilingual GAF Certified roofing contractor serving all of Greater Seattle & Puget Sound.',
+    ogImage: 'https://starkroofingrenovation.com/stark-cover.png',
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    // Add reveal-on-scroll class to all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll('[data-animate]');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    animatedElements.forEach(el => observer.observe(el));
-
-    return () => {
-      animatedElements.forEach(el => observer.unobserve(el));
-    };
   }, []);
 
   return (
@@ -71,10 +63,6 @@ const Index = () => {
 
       <AnimatedSection animation="fade">
         <ServicesOverviewSection />
-      </AnimatedSection>
-
-      <AnimatedSection animation="slide-up">
-        <BeforeAfterGallery />
       </AnimatedSection>
 
       {/* Lead-capture form — placed AFTER the cinematic story + services overview

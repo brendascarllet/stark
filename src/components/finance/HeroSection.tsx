@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="pt-40 pb-20 md:py-32 relative">
       <img 
-        src="/lovable-uploads/134c865a-a179-4974-9b1d-84bf099ee456.png" 
+        src="/lovable-uploads/134c865a-a179-4974-9b1d-84bf099ee456.webp" 
         alt="Modern home with blue metal roof" 
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

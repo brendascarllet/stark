@@ -7,7 +7,7 @@ const WarrantyHero = () => {
   return (
     <section className="hero-overlay relative pt-32 pb-20 md:py-32">
       <img 
-        src="/lovable-uploads/c72e9316-ddde-4593-8a3b-e66ac56d78a6.png" 
+        src="/lovable-uploads/c72e9316-ddde-4593-8a3b-e66ac56d78a6.webp" 
         alt="Beautiful blue-gray house with quality roof installation" 
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

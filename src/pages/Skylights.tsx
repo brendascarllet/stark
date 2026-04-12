@@ -30,7 +30,7 @@ const Skylights = () => {
     keywords: 'skylight installation Seattle, Velux skylights, skylight repair, natural light windows, roof windows',
     ogTitle: 'Skylight Installation - Velux Certified | Stark Roofing',
     ogDescription: 'Professional skylight installation with expert flashing. Bring natural light into your home.',
-    ogImage: 'https://starkroofingrenovation.com/skylight-hero.png',
+    ogImage: 'https://starkroofingrenovation.com/skylight-hero.webp',
   });
 
   return (
@@ -45,7 +45,7 @@ const Skylights = () => {
         title="Skylight Installation"
         subtitle="Bring natural light into your home with professional Velux skylight installation and expert flashing."
         badge="Velux Certified Installer"
-        bgImage="/skylight-hero.png"
+        bgImage="/skylight-hero.webp"
         breadcrumb="Skylights"
         ctaLabel="Get a Free Estimate"
         ctaHref="#contact"

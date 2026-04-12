@@ -77,29 +77,36 @@ interface ChapterSlideProps {
 
 const ChapterSlide: React.FC<ChapterSlideProps> = ({ chapter, index, progress, totalChapters }) => {
   const start  = index / totalChapters;
-  const center = (index + 0.5) / totalChapters;
   const end    = (index + 1) / totalChapters;
 
   // Image: slides in from right, centres, then exits left
   const imgX = useTransform(
     progress,
-    [start, center, end],
+    [start, (start + end) / 2, end],
     ['100%', '0%', '-100%']
   );
-  const imgScale = useTransform(progress, [start, center, end], [1.1, 1.0, 0.95]);
+  const imgScale = useTransform(progress, [start, (start + end) / 2, end], [1.1, 1.0, 0.95]);
 
-  // Text: fades + rises in, then fades out
-  const textY = useTransform(progress, [start, center, end], ['4rem', '0rem', '-4rem']);
-  const textOpacity = useTransform(progress, [start, center * 0.6, center * 1.4, end], [0, 1, 1, 0]);
+  // Text: fades + rises in, then fades out — WIDER window so content is readable
+  const textY = useTransform(progress, [start, (start + end) / 2, end], ['4rem', '0rem', '-4rem']);
+  const textOpacity = useTransform(
+    progress,
+    [start, start + 0.03, end - 0.03, end],
+    [0, 1, 1, 0]
+  );
 
   // Chapter number counter
-  const numOpacity = useTransform(progress, [start, center * 0.7, center * 1.3, end], [0, 1, 1, 0]);
+  const numOpacity = useTransform(
+    progress,
+    [start, start + 0.03, end - 0.03, end],
+    [0, 1, 1, 0]
+  );
 
   return (
     <div className="absolute inset-0 flex flex-col md:flex-row overflow-hidden">
       {/* ── Image panel ── */}
       <motion.div
-        className="relative w-full md:w-1/2 h-1/2 md:h-full overflow-hidden"
+        className="relative w-full md:w-1/2 h-[40%] md:h-full overflow-hidden"
         style={{ x: imgX }}
       >
         <motion.img
@@ -107,6 +114,7 @@ const ChapterSlide: React.FC<ChapterSlideProps> = ({ chapter, index, progress, t
           alt={chapter.headline}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ scale: imgScale }}
+          loading="lazy"
         />
         {/* Colour overlay */}
         <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${chapter.accent}22, transparent 60%)` }} />
@@ -115,7 +123,7 @@ const ChapterSlide: React.FC<ChapterSlideProps> = ({ chapter, index, progress, t
 
       {/* ── Text panel ── */}
       <motion.div
-        className="relative w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center px-8 md:px-16 bg-[#0a0a0a]"
+        className="relative w-full md:w-1/2 h-[60%] md:h-full flex flex-col justify-center px-6 md:px-16 bg-[#0a0a0a]"
         style={{ y: textY, opacity: textOpacity }}
       >
         {/* Chapter number */}
@@ -150,19 +158,87 @@ const ChapterSlide: React.FC<ChapterSlideProps> = ({ chapter, index, progress, t
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full text-sm tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(220,38,38,0.5)]"
               >
-                🏠 Free Estimate
+                Free Estimate
               </a>
               <a
                 href="tel:2067398232"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/20 text-white font-semibold rounded-full text-sm tracking-wide hover:bg-white/10 transition-all duration-300"
               >
-                📞 (206) 739-8232
+                (206) 739-8232
               </a>
             </div>
           )}
         </div>
       </motion.div>
     </div>
+  );
+};
+
+// ─── ChapterWrapper — owns its own useTransform hook (no hooks-in-map) ────────
+const ChapterWrapper: React.FC<{
+  chapter: (typeof CHAPTERS)[0];
+  index: number;
+  smoothProgress: MotionValue<number>;
+}> = ({ chapter, index, smoothProgress }) => {
+  const slideStart = index / TOTAL_CHAPTERS;
+  const slideEnd = (index + 1) / TOTAL_CHAPTERS;
+  const slideOpacity = useTransform(
+    smoothProgress,
+    [slideStart, slideStart + 0.02, slideEnd - 0.02, slideEnd],
+    [0, 1, 1, 0]
+  );
+
+  return (
+    <motion.div className="absolute inset-0" style={{ opacity: slideOpacity }}>
+      <ChapterSlide
+        chapter={chapter}
+        index={index}
+        progress={smoothProgress}
+        totalChapters={TOTAL_CHAPTERS}
+      />
+    </motion.div>
+  );
+};
+
+// ─── ChapterDot — owns its own useTransform hook ─────────────────────────────
+const ChapterDot: React.FC<{
+  chapter: (typeof CHAPTERS)[0];
+  index: number;
+  smoothProgress: MotionValue<number>;
+}> = ({ chapter, index, smoothProgress }) => {
+  const dotActive = useTransform(
+    smoothProgress,
+    [index / TOTAL_CHAPTERS, (index + 0.5) / TOTAL_CHAPTERS, (index + 1) / TOTAL_CHAPTERS],
+    [0.25, 1, 0.25]
+  );
+  return (
+    <motion.div
+      className="w-1.5 rounded-full cursor-pointer"
+      style={{ height: 24, backgroundColor: chapter.accent, opacity: dotActive }}
+      title={chapter.headline}
+    />
+  );
+};
+
+// ─── ScrollHint — owns its own useTransform hook ──────────────────────────────
+const ScrollHint: React.FC<{ smoothProgress: MotionValue<number> }> = ({ smoothProgress }) => {
+  const hintOpacity = useTransform(smoothProgress, [0, 0.05], [1, 0]);
+  return (
+    <motion.div
+      className="absolute bottom-8 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2"
+      style={{ opacity: hintOpacity }}
+    >
+      <motion.div
+        className="w-6 h-9 rounded-full border-2 border-white/30 flex items-start justify-center pt-1.5"
+      >
+        <motion.div
+          className="w-1 h-2 bg-white/50 rounded-full"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        />
+      </motion.div>
+      <span className="text-white/30 text-[10px] tracking-[0.3em] uppercase">scroll</span>
+    </motion.div>
   );
 };
 
@@ -201,66 +277,29 @@ const CinematicScrollSection: React.FC = () => {
         </div>
 
         {/* ── All chapter slides (stacked, driven by scroll) ── */}
-        {CHAPTERS.map((chapter, i) => {
-          const slideStart  = i / TOTAL_CHAPTERS;
-          const slideEnd    = (i + 1) / TOTAL_CHAPTERS;
-          const slideOpacity = useTransform(
-            smoothProgress,
-            [slideStart, slideStart + 0.02, slideEnd - 0.02, slideEnd],
-            [0, 1, 1, 0]
-          );
-
-          return (
-            <motion.div
-              key={i}
-              className="absolute inset-0"
-              style={{ opacity: slideOpacity }}
-            >
-              <ChapterSlide
-                chapter={chapter}
-                index={i}
-                progress={smoothProgress}
-                totalChapters={TOTAL_CHAPTERS}
-              />
-            </motion.div>
-          );
-        })}
+        {CHAPTERS.map((chapter, i) => (
+          <ChapterWrapper
+            key={i}
+            chapter={chapter}
+            index={i}
+            smoothProgress={smoothProgress}
+          />
+        ))}
 
         {/* ── Chapter dots (right edge) ── */}
         <div className="absolute right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
-          {CHAPTERS.map((ch, i) => {
-            const dotActive = useTransform(
-              smoothProgress,
-              [i / TOTAL_CHAPTERS, (i + 0.5) / TOTAL_CHAPTERS, (i + 1) / TOTAL_CHAPTERS],
-              [0.25, 1, 0.25]
-            );
-            return (
-              <motion.div
-                key={i}
-                className="w-1.5 rounded-full cursor-pointer"
-                style={{ height: 24, backgroundColor: ch.accent, opacity: dotActive }}
-                title={ch.headline}
-              />
-            );
-          })}
+          {CHAPTERS.map((ch, i) => (
+            <ChapterDot
+              key={i}
+              chapter={ch}
+              index={i}
+              smoothProgress={smoothProgress}
+            />
+          ))}
         </div>
 
         {/* ── Scroll hint (only at very start) ── */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2"
-          style={{ opacity: useTransform(smoothProgress, [0, 0.05], [1, 0]) }}
-        >
-          <motion.div
-            className="w-6 h-9 rounded-full border-2 border-white/30 flex items-start justify-center pt-1.5"
-          >
-            <motion.div
-              className="w-1 h-2 bg-white/50 rounded-full"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-          </motion.div>
-          <span className="text-white/30 text-[10px] tracking-[0.3em] uppercase">scroll</span>
-        </motion.div>
+        <ScrollHint smoothProgress={smoothProgress} />
       </div>
     </div>
   );

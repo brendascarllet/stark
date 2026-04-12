@@ -64,7 +64,7 @@ const LynnwoodLocation = () => {
       region="Greater Seattle"
       description="Roofing contractors based in Sammamish, proudly serving Lynnwood and the Puget Sound."
       content={content}
-      heroImage="drone-2.jpg"
+      heroImage="drone-2.webp"
       keywords="roofing contractor Lynnwood, roof repair Lynnwood WA, roofer Lynnwood, roof replacement Lynnwood"
     />
   );

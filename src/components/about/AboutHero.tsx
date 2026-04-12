@@ -5,7 +5,7 @@ const AboutHero = () => {
   return (
     <section className="hero-overlay relative pt-32 pb-20 md:py-32">
       <img 
-        src="/lovable-uploads/e06a0538-fea2-4c95-93fd-e2857286bc35.png" 
+        src="/lovable-uploads/e06a0538-fea2-4c95-93fd-e2857286bc35.webp" 
         alt="Professional Roofer Installing GAF Shingles" 
         className="absolute inset-0 w-full h-full object-cover"
       />

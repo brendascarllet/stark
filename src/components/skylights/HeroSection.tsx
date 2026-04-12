@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="hero-overlay relative pt-32 pb-20 md:py-32">
       <img 
-        src="/lovable-uploads/9d62f329-4ca8-420b-82fd-645ae2ee7e0e.png" 
+        src="/lovable-uploads/9d62f329-4ca8-420b-82fd-645ae2ee7e0e.webp" 
         alt="Modern kitchen with expansive skylights letting in natural light through a wooden ceiling" 
         className="absolute inset-0 w-full h-full object-cover object-top"
       />

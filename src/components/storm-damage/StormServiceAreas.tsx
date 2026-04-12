@@ -59,7 +59,7 @@ const StormServiceAreas = () => {
           <div className="lg:w-1/2">
             <div className="relative rounded-xl overflow-hidden shadow-md">
               <img 
-                src="/lovable-uploads/8341ce61-c6d5-4a1c-a860-f3c55d87e0d0.png" 
+                src="/lovable-uploads/8341ce61-c6d5-4a1c-a860-f3c55d87e0d0.webp" 
                 alt="Western Washington Service Map" 
                 className="w-full h-auto object-cover"
               />

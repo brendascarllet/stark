@@ -49,9 +49,9 @@ function loadSlides(): Slide[] {
 
 // ─── Cinematic intro overlay ────────────────────────────────────────────────────
 const INTRO_LINES = [
-  { text: 'STARK',            delay: 0.6, className: 'text-[clamp(4rem,14vw,11rem)] font-extrabold tracking-widest text-white leading-none font-heading' },
-  { text: 'ROOFING &',        delay: 0.9, className: 'text-[clamp(1.8rem,5vw,4rem)] font-bold tracking-[0.2em] text-white/90 font-heading' },
-  { text: 'RENOVATION',       delay: 1.1, className: 'text-[clamp(1.8rem,5vw,4rem)] font-bold tracking-[0.2em] text-white/90 font-heading' },
+  { text: 'STARK',            delay: 0.2, className: 'text-[clamp(4rem,14vw,11rem)] font-extrabold tracking-widest text-white leading-none font-heading' },
+  { text: 'ROOFING &',        delay: 0.4, className: 'text-[clamp(1.8rem,5vw,4rem)] font-bold tracking-[0.2em] text-white/90 font-heading' },
+  { text: 'RENOVATION',       delay: 0.5, className: 'text-[clamp(1.8rem,5vw,4rem)] font-bold tracking-[0.2em] text-white/90 font-heading' },
 ];
 
 // ─── Component ──────────────────────────────────────────────────────────────────
@@ -108,7 +108,7 @@ const HeroSection: React.FC = () => {
       setIntroPhase('hero');
       setShowMusicHint(true);
       setTimeout(() => setShowMusicHint(false), 4000);
-    }, 3800);
+    }, 1500);
     return () => clearTimeout(t);
   }, []);
 
@@ -186,10 +186,10 @@ const HeroSection: React.FC = () => {
             {/* Letterbox bars */}
             <motion.div className="absolute top-0 left-0 right-0 h-[10vh] bg-black z-10"
               initial={{ scaleY: 1 }} animate={{ scaleY: 0, originY: 0 }}
-              transition={{ delay: 2.8, duration: 0.7 }} />
+              transition={{ delay: 0.9, duration: 0.5 }} />
             <motion.div className="absolute bottom-0 left-0 right-0 h-[10vh] bg-black z-10"
               initial={{ scaleY: 1 }} animate={{ scaleY: 0, originY: 1 }}
-              transition={{ delay: 2.8, duration: 0.7 }} />
+              transition={{ delay: 0.9, duration: 0.5 }} />
 
             {/* Stark black logo — centred on pure black */}
             <motion.div
@@ -241,7 +241,7 @@ const HeroSection: React.FC = () => {
                   className="text-sm md:text-base text-white/50 tracking-[0.3em] uppercase font-light"
                   initial={{ y: '110%', opacity: 0 }}
                   animate={{ y: '0%', opacity: 1 }}
-                  transition={{ delay: 1.6, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ delay: 0.7, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 >
                   Built to Last · GAF Certified
                 </motion.p>
@@ -252,7 +252,7 @@ const HeroSection: React.FC = () => {
                 className="h-[2px] bg-red-600 mt-6"
                 initial={{ width: 0 }}
                 animate={{ width: '140px' }}
-                transition={{ delay: 2.0, duration: 0.8, ease: 'easeOut' }}
+                transition={{ delay: 0.8, duration: 0.5, ease: 'easeOut' }}
               />
             </div>
           </motion.div>
@@ -263,7 +263,7 @@ const HeroSection: React.FC = () => {
           PHASE 2 – HERO CAROUSEL (slides after intro)
       ══════════════════════════════════════════════════════════ */}
       {/* Parallax wrapper */}
-      <motion.div className="absolute inset-0 w-full h-full" style={{ y: bgY }}>
+      <motion.div className="absolute inset-0 w-full h-full" style={{ y: bgY, willChange: 'transform' }}>
         {slides.map((s, i) => {
           const isActive   = i === currentIndex && introPhase === 'hero';
           const isPrevious = i === previousIndex;
@@ -292,8 +292,8 @@ const HeroSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gray-900" />
               )
             ) : s.type === 'youtube' ? (
-              /* Full-bleed YouTube background — only mounted when active */
-              shouldMount ? (
+              /* Full-bleed YouTube background — only mounted when truly active (not fading out) */
+              isActive ? (
                 <div className="absolute inset-0 overflow-hidden bg-black">
                   <iframe
                     src={`https://www.youtube.com/embed/${s.ytId}?start=${s.ytStart ?? 0}&end=${s.ytEnd ?? 999}&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&playsinline=1`}
@@ -319,12 +319,16 @@ const HeroSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gray-900" />
               )
             ) : (
-              <img
-                src={s.url}
-                alt={s.alt}
-                className="w-full h-full object-cover"
-                loading={i === 0 ? 'eager' : 'lazy'}
-              />
+              shouldMount ? (
+                <img
+                  src={s.url}
+                  alt={s.alt}
+                  className="w-full h-full object-cover"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                />
+              ) : (
+                <div className="absolute inset-0 bg-gray-900" />
+              )
             )}
             {/* Cinematic gradient overlay */}
             <div className="absolute inset-0"

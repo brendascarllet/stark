@@ -112,10 +112,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="/window-replacement" className="text-gray-300 hover:text-primary-purple transition-colors flex items-center group">
+                <Link to="/window-replacement" className="text-gray-300 hover:text-primary-purple transition-colors flex items-center group">
                   <ChevronRight size={isMobile ? 14 : 16} className="mr-1 md:mr-2 group-hover:text-primary-purple" />
                   Window Replacement
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

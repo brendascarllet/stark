@@ -40,7 +40,7 @@ const PremiumRoofingSection = () => {
             
             <div className="mb-8 rounded-xl overflow-hidden">
               <img 
-                src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.png" 
+                src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.webp" 
                 alt="GAF Timberline HDZ Shingles Color Options" 
                 className="w-full h-auto"
               />
@@ -84,7 +84,7 @@ const PremiumRoofingSection = () => {
             
             <div className="mb-8 rounded-xl overflow-hidden">
               <img 
-                src="/lovable-uploads/5ea5b3b8-72f3-4e18-b9c5-0ce95d7896c9.png" 
+                src="/lovable-uploads/5ea5b3b8-72f3-4e18-b9c5-0ce95d7896c9.webp" 
                 alt="Premium Standing Seam Metal Roofing" 
                 className="w-full h-auto"
               />
@@ -128,7 +128,7 @@ const PremiumRoofingSection = () => {
             
             <div className="mb-8 rounded-xl overflow-hidden">
               <img 
-                src="/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.png" 
+                src="/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.webp" 
                 alt="TPO Commercial Roofing" 
                 className="w-full h-auto"
               />

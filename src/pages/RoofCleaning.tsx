@@ -28,7 +28,7 @@ const RoofCleaning = () => {
     keywords: 'roof cleaning Seattle, moss removal, roof algae cleaning, professional roof cleaning, roof maintenance',
     ogTitle: 'Roof Cleaning - Extend Your Roof Life | Stark Roofing',
     ogDescription: 'Professional roof cleaning removes moss and algae. Extends roof lifespan and improves curb appeal.',
-    ogImage: 'https://starkroofingrenovation.com/drone-5.jpg',
+    ogImage: 'https://starkroofingrenovation.com/drone-5.webp',
   });
 
   return (

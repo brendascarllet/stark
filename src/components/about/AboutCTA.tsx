@@ -6,7 +6,7 @@ const AboutCTA = () => {
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
       <img 
-        src="/lovable-uploads/a42f972f-722b-4465-a760-8b1722af7cbe.png" 
+        src="/lovable-uploads/a42f972f-722b-4465-a760-8b1722af7cbe.webp" 
         alt="Father playing with daughter in a bright, minimalist home" 
         className="absolute inset-0 w-full h-full object-cover"
       />

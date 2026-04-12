@@ -20,7 +20,7 @@ const GutterHero = () => {
           leaf protection on a wood-sided WA home, fir trees in background. */}
       <div className="absolute inset-0">
         <img
-          src="/gutter-hero.jpg"
+          src="/gutter-hero.webp"
           alt="Custom seamless black gutters with leaf protection on a Western Washington home"
           className="w-full h-full object-cover object-center"
         />

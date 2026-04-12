@@ -21,7 +21,7 @@ const OverviewSection: React.FC = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
-            <img src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.png" alt="GAF Timberline HDZ Shingles Close-up" className="w-full h-auto" />
+            <img src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.webp" alt="GAF Timberline HDZ Shingles Close-up" className="w-full h-auto" />
           </div>
         </div>
       </div>

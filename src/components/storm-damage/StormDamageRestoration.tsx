@@ -14,7 +14,7 @@ const StormDamageRestoration = () => {
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/lovable-uploads/17b5b310-a8ca-4f81-9f07-78a578f80f85.png"
+                src="/lovable-uploads/17b5b310-a8ca-4f81-9f07-78a578f80f85.webp"
                 alt="Storm-damaged asphalt shingles with visible impact and tearing"
                 className="w-full h-auto object-cover"
               />

@@ -21,7 +21,7 @@ const SidingInstallation = () => {
     keywords: 'siding installation Seattle, siding replacement, James Hardie siding, fiber cement siding, home exterior',
     ogTitle: 'Siding Installation - Transform Your Home | Stark Roofing',
     ogDescription: 'Premium siding installation with James Hardie materials. Enhance protection and curb appeal.',
-    ogImage: 'https://starkroofingrenovation.com/lovable-uploads/18812f3e-7163-4286-8680-afe230724e99.png',
+    ogImage: 'https://starkroofingrenovation.com/lovable-uploads/18812f3e-7163-4286-8680-afe230724e99.webp',
   });
 
   return (
@@ -36,7 +36,7 @@ const SidingInstallation = () => {
       {/* Hero Section */}
       <section className="hero-overlay relative pt-32 pb-20 md:py-32">
         <img 
-          src="/lovable-uploads/18812f3e-7163-4286-8680-afe230724e99.png" 
+          src="/lovable-uploads/18812f3e-7163-4286-8680-afe230724e99.webp" 
           alt="Professional siding installation" 
           className="absolute inset-0 w-full h-full object-cover"
         />

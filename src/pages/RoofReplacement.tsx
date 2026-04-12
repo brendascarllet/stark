@@ -39,7 +39,7 @@ const RoofReplacement = () => {
     ogTitle: 'Roof Replacement — Your Last Roof, Done Right | Stark Roofing',
     ogDescription:
       "GAF Timberline HDZ, synthetic underlayment, ice & water shield where it counts. 2,000+ roofs across the Puget Sound.",
-    ogImage: 'https://starkroofingrenovation.com/roof-replacement-hero.jpg',
+    ogImage: 'https://starkroofingrenovation.com/roof-replacement-hero.webp',
   });
   
   // Initialize animations

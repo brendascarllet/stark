@@ -16,7 +16,7 @@ const PremiumSystemsSection = () => {
           <div className="bg-white rounded-xl overflow-hidden shadow-md">
             <div className="relative h-64">
               <img
-                src="/lovable-uploads/7bcfdf0b-8eba-4883-ac40-89fd466bbdd3.png"
+                src="/lovable-uploads/7bcfdf0b-8eba-4883-ac40-89fd466bbdd3.webp"
                 alt="Seamless aluminum gutters installed by Stark Roofing"
                 className="w-full h-full object-cover"
               />
@@ -56,7 +56,7 @@ const PremiumSystemsSection = () => {
           <div className="bg-white rounded-xl overflow-hidden shadow-md">
             <div className="relative h-64">
               <img
-                src="/lovable-uploads/ddec2c5a-6ff0-40f9-b708-bdaf727993c8.png"
+                src="/lovable-uploads/ddec2c5a-6ff0-40f9-b708-bdaf727993c8.webp"
                 alt="Leaf protection system that blocks pine needles and Douglas fir cones"
                 className="w-full h-full object-cover"
               />

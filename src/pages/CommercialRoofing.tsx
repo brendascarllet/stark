@@ -199,7 +199,7 @@ const CommercialRoofing = () => {
     ogTitle: 'Commercial Roofing — TPO, PVC, EPDM, Mod Bit | Stark Roofing',
     ogDescription:
       'GAF Certified commercial roofing across King, Snohomish, and Pierce counties. NDL warranties, prevailing wage capable, full insurance.',
-    ogImage: 'https://starkroofingrenovation.com/commercial-roofing-hero.jpg',
+    ogImage: 'https://starkroofingrenovation.com/commercial-roofing-hero.webp',
   });
 
   return (
@@ -215,7 +215,7 @@ const CommercialRoofing = () => {
       <section className="relative overflow-hidden pt-28 md:pt-32 pb-14 md:pb-20">
         <div className="absolute inset-0">
           <img
-            src="/commercial-roofing-hero.jpg"
+            src="/commercial-roofing-hero.webp"
             alt="Commercial flat roof installed by Stark Roofing with the Seattle skyline in the background"
             className="w-full h-full object-cover object-center"
           />

@@ -25,7 +25,7 @@ const AsphaltShingles = () => {
     keywords: 'asphalt shingle roofing, GAF shingles, roof replacement asphalt, new roof installation, roofing materials',
     ogTitle: 'Asphalt Shingle Roofing - GAF Certified | Stark Roofing',
     ogDescription: 'Premium asphalt shingles with GAF certification. Reliable, affordable roofing solutions.',
-    ogImage: 'https://starkroofingrenovation.com/drone-3.jpg',
+    ogImage: 'https://starkroofingrenovation.com/drone-3.webp',
   });
 
   return (

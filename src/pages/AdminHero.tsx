@@ -248,7 +248,7 @@ function SlideCard({
                 type="text"
                 value={isIdbRef(slide.url) ? '' : (slide.url || '')}
                 onChange={e => onChange({ ...slide, url: e.target.value })}
-                placeholder={slide.type === 'image' ? '/drone-1.jpg' : '/hero-drone-1.mp4'}
+                placeholder={slide.type === 'image' ? '/drone-1.webp' : '/hero-drone-1.mp4'}
                 className="w-full mt-1 bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm focus:border-red-500 focus:outline-none"
               />
             </details>

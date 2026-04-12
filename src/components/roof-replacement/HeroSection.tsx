@@ -20,7 +20,7 @@ const HeroSection = () => {
           roof, surrounded by Douglas fir trees, classic Pacific NW. */}
       <div className="absolute inset-0">
         <img
-          src="/roof-replacement-hero.jpg"
+          src="/roof-replacement-hero.webp"
           alt="Pacific Northwest craftsman home with new GAF roof installed by Stark Roofing"
           className="w-full h-full object-cover object-center"
         />

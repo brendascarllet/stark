@@ -13,6 +13,15 @@ const NotFound = () => {
       "404 Error: User attempted to access non-existent route:",
       location.pathname
     );
+    // Tell search engines not to index 404 pages
+    let meta = document.querySelector('meta[name="robots"]') as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = 'robots';
+      document.head.appendChild(meta);
+    }
+    meta.content = 'noindex, nofollow';
+    return () => { meta.content = 'index, follow'; };
   }, [location.pathname]);
 
   return (

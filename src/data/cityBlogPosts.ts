@@ -7,7 +7,7 @@ export const cityBlogPosts: BlogPost[] = [
     excerpt: "Everything Bellevue homeowners need to know about roof replacement, repair, and maintenance. Local weather challenges, material recommendations, and what to expect.",
     date: "2026-03-28",
     author: "Stark Roofing Team",
-    image: "/blog-bellevue.jpg",
+    image: "/blog-bellevue.webp",
     keywords: "roofing Bellevue WA, roof replacement Bellevue, roofer Bellevue, Bellevue roofing company, roof repair Bellevue Washington",
     readTime: "6 min read",
     content: `
@@ -60,7 +60,7 @@ Stark Roofing & Renovation is based in nearby Sammamish and serves Bellevue dail
     excerpt: "Redmond homeowners face unique roofing challenges from PNW weather. Learn about the best materials, maintenance tips, and when to replace your roof.",
     date: "2026-03-26",
     author: "Stark Roofing Team",
-    image: "/blog-redmond.jpg",
+    image: "/blog-redmond.webp",
     keywords: "roofing Redmond WA, roof replacement Redmond, roofer Redmond, Redmond roofing company, roof repair Redmond Washington",
     readTime: "5 min read",
     content: `
@@ -116,7 +116,7 @@ Based just minutes away in Sammamish, Stark Roofing serves Redmond homeowners da
     excerpt: "Kirkland's proximity to Lake Washington brings extra moisture and wind. Learn how to protect your Kirkland home with the right roofing choices.",
     date: "2026-03-24",
     author: "Stark Roofing Team",
-    image: "/blog-kirkland.jpg",
+    image: "/blog-kirkland.webp",
     keywords: "roofing Kirkland WA, roof replacement Kirkland, roofer Kirkland, Kirkland roofing company, roof repair Kirkland Washington",
     readTime: "5 min read",
     content: `
@@ -170,7 +170,7 @@ Stark Roofing serves Kirkland from our nearby Sammamish headquarters. Free drone
     excerpt: "Woodinville's rural setting and tree coverage create unique roofing challenges. Learn how to maintain and protect your Woodinville home.",
     date: "2026-03-22",
     author: "Stark Roofing Team",
-    image: "/blog-woodinville.jpg",
+    image: "/blog-woodinville.webp",
     keywords: "roofing Woodinville WA, roof replacement Woodinville, roofer Woodinville, Woodinville roofing company, roof repair Woodinville",
     readTime: "5 min read",
     content: `
@@ -219,7 +219,7 @@ Stark Roofing is based nearby in Sammamish. We serve Woodinville daily with free
     excerpt: "From the Highlands to Benson Hill, Renton homeowners need roofs built for PNW weather. Learn about costs, materials, and maintenance for Renton homes.",
     date: "2026-03-20",
     author: "Stark Roofing Team",
-    image: "/blog-renton.jpg",
+    image: "/blog-renton.webp",
     keywords: "roofing Renton WA, roof replacement Renton, roofer Renton, Renton roofing company, roof repair Renton Washington, affordable roofer Renton",
     readTime: "5 min read",
     content: `
@@ -272,7 +272,7 @@ Stark Roofing serves Renton from our Sammamish headquarters. Free inspections, h
     excerpt: "Maple Valley's rural setting and heavy rainfall demand durable roofing. Learn what materials and maintenance your home needs in this growing community.",
     date: "2026-03-17",
     author: "Stark Roofing Team",
-    image: "/blog-maple-valley.jpg",
+    image: "/blog-maple-valley.webp",
     keywords: "roofing Maple Valley WA, roof replacement Maple Valley, roofer Maple Valley, Maple Valley roofing company, roof repair Maple Valley",
     readTime: "5 min read",
     content: `
@@ -324,7 +324,7 @@ Stark Roofing provides free inspections and estimates throughout Maple Valley an
     excerpt: "Snoqualmie and Snoqualmie Ridge homeowners face heavier rain, snow, and wind than most Puget Sound cities. Here's how to protect your home.",
     date: "2026-03-15",
     author: "Stark Roofing Team",
-    image: "/drone-1.jpg",
+    image: "/drone-1.webp",
     keywords: "roofing Snoqualmie WA, roof replacement Snoqualmie, roofer Snoqualmie, Snoqualmie Ridge roofing, roof repair Snoqualmie",
     readTime: "5 min read",
     content: `
@@ -376,7 +376,7 @@ Stark Roofing serves Snoqualmie and Snoqualmie Ridge from our Sammamish headquar
     excerpt: "Mercer Island homes are among the most valuable in Washington. Learn how to protect your investment with the right roofing materials and maintenance.",
     date: "2026-03-13",
     author: "Stark Roofing Team",
-    image: "/blog-mercer-island.jpg",
+    image: "/blog-mercer-island.webp",
     keywords: "roofing Mercer Island WA, roof replacement Mercer Island, roofer Mercer Island, Mercer Island roofing company, premium roofing Mercer Island",
     readTime: "5 min read",
     content: `
@@ -431,7 +431,7 @@ Stark Roofing provides free, thorough inspections for Mercer Island homeowners. 
     excerpt: "Newcastle's elevated position between Bellevue and Renton means more wind exposure. Learn how to protect your Newcastle home from PNW weather.",
     date: "2026-03-11",
     author: "Stark Roofing Team",
-    image: "/blog-newcastle.jpg",
+    image: "/blog-newcastle.webp",
     keywords: "roofing Newcastle WA, roof replacement Newcastle, roofer Newcastle, Newcastle roofing company, roof repair Newcastle Washington",
     readTime: "5 min read",
     content: `
@@ -482,7 +482,7 @@ Stark Roofing serves Newcastle from our Sammamish headquarters. Free inspections
     excerpt: "North Bend gets more rain and snow than any Eastside city. Learn what roofing materials and maintenance your mountain-adjacent home needs.",
     date: "2026-03-08",
     author: "Stark Roofing Team",
-    image: "/blog-north-bend.jpg",
+    image: "/blog-north-bend.webp",
     keywords: "roofing North Bend WA, roof replacement North Bend, roofer North Bend, North Bend roofing company, roof repair North Bend Washington",
     readTime: "5 min read",
     content: `

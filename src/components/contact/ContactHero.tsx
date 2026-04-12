@@ -45,7 +45,7 @@ const ContactHero = () => {
       {/* Background image with strong dark overlay */}
       <div className="absolute inset-0">
         <img
-          src="/lovable-uploads/ea006abb-9eda-4581-bc18-f64c4bf9d2c0.png"
+          src="/lovable-uploads/ea006abb-9eda-4581-bc18-f64c4bf9d2c0.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover object-center opacity-30"

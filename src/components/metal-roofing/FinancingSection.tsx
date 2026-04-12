@@ -87,7 +87,7 @@ const FinancingSection: React.FC = () => {
           >
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/fb70b9ca-15be-4ece-8b5b-104a70adf719.png" 
+                src="/lovable-uploads/fb70b9ca-15be-4ece-8b5b-104a70adf719.webp" 
                 alt="Happy father and daughter enjoying home comfort" 
                 className="w-full h-auto object-cover"
               />

@@ -50,24 +50,24 @@ const projects: Project[] = [
     location: 'Puget Sound, WA',
     description:
       'Complete tear-off of a failing built-up roof and installation of a new white TPO membrane system with proper insulation and drainage.',
-    beforeImage: '/gallery/commercial-before.jpg',
-    afterImage: '/gallery/commercial-after.jpg',
+    beforeImage: '/gallery/commercial-before.webp',
+    afterImage: '/gallery/commercial-after.webp',
   },
   {
     title: 'Residential Shingle Roof Replacement',
     location: 'Seattle Metro, WA',
     description:
       'Worn, aging shingles replaced with new GAF Timberline HDZ architectural shingles — installed with ice & water shield and proper ventilation.',
-    beforeImage: '/gallery/shingle-before.jpg',
-    afterImage: '/gallery/shingle-after.jpg',
+    beforeImage: '/gallery/shingle-before.webp',
+    afterImage: '/gallery/shingle-after.webp',
   },
   {
     title: 'Roof Vent Pipe Restoration',
     location: 'Eastside, WA',
     description:
       'Corroded and rusted roof vent pipe replaced with a new sealed unit and proper flashing to prevent leaks.',
-    beforeImage: '/gallery/vent-before.jpg',
-    afterImage: '/gallery/vent-after.jpg',
+    beforeImage: '/gallery/vent-before.webp',
+    afterImage: '/gallery/vent-after.webp',
   },
 ];
 

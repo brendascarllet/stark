@@ -8,7 +8,7 @@ const CTASection: React.FC = () => {
     <section className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/ea006abb-9eda-4581-bc18-f64c4bf9d2c0.png"
+          src="/lovable-uploads/ea006abb-9eda-4581-bc18-f64c4bf9d2c0.webp"
           alt="Luxury lakefront home with stone accents and premium black shingle roof"
           className="w-full h-full object-cover object-center"
         />

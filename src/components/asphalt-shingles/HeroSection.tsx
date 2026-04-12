@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const HeroSection: React.FC = () => {
   return (
     <section className="hero-overlay relative pt-32 pb-20 md:py-32">
-      <img src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.png" alt="GAF Timberline HDZ Shingles" className="absolute inset-0 w-full h-full object-cover" />
+      <img src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.webp" alt="GAF Timberline HDZ Shingles" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-navy/60"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-20">

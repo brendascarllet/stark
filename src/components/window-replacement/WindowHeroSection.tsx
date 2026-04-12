@@ -18,7 +18,7 @@ const WindowHeroSection = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/lovable-uploads/4c26975e-74ad-41ad-a63f-356d7b6c7aeb.png"
+          src="/lovable-uploads/4c26975e-74ad-41ad-a63f-356d7b6c7aeb.webp"
           alt="Modern Andersen window replacement on a Western Washington home"
           className="w-full h-full object-cover object-center"
         />

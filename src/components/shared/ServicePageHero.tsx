@@ -8,7 +8,7 @@
  *   title      — Main service name  e.g. "Roof Replacement"
  *   subtitle   — Short tagline      e.g. "Done Right. Done Fast."
  *   badge      — Trust chip text    e.g. "GAF Certified"
- *   bgImage    — Path from /public  e.g. "/drone-1.jpg"
+ *   bgImage    — Path from /public  e.g. "/drone-1.webp"
  *   ctaLabel   — Button text        e.g. "Get a Free Estimate"
  *   ctaHref    — Button target      e.g. "#contact"
  *   breadcrumb — Page name for breadcrumb

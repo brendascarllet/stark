@@ -18,7 +18,7 @@ const GAFHighlight = () => {
           >
             <div className="relative rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.png" 
+                src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.webp" 
                 alt="GAF Timberline HDZ Shingles Color Options" 
                 className="w-full h-auto"
               />

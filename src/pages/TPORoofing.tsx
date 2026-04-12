@@ -23,7 +23,7 @@ const TPORoofing = () => {
     keywords: 'TPO roofing, flat roof installation, TPO membranes, commercial roofing, energy efficient roofing',
     ogTitle: 'TPO Roofing Systems - Flat Roof Solutions | Stark Roofing',
     ogDescription: 'Durable and energy-efficient TPO roofing for commercial and residential properties.',
-    ogImage: 'https://starkroofingrenovation.com/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.png',
+    ogImage: 'https://starkroofingrenovation.com/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.webp',
   });
   
   return (
@@ -38,7 +38,7 @@ const TPORoofing = () => {
       {/* Hero Section */}
       <section className="hero-overlay relative pt-32 pb-20 md:py-32">
         <img 
-          src="/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.png" 
+          src="/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.webp" 
           alt="TPO Commercial Roofing" 
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -81,7 +81,7 @@ const TPORoofing = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.png" 
+                src="/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.webp" 
                 alt="TPO Roofing Installation" 
                 className="w-full h-auto"
               />

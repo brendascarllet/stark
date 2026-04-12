@@ -22,7 +22,7 @@ const OverviewSection = () => {
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg">
             <img 
-              src="/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.png" 
+              src="/lovable-uploads/263e14a0-6faa-45ca-b508-4d8d686b30e5.webp" 
               alt="Modern kitchen with elegant skylight" 
               className="w-full h-full object-cover"
             />

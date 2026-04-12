@@ -61,7 +61,7 @@ const BothellLocation = () => {
       region="Greater Seattle"
       description="Professional roofing contractors serving Bothell with premium GAF-certified services."
       content={content}
-      heroImage="drone-3.jpg"
+      heroImage="drone-3.webp"
       keywords="roofing contractor Bothell, roof repair Bothell WA, roofer Bothell, roof replacement Bothell"
     />
   );

@@ -47,7 +47,7 @@ const EmergencySection = () => {
           >
             <div className="rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="/lovable-uploads/9b34dfc1-2e00-4337-8e65-977762727951.png" 
+                src="/lovable-uploads/9b34dfc1-2e00-4337-8e65-977762727951.webp" 
                 alt="Emergency gutter repair team responding to water damage" 
                 className="w-full h-auto"
               />

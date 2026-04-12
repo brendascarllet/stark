@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="hero-overlay relative pt-32 pb-20 md:py-32">
       <img 
-        src="/lovable-uploads/0e501212-3f52-4640-a7a0-bc816bb9690e.png" 
+        src="/lovable-uploads/0e501212-3f52-4640-a7a0-bc816bb9690e.webp" 
         alt="Professional roof cleaning in action with water spraying on shingles" 
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

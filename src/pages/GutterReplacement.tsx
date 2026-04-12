@@ -28,7 +28,7 @@ const GutterReplacement = () => {
     ogTitle: 'Seamless Gutter Replacement — Built for Seattle Winters | Stark Roofing',
     ogDescription:
       'Custom seamless aluminum gutters with real leaf protection. Sized for atmospheric river rain. Lifetime no-clog warranty.',
-    ogImage: 'https://starkroofingrenovation.com/drone-4.jpg',
+    ogImage: 'https://starkroofingrenovation.com/drone-4.webp',
   });
 
   return (

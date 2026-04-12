@@ -21,7 +21,7 @@ const Blog = () => {
     keywords: 'roofing blog Seattle, roof maintenance tips, roofing guide Pacific Northwest, Seattle roofing advice, homeowner roofing tips',
     ogTitle: 'Roofing Blog | Stark Roofing & Renovation',
     ogDescription: 'Expert roofing tips and guides for Seattle & Puget Sound homeowners.',
-    ogImage: 'https://starkroofingrenovation.com/drone-1.jpg',
+    ogImage: 'https://starkroofingrenovation.com/drone-1.webp',
   });
 
   return (
@@ -32,7 +32,7 @@ const Blog = () => {
         title="Roofing Blog"
         subtitle="Expert tips, maintenance guides, and advice for Pacific Northwest homeowners."
         badge="From Our GAF Certified Team"
-        bgImage="/drone-1.jpg"
+        bgImage="/drone-1.webp"
         breadcrumb="Blog"
         ctaLabel="Get a Free Estimate"
         ctaHref="/contact"
