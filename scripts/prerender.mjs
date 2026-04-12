@@ -148,8 +148,13 @@ let failed = 0;
 
 try {
   browser = await puppeteer.launch({
-    headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    headless: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+    ],
   });
 
   for (const pathname of paths) {
@@ -160,6 +165,7 @@ try {
     } catch (err) {
       failed++;
       console.error(`[prerender] ✗ ${pathname}: ${err.message}`);
+      console.error(`[prerender]   stack: ${err.stack?.split('\n').slice(1, 3).join(' | ')}`);
     }
   }
 } finally {
