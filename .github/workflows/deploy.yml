@@ -57,22 +57,9 @@ jobs:
       continue-on-error: true
       run: node scripts/prerender.mjs
 
-    - name: Verify prerendered blog pages
-      run: |
-        echo "=== Prerendered blog files ==="
-        ls -la dist/blog/*/index.html 2>/dev/null || echo "No blog pages prerendered"
-        MISSING=0
-        for slug in roofing-guide-bellevue-wa roofing-guide-kirkland-wa roofing-guide-maple-valley-wa roofing-guide-mercer-island-wa roofing-guide-newcastle-wa roofing-guide-north-bend-wa roofing-guide-redmond-wa roofing-guide-renton-wa roofing-guide-snoqualmie-wa roofing-guide-woodinville-wa; do
-          if [ ! -f "dist/blog/$slug/index.html" ]; then
-            echo "MISSING: dist/blog/$slug/index.html"
-            MISSING=$((MISSING+1))
-          fi
-        done
-        if [ $MISSING -gt 0 ]; then
-          echo "WARNING: $MISSING city blog pages missing — prerender may have failed for these pages"
-        else
-          echo "All 10 city blog pages prerendered successfully"
-        fi
+    # ── Step 4: Fill gaps for any blog pages prerender missed ──
+    - name: Generate fallback HTML for missing blog pages
+      run: node scripts/generate-blog-fallbacks.mjs
 
     # ── Deploy ──
     - name: Create 404.html fallback for unknown URLs
