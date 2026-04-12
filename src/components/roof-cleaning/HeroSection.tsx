@@ -1,8 +1,6 @@
 
 import React from 'react';
-import { Shield, CheckCircle, Tag } from 'lucide-react';
-import { motion } from 'framer-motion';
-
+import { Shield, CheckCircle } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="hero-overlay relative pt-32 pb-20 md:py-32">
@@ -16,15 +14,6 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-3xl mx-auto text-center">
-          <motion.div 
-            className="inline-block bg-emerald-600 text-white px-4 py-1 rounded-full mb-4 font-semibold text-sm flex items-center justify-center"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Tag size={16} className="mr-2" /> Limited Time Offer: Roof Cleaning from $600
-          </motion.div>
-        
           <div className="w-20 h-1 bg-stark-red mb-6 mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 animate-fade-in drop-shadow-lg">
             Professional Roof Cleaning Services

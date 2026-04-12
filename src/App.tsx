@@ -42,6 +42,9 @@ import Sammamish from './pages/Sammamish';
 import Bellevue from './pages/Bellevue';
 import Issaquah from './pages/Issaquah';
 
+// Before & After
+import BeforeAfter from './pages/BeforeAfter';
+
 // Blog
 import Blog from './pages/Blog';
 import BlogArticle from './pages/BlogArticle';
@@ -104,6 +107,7 @@ function App() {
           <Route path="/metal-roofing" element={<MetalRoofing />} />
           <Route path="/asphalt-shingles" element={<AsphaltShingles />} />
           
+          <Route path="/before-after" element={<BeforeAfter />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/thank-you" element={<ThankYou />} />

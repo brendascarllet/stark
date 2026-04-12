@@ -29,8 +29,8 @@ const OurStory = () => {
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <div className="relative rounded-xl overflow-hidden shadow-xl h-96 border-b-4 border-stark-red">
               <img
-                src="/hero-custom-4.jpg"
-                alt="A premium Pacific Northwest home with a Stark-installed roof, Mt. Si in the background"
+                src="/hero-custom-issaquah.webp"
+                alt="A Pacific Northwest craftsman home with asphalt shingle roof, mountains in background"
                 className="w-full h-full object-cover"
               />
             </div>

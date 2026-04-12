@@ -21,8 +21,8 @@ const HeroSection = () => {
       {/* Background image — full-bleed on mobile, right-side on desktop */}
       <div className="absolute inset-0">
         <img
-          src="/crew-2.jpg"
-          alt="Stark Roofing crew repairing a roof in Seattle"
+          src="/hero-custom-6.webp"
+          alt="Brenda Scarllet inspecting a completed roof installation"
           className="w-full h-full object-cover object-center opacity-30 md:opacity-20"
         />
         {/* Navy gradient — heavier on the left so copy stays readable */}
@@ -149,8 +149,8 @@ const HeroSection = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
               <img
-                src="/crew-3.jpg"
-                alt="Stark Roofing crew on a Seattle rooftop"
+                src="/hero-custom-everett.webp"
+                alt="Pacific Northwest craftsman home with quality shingle roof"
                 className="w-full h-[520px] object-cover"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).src = '/crew-2.jpg';

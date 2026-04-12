@@ -10,7 +10,6 @@ import { useSEOMeta } from '@/hooks/useSEOMeta';
 // Import the refactored components
 import HeroSection from '@/components/gutter-repair/HeroSection';
 import HeroContactForm from '@/components/gutter-repair/HeroContactForm';
-import PromotionDetails from '@/components/gutter-repair/PromotionDetails';
 import FilterDetailsSection from '@/components/gutter-repair/FilterDetailsSection';
 import FilterBenefitsSection from '@/components/gutter-repair/FilterBenefitsSection';
 import CommonProblems from '@/components/gutter-repair/CommonProblems';
@@ -58,10 +57,7 @@ const GutterRepair = () => {
           <HeroContactForm />
         </div>
         <div className="py-6"></div>
-        
-        {/* Promotion Details Section */}
-        <PromotionDetails />
-        
+
         {/* Filter Details Section */}
         <FilterDetailsSection />
         

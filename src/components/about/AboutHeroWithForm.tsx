@@ -20,7 +20,7 @@ const AboutHeroWithForm: React.FC = () => {
       {/* ── Background: dark blurred aerial + cinematic gradient ── */}
       <div className="absolute inset-0">
         <img
-          src="/hero-custom-1.webp"
+          src="/hero-custom-sammamish.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover scale-110 blur-sm"

@@ -25,7 +25,7 @@ const Certifications = () => {
             <div className="flex items-center bg-white p-6 rounded-xl shadow-md border-l-4 border-stark-red">
               <Award className="text-stark-red mr-4" size={36} />
               <div>
-                <h3 className="text-lg font-heading font-bold text-navy">Malarkey Installer</h3>
+                <h3 className="text-lg font-heading font-bold text-navy">Malarkey Certified</h3>
                 <p className="text-sm text-charcoal/80">Premium polymer-modified shingles built for the PNW</p>
               </div>
             </div>

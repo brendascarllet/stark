@@ -21,6 +21,7 @@ import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import ScrollToTop from '@/components/ScrollToTop';
 import AnimatedSection from '@/components/AnimatedSection';
 import HomeFAQSection from '@/components/home/FAQSection';
+import BeforeAfterGallery from '@/components/home/BeforeAfterGallery';
 import { motion } from 'framer-motion';
 
 const Index = () => {
@@ -70,6 +71,10 @@ const Index = () => {
 
       <AnimatedSection animation="fade">
         <ServicesOverviewSection />
+      </AnimatedSection>
+
+      <AnimatedSection animation="slide-up">
+        <BeforeAfterGallery />
       </AnimatedSection>
 
       {/* Lead-capture form — placed AFTER the cinematic story + services overview

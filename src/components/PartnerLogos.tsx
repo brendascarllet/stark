@@ -30,10 +30,10 @@ type Partner = {
 
 const PARTNERS: Partner[] = [
   { slug: 'gaf', name: 'GAF', category: 'Roofing · Certified' },
-  { slug: 'malarkey', name: 'MALARKEY', category: 'Roofing · Installer' },
-  { slug: 'certainteed', name: 'CERTAINTEED', category: 'Roofing · Installer' },
-  { slug: 'james-hardie', name: 'JAMES HARDIE', category: 'Siding' },
-  { slug: 'velux', name: 'VELUX', category: 'Skylights' },
+  { slug: 'malarkey', name: 'MALARKEY', category: 'Roofing · Certified' },
+  { slug: 'certainteed', name: 'CERTAINTEED', category: 'Roofing · Certified' },
+  { slug: 'james-hardie', name: 'JAMES HARDIE', category: 'Siding · Certified' },
+  { slug: 'velux', name: 'VELUX', category: 'Skylights · Certified' },
 ];
 
 const PartnerTile: React.FC<{ partner: Partner }> = ({ partner }) => {

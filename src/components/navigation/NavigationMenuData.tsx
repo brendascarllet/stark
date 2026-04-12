@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Wallet, Droplets, Percent, Home, Wrench, Layers } from 'lucide-react';
+import { Phone, Wallet, Droplets, Percent, Home, Wrench, Layers, Camera } from 'lucide-react';
 import { DropdownItem } from './NavDropdown';
 
 export const getRoofingItems = (): DropdownItem[] => [
@@ -45,6 +45,11 @@ export const getServicesItems = (): DropdownItem[] => [
   {
     to: "/services",
     label: "All Services"
+  },
+  {
+    to: "/before-after",
+    icon: <Camera size={14} className="mr-2" />,
+    label: "Before & After"
   },
   {
     to: "/about",

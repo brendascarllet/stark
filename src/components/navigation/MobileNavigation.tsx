@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Wallet, Droplets, Percent, Home, Wrench, Layers, Info, Mail, Cloud } from 'lucide-react';
+import { Phone, Wallet, Droplets, Percent, Home, Wrench, Layers, Info, Mail, Cloud, Camera } from 'lucide-react';
 import MobileMenuTrigger from './MobileMenuTrigger';
 import MobileMenuItem from './MobileMenuItem';
 import MobileSubmenu from './MobileSubmenu';
@@ -146,8 +146,17 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
               Finance
             </MobileMenuItem>
 
-            <MobileMenuItem 
-              to="/about" 
+            <MobileMenuItem
+              to="/before-after"
+              className="text-xl font-medium text-white hover:text-stark-red transition-colors py-2"
+              onClick={toggleMobileMenu}
+            >
+              <Camera size={iconSize} className="inline mr-2" />
+              Before &amp; After
+            </MobileMenuItem>
+
+            <MobileMenuItem
+              to="/about"
               className="text-xl font-medium text-white hover:text-stark-red transition-colors py-2"
               onClick={toggleMobileMenu}
             >
