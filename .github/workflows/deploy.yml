@@ -57,9 +57,30 @@ jobs:
       continue-on-error: true
       run: node scripts/prerender.mjs
 
-    # ── Step 4: Fill gaps for any blog pages prerender missed ──
+    # ── Step 4: Fill gaps for any pages prerender missed ──
     - name: Generate fallback HTML for missing blog pages
       run: node scripts/generate-blog-fallbacks.mjs
+
+    - name: Generate fallback HTML for all remaining pages
+      run: node scripts/generate-all-fallbacks.mjs
+
+    # ── Step 5: Verify critical pages exist ──
+    - name: Verify critical pages exist
+      run: |
+        MISSING=0
+        for page in contact finance services roof-replacement storm-damage about warranty; do
+          if [ ! -f "dist/$page/index.html" ]; then
+            echo "MISSING: dist/$page/index.html"
+            MISSING=$((MISSING + 1))
+          else
+            echo "OK: dist/$page/index.html"
+          fi
+        done
+        if [ "$MISSING" -gt 0 ]; then
+          echo "::error::$MISSING critical pages missing. Deployment blocked."
+          exit 1
+        fi
+        echo "All critical pages verified."
 
     # ── Deploy ──
     - name: Create 404.html fallback for unknown URLs
