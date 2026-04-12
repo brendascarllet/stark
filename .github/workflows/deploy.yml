@@ -32,22 +32,30 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Install Chrome system dependencies
-      run: npx puppeteer browsers install chrome && npx @puppeteer/browsers install chrome-headless-shell@stable --path ~/.cache/puppeteer || true
-      env:
-        PUPPETEER_SKIP_DOWNLOAD: 'false'
-
-    - name: Install system libs for headless Chrome
-      run: |
-        sudo apt-get update -qq
-        sudo apt-get install -y -qq libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2 libatspi2.0-0 libxshmfence1 2>/dev/null || sudo apt-get install -y -qq libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2 libatspi2.0-0 libxshmfence1 2>/dev/null || true
-
-    - name: Build + prerender all routes to static HTML
+    # ── Step 1: Fetch Google reviews (non-fatal) ──
+    - name: Fetch Google reviews
+      continue-on-error: true
       env:
         GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
         GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
-      run: npm run build
+      run: node scripts/fetch-google-reviews.mjs
 
+    # ── Step 2: Vite build (must succeed) ──
+    - name: Vite build
+      run: npx vite build
+
+    # ── Step 3: Prerender with Puppeteer (non-fatal) ──
+    # If prerender fails, the SPA still deploys with 404.html fallback.
+    # All critical schema/meta is in the static index.html <head> already.
+    - name: Install Puppeteer browser
+      continue-on-error: true
+      run: npx puppeteer browsers install chrome
+
+    - name: Prerender static HTML
+      continue-on-error: true
+      run: node scripts/prerender.mjs
+
+    # ── Deploy ──
     - name: Create 404.html fallback for unknown URLs
       run: cp dist/index.html dist/404.html
 
