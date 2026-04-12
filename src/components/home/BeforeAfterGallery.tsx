@@ -14,6 +14,38 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Full Shingle Roof Replacement — Drone View',
+    location: 'Seattle, WA',
+    description:
+      'Complete tear-off and replacement with new GAF Timberline HDZ architectural shingles. Drone footage captures the full transformation from exposed decking to a clean, finished roof.',
+    beforeImage: '/gallery/drone-replacement-1-before.jpg',
+    afterImage: '/gallery/drone-replacement-1-after.jpg',
+  },
+  {
+    title: 'Residential Roof Refresh',
+    location: 'Puget Sound, WA',
+    description:
+      'Aging, weathered shingles replaced across a complex multi-hip roof. Restored curb appeal and sealed against Pacific Northwest storms.',
+    beforeImage: '/gallery/drone-replacement-2-before.jpg',
+    afterImage: '/gallery/drone-replacement-2-after.jpg',
+  },
+  {
+    title: 'Steep-Slope Shingle Replacement',
+    location: 'Greater Seattle, WA',
+    description:
+      'Old shingles removed and new architectural shingles installed with proper flashing on a steep-slope roof with multiple dormers.',
+    beforeImage: '/gallery/drone-replacement-3-before.jpg',
+    afterImage: '/gallery/drone-replacement-3-after.jpg',
+  },
+  {
+    title: 'Complete Tear-Off & Re-Roof with Skylights',
+    location: 'Seattle Metro, WA',
+    description:
+      'Full tear-off down to the deck, new insulation, ice & water shield, and GAF shingles installed around existing skylights. A dramatic before-and-after.',
+    beforeImage: '/gallery/drone-replacement-4-before.jpg',
+    afterImage: '/gallery/drone-replacement-4-after.jpg',
+  },
+  {
     title: 'Commercial Flat Roof — Full TPO Replacement',
     location: 'Puget Sound, WA',
     description:

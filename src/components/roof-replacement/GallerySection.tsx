@@ -12,23 +12,44 @@ const GallerySection = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
-            <img 
-              src="/lovable-uploads/b3d778ed-1ab1-4570-920a-b76c39b66e90.png" 
-              alt="Gray house with white trim and asphalt shingle roof" 
+            <img
+              src="/gallery/drone-replacement-1-after.jpg"
+              alt="Completed shingle roof replacement — aerial drone view"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
-            <img 
-              src="/lovable-uploads/2c094d9d-a1eb-4c13-b913-f75f4a2530ff.png" 
-              alt="Gray shingle roof with dormer window and white trim" 
+            <img
+              src="/gallery/drone-replacement-4-after.jpg"
+              alt="Finished re-roof with skylights — aerial drone view"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
-            <img 
-              src="/lovable-uploads/b3cf6ef6-5ed1-4812-b68c-8b9647891a75.png" 
-              alt="Brick home with multi-level architectural shingle roof" 
+            <img
+              src="/gallery/drone-replacement-5-after.jpg"
+              alt="Residential shingle roof replacement — aerial drone view"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
+            <img
+              src="/gallery/drone-replacement-3-after.jpg"
+              alt="Steep-slope roof with new architectural shingles — aerial drone view"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
+            <img
+              src="/lovable-uploads/b3d778ed-1ab1-4570-920a-b76c39b66e90.png"
+              alt="Gray house with white trim and asphalt shingle roof"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64">
+            <img
+              src="/lovable-uploads/2c094d9d-a1eb-4c13-b913-f75f4a2530ff.png"
+              alt="Gray shingle roof with dormer window and white trim"
               className="w-full h-full object-cover"
             />
           </div>
