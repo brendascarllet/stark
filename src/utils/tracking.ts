@@ -2,9 +2,8 @@
  * Centralized conversion tracking for GA4, Google Ads, and Meta Pixel.
  * All calls are wrapped in try/catch so tracking failures never block forms.
  *
- * TODO: Replace AW-XXXXXXXXX and AW-XXXXXXXXX/YYYYYYYYYY with actual values
- * from Google Ads dashboard (account 886-589-3754):
- *   Goals > Conversions > New conversion > "Submit lead form" > Tag setup
+ * Google Ads account 886-589-3754
+ * Conversion: "Submit lead form" / Quiz Lead ($50 value)
  */
 
 declare global {
@@ -17,7 +16,7 @@ declare global {
 export function trackLeadSubmission(service?: string) {
   try {
     window.gtag?.('event', 'conversion', {
-      send_to: 'AW-XXXXXXXXX/YYYYYYYYYY',
+      send_to: 'AW-17475363009/rlAJCJbupJscEMHB84xB',
       value: 1.0,
       currency: 'USD',
     });
