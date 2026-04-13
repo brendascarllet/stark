@@ -29,12 +29,20 @@ const GetStartedForm: React.FC<GetStartedFormProps> = ({
 
   const onSubmit = async (data: any) => {
     try {
-      console.log('Form data:', data);
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      toast.success('Thank you! We will be in touch shortly.');
+      const { sendLeadEmailAndSms } = await import('@/utils/emailjs');
+      await sendLeadEmailAndSms({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        zip: data.zipCode,
+        service: data.service,
+        source: window.location.pathname,
+      });
+      toast.success("Got it! Brenda or someone from her team will reach out within 2 business hours.", { duration: 6000 });
       reset();
     } catch (error) {
-      toast.error('There was an error submitting your request. Please try again.');
+      console.error('Form submission error:', error);
+      toast.error("Something went wrong — please call (206) 739-8232 and we'll take your info by phone.");
     }
   };
 

@@ -16,7 +16,7 @@ declare global {
 export function trackLeadSubmission(service?: string) {
   try {
     window.gtag?.('event', 'conversion', {
-      send_to: 'AW-17475363009/pgvMCOySjZscEMHB84xB',
+      send_to: 'AW-17475363009/I9C_CKq9jpscEMHB84xB',
       value: 1.0,
       currency: 'USD',
     });

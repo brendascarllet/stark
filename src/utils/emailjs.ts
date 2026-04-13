@@ -93,10 +93,12 @@ function buildTemplateParams(params: Record<string, string>) {
 
 export async function sendLeadEmail(params: Record<string, string>) {
   ensureInit();
-  return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+  const result = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
     ...buildTemplateParams(params),
     to_email: LEAD_RECIPIENT,
   });
+  trackLeadSubmission(params.service);
+  return result;
 }
 
 export async function sendLeadSms(params: Record<string, string>) {
@@ -123,7 +125,7 @@ export async function sendLeadEmailAndSms(params: Record<string, string>) {
     return null;
   });
   await Promise.all([emailPromise, smsPromise]);
-  trackLeadSubmission(params.service);
+  // trackLeadSubmission is now called inside sendLeadEmail — no duplicate needed
 }
 
 // ============================================================================
