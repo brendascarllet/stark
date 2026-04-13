@@ -43,7 +43,7 @@ const ServiceSchema = ({ name, description, url, serviceType }: ServiceSchemaPro
         'url': 'https://starkroofingrenovation.com',
         'telephone': '+12067398232',
         'email': 'office@starkroofingrenovation.com',
-        'image': 'https://starkroofingrenovation.com/metal-roofing-hero.webp',
+        'image': 'https://starkroofingrenovation.com/hero-custom-1.webp',
         'priceRange': '$$',
         'address': {
           '@type': 'PostalAddress',

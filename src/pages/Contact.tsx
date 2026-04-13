@@ -21,7 +21,7 @@ const Contact = () => {
     keywords: 'contact roofing contractor, free estimate, roofing inspection, get a quote',
     ogTitle: 'Contact Stark Roofing - Free Estimate Today',
     ogDescription: 'Get in touch for your free roofing inspection and estimate.',
-    ogImage: 'https://starkroofingrenovation.com/metal-roofing-hero.webp',
+    ogImage: 'https://starkroofingrenovation.com/hero-custom-1.webp',
   });
 
   return (
