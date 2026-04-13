@@ -29,7 +29,7 @@ const Index = () => {
     title: 'Stark Roofing & Renovation | Roofer Near Me | Seattle, Bellevue & Puget Sound WA',
     description: 'Looking for a roofer near you? Stark Roofing & Renovation is a bilingual, GAF Certified contractor serving Seattle, Bellevue, Sammamish, Redmond, Kirkland, Tacoma & all of Puget Sound. Free estimates: (206) 739-8232.',
     canonical: 'https://starkroofingrenovation.com/',
-    ogTitle: 'Stark Roofing & Renovation | Roofer Near Me in Seattle, Bellevue & Puget Sound WA',
+    ogTitle: 'Stark Roofing & Renovation — Seattle Roofer',
     ogDescription: 'Bilingual GAF Certified roofing contractor serving all of Greater Seattle & Puget Sound.',
     ogImage: 'https://starkroofingrenovation.com/metal-roofing-hero.webp',
   });
