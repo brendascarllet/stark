@@ -31,7 +31,7 @@ const Index = () => {
     canonical: 'https://starkroofingrenovation.com/',
     ogTitle: 'Stark Roofing & Renovation',
     ogDescription: 'Bilingual GAF Certified roofing contractor serving all of Greater Seattle & Puget Sound.',
-    ogImage: 'https://starkroofingrenovation.com/hero-custom-1.webp',
+    ogImage: 'https://starkroofingrenovation.com/og-share.png',
   });
 
   useEffect(() => {
