@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/browser';
+import { trackLeadSubmission } from './tracking';
 
 const EMAILJS_PUBLIC_KEY = 'ZRltQQTK2lkYAspj3';
 const EMAILJS_SERVICE_ID = 'service_74bf6sl';
@@ -122,6 +123,7 @@ export async function sendLeadEmailAndSms(params: Record<string, string>) {
     return null;
   });
   await Promise.all([emailPromise, smsPromise]);
+  trackLeadSubmission(params.service);
 }
 
 // ============================================================================
