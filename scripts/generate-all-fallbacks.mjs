@@ -70,6 +70,12 @@ for (const pathname of unique) {
     continue;
   }
 
+  // Skip .html files — they're static files in public/, not SPA routes
+  if (pathname.endsWith('.html')) {
+    skipped++;
+    continue;
+  }
+
   const trimmed = pathname.replace(/^\/+/, '').replace(/\/+$/, '');
   const file = resolve(DIST, trimmed, 'index.html');
 
