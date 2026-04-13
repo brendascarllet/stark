@@ -1005,7 +1005,7 @@ function submitLead(){
   try{ if(typeof emailjs!=='undefined'){ emailjs.send('service_74bf6sl','template_a5qe8zr',{from_name:lead.name||'',reply_to:lead.email||'',phone:lead.phone||'',service:lead.q1||'',address:[lead.street,lead.apt,lead.city,lead.state,lead.zip].filter(Boolean).join(', '),message:'Property: '+(lead.q2||'N/A')+'\nUrgency: '+(lead.q3||'N/A')+'\nRoof Condition: '+(lead.q4||'N/A')+'\nTrees: '+(lead.q5||'N/A')+'\nDiscount: '+(lead.q6||'N/A')+'\nSubmitted: '+lead.timestamp,source:document.referrer||'Quiz Funnel',page_url:window.location.href}).then(function(){console.log('EmailJS: Lead sent successfully');},function(err){console.error('EmailJS error:',err);}); } }catch(e){console.error('EmailJS exception:',e);}
   // Conversion tracking: Quiz Completed / Lead
   try {
-    gtag('event', 'conversion', { send_to: 'AW-17475363009/pgvMCOySjZscEMHB84xB', value: 1.0, currency: 'USD' });
+    gtag('event', 'conversion', { send_to: 'AW-17475363009/rlAJCJbupJscEMHB84xB', value: 1.0, currency: 'USD' });
     gtag('event', 'generate_lead', { event_category: 'conversion', event_label: lead.q1 || 'quiz_lead', value: 1 });
     fbq('track', 'Lead', { content_name: 'Roof Quiz', content_category: lead.q1 || 'Unknown Service', value: 1.00, currency: 'USD' });
   } catch(e) { console.warn('Tracking error:', e); }
