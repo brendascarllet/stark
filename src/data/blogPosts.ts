@@ -117,12 +117,6 @@ CertainTeed's Landmark series offers a luxury look with strong Pacific Northwest
 
 Malarkey shingles are manufactured in Portland, Oregon — a true Pacific Northwest product. They use recycled materials and perform excellently in our rainy climate. Their rubberized asphalt formulation provides superior flexibility in cold weather.
 
-### IKO Dynasty Shingles
-
-**Best for:** Budget-conscious homeowners who still want quality
-
-IKO Dynasty offers strong wind resistance and impact resistance at a competitive price point. A solid mid-range option for Puget Sound homes.
-
 ## Which Material Should You Choose?
 
 The right choice depends on your budget, aesthetic preferences, and how long you plan to stay in your home. Here's a quick guide:
@@ -131,7 +125,7 @@ The right choice depends on your budget, aesthetic preferences, and how long you
 - **Best for longevity:** Metal roofing (standing seam)
 - **Best for aesthetics:** CertainTeed Landmark
 - **Best local option:** Malarkey Vista/Legacy
-- **Best budget option:** IKO Dynasty
+- **Best budget option:** Malarkey Vista
 
 ## Get Expert Advice for Your Home
 

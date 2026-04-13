@@ -27,7 +27,7 @@ const Finance = () => {
     ogTitle: 'Financing — Powered by O Bee Credit Union | Stark Roofing',
     ogDescription:
       'WA credit union financing for your roof, gutters, or windows. No equity required. Rates from 8.25% APR.',
-    ogImage: 'https://starkroofingrenovation.com/stark-cover.png',
+    ogImage: 'https://starkroofingrenovation.com/metal-roofing-hero.webp',
   });
 
   return (

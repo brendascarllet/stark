@@ -40,10 +40,10 @@ const ServiceSchema = ({ name, description, url, serviceType }: ServiceSchemaPro
       'provider': {
         '@type': 'RoofingContractor',
         'name': 'Stark Roofing & Renovation',
-        'url': 'https://www.starkroofingrenovation.com',
+        'url': 'https://starkroofingrenovation.com',
         'telephone': '+12067398232',
         'email': 'office@starkroofingrenovation.com',
-        'image': 'https://starkroofingrenovation.com/stark-cover.png',
+        'image': 'https://starkroofingrenovation.com/metal-roofing-hero.webp',
         'priceRange': '$$',
         'address': {
           '@type': 'PostalAddress',
@@ -65,9 +65,9 @@ const ServiceSchema = ({ name, description, url, serviceType }: ServiceSchemaPro
         },
       },
       'areaServed': [
-        { '@type': 'City', 'name': 'Sammamish' },
         { '@type': 'City', 'name': 'Seattle' },
         { '@type': 'City', 'name': 'Bellevue' },
+        { '@type': 'City', 'name': 'Sammamish' },
         { '@type': 'City', 'name': 'Redmond' },
         { '@type': 'City', 'name': 'Kirkland' },
         { '@type': 'City', 'name': 'Issaquah' },
@@ -75,6 +75,18 @@ const ServiceSchema = ({ name, description, url, serviceType }: ServiceSchemaPro
         { '@type': 'City', 'name': 'Lynnwood' },
         { '@type': 'City', 'name': 'Everett' },
         { '@type': 'City', 'name': 'Tacoma' },
+        { '@type': 'City', 'name': 'Woodinville' },
+        { '@type': 'City', 'name': 'Renton' },
+        { '@type': 'City', 'name': 'Maple Valley' },
+        { '@type': 'City', 'name': 'Snoqualmie' },
+        { '@type': 'City', 'name': 'Mercer Island' },
+        { '@type': 'City', 'name': 'Newcastle' },
+        { '@type': 'City', 'name': 'North Bend' },
+        { '@type': 'City', 'name': 'Medina' },
+        { '@type': 'City', 'name': 'Clyde Hill' },
+        { '@type': 'City', 'name': 'Yarrow Point' },
+        { '@type': 'City', 'name': 'Edmonds' },
+        { '@type': 'City', 'name': 'Shoreline' },
       ],
     };
 

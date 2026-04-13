@@ -21,7 +21,7 @@ const Services = () => {
     keywords: 'roofing services Seattle, home renovation, gutter services, siding installation, window replacement',
     ogTitle: 'Our Services - Roofing & Renovation | Stark Roofing',
     ogDescription: 'Complete roofing and renovation services. GAF certified professionals.',
-    ogImage: 'https://starkroofingrenovation.com/stark-cover.png',
+    ogImage: 'https://starkroofingrenovation.com/metal-roofing-hero.webp',
   });
 
   return (

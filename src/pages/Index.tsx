@@ -31,7 +31,7 @@ const Index = () => {
     canonical: 'https://starkroofingrenovation.com/',
     ogTitle: 'Stark Roofing & Renovation | Roofer Near Me in Seattle, Bellevue & Puget Sound WA',
     ogDescription: 'Bilingual GAF Certified roofing contractor serving all of Greater Seattle & Puget Sound.',
-    ogImage: 'https://starkroofingrenovation.com/stark-cover.png',
+    ogImage: 'https://starkroofingrenovation.com/metal-roofing-hero.webp',
   });
 
   useEffect(() => {
