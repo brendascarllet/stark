@@ -89,17 +89,17 @@ export const YT_DRONE_SEGMENTS: YouTubeSegment[] = [
 // ─── SERVICE PAGE HERO IMAGES ──────────────────────────────────────────────────
 export const SERVICE_HERO_IMAGES: Record<string, string> = {
   'roof-replacement':   '/drone-1.webp',
-  'roof-repair':        '/crew-2.jpg',
+  'roof-repair':        '/stark-crew-team.jpg',
   'metal-roofing':      '/drone-3.webp',
   'gutter-replacement': '/drone-4.webp',
-  'gutter-repair':      '/crew-3.jpg',
+  'gutter-repair':      '/stark-crew-team.jpg',
   'storm-damage':       '/drone-6.webp',
   'commercial':         '/drone-7.jpg',
-  'skylights':          '/crew-4.webp',
+  'skylights':          '/stark-crew-team.jpg',
   'siding':             '/drone-2.webp',
   'tpo':                '/drone-5.webp',
-  'roof-cleaning':      '/crew-5.jpg',
+  'roof-cleaning':      '/stark-crew-team.jpg',
   'windows':            '/stark-cover.png',
   'contact':            '/drone-7.jpg',
-  'about':              '/crew-1.jpg',
+  'about':              '/stark-crew-team.jpg',
 };

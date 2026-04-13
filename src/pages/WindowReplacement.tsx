@@ -29,7 +29,7 @@ const WindowReplacement = () => {
     ogTitle: 'Andersen Window Replacement — Built for Seattle Winters | Stark Roofing',
     ogDescription:
       'Andersen Energy Star windows installed by certified Stark Roofing crews. Stop the condensation, the drafts, and the heat loss.',
-    ogImage: 'https://starkroofingrenovation.com/crew-1.jpg',
+    ogImage: 'https://starkroofingrenovation.com/stark-crew-team.jpg',
   });
 
   return (

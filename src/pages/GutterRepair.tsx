@@ -33,7 +33,7 @@ const GutterRepair = () => {
     keywords: 'gutter repair Seattle, fix leaking gutter, gutter cleaning, gutter maintenance, gutter services',
     ogTitle: 'Gutter Repair - Fast & Professional | Stark Roofing',
     ogDescription: 'Expert gutter repair and cleaning. Fix leaks and protect your foundation.',
-    ogImage: 'https://starkroofingrenovation.com/crew-3.jpg',
+    ogImage: 'https://starkroofingrenovation.com/stark-crew-team.jpg',
   });
 
   return (

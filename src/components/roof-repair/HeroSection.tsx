@@ -153,7 +153,7 @@ const HeroSection = () => {
                 alt="Pacific Northwest craftsman home with quality shingle roof"
                 className="w-full h-[520px] object-cover"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/crew-2.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/stark-crew-team.jpg';
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />

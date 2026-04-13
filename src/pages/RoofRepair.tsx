@@ -32,7 +32,7 @@ const RoofRepair = () => {
     keywords: 'roof repair Seattle, fix leaky roof, emergency roof repair, roof leak repair, roof damage repair',
     ogTitle: 'Roof Repair - Same-Day Service | Stark Roofing',
     ogDescription: 'Fast, permanent roof repairs in Seattle. Leaks, storm damage, missing shingles. Same-week service.',
-    ogImage: 'https://starkroofingrenovation.com/crew-2.jpg',
+    ogImage: 'https://starkroofingrenovation.com/stark-crew-team.jpg',
   });
 
   return (
