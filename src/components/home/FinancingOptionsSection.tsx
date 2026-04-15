@@ -20,7 +20,7 @@ const FinancingOptionsSection: React.FC = () => {
               Applying for financing is a breeze with our user-friendly application process. Whether you're eyeing a full roof replacement or a smaller gutter installation project, our financing process makes it hassle-free.
             </p>
             <p className="text-lg text-charcoal/80 mb-8">
-              With the flexibility of loan requests up to $200,000 and no impact on your credit score during the application, you're in full control. Plus, rest easy knowing that you could have your financing secured within just 2-3 business days. No need to delay your home improvement!
+              Through our O Bee Credit Union partnership, you can request loans up to $75,000 with terms up to 120 months and rates starting at 8.24% APR. Most applications get a same-day decision, and financing is typically secured within 2–3 business days. No need to delay your home improvement!
             </p>
             <div className="mt-8">
               <Link 

@@ -20,13 +20,13 @@ const Finance = () => {
   useSEOMeta({
     title: 'Roofing Financing Seattle | O Bee Credit Union Partner | Stark Roofing',
     description:
-      'Finance your roof, gutters, or windows through O Bee Credit Union — WA-state credit union, rates from 8.25% APR, terms up to 15 years, no equity required. Apply through Stark Roofing.',
+      'Finance your roof, gutters, or windows through O Bee Credit Union — WA credit union, rates from 8.24% APR, terms up to 120 months, loans up to $75,000, 3 months no payments. Apply through Stark Roofing.',
     canonical: 'https://starkroofingrenovation.com/finance',
     keywords:
-      'roofing financing seattle, obee credit union home loan, no equity home improvement loan washington, roof financing puget sound, stark roofing financing',
-    ogTitle: 'Financing — Powered by O Bee Credit Union | Stark Roofing',
+      'roofing financing seattle, obee credit union home improvement loan, roof financing washington, stark roofing financing, home improvement loan puget sound',
+    ogTitle: 'Financing — O Bee Credit Union Partner | Stark Roofing',
     ogDescription:
-      'WA credit union financing for your roof, gutters, or windows. No equity required. Rates from 8.25% APR.',
+      'WA credit union financing for your roof, gutters, or windows. Rates from 8.24% APR. Terms up to 120 months. Loans up to $75,000.',
     ogImage: 'https://starkroofingrenovation.com/og-share.png',
   });
 
