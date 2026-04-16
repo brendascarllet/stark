@@ -1,0 +1,13 @@
+{
+  "_NOTE": "UPDATE ratingCount to match your actual Google review count",
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Stark Roofing & Renovation",
+  "url": "https://starkroofingrenovation.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "ratingCount": "47"
+  }
+}

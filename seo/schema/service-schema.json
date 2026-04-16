@@ -1,0 +1,110 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Roof Replacement",
+      "description": "Full roof replacement using GAF HDZ, Grand Sequoia, and Natural Shadow shingles rated for Pacific Northwest rain, wind, and moss buildup. We tear off the old roof, inspect the deck for rot, and install a complete system with proper ventilation.",
+      "url": "https://starkroofingrenovation.com/roof-replacement",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Roof Repair",
+      "description": "Targeted roof repairs for leaks, missing shingles, flashing failures, and storm damage common in the Seattle area. We fix the problem at the source so you don't pay for the same repair twice.",
+      "url": "https://starkroofingrenovation.com/roof-repair",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Gutter Installation",
+      "description": "Seamless gutter installation sized for heavy PNW rainfall, with proper downspout routing to keep water away from your foundation. We also install gutter guards to cut down on leaf and debris clogs year-round.",
+      "url": "https://starkroofingrenovation.com/gutters",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Siding Installation",
+      "description": "Siding replacement and installation built to handle constant moisture, moss growth, and temperature swings across the Puget Sound region. We work with fiber cement, vinyl, and engineered wood options depending on your home and budget.",
+      "url": "https://starkroofingrenovation.com/siding",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Skylight Installation",
+      "description": "Skylight installation and replacement done right for Seattle's rain, with proper flashing and waterproofing so you get natural light without leaks. We install new skylights and replace old ones that have fogged, cracked, or started dripping.",
+      "url": "https://starkroofingrenovation.com/skylights",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    }
+  ]
+}
