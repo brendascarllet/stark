@@ -41,6 +41,8 @@ const Tacoma = lazy(() => import('./pages/Tacoma'));
 const Sammamish = lazy(() => import('./pages/Sammamish'));
 const Bellevue = lazy(() => import('./pages/Bellevue'));
 const Issaquah = lazy(() => import('./pages/Issaquah'));
+const Woodinville = lazy(() => import('./pages/Woodinville'));
+const Renton = lazy(() => import('./pages/Renton'));
 const BeforeAfter = lazy(() => import('./pages/BeforeAfter'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogArticle = lazy(() => import('./pages/BlogArticle'));
@@ -83,6 +85,8 @@ function App() {
             <Route path="/service-area/tacoma" element={<Tacoma />} />
             <Route path="/service-area/bellevue" element={<Bellevue />} />
             <Route path="/service-area/issaquah" element={<Issaquah />} />
+            <Route path="/service-area/woodinville" element={<Woodinville />} />
+            <Route path="/service-area/renton" element={<Renton />} />
 
             {/* Short city URLs — redirect to canonical /service-area/ paths */}
             <Route path="/seattle" element={<Navigate to="/service-area/seattle" replace />} />
@@ -91,6 +95,8 @@ function App() {
             <Route path="/kirkland" element={<Navigate to="/service-area/kirkland" replace />} />
             <Route path="/sammamish" element={<Navigate to="/service-area/sammamish" replace />} />
             <Route path="/issaquah" element={<Navigate to="/service-area/issaquah" replace />} />
+            <Route path="/woodinville" element={<Navigate to="/service-area/woodinville" replace />} />
+            <Route path="/renton" element={<Navigate to="/service-area/renton" replace />} />
             <Route path="/everett" element={<Navigate to="/service-area/everett" replace />} />
             <Route path="/lynnwood" element={<Navigate to="/service-area/lynnwood" replace />} />
             <Route path="/bothell" element={<Navigate to="/service-area/bothell" replace />} />

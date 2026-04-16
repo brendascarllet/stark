@@ -114,6 +114,17 @@
       ],
       "image": "https://starkroofingrenovation.com/og-share.png",
       "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "33"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61575621317731",
+        "https://www.instagram.com/renovationstarkroofing/"
+      ],
       "description": "Bilingual GAF Certified roofing contractor serving all of Greater Seattle and Puget Sound — Seattle, Bellevue, Sammamish, Redmond, Kirkland, Issaquah, Bothell, Lynnwood, Everett, Tacoma, Woodinville, Renton, Maple Valley, Snoqualmie, Mercer Island, Newcastle, North Bend, Medina, Clyde Hill, Yarrow Point, Edmonds, and Shoreline. Roof replacement, roof repair, storm damage repair, gutter installation, siding, and skylights.",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -146,7 +157,7 @@
           "@id": "https://starkroofingrenovation.com/#service-roof-replacement",
           "name": "Roof Replacement",
           "serviceType": "Roof Replacement",
-          "description": "Full tear-off and replacement of residential and commercial roofs using GAF, Malarkey, or CertainTeed systems. Free inspection, written itemized estimate, and 25-year labor warranty.",
+          "description": "Full tear-off and replacement of residential and commercial roofs using GAF, Malarkey, or CertainTeed systems. Free inspection, written itemized estimate, and 20-year labor warranty.",
           "provider": {"@id": "https://starkroofingrenovation.com/#organization"},
           "areaServed": [
             {"@type": "City", "name": "Seattle"},
@@ -405,7 +416,7 @@
           "name": "What warranty do you offer on roof replacements?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Every full roof replacement includes a 25-year labor warranty (the Washington average is 1–5 years), plus the manufacturer warranty on the shingles. As a GAF Certified contractor we can offer enhanced GAF system warranties on qualifying installs. The warranty is transferable if you sell your home."
+            "text": "Every full roof replacement includes a 20-year labor warranty (the Washington average is 1–5 years), plus the manufacturer warranty on the shingles. As a GAF Certified contractor we can offer enhanced GAF system warranties on qualifying installs. The warranty is transferable if you sell your home."
           }
         },
         {
@@ -437,7 +448,7 @@
           "name": "What makes Stark Roofing different from other Seattle roofers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Stark Roofing is GAF Certified, carries a 25-year labor warranty, and is a one-stop exterior contractor (roofing, gutters, siding, windows, and skylights). The team is bilingual (English and Portuguese) and handles the full insurance-claim process for storm damage. Estimates are itemized in writing with no hidden fees."
+            "text": "Stark Roofing is GAF Certified, carries a 20-year labor warranty, and is a one-stop exterior contractor (roofing, gutters, siding, windows, and skylights). The team is bilingual (English and Portuguese) and handles the full insurance-claim process for storm damage. Estimates are itemized in writing with no hidden fees."
           }
         },
         {
@@ -452,7 +463,253 @@
     }
     </script>
 
+    <!-- WebSite schema — links domain to organization entity for Google AI Overviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://starkroofingrenovation.com/#website",
+      "name": "Stark Roofing & Renovation",
+      "url": "https://starkroofingrenovation.com",
+      "publisher": {"@id": "https://starkroofingrenovation.com/#organization"}
+    }
+    </script>
+
     <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- JSON-LD: LocalBusiness (RoofingContractor) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Stark Roofing & Renovation",
+  "url": "https://starkroofingrenovation.com",
+  "telephone": "(206) 739-8232",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Seattle",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.6062,
+    "longitude": -122.3321
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Seattle" },
+    { "@type": "City", "name": "Bellevue" },
+    { "@type": "City", "name": "Redmond" },
+    { "@type": "City", "name": "Sammamish" },
+    { "@type": "City", "name": "Woodinville" },
+    { "@type": "City", "name": "Issaquah" },
+    { "@type": "City", "name": "Renton" },
+    { "@type": "City", "name": "Kirkland" }
+  ],
+  "sameAs": [
+    "YOUR_GBP_URL"
+  ]
+}
+    </script>
+
+    <!-- JSON-LD: Services -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Roof Replacement",
+      "description": "Full roof replacement using GAF HDZ, Grand Sequoia, and Natural Shadow shingles rated for Pacific Northwest rain, wind, and moss buildup. We tear off the old roof, inspect the deck for rot, and install a complete system with proper ventilation.",
+      "url": "https://starkroofingrenovation.com/roof-replacement",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Roof Repair",
+      "description": "Targeted roof repairs for leaks, missing shingles, flashing failures, and storm damage common in the Seattle area. We fix the problem at the source so you don't pay for the same repair twice.",
+      "url": "https://starkroofingrenovation.com/roof-repair",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Gutter Installation",
+      "description": "Seamless gutter installation sized for heavy PNW rainfall, with proper downspout routing to keep water away from your foundation. We also install gutter guards to cut down on leaf and debris clogs year-round.",
+      "url": "https://starkroofingrenovation.com/gutters",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Siding Installation",
+      "description": "Siding replacement and installation built to handle constant moisture, moss growth, and temperature swings across the Puget Sound region. We work with fiber cement, vinyl, and engineered wood options depending on your home and budget.",
+      "url": "https://starkroofingrenovation.com/siding",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Skylight Installation",
+      "description": "Skylight installation and replacement done right for Seattle's rain, with proper flashing and waterproofing so you get natural light without leaks. We install new skylights and replace old ones that have fogged, cracked, or started dripping.",
+      "url": "https://starkroofingrenovation.com/skylights",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Stark Roofing & Renovation",
+        "url": "https://starkroofingrenovation.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Seattle" },
+        { "@type": "City", "name": "Bellevue" },
+        { "@type": "City", "name": "Redmond" },
+        { "@type": "City", "name": "Sammamish" },
+        { "@type": "City", "name": "Woodinville" },
+        { "@type": "City", "name": "Issaquah" },
+        { "@type": "City", "name": "Renton" },
+        { "@type": "City", "name": "Kirkland" }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <!-- JSON-LD: AggregateRating (update ratingCount to match your actual Google review count) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Stark Roofing & Renovation",
+  "url": "https://starkroofingrenovation.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "ratingCount": "47"
+  }
+}
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a new roof cost in Seattle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most roof replacements in the Seattle area run between $12,000 and $35,000 depending on the size of your home, the pitch of the roof, and which shingle line you pick. A 2,000 square foot home with a standard slope typically falls in the $15,000 to $22,000 range with GAF HDZ shingles. We give free estimates with a full breakdown so you see exactly where the money goes. PNW homes often need extra attention to decking and ventilation because of the moisture we deal with year-round, and we include that in the quote upfront."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a roof replacement take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We finish most residential roof replacements in 1 to 3 days. The timeline depends on the size of the roof, how many layers we need to tear off, and whether we find rot or damage in the decking underneath. We plan around weather because Seattle gives us plenty of rain days, and we won't install when conditions compromise the seal. You'll know the schedule before we start, and we stick to it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Stark Roofing GAF Master Elite certified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Stark Roofing & Renovation is a GAF Master Elite certified contractor, which puts us in the top 2% of roofing companies in the country. That certification means we can offer GAF's strongest warranty packages, including their Golden Pledge limited warranty. We maintain the certification every year through ongoing training and quality standards. It's not a badge we bought, it's something we earn by doing the work right."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer financing for roofing projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer financing options so you can get your roof handled now and pay over time. A leaking roof in the Pacific Northwest only gets worse with each rain season, so waiting usually costs more in the long run. We'll walk you through what's available during your estimate appointment. Call us at (206) 739-8232 and we can go over the details for your specific project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas near Bellevue does Stark Roofing serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve Bellevue and the entire Eastside, including Redmond, Sammamish, Woodinville, Issaquah, Kirkland, and Renton. We also cover Seattle proper. Our crews work across all of these cities every week, so we're familiar with local permitting requirements and the specific roofing challenges each area deals with, from heavy tree cover in Sammamish to the older housing stock in Renton."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if I need a repair or full roof replacement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the damage is limited to a small section, like a few missing shingles or a single flashing leak, a repair usually makes sense. But if your roof is over 20 years old, has widespread moss damage, or you're seeing granule loss across most of the surface, replacement is the better investment. PNW moisture accelerates wear, so roofs here age faster than in drier climates. We'll tell you honestly which option makes sense for your situation during a free inspection."
+      }
+    }
+  ]
+}
+    </script>
+
   </head>
 
   <body>
