@@ -1,0 +1,11 @@
+# Serve markdown mirrors as plain text so AI crawlers and browsers can read them inline
+/*.md
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: index, follow
+
+# Serve llms.txt as plain text
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: index, follow

@@ -44,6 +44,66 @@ Seattle, Bellevue, Sammamish, Redmond, Kirkland, Issaquah, Bothell, Lynnwood, Ev
 - **Brands installed:** GAF, Malarkey, IKO, CertainTeed (shingles); James Hardie (siding); Andersen, Milgard, Ply Gem, Pella (windows); VELUX (skylights)
 - **Financing available** — flexible payment plans, most homeowners approved in minutes
 
+## Markdown Mirrors (Clean AI-Readable Versions)
+Every page on this site has a plain markdown mirror. Add /index.md to any URL to get the clean content without navigation, scripts, or layout chrome.
+
+### Core Pages
+- https://starkroofingrenovation.com/index.md
+- https://starkroofingrenovation.com/services/index.md
+- https://starkroofingrenovation.com/about/index.md
+- https://starkroofingrenovation.com/contact/index.md
+- https://starkroofingrenovation.com/finance/index.md
+- https://starkroofingrenovation.com/warranty/index.md
+
+### Service Pages
+- https://starkroofingrenovation.com/roof-replacement/index.md
+- https://starkroofingrenovation.com/roof-repair/index.md
+- https://starkroofingrenovation.com/storm-damage/index.md
+- https://starkroofingrenovation.com/commercial-roofing/index.md
+- https://starkroofingrenovation.com/tpo-roofing/index.md
+- https://starkroofingrenovation.com/metal-roofing/index.md
+- https://starkroofingrenovation.com/asphalt-shingles/index.md
+- https://starkroofingrenovation.com/roof-cleaning/index.md
+- https://starkroofingrenovation.com/gutter-replacement/index.md
+- https://starkroofingrenovation.com/gutter-repair/index.md
+- https://starkroofingrenovation.com/siding-installation/index.md
+- https://starkroofingrenovation.com/window-replacement/index.md
+- https://starkroofingrenovation.com/skylights/index.md
+
+### City / Service Area Pages
+- https://starkroofingrenovation.com/service-area/seattle/index.md
+- https://starkroofingrenovation.com/service-area/bellevue/index.md
+- https://starkroofingrenovation.com/service-area/sammamish/index.md
+- https://starkroofingrenovation.com/service-area/redmond/index.md
+- https://starkroofingrenovation.com/service-area/kirkland/index.md
+- https://starkroofingrenovation.com/service-area/issaquah/index.md
+- https://starkroofingrenovation.com/service-area/everett/index.md
+- https://starkroofingrenovation.com/service-area/lynnwood/index.md
+- https://starkroofingrenovation.com/service-area/bothell/index.md
+- https://starkroofingrenovation.com/service-area/tacoma/index.md
+
+### Blog Articles
+- https://starkroofingrenovation.com/blog/how-much-does-new-roof-cost-seattle-2026/index.md
+- https://starkroofingrenovation.com/blog/how-to-choose-roofing-contractor-washington/index.md
+- https://starkroofingrenovation.com/blog/roof-replacement-vs-repair-seattle-guide/index.md
+- https://starkroofingrenovation.com/blog/spring-roof-inspection-checklist-pacific-northwest-2026/index.md
+- https://starkroofingrenovation.com/blog/gaf-certified-vs-non-certified-roofer-warranty/index.md
+- https://starkroofingrenovation.com/blog/how-to-know-when-to-replace-your-roof-seattle/index.md
+- https://starkroofingrenovation.com/blog/best-roofing-materials-pacific-northwest/index.md
+- https://starkroofingrenovation.com/blog/storm-damage-roof-insurance-claim-guide-washington/index.md
+- https://starkroofingrenovation.com/blog/moss-removal-prevention-seattle-roofs/index.md
+- https://starkroofingrenovation.com/blog/gutter-maintenance-tips-seattle-homeowners/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-bellevue-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-redmond-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-kirkland-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-woodinville-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-renton-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-maple-valley-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-snoqualmie-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-mercer-island-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-newcastle-wa/index.md
+- https://starkroofingrenovation.com/blog/roofing-guide-north-bend-wa/index.md
+
 ## What Makes Us Different
 We are a one-stop exterior contractor: roofing, gutters, siding, windows, and skylights with a single point of accountability. We carry a 25-year labor warranty on full roof replacements — five to twenty-five times longer than the typical Washington roofer. We are GAF Certified, which is a specific manufacturer credential (not the same as a general license) that lets us offer enhanced GAF warranties. We are family-owned, bilingual, and we handle the full insurance-claim process for storm damage so homeowners do not have to negotiate with adjusters alone. Western Washington does not get hail; the real threats here are windstorms, falling trees, and atmospheric rivers — we build and inspect with that climate in mind.
 
