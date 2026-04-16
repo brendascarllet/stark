@@ -47,6 +47,9 @@ const BeforeAfter = lazy(() => import('./pages/BeforeAfter'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogArticle = lazy(() => import('./pages/BlogArticle'));
 const AdminHero = lazy(() => import('./pages/AdminHero'));
+const RoofReplacementAd = lazy(() => import('./pages/ads/RoofReplacementAd'));
+const RoofRepairAd = lazy(() => import('./pages/ads/RoofRepairAd'));
+const GuttersAd = lazy(() => import('./pages/ads/GuttersAd'));
 
 function App() {
   useEntranceAnimations();
@@ -116,6 +119,12 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogArticle />} />
             <Route path="/thank-you" element={<ThankYou />} />
+
+            {/* Ad landing pages — stripped-down, conversion-focused */}
+            <Route path="/ads/roof-replacement" element={<RoofReplacementAd />} />
+            <Route path="/ads/roof-repair" element={<RoofRepairAd />} />
+            <Route path="/ads/gutters" element={<GuttersAd />} />
+
             <Route path="/admin/hero" element={<AdminHero />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

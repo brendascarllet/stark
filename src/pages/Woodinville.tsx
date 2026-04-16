@@ -81,7 +81,7 @@ const WoodinvilleLocation = () => {
       region="Greater Seattle"
       description="GAF Master Elite roofing contractor serving Woodinville. Cedar shake conversions, roof replacement, and repair."
       content={content}
-      heroImage="/hero-custom-7.webp"
+      heroImage="/hero-custom-1.webp"
       keywords="roofing contractor Woodinville, roof repair Woodinville WA, roofer Woodinville, roof replacement Woodinville, Woodinville roofing company"
       metaTitle="Roofing in Woodinville, WA | Stark Roofing & Renovation"
       metaDescription="Woodinville roofer for tree-heavy lots and moss-prone roofs. GAF Master Elite certified with 20-year warranty. Free estimate, line-item pricing."
