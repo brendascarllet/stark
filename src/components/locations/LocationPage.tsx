@@ -6,6 +6,7 @@ import HorizontalContactForm from '@/components/home/HorizontalContactForm';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import ScrollToTop from '@/components/ScrollToTop';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
+import BreadcrumbSchema from '@/components/shared/BreadcrumbSchema';
 
 interface LocationPageProps {
   city: string;
@@ -15,6 +16,8 @@ interface LocationPageProps {
   content: React.ReactNode;
   heroImage: string;
   keywords: string;
+  metaTitle?: string;
+  metaDescription?: string;
 }
 
 const LocationPage: React.FC<LocationPageProps> = ({
@@ -25,14 +28,16 @@ const LocationPage: React.FC<LocationPageProps> = ({
   content,
   heroImage,
   keywords,
+  metaTitle,
+  metaDescription,
 }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const canonicalUrl = `https://starkroofingrenovation.com/service-area/${city.toLowerCase().replace(/\s+/g, '-')}`;
-  const pageTitle = `Roofing Services in ${city}, ${state} | Stark Roofing`;
-  const pageDescription = `Professional roofing, gutter & renovation services in ${city}, ${state}. ${description} Serving the ${region}. GAF Certified. Call 206-739-8232 for a free estimate.`;
+  const pageTitle = metaTitle || `Roofing Services in ${city}, ${state} | Stark Roofing`;
+  const pageDescription = metaDescription || `Professional roofing, gutter & renovation services in ${city}, ${state}. ${description} Serving the ${region}. GAF Certified. Call 206-739-8232 for a free estimate.`;
 
   useSEOMeta({
     title: pageTitle,
@@ -70,6 +75,11 @@ const LocationPage: React.FC<LocationPageProps> = ({
 
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://starkroofingrenovation.com/' },
+        { name: 'Service Areas', url: 'https://starkroofingrenovation.com/services' },
+        { name: city, url: canonicalUrl },
+      ]} />
       <Navbar />
       <ServicePageHero
         title={`Roofing & Renovation Services in ${city}`}

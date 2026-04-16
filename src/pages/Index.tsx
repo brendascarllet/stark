@@ -26,11 +26,11 @@ import { motion } from 'framer-motion';
 
 const Index = () => {
   useSEOMeta({
-    title: 'Stark Roofing & Renovation | Roofer Near Me | Seattle, Bellevue & Puget Sound WA',
-    description: 'Looking for a roofer near you? Stark Roofing & Renovation is a bilingual, GAF Certified contractor serving Seattle, Bellevue, Sammamish, Redmond, Kirkland, Tacoma & all of Puget Sound. Free estimates: (206) 739-8232.',
+    title: 'Stark Roofing & Renovation | GAF Roofer Seattle & Eastside WA',
+    description: 'GAF Master Elite roofer with 5-star reviews across Seattle and the Eastside. Free estimates on roofing, gutters, siding, and more. (206) 739-8232.',
     canonical: 'https://starkroofingrenovation.com/',
     ogTitle: 'Stark Roofing & Renovation',
-    ogDescription: 'Bilingual GAF Certified roofing contractor serving all of Greater Seattle & Puget Sound.',
+    ogDescription: 'GAF Master Elite roofing contractor serving Seattle, Bellevue, and all Eastside cities.',
     ogImage: 'https://starkroofingrenovation.com/og-share.png',
   });
 

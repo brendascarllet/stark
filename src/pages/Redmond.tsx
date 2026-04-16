@@ -63,6 +63,8 @@ const RedmondLocation = () => {
       content={content}
       heroImage="/hero-custom-redmond.webp"
       keywords="roofing contractor Redmond, roof repair Redmond WA, roofer Redmond, roof replacement Redmond"
+      metaTitle="Roofing in Redmond, WA | Stark Roofing & Renovation"
+      metaDescription="GAF Master Elite roofer serving Redmond, WA. Roof replacement, repair, gutters, and siding. Free drone inspection and written estimate included."
     />
   );
 };

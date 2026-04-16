@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingCTA from '@/components/shared/FloatingCTA';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 import StormHero from '@/components/storm-damage/StormHero';
 import EmergencyNotice from '@/components/storm-damage/EmergencyNotice';
@@ -65,6 +66,7 @@ const StormDamage = () => {
       <StormFAQSection />
       <StormCTA />
       <VirtualAssistant />
+      <FloatingCTA label="Free Storm Damage Estimate" />
       <ScrollToTop />
       <Footer />
     </div>

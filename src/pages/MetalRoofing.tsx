@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingCTA from '@/components/shared/FloatingCTA';
 import ServicePageHero from '@/components/shared/ServicePageHero';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 import { Shield, ArrowRight, Construction, Clock, Droplets, Zap } from 'lucide-react';
@@ -217,6 +218,7 @@ const MetalRoofing = () => {
       
       {/* Contact Section */}
       <ContactSection />
+      <FloatingCTA label="Free Roof Estimate" />
       <ScrollToTop />
       <Footer />
     </>

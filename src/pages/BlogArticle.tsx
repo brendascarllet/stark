@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
+import BreadcrumbSchema from '@/components/shared/BreadcrumbSchema';
 import { blogPosts } from '@/data/blogPosts';
 import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react';
 
@@ -31,6 +32,7 @@ const BlogArticle = () => {
       description: post.excerpt,
       image: `https://starkroofingrenovation.com${post.image}`,
       datePublished: post.date,
+      dateModified: post.dateModified || post.date,
       author: {
         '@type': 'Organization',
         name: 'Stark Roofing & Renovation',
@@ -114,6 +116,11 @@ const BlogArticle = () => {
 
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://starkroofingrenovation.com/' },
+        { name: 'Blog', url: 'https://starkroofingrenovation.com/blog' },
+        { name: post.title, url: `https://starkroofingrenovation.com/blog/${post.slug}` },
+      ]} />
       <Navbar />
 
       {/* Hero Image */}

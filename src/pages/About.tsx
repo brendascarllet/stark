@@ -17,12 +17,12 @@ const About = () => {
   }, []);
 
   useSEOMeta({
-    title: 'About Stark Roofing | GAF Certified | Since Day One',
-    description: 'Learn about Stark Roofing & Renovation. Family-owned, GAF certified, serving Seattle & Puget Sound with quality and integrity.',
+    title: 'About Us | Stark Roofing & Renovation Seattle WA',
+    description: 'Family-owned roofing company based in Sammamish, serving Seattle and the Eastside. GAF Master Elite certified. We show up when we say and finish on time.',
     canonical: 'https://starkroofingrenovation.com/about',
     keywords: 'about Stark Roofing, GAF certified roofer, family business, roofing contractor Seattle',
-    ogTitle: 'About Stark Roofing - Trusted Local Roofing Experts',
-    ogDescription: 'GAF certified roofing contractor serving Seattle & Puget Sound with family values.',
+    ogTitle: 'About Stark Roofing & Renovation',
+    ogDescription: 'Family-owned, GAF Master Elite certified roofing contractor based in Sammamish, serving Seattle and the Eastside.',
     ogImage: 'https://starkroofingrenovation.com/brenda-scarllet-owner.jpg',
   });
 

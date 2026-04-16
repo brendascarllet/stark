@@ -15,12 +15,12 @@ const Contact = () => {
   }, []);
 
   useSEOMeta({
-    title: 'Contact Stark Roofing | Free Estimate | 206-739-8232',
-    description: 'Contact Stark Roofing for a free inspection & estimate. Roofing, gutters, siding services. Call 206-739-8232 or fill out our form.',
+    title: 'Contact Stark Roofing | Free Estimate | (206) 739-8232',
+    description: 'Call Stark Roofing at (206) 739-8232 or fill out our form for a free roof inspection and estimate. Seattle, Bellevue, Redmond, and all Eastside cities.',
     canonical: 'https://starkroofingrenovation.com/contact',
     keywords: 'contact roofing contractor, free estimate, roofing inspection, get a quote',
-    ogTitle: 'Contact Stark Roofing - Free Estimate Today',
-    ogDescription: 'Get in touch for your free roofing inspection and estimate.',
+    ogTitle: 'Contact Stark Roofing & Renovation',
+    ogDescription: 'Call (206) 739-8232 or fill out our form for a free roof inspection and estimate.',
     ogImage: 'https://starkroofingrenovation.com/og-share.png',
   });
 

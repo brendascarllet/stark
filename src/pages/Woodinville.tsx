@@ -83,6 +83,8 @@ const WoodinvilleLocation = () => {
       content={content}
       heroImage="/hero-custom-7.webp"
       keywords="roofing contractor Woodinville, roof repair Woodinville WA, roofer Woodinville, roof replacement Woodinville, Woodinville roofing company"
+      metaTitle="Roofing in Woodinville, WA | Stark Roofing & Renovation"
+      metaDescription="Woodinville roofer for tree-heavy lots and moss-prone roofs. GAF Master Elite certified with 20-year warranty. Free estimate, line-item pricing."
     />
   );
 };

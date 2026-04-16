@@ -24,12 +24,12 @@ const Skylights = () => {
   }, []);
 
   useSEOMeta({
-    title: 'Skylight Installation & Replacement | Velux Certified | Seattle',
-    description: 'Professional skylight installation in Seattle & Puget Sound. Velux certified. Bring natural light safely. Expert flashing. Free estimates. 206-739-8232.',
+    title: 'Skylight Installation Seattle | Stark Roofing & Renovation',
+    description: 'Velux skylight installation across the Seattle area. We handle the flashing so it never leaks. Free estimate on new or replacement: (206) 739-8232.',
     canonical: 'https://starkroofingrenovation.com/skylights',
     keywords: 'skylight installation Seattle, Velux skylights, skylight repair, natural light windows, roof windows',
-    ogTitle: 'Skylight Installation - Velux Certified | Stark Roofing',
-    ogDescription: 'Professional skylight installation with expert flashing. Bring natural light into your home.',
+    ogTitle: 'Skylight Installation | Stark Roofing & Renovation',
+    ogDescription: 'Velux skylight installation with leak-proof flashing across the Seattle area.',
     ogImage: 'https://starkroofingrenovation.com/skylight-hero.webp',
   });
 

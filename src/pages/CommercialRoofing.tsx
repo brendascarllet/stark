@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingCTA from '@/components/shared/FloatingCTA';
 import ContactForm from '@/components/services/ContactForm';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 import { Card, CardContent } from '@/components/ui/card';
@@ -559,6 +560,7 @@ const CommercialRoofing = () => {
       </div>
 
       <VirtualAssistant />
+      <FloatingCTA label="Free Commercial Estimate" />
       <Footer />
     </div>
   );

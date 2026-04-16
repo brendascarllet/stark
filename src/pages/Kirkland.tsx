@@ -63,6 +63,8 @@ const KirklandLocation = () => {
       content={content}
       heroImage="/hero-custom-5.jpg"
       keywords="roofing contractor Kirkland, roof repair Kirkland WA, roofer Kirkland, roof replacement Kirkland"
+      metaTitle="Roofing in Kirkland, WA | Stark Roofing & Renovation"
+      metaDescription="Kirkland roofing by a GAF Master Elite contractor. Roof replacement, repair, gutters, and siding. Free inspection with honest, written pricing."
     />
   );
 };

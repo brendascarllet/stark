@@ -19,6 +19,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
+import { getLeadValue } from '@/utils/tracking';
 
 /**
  * /thank-you — Landing page shown after a customer submits the QuickQuoteForm.
@@ -58,6 +59,42 @@ const ThankYou: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Backup conversion tracking: fires on ThankYou page load in case the
+    // form-side tracking was blocked (ad blocker, network error, etc.).
+    // Guarded by sessionStorage flag to prevent double-firing.
+    try {
+      const alreadyFired = sessionStorage.getItem('stark_ty_fired');
+      if (!alreadyFired) {
+        const value = getLeadValue(state.service);
+        window.gtag?.('event', 'conversion', {
+          send_to: 'AW-17475363009/rlAJCJbupJscEMHB84xB',
+          value,
+          currency: 'USD',
+        });
+        window.gtag?.('event', 'generate_lead', {
+          event_category: 'conversion',
+          event_label: state.service || 'thank_you_page',
+          form_type: 'thank_you_backup',
+          value,
+        });
+        if (state.email || state.phone) {
+          window.gtag?.('set', 'user_data', {
+            email: state.email || undefined,
+            phone_number: state.phone || undefined,
+          });
+        }
+        window.fbq?.('track', 'Lead', {
+          content_name: 'Thank You Page',
+          content_category: state.service || 'General',
+          value,
+          currency: 'USD',
+        });
+        sessionStorage.setItem('stark_ty_fired', '1');
+      }
+    } catch (e) {
+      console.warn('ThankYou tracking error:', e);
+    }
   }, []);
 
   const firstName = state.name?.split(' ')[0] || 'there';

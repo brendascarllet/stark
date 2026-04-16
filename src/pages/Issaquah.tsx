@@ -34,7 +34,7 @@ const IssaquahLocation = () => {
           <li><strong>Free Roof Inspections</strong> - Drone-assisted assessments with full reports</li>
           <li><strong>Competitive Pricing</strong> - Transparent estimates, no surprises</li>
           <li><strong>Flexible Financing</strong> - Payment plans for every budget</li>
-          <li><strong>25-Year Labor Warranty</strong> - Complete protection on workmanship</li>
+          <li><strong>20-Year Labor Warranty</strong> - Complete protection on workmanship</li>
         </ul>
       </div>
 
@@ -63,6 +63,8 @@ const IssaquahLocation = () => {
       content={content}
       heroImage="/hero-custom-issaquah.webp"
       keywords="roofing contractor Issaquah, roof repair Issaquah WA, roofer Issaquah, roof replacement Issaquah, Issaquah roofing company"
+      metaTitle="Roofing in Issaquah, WA | Stark Roofing & Renovation"
+      metaDescription="GAF Master Elite roofer minutes from Issaquah. Based in Sammamish, on your roof fast. Free inspection and written estimate, financing available."
     />
   );
 };

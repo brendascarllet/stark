@@ -34,7 +34,7 @@ const BellevueLocation = () => {
           <li><strong>Free Roof Inspections</strong> - Drone-assisted assessments with detailed reports</li>
           <li><strong>Transparent Pricing</strong> - Honest, competitive estimates with no hidden fees</li>
           <li><strong>Flexible Financing</strong> - Payment options for every budget</li>
-          <li><strong>25-Year Labor Warranty</strong> - Industry-leading coverage on workmanship</li>
+          <li><strong>20-Year Labor Warranty</strong> - Industry-leading coverage on workmanship</li>
           <li><strong>Local Eastside Expertise</strong> - Based in Sammamish, serving Bellevue daily</li>
         </ul>
       </div>
@@ -60,10 +60,12 @@ const BellevueLocation = () => {
       city="Bellevue"
       state="WA"
       region="Greater Seattle"
-      description="Expert roofing contractors serving Bellevue and the Eastside with GAF-certified quality and 25-year warranties."
+      description="Expert roofing contractors serving Bellevue and the Eastside with GAF-certified quality and 20-year warranties."
       content={content}
       heroImage="/hero-custom-3.webp"
       keywords="roofing contractor Bellevue, roof repair Bellevue WA, roofer Bellevue, roof replacement Bellevue, Bellevue roofing company"
+      metaTitle="Roofing in Bellevue, WA | Stark Roofing & Renovation"
+      metaDescription="Bellevue's GAF Master Elite roofer. We replace and repair roofs on the Eastside every week. Free inspections with written estimates, 20-year warranty."
     />
   );
 };

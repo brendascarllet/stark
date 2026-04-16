@@ -86,6 +86,8 @@ const SammamishLocation = () => {
       content={content}
       heroImage="/hero-custom-sammamish.webp"
       keywords="roofing contractor Sammamish, roof repair Sammamish WA, roofer Sammamish, roof replacement Sammamish, Sammamish roofing company"
+      metaTitle="Roofing in Sammamish, WA | Stark Roofing & Renovation"
+      metaDescription="Your neighbor's roofer. Stark Roofing is headquartered right here in Sammamish. GAF Master Elite, 20-year labor warranty. Free on-site estimates."
     />
   );
 };

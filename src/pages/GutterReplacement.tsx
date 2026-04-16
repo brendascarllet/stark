@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingCTA from '@/components/shared/FloatingCTA';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 import GutterHero from '@/components/gutter-replacement/GutterHero';
 import HorizontalContactForm from '@/components/gutter-replacement/HorizontalContactForm';
@@ -19,15 +20,15 @@ const GutterReplacement = () => {
   }, []);
 
   useSEOMeta({
-    title: 'Seamless Gutter Replacement Seattle | Pine-Needle Proof | Stark Roofing',
+    title: 'Gutter Replacement Seattle WA | Stark Roofing & Renovation',
     description:
-      'Custom seamless aluminum gutters built for Western Washington — pine needles, atmospheric river rain, ice dams. Lifetime no-clog warranty. Free quote. (206) 739-8232.',
+      'Seamless gutter replacement built for Seattle rain and pine needles. Custom aluminum, lifetime no-clog warranty. Free quote: (206) 739-8232.',
     canonical: 'https://starkroofingrenovation.com/gutter-replacement',
     keywords:
       'gutter replacement seattle, seamless gutters bellevue, leaf protection seattle, gutter installation snohomish, ice dam prevention',
-    ogTitle: 'Seamless Gutter Replacement — Built for Seattle Winters | Stark Roofing',
+    ogTitle: 'Gutter Replacement | Stark Roofing & Renovation',
     ogDescription:
-      'Custom seamless aluminum gutters with real leaf protection. Sized for atmospheric river rain. Lifetime no-clog warranty.',
+      'Custom seamless aluminum gutters sized for Seattle rain and pine needles. Lifetime no-clog warranty.',
     ogImage: 'https://starkroofingrenovation.com/drone-4.webp',
   });
 
@@ -51,6 +52,7 @@ const GutterReplacement = () => {
       <InstallationProcess />
       <CTASection />
       <ContactFormSection />
+      <FloatingCTA label="Free Gutter Estimate" />
       <Footer />
     </div>
   );

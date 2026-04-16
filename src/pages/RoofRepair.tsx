@@ -26,12 +26,12 @@ const RoofRepair = () => {
   }, []);
 
   useSEOMeta({
-    title: 'Emergency Roof Repair Services | Same-Week Service | Seattle',
-    description: 'Professional roof repair in Seattle & Puget Sound. Leaks, missing shingles, storm damage. Same-week service available. GAF certified. Call 206-739-8232.',
+    title: 'Roof Repair Seattle WA | Stark Roofing & Renovation',
+    description: 'Roof leak or storm damage in Seattle? We fix it the same week. Shingles, flashing, emergency tarps. GAF certified crew. Call (206) 739-8232 now.',
     canonical: 'https://starkroofingrenovation.com/roof-repair',
     keywords: 'roof repair Seattle, fix leaky roof, emergency roof repair, roof leak repair, roof damage repair',
-    ogTitle: 'Roof Repair - Same-Day Service | Stark Roofing',
-    ogDescription: 'Fast, permanent roof repairs in Seattle. Leaks, storm damage, missing shingles. Same-week service.',
+    ogTitle: 'Roof Repair | Stark Roofing & Renovation',
+    ogDescription: 'Same-week roof repairs in Seattle. Leaks, storm damage, missing shingles. GAF certified crew.',
     ogImage: 'https://starkroofingrenovation.com/stark-crew-team.jpg',
   });
 

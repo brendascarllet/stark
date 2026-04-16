@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingCTA from '@/components/shared/FloatingCTA';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 import WindowHeroSection from '@/components/window-replacement/WindowHeroSection';
 import WindowOverviewSection from '@/components/window-replacement/WindowOverviewSection';
@@ -55,6 +56,7 @@ const WindowReplacement = () => {
       <div id="book-windows">
         <WindowContactSection />
       </div>
+      <FloatingCTA label="Free Window Estimate" />
       <ScrollToTop />
       <Footer />
     </motion.div>

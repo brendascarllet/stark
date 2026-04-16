@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingCTA from '@/components/shared/FloatingCTA';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
 import { Shield, ArrowRight, CheckCircle2, Zap, Leaf, Sun } from 'lucide-react';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -272,6 +273,7 @@ const TPORoofing = () => {
       
       {/* Contact Section */}
       <ContactSection />
+      <FloatingCTA label="Free TPO Roof Estimate" />
       <ScrollToTop />
       <Footer />
     </>
