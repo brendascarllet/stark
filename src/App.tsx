@@ -1,5 +1,5 @@
 
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import './App.css';
@@ -8,6 +8,7 @@ import './App.css';
 import Index from './pages/Index';
 import PageTransition from './components/PageTransition';
 import { useEntranceAnimations } from './hooks/useEntranceAnimations';
+import { initPhoneTracking } from './utils/phoneTracking';
 
 // Everything else is code-split
 const Services = lazy(() => import('./pages/Services'));
@@ -53,6 +54,10 @@ const GuttersAd = lazy(() => import('./pages/ads/GuttersAd'));
 
 function App() {
   useEntranceAnimations();
+
+  useEffect(() => {
+    return initPhoneTracking();
+  }, []);
 
   return (
     <Router>
