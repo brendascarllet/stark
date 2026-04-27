@@ -43,7 +43,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 bg-stark-red text-white rounded-full shadow-lg z-50"
+          className="fixed bottom-24 right-6 p-3 bg-stark-red text-white rounded-full shadow-lg z-50"
           variants={buttonVariants}
           initial="hidden"
           animate="visible"

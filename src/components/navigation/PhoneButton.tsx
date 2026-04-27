@@ -13,7 +13,7 @@ const PhoneButton = ({ isScrolled }: PhoneButtonProps) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="animate-pulse-glow"
+      className="animate-pulse-glow rounded-full inline-block"
     >
       <a 
         href="tel:+12067398232" 
