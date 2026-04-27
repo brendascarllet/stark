@@ -139,7 +139,7 @@ export function trackLeadSubmission(
 
     // Google Ads conversion with dynamic value
     window.gtag?.('event', 'conversion', {
-      send_to: 'AW-17475363009/rlAJCJbupJscEMHB84xB',
+      send_to: 'AW-17475363009/I9C_CKq9jpscEMHB84xB',
       value,
       currency: 'USD',
     });

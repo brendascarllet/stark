@@ -68,7 +68,7 @@ const ThankYou: React.FC = () => {
       if (!alreadyFired) {
         const value = getLeadValue(state.service);
         window.gtag?.('event', 'conversion', {
-          send_to: 'AW-17475363009/rlAJCJbupJscEMHB84xB',
+          send_to: 'AW-17475363009/I9C_CKq9jpscEMHB84xB',
           value,
           currency: 'USD',
         });
