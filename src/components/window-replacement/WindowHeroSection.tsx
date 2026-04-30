@@ -28,17 +28,18 @@ const WindowHeroSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Breadcrumb */}
         <motion.div
-          className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+          className="text-white/50 text-xs tracking-widest uppercase mb-6 text-center"
+          style={{ whiteSpace: 'nowrap' }}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
           <a href="/" className="hover:text-white/80 transition-colors">Home</a>
-          <ChevronRight className="w-3 h-3" />
+          <ChevronRight className="inline-block w-3 h-3 mx-2 align-middle" />
           <span className="text-white/70">Window Replacement</span>
         </motion.div>
 
-        <div className="max-w-2xl text-white">
+        <div className="max-w-2xl text-white text-center mx-auto">
           {/* Brand pulse badge */}
           <motion.div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-stark-red/20 border border-stark-red/40 backdrop-blur-sm mb-5"
@@ -67,7 +68,7 @@ const WindowHeroSection = () => {
 
           {/* Accent bar */}
           <motion.div
-            className="h-1 bg-stark-red rounded-full mb-5"
+            className="h-1 bg-stark-red rounded-full mb-5 mx-auto"
             initial={{ width: 0 }}
             animate={{ width: 64 }}
             transition={{ delay: 0.55, duration: 0.5 }}
@@ -75,7 +76,7 @@ const WindowHeroSection = () => {
 
           {/* Subheadline */}
           <motion.p
-            className="text-base md:text-lg text-white/85 mb-7 leading-relaxed max-w-xl"
+            className="text-base md:text-lg text-white/85 mb-7 leading-relaxed max-w-xl mx-auto"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.55 }}
@@ -89,7 +90,7 @@ const WindowHeroSection = () => {
 
           {/* CTAs */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-3 mb-8"
+            className="flex flex-col sm:flex-row gap-3 mb-8 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.55 }}
@@ -116,24 +117,24 @@ const WindowHeroSection = () => {
 
           {/* Trust badges */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl"
+            className="flex flex-col items-center gap-3 sm:grid sm:grid-cols-3 sm:items-stretch max-w-xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.05, duration: 0.5 }}
           >
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+            <div className="inline-flex sm:flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15 text-left">
               <Award size={18} className="text-stark-red flex-shrink-0" />
               <span className="text-sm text-white/90 font-medium leading-tight">
                 3 Top WA Brands
               </span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+            <div className="inline-flex sm:flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15 text-left">
               <Sun size={18} className="text-stark-red flex-shrink-0" />
               <span className="text-sm text-white/90 font-medium leading-tight">
                 Energy Star V7.0
               </span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+            <div className="inline-flex sm:flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15 text-left">
               <Shield size={18} className="text-stark-red flex-shrink-0" />
               <span className="text-sm text-white/90 font-medium leading-tight">
                 $600 Federal Tax Credit

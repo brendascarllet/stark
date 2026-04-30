@@ -24,7 +24,7 @@ const WindowOverviewSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
               <div className="bg-stark-red/10 p-3 rounded-full flex-shrink-0">
                 <Droplets className="h-6 w-6 text-stark-red" />
               </div>
@@ -43,7 +43,7 @@ const WindowOverviewSection = () => {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
               <div className="bg-stark-red/10 p-3 rounded-full flex-shrink-0">
                 <Wind className="h-6 w-6 text-stark-red" />
               </div>
@@ -62,7 +62,7 @@ const WindowOverviewSection = () => {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
               <div className="bg-stark-red/10 p-3 rounded-full flex-shrink-0">
                 <Flame className="h-6 w-6 text-stark-red" />
               </div>
@@ -82,7 +82,7 @@ const WindowOverviewSection = () => {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
               <div className="bg-stark-red/10 p-3 rounded-full flex-shrink-0">
                 <AlertCircle className="h-6 w-6 text-stark-red" />
               </div>

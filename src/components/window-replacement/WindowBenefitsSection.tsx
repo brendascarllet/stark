@@ -62,13 +62,13 @@ const WindowBenefitsSection = () => {
           {benefits.map(({ icon: Icon, title, body, cite }, i) => (
             <motion.div
               key={title}
-              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-stark-red/30 transition-all"
+              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-stark-red/30 transition-all text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full inline-block mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full inline-block mb-4 mx-auto md:mx-0">
                 <Icon className="h-6 w-6 text-stark-red" />
               </div>
               <h3 className="text-lg font-heading font-bold text-navy mb-2 leading-tight">

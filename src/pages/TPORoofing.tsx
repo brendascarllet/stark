@@ -46,11 +46,11 @@ const TPORoofing = () => {
         <div className="absolute inset-0 bg-navy/60"></div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-20">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl text-center mx-auto">
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 animate-fade-in">
               TPO Roofing Solutions
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
               Energy-efficient, durable thermoplastic membrane roofing ideal for commercial properties and flat residential roofs.
             </p>
             <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
@@ -66,7 +66,7 @@ const TPORoofing = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-6">
                 What is TPO Roofing?
               </h2>
@@ -105,13 +105,13 @@ const TPORoofing = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Sun className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Energy Efficient</h3>
@@ -121,13 +121,13 @@ const TPORoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Zap className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Durable & Long-Lasting</h3>
@@ -137,13 +137,13 @@ const TPORoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Leaf className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Environmentally Friendly</h3>
@@ -153,13 +153,13 @@ const TPORoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Shield className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Low Maintenance</h3>
@@ -169,13 +169,13 @@ const TPORoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <CheckCircle2 className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Cost-Effective</h3>
@@ -185,13 +185,13 @@ const TPORoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <ArrowRight className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Versatile Application</h3>
@@ -219,33 +219,33 @@ const TPORoofing = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="glass-card p-6 rounded-xl relative">
-              <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-stark-red text-white flex items-center justify-center font-bold text-lg">1</div>
-              <h3 className="text-xl font-heading font-bold text-navy mb-3 mt-3">Inspection & Preparation</h3>
+            <div className="glass-card p-6 rounded-xl relative text-center md:text-left">
+              <div className="w-10 h-10 rounded-full bg-stark-red text-white flex items-center justify-center font-bold text-lg mx-auto mb-3 md:mx-0 md:mb-0 md:absolute md:-top-3 md:-left-3">1</div>
+              <h3 className="text-xl font-heading font-bold text-navy mb-3 md:mt-3">Inspection & Preparation</h3>
               <p className="text-charcoal/80">
                 We thoroughly assess your existing roof structure, repair any damage to the deck, and ensure proper drainage patterns before installation begins.
               </p>
             </div>
             
-            <div className="glass-card p-6 rounded-xl relative">
-              <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-stark-red text-white flex items-center justify-center font-bold text-lg">2</div>
-              <h3 className="text-xl font-heading font-bold text-navy mb-3 mt-3">Insulation Installation</h3>
+            <div className="glass-card p-6 rounded-xl relative text-center md:text-left">
+              <div className="w-10 h-10 rounded-full bg-stark-red text-white flex items-center justify-center font-bold text-lg mx-auto mb-3 md:mx-0 md:mb-0 md:absolute md:-top-3 md:-left-3">2</div>
+              <h3 className="text-xl font-heading font-bold text-navy mb-3 md:mt-3">Insulation Installation</h3>
               <p className="text-charcoal/80">
                 We install high-R-value insulation boards to improve energy efficiency and create a smooth surface for the TPO membrane attachment.
               </p>
             </div>
             
-            <div className="glass-card p-6 rounded-xl relative">
-              <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-stark-red text-white flex items-center justify-center font-bold text-lg">3</div>
-              <h3 className="text-xl font-heading font-bold text-navy mb-3 mt-3">Membrane Application</h3>
+            <div className="glass-card p-6 rounded-xl relative text-center md:text-left">
+              <div className="w-10 h-10 rounded-full bg-stark-red text-white flex items-center justify-center font-bold text-lg mx-auto mb-3 md:mx-0 md:mb-0 md:absolute md:-top-3 md:-left-3">3</div>
+              <h3 className="text-xl font-heading font-bold text-navy mb-3 md:mt-3">Membrane Application</h3>
               <p className="text-charcoal/80">
                 TPO sheets are rolled out, overlapped, and heat-welded to create a monolithic, watertight surface across the entire roof area.
               </p>
             </div>
             
-            <div className="glass-card p-6 rounded-xl relative">
-              <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-stark-red text-white flex items-center justify-center font-bold text-lg">4</div>
-              <h3 className="text-xl font-heading font-bold text-navy mb-3 mt-3">Detail Work & Inspection</h3>
+            <div className="glass-card p-6 rounded-xl relative text-center md:text-left">
+              <div className="w-10 h-10 rounded-full bg-stark-red text-white flex items-center justify-center font-bold text-lg mx-auto mb-3 md:mx-0 md:mb-0 md:absolute md:-top-3 md:-left-3">4</div>
+              <h3 className="text-xl font-heading font-bold text-navy mb-3 md:mt-3">Detail Work & Inspection</h3>
               <p className="text-charcoal/80">
                 We carefully seal all penetrations, flashings, and edges, then perform a thorough inspection including seam testing to ensure complete waterproofing.
               </p>

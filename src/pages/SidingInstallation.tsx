@@ -44,11 +44,11 @@ const SidingInstallation = () => {
         <div className="absolute inset-0 bg-navy/50"></div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-20">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl text-center mx-auto">
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 animate-fade-in">
               Professional Siding Installation
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
               Transform your home's appearance and enhance its protection with our premium siding installation services.
             </p>
             <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
@@ -133,12 +133,12 @@ const SidingInstallation = () => {
               
               <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0">
                 <div className="md:flex md:justify-end">
-                  <div className="md:max-w-md glass-card p-6">
+                  <div className="md:max-w-md glass-card p-6 text-center md:text-left">
                     <h3 className="text-xl font-heading font-bold text-navy mb-3">Consultation & Assessment</h3>
                     <p className="text-charcoal/80">
                       Our experts will meet with you to discuss your needs, preferences, and budget. We'll perform a thorough assessment of your home's exterior to identify any underlying issues.
                     </p>
-                    <div className="md:hidden flex items-center mt-4">
+                    <div className="md:hidden flex items-center justify-center mt-4">
                       <div className="w-8 h-8 rounded-full bg-stark-red flex items-center justify-center text-white font-bold mr-3">1</div>
                       <span className="text-navy font-medium">First Step</span>
                     </div>
@@ -159,12 +159,12 @@ const SidingInstallation = () => {
               
               <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:order-2">
                 <div className="md:flex md:justify-start">
-                  <div className="md:max-w-md glass-card p-6">
+                  <div className="md:max-w-md glass-card p-6 text-center md:text-left">
                     <h3 className="text-xl font-heading font-bold text-navy mb-3">Design & Material Selection</h3>
                     <p className="text-charcoal/80">
                       Choose from our wide selection of high-quality siding materials, colors, and styles. Our team will provide samples and digital renderings to help you visualize the final result.
                     </p>
-                    <div className="md:hidden flex items-center mt-4">
+                    <div className="md:hidden flex items-center justify-center mt-4">
                       <div className="w-8 h-8 rounded-full bg-stark-red flex items-center justify-center text-white font-bold mr-3">2</div>
                       <span className="text-navy font-medium">Second Step</span>
                     </div>
@@ -185,12 +185,12 @@ const SidingInstallation = () => {
               
               <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0">
                 <div className="md:flex md:justify-end">
-                  <div className="md:max-w-md glass-card p-6">
+                  <div className="md:max-w-md glass-card p-6 text-center md:text-left">
                     <h3 className="text-xl font-heading font-bold text-navy mb-3">Removal & Preparation</h3>
                     <p className="text-charcoal/80">
                       We'll carefully remove old siding, inspect for and repair any structural damage, and prepare the surface with proper moisture barriers and insulation for optimal performance.
                     </p>
-                    <div className="md:hidden flex items-center mt-4">
+                    <div className="md:hidden flex items-center justify-center mt-4">
                       <div className="w-8 h-8 rounded-full bg-stark-red flex items-center justify-center text-white font-bold mr-3">3</div>
                       <span className="text-navy font-medium">Third Step</span>
                     </div>
@@ -211,12 +211,12 @@ const SidingInstallation = () => {
               
               <div className="md:w-1/2 md:pr-12 md:order-2">
                 <div className="md:flex md:justify-start">
-                  <div className="md:max-w-md glass-card p-6">
+                  <div className="md:max-w-md glass-card p-6 text-center md:text-left">
                     <h3 className="text-xl font-heading font-bold text-navy mb-3">Professional Installation & Cleanup</h3>
                     <p className="text-charcoal/80">
                       Our certified installers will expertly install your new siding according to manufacturer specifications and industry best practices. We'll conduct a thorough cleanup, leaving your property spotless.
                     </p>
-                    <div className="md:hidden flex items-center mt-4">
+                    <div className="md:hidden flex items-center justify-center mt-4">
                       <div className="w-8 h-8 rounded-full bg-stark-red flex items-center justify-center text-white font-bold mr-3">4</div>
                       <span className="text-navy font-medium">Final Step</span>
                     </div>

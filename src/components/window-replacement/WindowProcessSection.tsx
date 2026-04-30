@@ -47,16 +47,16 @@ const WindowProcessSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {processSteps.map((step, index) => (
-            <motion.div 
+            <motion.div
               key={index}
-              className="bg-navy/50 border border-stark-red/30 rounded-lg p-6 hover:bg-navy/80 transition-all"
+              className="bg-navy/50 border border-white/30 rounded-lg p-6 hover:bg-navy/80 transition-all text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center mb-4">
-                <div className="bg-stark-red p-3 rounded-full mr-4">
+              <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left mb-4">
+                <div className="bg-stark-red p-3 rounded-full mb-3 md:mb-0 md:mr-4">
                   {step.icon}
                 </div>
                 <h3 className="text-xl font-heading font-bold">{step.title}</h3>

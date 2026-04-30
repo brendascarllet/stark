@@ -10,11 +10,11 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-navy/60"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-20">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl text-center mx-auto">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 animate-fade-in">
             GAF Timberline HDZ® Shingles
           </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl animate-fade-in" style={{
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in" style={{
           animationDelay: '200ms'
         }}>
             America's #1 selling shingle, offering exceptional protection, curb appeal, and value for your home.

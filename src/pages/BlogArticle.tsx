@@ -132,14 +132,14 @@ const BlogArticle = () => {
         />
         <div className="absolute inset-0 bg-navy/60" />
         <div className="absolute inset-0 flex items-end">
-          <div className="container mx-auto px-4 md:px-6 pb-8 md:pb-12">
-            <Link to="/blog" className="text-white/80 hover:text-white flex items-center mb-4 text-sm">
+          <div className="container mx-auto px-4 md:px-6 pb-8 md:pb-12 text-center md:text-left">
+            <Link to="/blog" className="text-white/80 hover:text-white inline-flex items-center mb-4 text-sm">
               <ArrowLeft size={14} className="mr-1" /> Back to Blog
             </Link>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white max-w-4xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white max-w-4xl mx-auto md:mx-0">
               {post.title}
             </h1>
-            <div className="flex items-center text-white/70 mt-4 space-x-4 text-sm">
+            <div className="flex items-center justify-center md:justify-start text-white/70 mt-4 space-x-4 text-sm">
               <span className="flex items-center">
                 <Calendar size={14} className="mr-1" />
                 {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
@@ -162,14 +162,14 @@ const BlogArticle = () => {
             </article>
 
             {/* CTA Box */}
-            <div className="mt-12 bg-gray-50 border border-gray-200 rounded-xl p-6 md:p-8">
+            <div className="mt-12 bg-gray-50 border border-gray-200 rounded-xl p-6 md:p-8 text-center md:text-left">
               <h3 className="text-xl font-heading font-bold text-navy mb-3">
                 Ready for a Free Roof Inspection?
               </h3>
               <p className="text-charcoal/70 mb-4">
                 Our GAF certified team provides free, no-obligation inspections across Seattle, Sammamish, Bellevue, and the entire Puget Sound area.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Link
                   to="/contact"
                   className="bg-stark-red hover:bg-stark-red/90 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 text-center"
@@ -190,7 +190,7 @@ const BlogArticle = () => {
           {/* Related Posts */}
           {otherPosts.length > 0 && (
             <div className="max-w-5xl mx-auto mt-16">
-              <h3 className="text-2xl font-heading font-bold text-navy mb-8">
+              <h3 className="text-2xl font-heading font-bold text-navy mb-8 text-center md:text-left">
                 More from Our Blog
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -207,7 +207,7 @@ const BlogArticle = () => {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 text-center md:text-left">
                       <h4 className="font-heading font-bold text-navy text-sm group-hover:text-stark-red transition-colors">
                         {related.title}
                       </h4>

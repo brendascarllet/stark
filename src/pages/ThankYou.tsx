@@ -334,12 +334,12 @@ const ThankYou: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1, duration: 0.4 }}
-                    className="relative bg-gray-50 rounded-xl p-6 border border-gray-100"
+                    className="relative bg-gray-50 rounded-xl p-6 border border-gray-100 text-center"
                   >
-                    <div className="absolute -top-3 -left-3 w-9 h-9 rounded-full bg-stark-red text-white font-bold flex items-center justify-center shadow-md">
+                    <div className="w-9 h-9 rounded-full bg-stark-red text-white font-bold flex items-center justify-center shadow-md mx-auto mb-3 md:mb-0 md:absolute md:-top-3 md:-left-3">
                       {step.num}
                     </div>
-                    <div className="bg-stark-red/10 text-stark-red rounded-lg w-12 h-12 flex items-center justify-center mb-4 mt-2">
+                    <div className="bg-stark-red/10 text-stark-red rounded-lg w-12 h-12 flex items-center justify-center mb-4 mx-auto md:mt-2">
                       <Icon size={22} />
                     </div>
                     <h3 className="font-heading font-bold text-navy text-lg mb-2">

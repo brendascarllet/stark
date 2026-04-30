@@ -26,22 +26,22 @@ const WindowContactSection = () => {
           </motion.div>
           
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start"
+            className="flex flex-col gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <div className="lg:col-span-2">
+            <div>
               <ContactForm />
             </div>
-            
-            <div className="bg-navy text-white p-6 rounded-xl shadow-lg">
+
+            <div className="bg-navy text-white p-6 rounded-xl shadow-lg text-center md:text-left">
               <h3 className="text-xl font-bold mb-4">Need Immediate Assistance?</h3>
               <p className="mb-6 text-white/80">Our window experts are ready to answer your questions and provide guidance.</p>
               
               <div className="space-y-4">
-                <a href="tel:206-739-8232" className="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all">
+                <a href="tel:206-739-8232" className="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all text-left">
                   <div className="bg-stark-red p-2 rounded-full">
                     <Phone className="h-5 w-5 text-white" />
                   </div>
@@ -50,8 +50,8 @@ const WindowContactSection = () => {
                     <p className="font-bold">206-739-8232</p>
                   </div>
                 </a>
-                
-                <a href="mailto:office@starkroofingrenovation.com" className="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all">
+
+                <a href="mailto:office@starkroofingrenovation.com" className="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all text-left">
                   <div className="bg-stark-red p-2 rounded-full">
                     <MessageSquare className="h-5 w-5 text-white" />
                   </div>
@@ -62,7 +62,7 @@ const WindowContactSection = () => {
                 </a>
               </div>
               
-              <div className="mt-6 p-4 bg-white/10 rounded-lg">
+              <div className="mt-6 p-4 bg-white/10 rounded-lg text-left">
                 <h4 className="font-bold mb-2">Our Promise</h4>
                 <ul className="text-sm space-y-2 text-white/80">
                   <li>• Free, no-obligation consultation</li>

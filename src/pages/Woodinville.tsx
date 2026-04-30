@@ -4,19 +4,19 @@ import LocationPage from '@/components/locations/LocationPage';
 const WoodinvilleLocation = () => {
   const content = (
     <div className="space-y-8">
-      <div>
+      <div className="text-center md:text-left">
         <h2 className="text-3xl font-bold mb-4">Roofing Services in Woodinville, WA</h2>
         <p className="text-lg text-gray-700 mb-4">
           Woodinville's heavy tree canopy drops needles, leaves, and branches onto roofs year-round. That debris traps moisture against your shingles and feeds moss growth that shortens the life of any roof. Stark Roofing & Renovation works across Woodinville from Hollywood Hill down through the Sammamish River Valley, replacing and repairing roofs that have taken years of this kind of punishment.
         </p>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Woodinville Roofing Services</h3>
         <p className="text-gray-700 mb-4">
           Full-service roofing and exterior work for Woodinville homeowners:
         </p>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 text-left">
           <li><strong>Roof Replacement</strong> - Complete tear-off and GAF shingle installation (HDZ, Grand Sequoia, Natural Shadow)</li>
           <li><strong>Roof Repair</strong> - Leak tracing, damaged shingle replacement, flashing repair around chimneys and skylights</li>
           <li><strong>Gutter Replacement</strong> - Properly sized gutters and downspouts for homes with heavy tree cover</li>
@@ -25,9 +25,9 @@ const WoodinvilleLocation = () => {
         </ul>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Why Woodinville Homeowners Work With Us</h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 text-left">
           <li><strong>GAF Master Elite Certified</strong> - Top 2% of roofers nationwide. Backed by GAF's 50-year shingle and 20-year labor warranty</li>
           <li><strong>Local Eastside Experience</strong> - We know what Woodinville weather does to roofs: the moss, the debris, the wind-driven rain off the valley</li>
           <li><strong>Free Estimates</strong> - We walk the roof, take photos, and give you a written quote with line items. No sales pitch</li>
@@ -36,14 +36,14 @@ const WoodinvilleLocation = () => {
         </ul>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Woodinville Weather and Your Roof</h3>
         <p className="text-gray-700 mb-4">
           Woodinville sits in a river valley surrounded by mature firs, cedars, and maples. The combination of constant shade and Pacific Northwest rain creates ideal conditions for moss and algae on roofs. Most of the homes here were built in the 1980s and 1990s, and the original roofs are past their expected lifespan. We see a lot of curling shingles, granule loss, and soft spots in the plywood from slow leaks that went unnoticed for years.
         </p>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Woodinville Roofing FAQs</h3>
         <div className="space-y-4">
           <div>
@@ -65,7 +65,7 @@ const WoodinvilleLocation = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100 p-6 rounded-lg">
+      <div className="bg-gray-100 p-6 rounded-lg text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Free Woodinville Roof Estimate</h3>
         <p className="text-gray-700 mb-4">
           Call Stark Roofing at <a href="tel:+12067398232" className="font-bold text-red-600 hover:underline">206-739-8232</a> for a free roof inspection and written estimate in Woodinville.

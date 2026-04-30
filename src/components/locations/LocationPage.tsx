@@ -90,6 +90,7 @@ const LocationPage: React.FC<LocationPageProps> = ({
         ctaLabel="Get Free Estimate"
         ctaHref="#contact"
         accentColor="#dc2626"
+        align="center"
       />
       <div className="w-full py-12 lg:py-16 px-4">
         <div className="max-w-3xl mx-auto">

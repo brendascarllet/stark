@@ -296,6 +296,7 @@ const VeluxLineup = () => {
         ctaHref="#contact"
         secondaryCta={{ label: 'Back to Skylights', href: '/skylights' }}
         accentColor="#f59e0b"
+        align="center"
       />
 
       {/* ── Quick comparison ── */}
@@ -390,8 +391,8 @@ const VeluxLineup = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="lg:col-span-3 p-6 md:p-8">
-                    <div className="flex items-center gap-2 mb-2">
+                  <div className="lg:col-span-3 p-6 md:p-8 text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                       <div className="bg-amber-100 p-2 rounded-lg">
                         <Icon size={20} className="text-amber-700" />
                       </div>
@@ -405,7 +406,7 @@ const VeluxLineup = () => {
                     <p className="text-amber-700 italic font-medium mb-4">{m.tagline}</p>
                     <p className="text-charcoal/80 leading-relaxed mb-5">{m.description}</p>
 
-                    <div className="grid md:grid-cols-2 gap-5 mb-5">
+                    <div className="grid md:grid-cols-2 gap-5 mb-5 text-left">
                       <div>
                         <div className="text-[11px] font-bold text-charcoal/50 uppercase tracking-widest mb-2">
                           Highlights
@@ -434,7 +435,7 @@ const VeluxLineup = () => {
                       </div>
                     </div>
 
-                    <div className="bg-amber-50 border-l-4 border-amber-400 p-3 rounded">
+                    <div className="bg-amber-50 border-l-4 border-amber-400 p-3 rounded text-left">
                       <div className="text-[11px] font-bold text-amber-800 uppercase tracking-widest mb-1">
                         Best for
                       </div>
@@ -456,7 +457,7 @@ const VeluxLineup = () => {
       <section className="section-padding bg-navy text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="text-center md:text-left">
               <span className="inline-block px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-sm font-semibold mb-3">
                 Glass Technology
               </span>
@@ -466,7 +467,7 @@ const VeluxLineup = () => {
               <p className="text-white/70 mb-6 leading-relaxed">
                 Every VELUX residential skylight ships with the same premium glass package as standard. No upgrade fees, no fine print. Here's what's actually in it:
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 text-left">
                 <li className="flex items-start gap-3">
                   <div className="bg-amber-500/20 p-1.5 rounded mt-0.5"><Check size={16} className="text-amber-300" /></div>
                   <div>
@@ -611,7 +612,7 @@ const VeluxLineup = () => {
       <section className="section-padding bg-amber-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="text-center md:text-left">
               <span className="inline-block px-4 py-1.5 rounded-full bg-white text-amber-800 border border-amber-200 text-sm font-semibold mb-3">
                 Warranty
               </span>
@@ -622,28 +623,28 @@ const VeluxLineup = () => {
                 When a VELUX deck-mounted skylight is installed by a Certified Installer (that's us) using a VELUX flashing kit, the installation itself is covered for <strong>10 full years</strong>. That's the longest installation warranty in the residential skylight category. Here's the full breakdown:
               </p>
               <div className="space-y-3">
-                <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+                <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-4 bg-white p-4 rounded-lg shadow-sm">
                   <Shield size={28} className="text-amber-600 flex-shrink-0" />
                   <div>
                     <div className="font-bold text-navy">10 years — Installation</div>
                     <div className="text-sm text-charcoal/70">Covered against leaks when installed by a VELUX-Certified Installer with a VELUX flashing kit.</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+                <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-4 bg-white p-4 rounded-lg shadow-sm">
                   <Shield size={28} className="text-amber-600 flex-shrink-0" />
                   <div>
                     <div className="font-bold text-navy">20 years — Glass</div>
                     <div className="text-sm text-charcoal/70">Against seal failure and material defects in the insulating glass unit.</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+                <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-4 bg-white p-4 rounded-lg shadow-sm">
                   <Shield size={28} className="text-amber-600 flex-shrink-0" />
                   <div>
                     <div className="font-bold text-navy">10 years — Skylight & flashing</div>
                     <div className="text-sm text-charcoal/70">Material defects on the unit body and engineered flashing components.</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+                <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-4 bg-white p-4 rounded-lg shadow-sm">
                   <Shield size={28} className="text-amber-600 flex-shrink-0" />
                   <div>
                     <div className="font-bold text-navy">5 years — Motors, controls, blinds</div>
@@ -653,13 +654,13 @@ const VeluxLineup = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl p-8 text-white shadow-xl">
-              <Award size={48} className="mb-4" />
+            <div className="bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl p-8 text-white shadow-xl text-center md:text-left">
+              <Award size={48} className="mb-4 mx-auto md:mx-0" />
               <h3 className="text-2xl font-extrabold mb-3">We're VELUX Certified</h3>
               <p className="text-white/90 mb-5 leading-relaxed">
                 Stark Roofing &amp; Renovation is a VELUX-Certified Installer. That means every skylight we put in your roof gets the full 10-year No Leak Promise — automatically, no extra paperwork from you.
               </p>
-              <div className="bg-white/10 backdrop-blur rounded-lg p-4 border border-white/20">
+              <div className="bg-white/10 backdrop-blur rounded-lg p-4 border border-white/20 text-left">
                 <div className="text-xs uppercase tracking-widest text-white/70 mb-1">Certification advantages</div>
                 <ul className="text-sm space-y-1">
                   <li>✓ Direct VELUX warranty registration</li>
@@ -678,8 +679,8 @@ const VeluxLineup = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="bg-gradient-to-br from-slate-50 to-amber-50 border border-amber-200 rounded-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-2">
-                <div className="flex items-center gap-2 mb-3">
+              <div className="md:col-span-2 text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
                   <Smartphone size={22} className="text-amber-600" />
                   <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">VELUX ACTIVE with NETATMO</span>
                 </div>
@@ -687,7 +688,7 @@ const VeluxLineup = () => {
                 <p className="text-charcoal/80 mb-5 leading-relaxed">
                   Both solar (VSS/VCS) and electric (VSE) skylights pair with the VELUX ACTIVE gateway and a small Netatmo sensor. The system reads the indoor temperature, humidity, and CO₂ in your room and automatically opens or closes the skylights to keep the air healthy — and shuts them when it senses rain. Apple HomeKit compatible.
                 </p>
-                <ul className="grid sm:grid-cols-2 gap-2 text-sm text-charcoal/80">
+                <ul className="grid sm:grid-cols-2 gap-2 text-sm text-charcoal/80 text-left">
                   <li className="flex items-center gap-2"><Check size={15} className="text-amber-600" /> Indoor air quality automation</li>
                   <li className="flex items-center gap-2"><Check size={15} className="text-amber-600" /> Schedule-based open/close</li>
                   <li className="flex items-center gap-2"><Check size={15} className="text-amber-600" /> Apple HomeKit support</li>

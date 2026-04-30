@@ -76,7 +76,7 @@ const WindowFAQSection = () => {
               className="border-b border-gray-200"
             >
               <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-navy hover:text-stark-red py-5">
-                {f.question}
+                <span className="text-left flex-1">{f.question}</span>
               </AccordionTrigger>
               <AccordionContent className="text-charcoal/80 text-sm md:text-base leading-relaxed pb-5">
                 {f.answer}

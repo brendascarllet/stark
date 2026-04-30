@@ -54,7 +54,7 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
   const words = title.split(' ');
 
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: '72vh', minHeight: 520 }}>
+    <section className="relative w-full overflow-hidden h-[72vh] md:h-[82vh] min-h-[520px]">
 
       {/* ── Background image with Ken Burns slow zoom ── */}
       <motion.div
@@ -128,7 +128,7 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
           {words.map((word, i) => (
             <div key={i} className="overflow-hidden">
               <motion.span
-                className="block text-[clamp(2.5rem,7vw,6rem)] font-extrabold text-white leading-none tracking-tight font-heading"
+                className="block text-[clamp(2rem,5.5vw,4.5rem)] font-extrabold text-white leading-none tracking-tight font-heading"
                 initial={{ y: '110%' }}
                 animate={{ y: '0%' }}
                 transition={{ delay: 0.4 + i * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}

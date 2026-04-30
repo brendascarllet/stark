@@ -4,19 +4,19 @@ import LocationPage from '@/components/locations/LocationPage';
 const RentonLocation = () => {
   const content = (
     <div className="space-y-8">
-      <div>
+      <div className="text-center md:text-left">
         <h2 className="text-3xl font-bold mb-4">Roofing Services in Renton, WA</h2>
         <p className="text-lg text-gray-700 mb-4">
           Renton has some of the most varied housing stock on the south end of Lake Washington. You've got 1950s ramblers in Kennydale, split-levels in Renton Highlands from the '70s, and newer builds up on Benson Hill. Every era of home comes with its own roofing problems, and we've worked on all of them. Stark Roofing & Renovation has been replacing and repairing roofs in Renton for years, and we know what decades of PNW rain does to these homes.
         </p>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Renton Roofing Services</h3>
         <p className="text-gray-700 mb-4">
           Complete roofing and exterior services for Renton homeowners:
         </p>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 text-left">
           <li><strong>Roof Replacement</strong> - Full tear-off and GAF shingle installation (HDZ, Grand Sequoia, Natural Shadow) with deck repair included</li>
           <li><strong>Flat Roofing</strong> - EverGuard PVC and Uniflex Silicone systems for flat sections over carports, additions, and garages</li>
           <li><strong>Roof Repair</strong> - Targeted leak repair, missing shingle replacement, and wind damage fixes</li>
@@ -25,9 +25,9 @@ const RentonLocation = () => {
         </ul>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Why Renton Homeowners Work With Us</h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 text-left">
           <li><strong>GAF Master Elite Certified</strong> - Top 2% of roofers in the country. GAF backs our work with a 50-year shingle warranty and 20 years of labor coverage</li>
           <li><strong>Full-Project Crews</strong> - If your roof leaked and damaged the ceiling below, we do the roof, the drywall, and the paint. One crew, one invoice</li>
           <li><strong>Free Estimates, Straight Talk</strong> - We look at the roof, tell you what we find, and give you a written price. If a repair buys you five more years, we say so</li>
@@ -36,14 +36,14 @@ const RentonLocation = () => {
         </ul>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Renton's Roofing Challenges</h3>
         <p className="text-gray-700 mb-4">
           Renton's older neighborhoods have roofs that survived decades of Pacific Northwest rain but are running out of time. We see cracked shingles, rusted flashing around old brick chimneys, and soft spots in the plywood deck from slow leaks that went unnoticed. The newer homes on Benson Hill deal with wind exposure and steep pitches that make proper installation critical. We fix what's underneath before we put anything new on top, because that's the part that determines whether a roof lasts.
         </p>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Renton Roofing FAQs</h3>
         <div className="space-y-4">
           <div>
@@ -65,7 +65,7 @@ const RentonLocation = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100 p-6 rounded-lg">
+      <div className="bg-gray-100 p-6 rounded-lg text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Free Renton Roof Estimate</h3>
         <p className="text-gray-700 mb-4">
           Call Stark Roofing at <a href="tel:+12067398232" className="font-bold text-red-600 hover:underline">206-739-8232</a> for a free roof inspection and written estimate in Renton. We'll tell you what's going on up there and put a price on paper.

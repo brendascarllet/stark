@@ -4,19 +4,19 @@ import LocationPage from '@/components/locations/LocationPage';
 const SammamishLocation = () => {
   const content = (
     <div className="space-y-8">
-      <div>
+      <div className="text-center md:text-left">
         <h2 className="text-3xl font-bold mb-4">Roofing Services in Sammamish, WA</h2>
         <p className="text-lg text-gray-700 mb-4">
           Stark Roofing & Renovation is headquartered right here in Sammamish at 24243 SE 43rd Ct. We're not a Seattle company driving out to the Eastside. We live here, and the roofs we replace are on the same streets we drive every day. Sammamish gets more rain than downtown Seattle, more tree cover, and colder winter nights that cause freeze-thaw damage to aging shingles. We built this business around solving those problems.
         </p>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Sammamish Roofing Services</h3>
         <p className="text-gray-700 mb-4">
           From our Sammamish headquarters, we provide:
         </p>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 text-left">
           <li><strong>Roof Replacement</strong> - GAF HDZ, Grand Sequoia, and Natural Shadow shingles with full system components and warranty</li>
           <li><strong>Emergency Roof Repair</strong> - Storm damage, active leaks, and wind damage. Same-day response for Sammamish homes</li>
           <li><strong>Gutter Replacement</strong> - Properly sized gutters for Sammamish's heavy rainfall and tree debris</li>
@@ -26,9 +26,9 @@ const SammamishLocation = () => {
         </ul>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Why Sammamish Homeowners Trust Stark Roofing</h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 text-left">
           <li><strong>Based in Sammamish</strong> - Our HQ is in your neighborhood. We respond fast because we're already here</li>
           <li><strong>GAF Master Elite Certified</strong> - Top 2% of roofers nationwide. GAF's best warranty: 50-year shingles, 20-year labor</li>
           <li><strong>Free Roof Inspections</strong> - Drone-assisted assessments with photos and a written report</li>
@@ -37,14 +37,14 @@ const SammamishLocation = () => {
         </ul>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Sammamish Plateau Weather and Your Roof</h3>
         <p className="text-gray-700 mb-4">
           The Sammamish Plateau sits at a higher elevation than most Eastside cities, and that changes the math on your roof. Colder overnight temperatures in winter mean more freeze-thaw cycles cracking old shingles and flashing. The dense tree cover on the plateau holds moisture against roofs and accelerates moss growth. And when windstorms come through, the exposed elevation means shingles take a harder hit than they would in lower-lying areas. We install roofing systems that account for all of it: ice and water shield in every valley, proper ventilation to prevent condensation, and shingles rated for 130 mph winds.
         </p>
       </div>
 
-      <div>
+      <div className="text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Sammamish Roofing FAQs</h3>
         <div className="space-y-4">
           <div>
@@ -66,7 +66,7 @@ const SammamishLocation = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100 p-6 rounded-lg">
+      <div className="bg-gray-100 p-6 rounded-lg text-center md:text-left">
         <h3 className="text-2xl font-semibold mb-3">Free Sammamish Roof Estimate</h3>
         <p className="text-gray-700 mb-4">
           <strong>Stark Roofing & Renovation</strong><br />

@@ -50,13 +50,14 @@ const MetalRoofing = () => {
         bgImage="/metal-roofing-hero.webp"
         breadcrumb="Metal Roofing"
         secondaryCta={{ label: "View Metal Options", href: "#materials" }}
+        align="center"
       />
 
       {/* Overview Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-6">
                 Why Choose Metal Roofing?
               </h2>
@@ -95,13 +96,13 @@ const MetalRoofing = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Clock className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Exceptional Longevity</h3>
@@ -111,13 +112,13 @@ const MetalRoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Zap className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Energy Efficiency</h3>
@@ -127,13 +128,13 @@ const MetalRoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Construction className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Extreme Durability</h3>
@@ -143,13 +144,13 @@ const MetalRoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Shield className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Low Maintenance</h3>
@@ -159,13 +160,13 @@ const MetalRoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Droplets className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">All-Weather Protection</h3>
@@ -175,13 +176,13 @@ const MetalRoofing = () => {
             </motion.div>
             
             <motion.div 
-              className="glass-card p-6 rounded-xl"
+              className="glass-card p-6 rounded-xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+              <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <ArrowRight className="h-7 w-7 text-stark-red" />
               </div>
               <h3 className="text-xl font-heading font-bold text-navy mb-3">Environmentally Friendly</h3>

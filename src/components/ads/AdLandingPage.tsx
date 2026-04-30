@@ -138,14 +138,14 @@ const AdLandingPage: React.FC<AdLandingPageProps> = ({
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left: headline + trust signals */}
-            <div className="pt-4">
+            <div className="pt-4 text-center md:text-left">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-navy mb-4 leading-tight">
                 {h1}
               </h1>
               <p className="text-lg text-charcoal/75 mb-6">{sub}</p>
 
               {/* Trust badges */}
-              <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-2 gap-3 mb-6 text-left">
                 <div className="flex items-center gap-2 bg-white rounded-lg border border-gray-100 p-3">
                   <Shield size={20} className="text-stark-red flex-shrink-0" />
                   <span className="text-sm font-semibold text-navy">GAF Certified</span>
@@ -210,7 +210,7 @@ const AdLandingPage: React.FC<AdLandingPageProps> = ({
                     AFTER
                   </span>
                 </div>
-                <div className="p-4">
+                <div className="p-4 text-center md:text-left">
                   <p className="font-semibold text-navy text-sm">{project.label}</p>
                   <p className="text-xs text-charcoal/60">Puget Sound, WA</p>
                 </div>
@@ -229,8 +229,8 @@ const AdLandingPage: React.FC<AdLandingPageProps> = ({
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {topReviews.map((review, i) => (
-                <div key={i} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-                  <div className="flex gap-0.5 mb-3">
+                <div key={i} className="bg-gray-50 rounded-xl p-6 border border-gray-100 text-center md:text-left">
+                  <div className="flex gap-0.5 mb-3 justify-center md:justify-start">
                     {Array.from({ length: review.rating }).map((_, j) => (
                       <Star key={j} size={16} className="text-yellow-400 fill-yellow-400" />
                     ))}

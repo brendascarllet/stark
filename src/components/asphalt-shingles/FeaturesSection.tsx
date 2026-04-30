@@ -17,7 +17,7 @@ const FeaturesSection: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div className="glass-card p-6 rounded-xl" initial={{
+          <motion.div className="glass-card p-6 rounded-xl text-center md:text-left" initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -28,7 +28,7 @@ const FeaturesSection: React.FC = () => {
         }} transition={{
           duration: 0.5
         }}>
-            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
               <Shield className="h-7 w-7 text-stark-red" />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">LayerLock™ Technology</h3>
@@ -37,7 +37,7 @@ const FeaturesSection: React.FC = () => {
             </p>
           </motion.div>
           
-          <motion.div className="glass-card p-6 rounded-xl" initial={{
+          <motion.div className="glass-card p-6 rounded-xl text-center md:text-left" initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -49,7 +49,7 @@ const FeaturesSection: React.FC = () => {
           duration: 0.5,
           delay: 0.1
         }}>
-            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
               <Award className="h-7 w-7 text-stark-red" />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">StainGuard Plus™</h3>
@@ -58,7 +58,7 @@ const FeaturesSection: React.FC = () => {
             </p>
           </motion.div>
           
-          <motion.div className="glass-card p-6 rounded-xl" initial={{
+          <motion.div className="glass-card p-6 rounded-xl text-center md:text-left" initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -70,7 +70,7 @@ const FeaturesSection: React.FC = () => {
           duration: 0.5,
           delay: 0.2
         }}>
-            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
               <Palette className="h-7 w-7 text-stark-red" />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">Color Blending Technology</h3>
@@ -79,7 +79,7 @@ const FeaturesSection: React.FC = () => {
             </p>
           </motion.div>
           
-          <motion.div className="glass-card p-6 rounded-xl" initial={{
+          <motion.div className="glass-card p-6 rounded-xl text-center md:text-left" initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -91,7 +91,7 @@ const FeaturesSection: React.FC = () => {
           duration: 0.5,
           delay: 0.3
         }}>
-            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
               <Hammer className="h-7 w-7 text-stark-red" />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">StrikeZone™ Nailing Area</h3>
@@ -100,7 +100,7 @@ const FeaturesSection: React.FC = () => {
             </p>
           </motion.div>
           
-          <motion.div className="glass-card p-6 rounded-xl" initial={{
+          <motion.div className="glass-card p-6 rounded-xl text-center md:text-left" initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -112,7 +112,7 @@ const FeaturesSection: React.FC = () => {
           duration: 0.5,
           delay: 0.4
         }}>
-            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
               <Home className="h-7 w-7 text-stark-red" />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">Dura Grip™ Adhesive</h3>
@@ -121,7 +121,7 @@ const FeaturesSection: React.FC = () => {
             </p>
           </motion.div>
           
-          <motion.div className="glass-card p-6 rounded-xl" initial={{
+          <motion.div className="glass-card p-6 rounded-xl text-center md:text-left" initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -133,7 +133,7 @@ const FeaturesSection: React.FC = () => {
           duration: 0.5,
           delay: 0.5
         }}>
-            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+            <div className="bg-stark-red/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto md:mx-0">
               <ArrowRight className="h-7 w-7 text-stark-red" />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">Industry-Leading Warranty</h3>
