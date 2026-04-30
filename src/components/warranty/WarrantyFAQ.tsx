@@ -28,10 +28,10 @@ const WarrantyFAQ = () => {
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-sm overflow-hidden" id="download">
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
-              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100">
-                <span className="text-lg font-heading font-bold text-navy">What does the 25-year labor warranty cover?</span>
+              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100 text-left">
+                <span className="text-lg font-heading font-bold text-navy flex-1 text-left">What does the 25-year labor warranty cover?</span>
               </AccordionTrigger>
-              <AccordionContent className="px-6 py-4">
+              <AccordionContent className="px-6 py-4 text-left">
                 <p className="text-charcoal/80">
                   Our labor warranty covers any defects or issues arising from the installation process itself. This includes problems with flashing, sealing, improper nailing, and any other workmanship-related issues that might cause leaks or damage.
                 </p>
@@ -39,10 +39,10 @@ const WarrantyFAQ = () => {
             </AccordionItem>
             
             <AccordionItem value="item-2">
-              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100">
-                <span className="text-lg font-heading font-bold text-navy">Is the warranty transferable if I sell my home?</span>
+              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100 text-left">
+                <span className="text-lg font-heading font-bold text-navy flex-1 text-left">Is the warranty transferable if I sell my home?</span>
               </AccordionTrigger>
-              <AccordionContent className="px-6 py-4">
+              <AccordionContent className="px-6 py-4 text-left">
                 <p className="text-charcoal/80">
                   Yes, our warranty is fully transferable to a new homeowner one time during the warranty period. This adds value to your home when selling and provides peace of mind to the new owners.
                 </p>
@@ -56,10 +56,10 @@ const WarrantyFAQ = () => {
             </AccordionItem>
             
             <AccordionItem value="item-3">
-              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100">
-                <span className="text-lg font-heading font-bold text-navy">What happens if I need to make a warranty claim?</span>
+              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100 text-left">
+                <span className="text-lg font-heading font-bold text-navy flex-1 text-left">What happens if I need to make a warranty claim?</span>
               </AccordionTrigger>
-              <AccordionContent className="px-6 py-4">
+              <AccordionContent className="px-6 py-4 text-left">
                 <p className="text-charcoal/80 mb-3">
                   Simply contact our office, and we'll schedule an inspection within 48 hours. If we find any issues covered by the warranty, repairs will be scheduled promptly at no cost to you. Our goal is to resolve warranty claims as quickly and efficiently as possible.
                 </p>
@@ -74,10 +74,10 @@ const WarrantyFAQ = () => {
             </AccordionItem>
             
             <AccordionItem value="item-4">
-              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100">
-                <span className="text-lg font-heading font-bold text-navy">Does the warranty cover storm damage?</span>
+              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100 text-left">
+                <span className="text-lg font-heading font-bold text-navy flex-1 text-left">Does the warranty cover storm damage?</span>
               </AccordionTrigger>
-              <AccordionContent className="px-6 py-4">
+              <AccordionContent className="px-6 py-4 text-left">
                 <p className="text-charcoal/80">
                   The manufacturer warranty includes coverage for wind damage up to 130 MPH for the first 15 years. Storm damage such as hail or falling objects would typically be covered by your homeowner's insurance, but we work closely with insurance companies to ensure proper repairs.
                 </p>
@@ -85,10 +85,10 @@ const WarrantyFAQ = () => {
             </AccordionItem>
             
             <AccordionItem value="item-5">
-              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100">
-                <span className="text-lg font-heading font-bold text-navy">Are there any maintenance requirements to keep the warranty valid?</span>
+              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100 text-left">
+                <span className="text-lg font-heading font-bold text-navy flex-1 text-left">Are there any maintenance requirements to keep the warranty valid?</span>
               </AccordionTrigger>
-              <AccordionContent className="px-6 py-4">
+              <AccordionContent className="px-6 py-4 text-left">
                 <p className="text-charcoal/80">
                   We recommend an annual roof inspection to identify and address minor issues before they become major problems. However, regular maintenance is not required to maintain warranty coverage. Any damage caused by neglect or improper maintenance would not be covered.
                 </p>
@@ -96,10 +96,10 @@ const WarrantyFAQ = () => {
             </AccordionItem>
             
             <AccordionItem value="item-6">
-              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100">
-                <span className="text-lg font-heading font-bold text-navy">How does your warranty compare to other roofing companies?</span>
+              <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100 text-left">
+                <span className="text-lg font-heading font-bold text-navy flex-1 text-left">How does your warranty compare to other roofing companies?</span>
               </AccordionTrigger>
-              <AccordionContent className="px-6 py-4">
+              <AccordionContent className="px-6 py-4 text-left">
                 <p className="text-charcoal/80 mb-3">
                   Our warranty stands out in several key ways:
                 </p>

@@ -37,16 +37,17 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-24 items-center max-w-6xl mx-auto">
           {/* ── Left: Copy ── */}
-          <div className="lg:col-span-6 text-left">
+          <div className="lg:col-span-6 text-center md:text-left">
             {/* Breadcrumb */}
             <motion.div
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+              className="text-white/50 text-xs tracking-widest uppercase mb-6 text-center md:text-left"
+              style={{ whiteSpace: 'nowrap' }}
             >
               <a href="/" className="hover:text-white transition-colors">Home</a>
-              <ChevronRight className="w-3 h-3" />
+              <ChevronRight className="inline-block w-3 h-3 mx-2 align-middle" />
               <span className="text-white/80">Roof Repair</span>
             </motion.div>
 
@@ -71,7 +72,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-[1.05] tracking-tight mb-6 text-left"
+              className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-[1.05] tracking-tight mb-6 text-center md:text-left"
             >
               Roof Leaking?
               <span className="block text-stark-red mt-2">We'll Fix It This Week.</span>
@@ -82,7 +83,7 @@ const HeroSection = () => {
               initial={{ width: 0 }}
               animate={{ width: 64 }}
               transition={{ delay: 0.45, duration: 0.5 }}
-              className="h-[3px] bg-stark-red rounded-full mb-8"
+              className="h-[3px] bg-stark-red rounded-full mb-8 mx-auto md:mx-0"
             />
 
             {/* Subhead */}
@@ -90,7 +91,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-lg md:text-xl text-white/80 max-w-xl mb-10 leading-relaxed text-left"
+              className="text-lg md:text-xl text-white/80 max-w-xl mb-10 leading-relaxed text-center md:text-left mx-auto md:mx-0"
             >
               Permanent fixes for leaks, missing shingles, flashing failures, and storm damage —
               done by a GAF-certified Seattle crew who actually shows up.
@@ -101,10 +102,10 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-xl"
+              className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-xl mx-auto md:mx-0"
             >
               {trustPoints.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-start gap-2.5 text-white/85 text-sm">
+                <li key={text} className="flex items-start gap-2.5 text-white/85 text-sm justify-center sm:justify-start">
                   <Icon size={18} className="text-stark-red flex-shrink-0 mt-0.5" />
                   <span className="text-left">{text}</span>
                 </li>
@@ -116,7 +117,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.75, duration: 0.5 }}
-              className="flex flex-col sm:flex-row gap-3 justify-start"
+              className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start"
             >
               <motion.a
                 href="#schedule-form"

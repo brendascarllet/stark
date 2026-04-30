@@ -73,7 +73,7 @@ const Blog = () => {
                     <p className="text-charcoal/70 mb-4 text-sm leading-relaxed">
                       {post.excerpt}
                     </p>
-                    <span className="text-stark-red font-semibold text-sm flex items-center">
+                    <span className="text-stark-red font-semibold text-sm flex items-center justify-center">
                       Read More <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </div>

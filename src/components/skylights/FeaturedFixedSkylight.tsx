@@ -112,12 +112,12 @@ const FeaturedFixedSkylight = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-left"
+            className="text-center md:text-left"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-navy mb-5 text-left">
+            <h3 className="text-2xl md:text-3xl font-bold text-navy mb-5 text-center md:text-left">
               Daylight by day. Pure dark by night.
             </h3>
-            <p className="text-charcoal/80 mb-8 leading-relaxed text-left">
+            <p className="text-charcoal/80 mb-8 leading-relaxed text-center md:text-left">
               We install the <strong>VELUX Fixed Deck-Mount Skylight</strong> in the same job as the <strong>Solar Powered Blackout Blind</strong> — one trip, one crew, one clean install. Pacific Northwest light, finally on your terms.
             </p>
 
@@ -148,7 +148,7 @@ const FeaturedFixedSkylight = () => {
             <button
               type="button"
               onClick={() => setExpanded((e) => !e)}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-800 mb-8 transition self-start"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-800 mb-8 transition self-center md:self-start"
             >
               {expanded ? (
                 <>
@@ -184,7 +184,7 @@ const FeaturedFixedSkylight = () => {
               </motion.div>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 items-center md:items-start justify-center md:justify-start">
               <QuickQuoteButton
                 defaultService="skylight"
                 label="Get My Free Quote"

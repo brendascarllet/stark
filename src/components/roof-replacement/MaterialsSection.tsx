@@ -47,12 +47,12 @@ const MaterialsSection = () => {
           once: true
         }} transition={{
           duration: 0.7
-        }} className="text-left self-center">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-stark-red mb-6 text-left">Complete Roofing System</h3>
-            <p className="text-charcoal/80 mb-6 text-left leading-relaxed">
+        }} className="text-center md:text-left self-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-stark-red mb-6 text-center md:text-left">Complete Roofing System</h3>
+            <p className="text-charcoal/80 mb-6 text-center md:text-left leading-relaxed">
               Our premium roof replacement includes a complete system of components that work together to provide maximum protection for your home:
             </p>
-            <ul className="grid grid-cols-1 gap-4 mb-6">
+            <ul className="grid grid-cols-1 gap-4 mb-6 text-left">
               <li className="flex items-start gap-3">
                 <div className="mt-0.5 bg-stark-red/10 p-1.5 rounded-full">
                   <Check className="h-4 w-4 text-stark-red" />
@@ -90,7 +90,7 @@ const MaterialsSection = () => {
                 <span className="text-charcoal/80">Proper flashing installation around roof penetrations</span>
               </li>
             </ul>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center md:items-start justify-center md:justify-start">
               <Link to="/warranty">
                 <Button variant="outline" className="border-stark-red text-stark-red hover:bg-stark-red hover:text-white">
                   Learn About Our Warranty

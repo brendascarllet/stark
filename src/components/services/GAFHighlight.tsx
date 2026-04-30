@@ -33,22 +33,22 @@ const GAFHighlight = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="w-full md:w-1/2 text-left"
+            className="w-full md:w-1/2 text-center md:text-left"
           >
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 justify-center md:justify-start">
               <Shield className="text-stark-red mr-2" size={24} />
               <span className="text-navy font-medium">GAF Certified Contractor</span>
             </div>
 
-            <h2 className="text-3xl font-heading font-bold text-navy mb-4 text-left">
+            <h2 className="text-3xl font-heading font-bold text-navy mb-4 text-center md:text-left">
               GAF Timberline HDZ Shingles
             </h2>
 
-            <p className="text-charcoal/80 mb-6 text-left">
+            <p className="text-charcoal/80 mb-6 text-center md:text-left">
               Our premium roofing installations feature GAF Timberline HDZ architectural shingles, America's #1 shingle brand. These shingles offer exceptional protection against wind, rain, and other elements while enhancing your home's curb appeal.
             </p>
-            
-            <ul className="space-y-3 mb-8">
+
+            <ul className="space-y-3 mb-8 inline-block text-left mx-auto md:mx-0 md:block">
               <li className="flex items-start">
                 <ChevronRight className="text-stark-red flex-shrink-0 mt-1" size={18} />
                 <span className="ml-2">Limited lifetime warranty</span>
@@ -71,7 +71,7 @@ const GAFHighlight = () => {
               </li>
             </ul>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center md:items-start justify-center md:justify-start">
               <Link to="/warranty" className="btn-primary">
                 Learn About Our Warranty
               </Link>

@@ -22,7 +22,7 @@ const HeroSection = () => {
             Restore your roof's appearance and extend its lifespan with our professional cleaning services. Remove harmful moss, algae, and debris.
           </p>
           
-          <div className="flex flex-col md:flex-row gap-4 mb-8 animate-fade-in justify-center" style={{ animationDelay: '300ms' }}>
+          <div className="flex flex-col md:flex-row gap-4 mb-8 animate-fade-in justify-center items-start md:items-center w-fit md:w-auto mx-auto" style={{ animationDelay: '300ms' }}>
             <div className="flex items-center gap-2 text-white/90">
               <CheckCircle size={20} className="text-emerald-500" />
               <span>Extends roof life</span>

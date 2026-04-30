@@ -46,9 +46,9 @@ const CommonProblems = () => {
             whileHover={{ y: -10, transition: { duration: 0.3 } }}
           >
             <Card className="h-full shadow-lg">
-              <CardContent className="p-6">
-                <motion.div 
-                  className="h-12 w-12 rounded-full bg-stark-red/10 flex items-center justify-center mb-4"
+              <CardContent className="p-6 text-center md:text-left">
+                <motion.div
+                  className="h-12 w-12 rounded-full bg-stark-red/10 flex items-center justify-center mb-4 mx-auto md:mx-0"
                   whileHover={{ rotate: 360, backgroundColor: "rgba(204, 0, 0, 0.2)" }}
                   transition={{ duration: 0.8 }}
                 >
@@ -71,9 +71,9 @@ const CommonProblems = () => {
             whileHover={{ y: -10, transition: { duration: 0.3 } }}
           >
             <Card className="h-full shadow-lg">
-              <CardContent className="p-6">
-                <motion.div 
-                  className="h-12 w-12 rounded-full bg-stark-red/10 flex items-center justify-center mb-4"
+              <CardContent className="p-6 text-center md:text-left">
+                <motion.div
+                  className="h-12 w-12 rounded-full bg-stark-red/10 flex items-center justify-center mb-4 mx-auto md:mx-0"
                   whileHover={{ rotate: 360, backgroundColor: "rgba(204, 0, 0, 0.2)" }}
                   transition={{ duration: 0.8 }}
                 >
@@ -96,9 +96,9 @@ const CommonProblems = () => {
             whileHover={{ y: -10, transition: { duration: 0.3 } }}
           >
             <Card className="h-full shadow-lg">
-              <CardContent className="p-6">
-                <motion.div 
-                  className="h-12 w-12 rounded-full bg-stark-red/10 flex items-center justify-center mb-4"
+              <CardContent className="p-6 text-center md:text-left">
+                <motion.div
+                  className="h-12 w-12 rounded-full bg-stark-red/10 flex items-center justify-center mb-4 mx-auto md:mx-0"
                   whileHover={{ rotate: 360, backgroundColor: "rgba(204, 0, 0, 0.2)" }}
                   transition={{ duration: 0.8 }}
                 >

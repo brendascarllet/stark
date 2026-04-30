@@ -12,8 +12,8 @@ const BenefitsSection = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <div className="w-16 h-16 bg-stark-red rounded-full flex items-center justify-center mb-6">
+          <div className="bg-white p-8 rounded-xl shadow-md text-center md:text-left">
+            <div className="w-16 h-16 bg-stark-red rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
               <PiggyBank className="text-white" size={28} />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">No Money Down</h3>
@@ -22,8 +22,8 @@ const BenefitsSection = () => {
             </p>
           </div>
           
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <div className="w-16 h-16 bg-stark-red rounded-full flex items-center justify-center mb-6">
+          <div className="bg-white p-8 rounded-xl shadow-md text-center md:text-left">
+            <div className="w-16 h-16 bg-stark-red rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
               <CreditCard className="text-white" size={28} />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">Low Interest Rates</h3>
@@ -32,8 +32,8 @@ const BenefitsSection = () => {
             </p>
           </div>
           
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <div className="w-16 h-16 bg-stark-red rounded-full flex items-center justify-center mb-6">
+          <div className="bg-white p-8 rounded-xl shadow-md text-center md:text-left">
+            <div className="w-16 h-16 bg-stark-red rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
               <BadgeDollarSign className="text-white" size={28} />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">Quick Approval</h3>

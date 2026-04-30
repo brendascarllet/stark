@@ -111,10 +111,10 @@ const ContactHero = () => {
             <motion.a
               key={label}
               href={href}
-              className="group flex flex-col p-5 rounded-xl bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/15 hover:border-stark-red/50 transition-all"
+              className="group flex flex-col p-5 rounded-xl bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/15 hover:border-stark-red/50 transition-all text-center md:text-left"
               whileHover={{ y: -4 }}
             >
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-3 mb-2 justify-center md:justify-start">
                 <div className="p-2 rounded-lg bg-stark-red/20 group-hover:bg-stark-red transition-colors">
                   <Icon size={18} className="text-white" />
                 </div>

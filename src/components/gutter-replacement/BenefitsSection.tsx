@@ -12,8 +12,8 @@ const BenefitsSection = () => {
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-          <div className="flex items-start">
-            <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-stark-red/10 p-3 rounded-full mb-4 flex-shrink-0">
               <Leaf className="h-6 w-6 text-stark-red" />
             </div>
             <div>
@@ -27,8 +27,8 @@ const BenefitsSection = () => {
             </div>
           </div>
 
-          <div className="flex items-start">
-            <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-stark-red/10 p-3 rounded-full mb-4 flex-shrink-0">
               <Droplets className="h-6 w-6 text-stark-red" />
             </div>
             <div>
@@ -43,8 +43,8 @@ const BenefitsSection = () => {
             </div>
           </div>
 
-          <div className="flex items-start">
-            <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-stark-red/10 p-3 rounded-full mb-4 flex-shrink-0">
               <Shield className="h-6 w-6 text-stark-red" />
             </div>
             <div>
@@ -59,8 +59,8 @@ const BenefitsSection = () => {
             </div>
           </div>
 
-          <div className="flex items-start">
-            <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-stark-red/10 p-3 rounded-full mb-4 flex-shrink-0">
               <DollarSign className="h-6 w-6 text-stark-red" />
             </div>
             <div>

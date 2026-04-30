@@ -90,13 +90,14 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
         {/* Breadcrumb */}
         {breadcrumb && (
           <motion.div
-            className={`flex items-center gap-1.5 text-white/60 text-sm tracking-widest uppercase mb-6 ${isCenter ? 'justify-center' : ''}`}
+            className={`text-white/60 text-sm tracking-widest uppercase mb-6 ${isCenter ? 'text-center' : 'text-center md:text-left'}`}
+            style={{ whiteSpace: 'nowrap' }}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             <a href="/" className="hover:text-white/80 transition-colors">Home</a>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="inline-block w-3 h-3 mx-2 align-middle" />
             <span className="text-white/70">{breadcrumb}</span>
           </motion.div>
         )}

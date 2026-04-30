@@ -7,25 +7,25 @@ const OverviewSection = () => {
     <section className="py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-stretch gap-12">
-          <div className="w-full md:w-1/2 text-left flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-6 text-left">
+          <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-6 text-center md:text-left">
               Expert Roof Repair When You Need It Most
             </h2>
 
-            <p className="text-charcoal/80 mb-4 text-left leading-relaxed">
+            <p className="text-charcoal/80 mb-4 text-center md:text-left leading-relaxed">
               Even small roofing issues can quickly escalate into major problems if left unaddressed. Our professional roof repair services help maintain your home's protection against the elements while extending your roof's lifespan.
             </p>
 
-            <p className="text-charcoal/80 mb-6 text-left leading-relaxed">
+            <p className="text-charcoal/80 mb-6 text-center md:text-left leading-relaxed">
               With our team of experienced professionals, we identify and fix roofing problems quickly and effectively, using premium materials that are built to last in Washington's challenging climate.
             </p>
-            
-            <div className="flex items-center mb-6">
+
+            <div className="flex items-center mb-6 justify-center md:justify-start">
               <Shield className="text-stark-red mr-3" size={24} />
               <span className="text-navy font-medium">Backed by our industry-leading warranty</span>
             </div>
             
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-3 mb-8 text-left">
               <li className="flex items-start">
                 <Check className="text-stark-red flex-shrink-0 mt-1" size={18} />
                 <span className="ml-2">Comprehensive inspections to identify all issues</span>

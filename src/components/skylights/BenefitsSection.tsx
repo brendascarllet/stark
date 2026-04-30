@@ -21,14 +21,14 @@ const BenefitsSection = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div 
-            className="glass-card p-8"
+          <motion.div
+            className="glass-card p-8 text-center md:text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="bg-stark-red/10 p-4 rounded-full inline-flex mb-6">
+            <div className="bg-stark-red/10 p-4 rounded-full inline-flex mb-6 mx-auto md:mx-0">
               <Sun size={32} className="text-stark-red" />
             </div>
             <h3 className="text-xl font-bold text-navy mb-4">Natural Light</h3>
@@ -37,14 +37,14 @@ const BenefitsSection = () => {
             </p>
           </motion.div>
           
-          <motion.div 
-            className="glass-card p-8"
+          <motion.div
+            className="glass-card p-8 text-center md:text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-stark-red/10 p-4 rounded-full inline-flex mb-6">
+            <div className="bg-stark-red/10 p-4 rounded-full inline-flex mb-6 mx-auto md:mx-0">
               <Shield size={32} className="text-stark-red" />
             </div>
             <h3 className="text-xl font-bold text-navy mb-4">Energy Efficiency</h3>
@@ -53,14 +53,14 @@ const BenefitsSection = () => {
             </p>
           </motion.div>
           
-          <motion.div 
-            className="glass-card p-8"
+          <motion.div
+            className="glass-card p-8 text-center md:text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="bg-stark-red/10 p-4 rounded-full inline-flex mb-6">
+            <div className="bg-stark-red/10 p-4 rounded-full inline-flex mb-6 mx-auto md:mx-0">
               <Check size={32} className="text-stark-red" />
             </div>
             <h3 className="text-xl font-bold text-navy mb-4">Enhanced Well-being</h3>

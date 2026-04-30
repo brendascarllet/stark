@@ -30,13 +30,14 @@ const GutterHero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Breadcrumb */}
         <motion.div
-          className="flex items-center justify-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+          className="text-white/50 text-xs tracking-widest uppercase mb-6 text-center"
+          style={{ whiteSpace: 'nowrap' }}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
           <a href="/" className="hover:text-white/80 transition-colors">Home</a>
-          <ChevronRight className="w-3 h-3" />
+          <ChevronRight className="inline-block w-3 h-3 mx-2 align-middle" />
           <span className="text-white/70">Gutter Replacement</span>
         </motion.div>
 
@@ -121,19 +122,19 @@ const GutterHero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.05, duration: 0.5 }}
           >
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15 justify-center sm:justify-start">
               <TreePine size={18} className="text-stark-red flex-shrink-0" />
               <span className="text-sm text-white/90 font-medium leading-tight">
                 Pine-needle proof
               </span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15 justify-center sm:justify-start">
               <CloudRain size={18} className="text-stark-red flex-shrink-0" />
               <span className="text-sm text-white/90 font-medium leading-tight">
                 Atmospheric river ready
               </span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2.5 border border-white/15 justify-center sm:justify-start">
               <Shield size={18} className="text-stark-red flex-shrink-0" />
               <span className="text-sm text-white/90 font-medium leading-tight">
                 Lifetime no-clog warranty

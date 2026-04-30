@@ -69,10 +69,10 @@ const FilterBenefitsSection = () => {
                   {benefit.icon}
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
                 <p className="text-slate-600 mb-4">{benefit.description}</p>
-                <div className="flex items-center text-stark-red font-medium">
+                <div className="flex items-center justify-center text-stark-red font-medium">
                   <Check className="h-5 w-5 mr-1" /> Included in our systems
                 </div>
               </div>

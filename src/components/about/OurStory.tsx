@@ -9,12 +9,12 @@ const OurStory = () => {
       <div className="container mx-auto px-4 md:px-6">
         {/* Top: Text (left) + Form & Image (right) */}
         <div className="flex flex-col md:flex-row items-start gap-12 mb-12">
-          <div className="w-full md:w-1/2 text-left">
-            <div className="w-16 h-1 bg-stark-red mb-4"></div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-6 text-left">
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <div className="w-16 h-1 bg-stark-red mb-4 mx-auto md:mx-0"></div>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-6 text-center md:text-left">
               Meet Brenda Scarllet — Founder &amp; Owner
             </h2>
-            <p className="text-charcoal/80 mb-6 text-left">
+            <p className="text-charcoal/80 mb-6 text-center md:text-left">
               Stark Roofing &amp; Renovation began with a simple frustration. As a homeowner
               herself in the Greater Seattle area, <strong>Brenda Scarllet</strong> watched
               too many neighbors get burned by contractors who overpromised, underdelivered,
@@ -22,11 +22,11 @@ const OurStory = () => {
               deserved better — a roofing company that treated every home like it belonged to
               family, because for Brenda, it does.
             </p>
-            <p className="text-charcoal/80 font-semibold text-left mb-6">
+            <p className="text-charcoal/80 font-semibold text-center md:text-left mb-6">
               So she built one.
             </p>
 
-            <p className="text-charcoal/80 mb-8 text-left">
+            <p className="text-charcoal/80 mb-8 text-center md:text-left">
               Today, Stark Roofing &amp; Renovation is a family-owned, GAF Certified contractor
               based in Sammamish, Washington, proudly serving homeowners across <strong>King,
               Snohomish, and Pierce counties</strong> — from Bellevue and Issaquah to Lynnwood,
@@ -35,10 +35,10 @@ const OurStory = () => {
               always answered: <strong>(206) 739-8232</strong>.
             </p>
 
-            <h3 className="text-2xl font-heading font-bold text-navy mb-3 text-left">
+            <h3 className="text-2xl font-heading font-bold text-navy mb-3 text-center md:text-left">
               Why Brenda Started Stark
             </h3>
-            <p className="text-charcoal/80 mb-8 text-left">
+            <p className="text-charcoal/80 mb-8 text-center md:text-left">
               Brenda founded Stark to bring transparency, craftsmanship, and follow-through
               back to an industry that too often forgets the homeowner once the deposit clears.
               Every estimate she signs comes with the same promise: honest pricing, premium
@@ -47,10 +47,10 @@ const OurStory = () => {
               the first phone call to the final cleanup.
             </p>
 
-            <h3 className="text-2xl font-heading font-bold text-navy mb-3 text-left">
+            <h3 className="text-2xl font-heading font-bold text-navy mb-3 text-center md:text-left">
               The GAF Certified Standard
             </h3>
-            <p className="text-charcoal/80 mb-8 text-left">
+            <p className="text-charcoal/80 mb-8 text-center md:text-left">
               As a <strong>GAF Certified contractor</strong>, Stark installs the strongest
               asphalt shingle systems on the market — including GAF Timberline HDZ — using the
               exact specifications that unlock GAF's <strong>limited lifetime warranty</strong>.
@@ -58,10 +58,10 @@ const OurStory = () => {
               the right to offer a warranty that follows the home, not just the first owner.
             </p>
 
-            <h3 className="text-2xl font-heading font-bold text-navy mb-3 text-left">
+            <h3 className="text-2xl font-heading font-bold text-navy mb-3 text-center md:text-left">
               30+ Years of Experience. 2,000+ Roofs. One Standard.
             </h3>
-            <p className="text-charcoal/80 text-left">
+            <p className="text-charcoal/80 text-center md:text-left">
               Brenda leads Stark alongside a seasoned sales and production team whose
               <strong> 30+ years of combined roofing experience</strong> and
               <strong> 2,000+ completed roofs</strong> across the Puget Sound bring real,

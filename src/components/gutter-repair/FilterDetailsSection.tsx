@@ -28,16 +28,16 @@ const FilterDetailsSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-left"
+            className="text-center md:text-left"
           >
-            <h2 className="text-3xl font-heading font-bold text-navy mb-6 md:text-4xl text-left">
+            <h2 className="text-3xl font-heading font-bold text-navy mb-6 md:text-4xl text-center md:text-left">
               Keep Your Gutters Performing Optimally
             </h2>
-            <p className="text-gray-700 mb-6 text-left leading-relaxed">
+            <p className="text-gray-700 mb-6 text-center md:text-left leading-relaxed">
               Clogged or damaged gutters can lead to serious water damage to your home's foundation, roof, and siding. Our expert gutter repair services ensure your gutter system functions properly, protecting your home from costly repairs.
             </p>
             
-            <ul className="space-y-3">
+            <ul className="space-y-3 inline-flex flex-col items-start mx-auto md:mx-0">
               <li className="flex items-center text-gray-700">
                 <Check className="text-stark-red mr-2 h-5 w-5" />
                 <span>Thorough inspection to identify all issues</span>

@@ -10,16 +10,16 @@ const EmergencySection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <motion.div
-            className="w-full md:w-3/5 text-left"
+            className="w-full md:w-3/5 text-center md:text-left flex flex-col items-center md:items-start"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-heading font-bold mb-4 text-left">
+            <h2 className="text-3xl font-heading font-bold mb-4 text-center md:text-left">
               24/7 Emergency Gutter Services
             </h2>
-            <p className="text-white/90 mb-6 text-left leading-relaxed max-w-md">
+            <p className="text-white/90 mb-6 text-center md:text-left leading-relaxed max-w-md">
               Don't let a gutter emergency cause water damage to your home. Our technicians are available around the clock for urgent repairs when you need them most.
             </p>
             <div className="flex items-center mb-6">

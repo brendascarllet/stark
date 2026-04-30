@@ -140,13 +140,13 @@ const SkylightTypes = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
-                  <div className="flex items-center gap-2 mb-1">
+                  <div className="flex items-center justify-center gap-2 mb-3">
                     <div className="bg-amber-100 p-1.5 rounded-md">
                       <Icon size={18} className="text-amber-700" />
                     </div>
                     <span className="text-xs font-semibold text-amber-700 uppercase tracking-wide">{product.model}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-navy mb-3">{product.title}</h3>
+                  <h3 className="text-xl font-bold text-navy mb-3 text-center">{product.title}</h3>
                   <ul className="space-y-1.5 mb-4 flex-1">
                     {product.bullets.map((b) => (
                       <li key={b} className="flex items-start text-sm text-charcoal/80">

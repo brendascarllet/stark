@@ -45,7 +45,7 @@ const ProcessSection = () => {
     <section className="py-16 md:py-28 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-navy">
             Our Process Makes It Easy!
           </h2>
           <p className="text-charcoal/80 max-w-2xl mx-auto text-lg">

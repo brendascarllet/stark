@@ -32,12 +32,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
       </div>
-      <div className="p-6">
+      <div className="p-6 text-center md:text-left">
         <h3 className="text-xl font-heading font-bold text-navy mb-3">{title}</h3>
         <p className="text-charcoal/80 mb-4">{description}</p>
-        
+
         <div className="inline-flex items-center text-stark-red font-medium group-hover:text-navy transition-colors">
-          Learn More 
+          Learn More
           <ChevronRight className="ml-1 transition-transform duration-300 group-hover:translate-x-1" size={18} />
         </div>
       </div>

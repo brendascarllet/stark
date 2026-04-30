@@ -55,25 +55,23 @@ const WarrantySection = () => {
             return (
               <motion.div
                 key={w.title}
-                className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col"
+                className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
                 viewport={{ once: true }}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="bg-stark-red/10 p-3 rounded-lg">
-                    <Icon size={28} className="text-stark-red" />
-                  </div>
-                  <span className="text-xs font-bold text-stark-red bg-stark-red/10 px-3 py-1 rounded-full">
-                    {w.duration}
-                  </span>
+                <div className="bg-stark-red/10 p-3 rounded-lg mb-3">
+                  <Icon size={28} className="text-stark-red" />
                 </div>
+                <span className="text-xs font-bold text-stark-red bg-stark-red/10 px-3 py-1 rounded-full mb-4">
+                  {w.duration}
+                </span>
                 <h3 className="text-xl font-bold text-navy mb-3">{w.title}</h3>
                 <p className="text-sm text-charcoal/75 mb-4 leading-relaxed flex-1">{w.body}</p>
-                <ul className="space-y-1.5 border-t pt-3">
+                <ul className="space-y-1.5 border-t pt-3 w-full">
                   {w.points.map((p) => (
-                    <li key={p} className="flex items-center text-xs text-charcoal/80">
+                    <li key={p} className="flex items-center justify-center text-xs text-charcoal/80">
                       <span className="text-stark-red mr-2 font-bold">✓</span>
                       {p}
                     </li>

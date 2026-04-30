@@ -8,8 +8,8 @@ const ContactFormSection = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 gap-12 lg:gap-16">
             {/* Contact Form */}
             <motion.div 
               className="bg-white rounded-xl p-6 md:p-8 shadow-lg"
@@ -19,7 +19,7 @@ const ContactFormSection = () => {
               viewport={{ once: true }}
             >
               <div className="mb-8">
-                <h2 className="text-3xl font-heading font-bold mb-4">Get in Touch</h2>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Get in Touch</h2>
                 <p className="text-charcoal/80">
                   Fill out the form below and one of our team members will reach out to you shortly.
                 </p>
@@ -49,8 +49,8 @@ const ContactFormSection = () => {
 
               {/* Three customer promises */}
               <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-stark-red/10 p-3 rounded-full mb-4 flex-shrink-0">
                     <span className="block w-6 h-6 text-stark-red font-bold text-center leading-6">
                       1
                     </span>
@@ -66,8 +66,8 @@ const ContactFormSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-stark-red/10 p-3 rounded-full mb-4 flex-shrink-0">
                     <span className="block w-6 h-6 text-stark-red font-bold text-center leading-6">
                       2
                     </span>
@@ -84,8 +84,8 @@ const ContactFormSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="bg-stark-red/10 p-3 rounded-full mr-4 flex-shrink-0">
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-stark-red/10 p-3 rounded-full mb-4 flex-shrink-0">
                     <span className="block w-6 h-6 text-stark-red font-bold text-center leading-6">
                       3
                     </span>
@@ -103,19 +103,19 @@ const ContactFormSection = () => {
               </div>
 
               {/* Compact contact details strip */}
-              <div className="mt-10 pt-8 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="mt-10 pt-8 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <a
                   href="tel:+12067398232"
-                  className="flex items-start gap-3 hover:text-stark-red transition-colors"
+                  className="flex flex-col items-center text-center gap-2 hover:text-stark-red transition-colors"
                 >
-                  <Phone className="w-5 h-5 text-stark-red flex-shrink-0 mt-0.5" />
+                  <Phone className="w-6 h-6 text-stark-red flex-shrink-0" />
                   <div className="text-sm">
                     <div className="font-semibold text-navy">Call or Text</div>
                     <div className="text-charcoal/70">(206) 739-8232</div>
                   </div>
                 </a>
-                <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-stark-red flex-shrink-0 mt-0.5" />
+                <div className="flex flex-col items-center text-center gap-2">
+                  <Clock className="w-6 h-6 text-stark-red flex-shrink-0" />
                   <div className="text-sm">
                     <div className="font-semibold text-navy">Office Hours</div>
                     <div className="text-charcoal/70">Mon–Fri 7a–7p · Sat 8a–4p</div>
@@ -126,9 +126,9 @@ const ContactFormSection = () => {
                   href="https://www.google.com/maps/dir/?api=1&destination=24243+SE+43rd+Ct,+Sammamish,+WA+98029"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 hover:text-stark-red transition-colors"
+                  className="flex flex-col items-center text-center gap-2 hover:text-stark-red transition-colors"
                 >
-                  <MapPin className="w-5 h-5 text-stark-red flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-6 h-6 text-stark-red flex-shrink-0" />
                   <div className="text-sm">
                     <div className="font-semibold text-navy">HQ</div>
                     <div className="text-charcoal/70">24243 SE 43rd Ct</div>

@@ -17,7 +17,7 @@ const WarrantyDetails = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white rounded-lg shadow-sm p-8">
-            <h3 className="text-2xl font-heading font-bold text-navy mb-6 flex items-center">
+            <h3 className="text-2xl font-heading font-bold text-navy mb-6 flex items-center justify-center md:justify-start">
               <FileText className="text-stark-red mr-3" size={28} />
               Material Warranty
             </h3>
@@ -95,7 +95,7 @@ const WarrantyDetails = () => {
           </div>
           
           <div className="bg-white rounded-lg shadow-sm p-8">
-            <h3 className="text-2xl font-heading font-bold text-navy mb-6 flex items-center">
+            <h3 className="text-2xl font-heading font-bold text-navy mb-6 flex items-center justify-center md:justify-start">
               <Tools className="text-stark-red mr-3" size={28} />
               Workmanship Warranty
             </h3>

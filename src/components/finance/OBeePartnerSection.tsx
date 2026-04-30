@@ -77,11 +77,11 @@ const OBeePartnerSection = () => {
               </div>
 
               {/* Right: Program facts */}
-              <div className="md:col-span-3 p-8 md:p-10">
-                <h3 className="text-xl md:text-2xl font-heading font-bold text-navy mb-2">
+              <div className="md:col-span-3 p-8 md:p-10 text-center md:text-left">
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-navy mb-2 text-center md:text-left">
                   Program Details
                 </h3>
-                <p className="text-sm text-charcoal/70 mb-5">
+                <p className="text-sm text-charcoal/70 mb-5 text-center md:text-left">
                   Loans sized for roofing and exterior projects — roof replacements,
                   gutters, windows, and siding.
                 </p>
@@ -114,7 +114,7 @@ const OBeePartnerSection = () => {
                   </div>
                 </div>
 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6 inline-block text-left mx-auto md:mx-0 md:block">
                   {[
                     'No payments for the first 3 months (if requested prior to funding)',
                     'No prepayment penalty — pay it off early, save the interest',
@@ -132,7 +132,7 @@ const OBeePartnerSection = () => {
                   ))}
                 </ul>
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-3 items-center md:items-start justify-center md:justify-start">
                   <a
                     href={OBEE_APPLY_URL}
                     target="_blank"

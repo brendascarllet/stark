@@ -52,9 +52,9 @@ const SkylightFAQSection = () => {
             {FAQS.map((faq, idx) => (
               <AccordionItem key={idx} value={`item-${idx}`} className="border-b last:border-b-0">
                 <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-navy">
-                  {faq.q}
+                  <span className="text-left flex-1">{faq.q}</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-charcoal/80 text-sm md:text-base leading-relaxed">
+                <AccordionContent className="text-charcoal/80 text-sm md:text-base leading-relaxed text-left">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

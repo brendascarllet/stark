@@ -55,13 +55,13 @@ const AutomaticSkylightsSection = () => {
             return (
               <motion.div
                 key={feature.title}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center md:text-left"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-amber-100 p-3 rounded-lg inline-flex mb-4">
+                <div className="bg-amber-100 p-3 rounded-lg inline-flex mb-4 mx-auto md:mx-0">
                   <Icon size={24} className="text-amber-700" />
                 </div>
                 <h3 className="text-lg font-bold text-navy mb-2">{feature.title}</h3>

@@ -39,7 +39,7 @@ const HeroSection = () => {
           </p>
 
           <div
-            className="flex flex-col md:flex-row gap-6 mb-10 animate-fade-in justify-center"
+            className="flex flex-col md:flex-row gap-6 mb-10 animate-fade-in justify-center items-start md:items-center w-fit md:w-auto mx-auto"
             style={{ animationDelay: '300ms' }}
           >
             <div className="flex items-center gap-2 text-white/90">

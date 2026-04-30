@@ -115,11 +115,11 @@ const BeforeAfter = () => {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 text-center md:text-left">
                   <h3 className="text-xl font-heading font-bold text-navy mb-1">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-stark-red font-medium flex items-center gap-1 mb-3">
+                  <p className="text-sm text-stark-red font-medium flex items-center justify-center md:justify-start gap-1 mb-3">
                     <MapPin size={14} />
                     {project.location}
                   </p>

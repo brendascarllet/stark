@@ -34,28 +34,26 @@ const AboutHeroWithForm: React.FC = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
-        {/* Breadcrumb */}
-        <motion.div
-          className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <a href="/" className="hover:text-white/80 transition-colors">
-            Home
-          </a>
-          <ChevronRight className="w-3 h-3" />
-          <span className="text-white/70">About Us</span>
-        </motion.div>
-
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-14 items-center">
           {/* ─────────────  LEFT — copy block  ───────────── */}
           <motion.div
             initial={{ opacity: 0, x: -32 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="relative text-left"
+            className="relative text-center md:text-left"
           >
+            {/* Breadcrumb */}
+            <div
+              className="text-white/50 text-xs tracking-widest uppercase mb-6 text-center md:text-left"
+              style={{ whiteSpace: 'nowrap' }}
+            >
+              <a href="/" className="hover:text-white/80 transition-colors">
+                Home
+              </a>
+              <ChevronRight className="inline-block w-3 h-3 mx-2 align-middle" />
+              <span className="text-white/70">About Us</span>
+            </div>
+
             {/* Badge chip */}
             <div className="mb-5">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider text-white border border-white/20 backdrop-blur-sm bg-stark-red/25">
@@ -71,16 +69,16 @@ const AboutHeroWithForm: React.FC = () => {
               Owner of Stark Roofing
             </h1>
 
-            <div className="h-[3px] w-16 bg-stark-red rounded-full mb-5" />
+            <div className="h-[3px] w-16 bg-stark-red rounded-full mb-5 mx-auto md:mx-0" />
 
-            <p className="text-base md:text-lg text-white/80 font-medium max-w-xl mb-8">
+            <p className="text-base md:text-lg text-white/80 font-medium max-w-xl mb-8 mx-auto md:mx-0">
               Stark Roofing &amp; Renovation is a GAF Certified contractor with
               over 30 years of experience and 2,000+ roofs installed across the
               Greater Seattle area.
             </p>
 
             {/* Trust row */}
-            <div className="flex items-center gap-4 text-xs md:text-sm text-white/75 flex-wrap">
+            <div className="flex items-center gap-4 text-xs md:text-sm text-white/75 flex-wrap justify-center md:justify-start">
               <span className="flex items-center gap-1.5">
                 <Shield size={14} className="text-stark-red" /> GAF Certified
               </span>

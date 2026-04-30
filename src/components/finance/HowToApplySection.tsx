@@ -38,7 +38,7 @@ const HowToApplySection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">How to Apply</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-navy">How to Apply</h2>
         <p className="text-charcoal/80 text-center mb-16 text-lg max-w-3xl mx-auto">
           Getting financing for your project is easy with our simple application process
         </p>

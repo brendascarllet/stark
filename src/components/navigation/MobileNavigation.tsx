@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import { Phone, Wallet, Droplets, Percent, Home, Wrench, Layers, Info, Mail, Cloud, Camera } from 'lucide-react';
 import MobileMenuTrigger from './MobileMenuTrigger';
@@ -85,23 +86,21 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
     setActiveSubmenu(activeSubmenu === menu ? null : menu);
   };
 
-  return (
-    <>
-      <MobileMenuTrigger 
-        isScrolled={isScrolled} 
-        isMobileMenuOpen={isMobileMenuOpen} 
-        toggleMobileMenu={toggleMobileMenu} 
-      />
-
-      <motion.div 
-        initial={{ x: '100%' }}
-        animate={{ x: isMobileMenuOpen ? 0 : '100%' }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed inset-0 z-[999] bg-navy/95 backdrop-blur-sm overflow-y-auto mobile-menu-overlay"
-        style={{ display: isMobileMenuOpen ? 'block' : 'none' }}
-      >
-        <div className="pt-20 pb-24 min-h-screen">
-          <nav className="container mx-auto px-6 flex flex-col space-y-6">
+  const menuOverlay = (
+    <motion.div
+      initial={{ x: '100%' }}
+      animate={{ x: isMobileMenuOpen ? 0 : '100%' }}
+      transition={{ duration: 0.3, ease: 'easeInOut' }}
+      className="fixed top-0 left-0 right-0 bottom-0 z-[999] bg-navy overflow-y-auto mobile-menu-overlay"
+      style={{
+        pointerEvents: isMobileMenuOpen ? 'auto' : 'none',
+        height: '100vh',
+        width: '100vw',
+      }}
+      aria-hidden={!isMobileMenuOpen}
+    >
+      <div className="pt-20 pb-24 min-h-screen">
+        <nav className="container mx-auto px-6 flex flex-col space-y-6">
             <MobileMenuItem 
               to="/" 
               className="text-xl font-medium text-white hover:text-stark-red transition-colors py-2"
@@ -179,12 +178,22 @@ const MobileNavigation = ({ isScrolled, isMobileMenuOpen, toggleMobileMenu }: Mo
               onItemClick={toggleMobileMenu} 
             />
             
-            <div className="pt-4">
-              <MobileCallButton onClick={toggleMobileMenu} />
-            </div>
-          </nav>
-        </div>
-      </motion.div>
+          <div className="pt-4">
+            <MobileCallButton onClick={toggleMobileMenu} />
+          </div>
+        </nav>
+      </div>
+    </motion.div>
+  );
+
+  return (
+    <>
+      <MobileMenuTrigger
+        isScrolled={isScrolled}
+        isMobileMenuOpen={isMobileMenuOpen}
+        toggleMobileMenu={toggleMobileMenu}
+      />
+      {typeof document !== 'undefined' && createPortal(menuOverlay, document.body)}
     </>
   );
 };

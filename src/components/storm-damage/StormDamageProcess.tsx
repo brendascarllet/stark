@@ -57,7 +57,7 @@ const StormDamageProcess = () => {
     <section className="py-16 md:py-28 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-navy">
             Our Storm Damage Response Process
           </h2>
           <p className="text-charcoal/80 max-w-2xl mx-auto text-lg">
@@ -65,7 +65,7 @@ const StormDamageProcess = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto justify-items-center md:justify-items-stretch">
           {steps.map((step) => (
             <ProcessStepBox
               key={step.number}

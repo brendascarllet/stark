@@ -31,7 +31,6 @@ const WarrantyCTA = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="animate-pulse-glow"
             >
               <Link to="/services" className="btn-primary inline-flex items-center justify-center h-12">
                 Get Free Inspection

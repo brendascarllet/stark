@@ -31,7 +31,7 @@ const PremiumRoofingSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="glass-card p-8 rounded-2xl hover-card flex flex-col h-full">
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-6 justify-center md:justify-start">
               <div className="bg-stark-red/10 p-3 rounded-full mr-4">
                 <Award className="h-6 w-6 text-stark-red" />
               </div>
@@ -77,7 +77,7 @@ const PremiumRoofingSection = () => {
           </div>
           
           <div className="glass-card p-8 rounded-2xl hover-card flex flex-col h-full">
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-6 justify-center md:justify-start">
               <div className="bg-stark-red/10 p-3 rounded-full mr-4">
                 <Layers className="h-6 w-6 text-stark-red" />
               </div>
@@ -123,7 +123,7 @@ const PremiumRoofingSection = () => {
           </div>
           
           <div className="glass-card p-8 rounded-2xl hover-card flex flex-col h-full">
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-6 justify-center md:justify-start">
               <div className="bg-stark-red/10 p-3 rounded-full mr-4">
                 <Building2 className="h-6 w-6 text-stark-red" />
               </div>

@@ -10,8 +10,8 @@ const WhyChooseStark = () => {
         <h2 className="section-title text-center text-white">Why Choose Stark for Storm Repairs?</h2>
         
         <div className="max-w-4xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
-            <div className="flex items-center mb-4">
+          <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm text-center md:text-left">
+            <div className="flex items-center mb-4 justify-center md:justify-start">
               <div className="w-10 h-10 rounded-full bg-stark-red flex items-center justify-center mr-4">
                 <Clock className="text-white" size={20} />
               </div>
@@ -20,8 +20,8 @@ const WhyChooseStark = () => {
             <p className="text-white/80">Stop leaks fast before they cause extensive interior damage.</p>
           </div>
           
-          <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
-            <div className="flex items-center mb-4">
+          <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm text-center md:text-left">
+            <div className="flex items-center mb-4 justify-center md:justify-start">
               <div className="w-10 h-10 rounded-full bg-stark-red flex items-center justify-center mr-4">
                 <FileText className="text-white" size={20} />
               </div>
@@ -30,8 +30,8 @@ const WhyChooseStark = () => {
             <p className="text-white/80">We fight for your coverage and handle the paperwork.</p>
           </div>
           
-          <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
-            <div className="flex items-center mb-4">
+          <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm text-center md:text-left">
+            <div className="flex items-center mb-4 justify-center md:justify-start">
               <div className="w-10 h-10 rounded-full bg-stark-red flex items-center justify-center mr-4">
                 <Shield className="text-white" size={20} />
               </div>

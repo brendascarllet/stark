@@ -123,10 +123,10 @@ const ChapterSlide: React.FC<ChapterSlideProps> = ({ chapter, index, progress, t
 
       {/* ── Text panel ── */}
       <motion.div
-        className="relative w-full md:w-1/2 h-[60%] md:h-full flex flex-col justify-center items-start text-left px-6 md:px-16 bg-[#0a0a0a]"
+        className="relative w-full md:w-1/2 h-[60%] md:h-full flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 md:px-16 bg-[#0a0a0a]"
         style={{ y: textY, opacity: textOpacity }}
       >
-        <div className="relative z-10 w-full max-w-md text-left">
+        <div className="relative z-10 w-full max-w-md text-center md:text-left">
           {/* Chapter number — sits directly above the accent line */}
           <motion.span
             className="block text-3xl md:text-[2.5rem] font-extrabold leading-none select-none mb-3 pointer-events-none"
@@ -137,23 +137,23 @@ const ChapterSlide: React.FC<ChapterSlideProps> = ({ chapter, index, progress, t
 
           {/* Accent line */}
           <motion.div
-            className="h-1 w-12 rounded-full mb-6"
+            className="h-1 w-12 rounded-full mb-6 mx-auto md:mx-0"
             style={{ backgroundColor: chapter.accent }}
             initial={false}
           />
 
-          <h3 className="text-[clamp(2rem,5vw,4rem)] font-extrabold text-white leading-tight tracking-tight mb-3 font-heading text-left">
+          <h3 className="text-[clamp(2rem,5vw,4rem)] font-extrabold text-white leading-tight tracking-tight mb-3 font-heading text-center md:text-left">
             {chapter.headline}
           </h3>
-          <p className="text-lg md:text-xl font-semibold mb-4 text-left" style={{ color: chapter.accent }}>
+          <p className="text-lg md:text-xl font-semibold mb-4 text-center md:text-left" style={{ color: chapter.accent }}>
             {chapter.sub}
           </p>
-          <p className="text-white/60 text-sm md:text-base leading-relaxed mb-8 text-left">
+          <p className="text-white/60 text-sm md:text-base leading-relaxed mb-8 text-center md:text-left">
             {chapter.body}
           </p>
 
           {chapter.cta && (
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full text-sm tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(220,38,38,0.5)]"

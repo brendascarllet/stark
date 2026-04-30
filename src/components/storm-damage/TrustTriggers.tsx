@@ -4,8 +4,8 @@ const TrustTriggers = () => {
   return <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-stark-red">
+          <div className="bg-white p-8 rounded-xl shadow-md text-center md:text-left">
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-stark-red mx-auto md:mx-0">
               <Shield className="text-white" size={28} />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">BBB A+ Rated</h3>
@@ -14,8 +14,8 @@ const TrustTriggers = () => {
             </p>
           </div>
           
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-stark-red">
+          <div className="bg-white p-8 rounded-xl shadow-md text-center md:text-left">
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-stark-red mx-auto md:mx-0">
               <Award className="text-white" size={28} />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">Licensed & Insured</h3>
@@ -24,8 +24,8 @@ const TrustTriggers = () => {
             </p>
           </div>
           
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-stark-red">
+          <div className="bg-white p-8 rounded-xl shadow-md text-center md:text-left">
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-stark-red mx-auto md:mx-0">
               <Star className="text-white" size={28} />
             </div>
             <h3 className="text-xl font-heading font-bold text-navy mb-3">5-Star Reviews</h3>

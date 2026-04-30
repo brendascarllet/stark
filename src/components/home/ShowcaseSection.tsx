@@ -129,39 +129,39 @@ const ShowcaseSection = () => {
           
           {/* Right Side - Text and CTA */}
           <motion.div
-            className="flex flex-col space-y-6 text-left"
+            className="flex flex-col space-y-6 text-center md:text-left"
             variants={containerVariants}
           >
             <motion.h2
-              className="text-3xl md:text-4xl font-bold text-left"
+              className="text-3xl md:text-4xl font-bold text-center md:text-left"
               variants={itemVariants}
             >
               <span className="text-slate-950">Transforming Houses,</span> <span className="text-stark-red">Creating Homes</span>
             </motion.h2>
 
             <motion.p
-              className="text-gray-700 text-lg text-left leading-relaxed"
+              className="text-gray-700 text-lg text-center md:text-left leading-relaxed"
               variants={itemVariants}
             >
               We all know a house is just a building, but your home is so much more. It's a place that reflects your personality, where your family gathers, your kids and grandkids make memories, and where life's moments unfold. That's why we don't just build — we create exteriors that stand the test of time.
             </motion.p>
 
             <motion.p
-              className="text-gray-700 text-left leading-relaxed"
+              className="text-gray-700 text-center md:text-left leading-relaxed"
               variants={itemVariants}
             >
               At Stark Renovation, we take pride in our work by investing in both our team and the materials we use. Our highly trained crews ensure top-tier craftsmanship, while our use of premium materials, including custom-made, in-house gutters, and our trusted partnerships with industry leaders like GAF and Certainteed, guarantee your home is built to last for generations.
             </motion.p>
 
             <motion.p
-              className="text-gray-700 font-medium text-left leading-relaxed"
+              className="text-gray-700 font-medium text-center md:text-left leading-relaxed"
               variants={itemVariants}
             >
               And with our industry-leading warranties, you can rest easy knowing your home is protected every step of the way.
             </motion.p>
 
             <motion.div
-              className="pt-4 self-start"
+              className="pt-4 self-center md:self-start"
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"

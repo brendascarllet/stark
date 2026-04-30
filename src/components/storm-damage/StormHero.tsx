@@ -41,7 +41,8 @@ const StormHero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Breadcrumb */}
         <motion.div
-          className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+          className="text-white/50 text-xs tracking-widest uppercase mb-6 text-center md:text-left"
+          style={{ whiteSpace: 'nowrap' }}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -49,13 +50,13 @@ const StormHero = () => {
           <a href="/" className="hover:text-white/80 transition-colors">
             Home
           </a>
-          <ChevronRight className="w-3 h-3" />
+          <ChevronRight className="inline-block w-3 h-3 mx-2 align-middle" />
           <span className="text-white/70">Storm Damage</span>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* ── LEFT: Copy + CTAs ── */}
-          <div className="text-white text-left">
+          <div className="text-white text-center md:text-left">
             {/* Pulsing live alert badge */}
             <motion.div
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-stark-red/20 border border-stark-red/40 backdrop-blur-sm mb-5"
@@ -84,7 +85,7 @@ const StormHero = () => {
 
             {/* Accent line */}
             <motion.div
-              className="h-1 bg-stark-red rounded-full mb-5"
+              className="h-1 bg-stark-red rounded-full mb-5 mx-auto md:mx-0"
               initial={{ width: 0 }}
               animate={{ width: 64 }}
               transition={{ delay: 0.55, duration: 0.5 }}
@@ -92,7 +93,7 @@ const StormHero = () => {
 
             {/* Subheadline */}
             <motion.p
-              className="text-base md:text-lg text-white/85 mb-7 max-w-xl leading-relaxed"
+              className="text-base md:text-lg text-white/85 mb-7 max-w-xl leading-relaxed mx-auto md:mx-0"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.65, duration: 0.55 }}
@@ -104,7 +105,7 @@ const StormHero = () => {
 
             {/* CTAs — ONE primary, ONE phone. No triple-call clutter. */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-3 mb-7"
+              className="flex flex-col sm:flex-row gap-3 mb-7 justify-center md:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.85, duration: 0.55 }}
@@ -131,7 +132,7 @@ const StormHero = () => {
 
             {/* Trust strip */}
             <motion.div
-              className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/75"
+              className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/75 justify-center md:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.05, duration: 0.5 }}

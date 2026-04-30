@@ -50,9 +50,9 @@ const BenefitsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div 
-              key={index} 
-              className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
+            <div
+              key={index}
+              className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center"
             >
               <div className="mb-4">
                 {benefit.icon}
