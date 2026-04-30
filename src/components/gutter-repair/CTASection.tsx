@@ -57,10 +57,10 @@ const CTASection = () => {
               whileHover={{ scale: 1.05 }} 
               whileTap={{ scale: 0.95 }}
             >
-              <Button 
-                size="fit" 
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 px-6 py-6 text-lg whitespace-nowrap"
+              <Button
+                size="fit"
+                variant="outline"
+                className="bg-white border-stark-red text-stark-red hover:bg-stark-red hover:text-white hover:border-stark-red px-6 py-6 text-lg whitespace-nowrap transition-colors"
               >
                 <Link to="/gutter-replacement" className="whitespace-nowrap">Explore Full Replacement Options</Link>
               </Button>
