@@ -54,14 +54,14 @@ const FeaturedFixedSkylight = () => {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-radial from-orange-300/20 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="container relative mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-amber-500 text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-lg">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-amber-500 text-white text-xs font-bold uppercase tracking-wider mb-6 shadow-lg">
             <Star size={14} className="fill-white" /> Most Requested in Bellevue &amp; Sammamish
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-navy mb-6">
             Fixed Skylight <span className="text-amber-600">+</span> Automatic Blackout Blind
           </h2>
-          <p className="text-lg text-charcoal/75 max-w-2xl mx-auto">
+          <p className="text-lg text-charcoal/75 max-w-2xl mx-auto leading-relaxed">
             One product solves two problems at once — flood the room with daylight when you want it, blackout dark when you don't. Zero wiring, zero compromise.
           </p>
         </div>
@@ -112,16 +112,17 @@ const FeaturedFixedSkylight = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
+            className="text-left"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-navy mb-3">
+            <h3 className="text-2xl md:text-3xl font-bold text-navy mb-5 text-left">
               Daylight by day. Pure dark by night.
             </h3>
-            <p className="text-charcoal/80 mb-6 leading-relaxed">
+            <p className="text-charcoal/80 mb-8 leading-relaxed text-left">
               We install the <strong>VELUX Fixed Deck-Mount Skylight</strong> in the same job as the <strong>Solar Powered Blackout Blind</strong> — one trip, one crew, one clean install. Pacific Northwest light, finally on your terms.
             </p>
 
             {/* Feature grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {KEY_FEATURES.slice(0, expanded ? 6 : 4).map((feature, idx) => {
                 const Icon = feature.icon;
                 return (
@@ -130,7 +131,7 @@ const FeaturedFixedSkylight = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: idx * 0.05 }}
-                    className="flex gap-3 p-3 rounded-xl bg-white/70 backdrop-blur border border-amber-100"
+                    className="flex gap-3 p-3 rounded-xl bg-white/70 backdrop-blur border border-amber-100 text-left"
                   >
                     <div className="bg-amber-100 p-2 rounded-lg h-fit flex-shrink-0">
                       <Icon size={16} className="text-amber-700" />
@@ -147,7 +148,7 @@ const FeaturedFixedSkylight = () => {
             <button
               type="button"
               onClick={() => setExpanded((e) => !e)}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-800 mb-6 transition"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-800 mb-8 transition self-start"
             >
               {expanded ? (
                 <>

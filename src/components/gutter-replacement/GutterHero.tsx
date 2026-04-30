@@ -30,7 +30,7 @@ const GutterHero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Breadcrumb */}
         <motion.div
-          className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+          className="flex items-center justify-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -40,7 +40,7 @@ const GutterHero = () => {
           <span className="text-white/70">Gutter Replacement</span>
         </motion.div>
 
-        <div className="max-w-2xl text-white">
+        <div className="max-w-2xl mx-auto text-white text-center">
           {/* Pulse badge */}
           <motion.div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-stark-red/20 border border-stark-red/40 backdrop-blur-sm mb-5"
@@ -69,7 +69,7 @@ const GutterHero = () => {
 
           {/* Accent bar */}
           <motion.div
-            className="h-1 bg-stark-red rounded-full mb-5"
+            className="h-1 bg-stark-red rounded-full mb-5 mx-auto"
             initial={{ width: 0 }}
             animate={{ width: 64 }}
             transition={{ delay: 0.55, duration: 0.5 }}
@@ -77,7 +77,7 @@ const GutterHero = () => {
 
           {/* Subheadline */}
           <motion.p
-            className="text-base md:text-lg text-white/85 mb-7 leading-relaxed max-w-xl"
+            className="text-base md:text-lg text-white/85 mb-7 leading-relaxed max-w-xl mx-auto"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.55 }}
@@ -89,7 +89,7 @@ const GutterHero = () => {
 
           {/* CTAs — ONE primary, ONE phone */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-3 mb-8"
+            className="flex flex-col sm:flex-row gap-3 mb-8 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.55 }}
@@ -116,7 +116,7 @@ const GutterHero = () => {
 
           {/* Trust badges row */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.05, duration: 0.5 }}

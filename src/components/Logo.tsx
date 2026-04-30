@@ -4,31 +4,32 @@ import { cn } from '@/lib/utils';
 
 interface LogoProps {
   className?: string;
+  /** @deprecated kept for backwards-compat with text logo; ignored now that logo is an image */
   textClassName?: string;
   textSize?: 'sm' | 'md' | 'lg';
+  /** @deprecated tagline is baked into the badge image */
   withTagline?: boolean;
 }
 
-const Logo = ({ 
-  className, 
-  textClassName,
+const Logo = ({
+  className,
   textSize = 'md',
-  withTagline = false
 }: LogoProps) => {
-  const textSizeClasses = {
-    sm: 'text-xl',
-    md: 'text-2xl',
-    lg: 'text-3xl'
+  const heightClasses = {
+    sm: 'h-10',
+    md: 'h-14',
+    lg: 'h-28 md:h-32'
   };
 
   return (
-    <div className={cn("flex flex-col items-center", className)}>
-      <h1 className={cn("font-heading font-extrabold tracking-tight text-stark-red", textSizeClasses[textSize], textClassName)}>
-        STARK
-      </h1>
-      {withTagline && (
-        <p className="text-xs text-gray-600 font-medium -mt-1">ROOFING & RENOVATION</p>
-      )}
+    <div className={cn("flex items-center", className)}>
+      <img
+        src="/stark_logo_badge.png"
+        alt="Stark Roofing & Renovation"
+        className={cn("w-auto", heightClasses[textSize])}
+        loading="eager"
+        decoding="async"
+      />
     </div>
   );
 };

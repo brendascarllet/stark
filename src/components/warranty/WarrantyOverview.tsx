@@ -34,29 +34,29 @@ const WarrantyOverview = () => {
                 <table className="min-w-full border-collapse">
                   <thead>
                     <tr className="bg-gray-50">
-                      <th className="px-4 py-3 text-left text-navy font-medium border-b">Warranty Feature</th>
-                      <th className="px-4 py-3 text-center text-navy font-medium border-b">Competitors</th>
-                      <th className="px-4 py-3 text-center text-stark-red font-medium border-b">Stark Roofing</th>
+                      <th className="px-4 py-3 text-center text-navy font-medium border-b w-1/3">Warranty Feature</th>
+                      <th className="px-4 py-3 text-center text-navy font-medium border-b w-1/3">Competitors</th>
+                      <th className="px-4 py-3 text-center text-stark-red font-medium border-b w-1/3">Stark Roofing</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-4 py-3 border-b">Labor Coverage</td>
+                      <td className="px-4 py-3 border-b text-center">Labor Coverage</td>
                       <td className="px-4 py-3 border-b text-center">1-10 Years</td>
                       <td className="px-4 py-3 border-b text-center font-bold text-stark-red">25 Years</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-4 py-3 border-b">Transferable to New Owner</td>
+                      <td className="px-4 py-3 border-b text-center">Transferable to New Owner</td>
                       <td className="px-4 py-3 border-b text-center">Sometimes</td>
                       <td className="px-4 py-3 border-b text-center font-bold text-stark-red">Yes</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-4 py-3 border-b">Proration</td>
+                      <td className="px-4 py-3 border-b text-center">Proration</td>
                       <td className="px-4 py-3 border-b text-center">Typically After 5 Years</td>
                       <td className="px-4 py-3 border-b text-center font-bold text-stark-red">No Proration</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-4 py-3 border-b">Coverage For All Components</td>
+                      <td className="px-4 py-3 border-b text-center">Coverage For All Components</td>
                       <td className="px-4 py-3 border-b text-center">Partial</td>
                       <td className="px-4 py-3 border-b text-center font-bold text-stark-red">Complete</td>
                     </tr>

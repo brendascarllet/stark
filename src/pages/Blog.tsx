@@ -36,6 +36,7 @@ const Blog = () => {
         breadcrumb="Blog"
         ctaLabel="Get a Free Estimate"
         ctaHref="/contact"
+        align="center"
       />
 
       <section className="py-16 md:py-24">

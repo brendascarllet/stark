@@ -3,7 +3,7 @@ import React from 'react';
 
 const GallerySection = () => {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 md:py-24 bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-heading font-bold text-navy mb-4 text-center">Our Recent Projects</h2>
         <p className="text-charcoal/80 mb-12 max-w-3xl mx-auto text-center">

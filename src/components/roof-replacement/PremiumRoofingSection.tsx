@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const PremiumRoofingSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <motion.h2 
@@ -30,7 +30,7 @@ const PremiumRoofingSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="glass-card p-8 rounded-2xl hover-card">
+          <div className="glass-card p-8 rounded-2xl hover-card flex flex-col h-full">
             <div className="flex items-center mb-6">
               <div className="bg-stark-red/10 p-3 rounded-full mr-4">
                 <Award className="h-6 w-6 text-stark-red" />
@@ -38,11 +38,11 @@ const PremiumRoofingSection = () => {
               <h3 className="text-2xl font-heading font-bold text-navy">GAF Timberline HDZ</h3>
             </div>
             
-            <div className="mb-8 rounded-xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.webp" 
-                alt="GAF Timberline HDZ Shingles Color Options" 
-                className="w-full h-auto"
+            <div className="mb-8 rounded-xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/lovable-uploads/45d75592-5471-4973-9d9e-e96c41b8ac16.webp"
+                alt="GAF Timberline HDZ Shingles Color Options"
+                className="w-full h-full object-cover"
               />
             </div>
             
@@ -69,12 +69,14 @@ const PremiumRoofingSection = () => {
               </li>
             </ul>
             
-            <Link to="/asphalt-shingles" className="btn-primary">
-              Learn About Asphalt Shingles
-            </Link>
+            <div className="mt-auto">
+              <Link to="/asphalt-shingles" className="btn-primary inline-block">
+                Learn About Asphalt Shingles
+              </Link>
+            </div>
           </div>
           
-          <div className="glass-card p-8 rounded-2xl hover-card">
+          <div className="glass-card p-8 rounded-2xl hover-card flex flex-col h-full">
             <div className="flex items-center mb-6">
               <div className="bg-stark-red/10 p-3 rounded-full mr-4">
                 <Layers className="h-6 w-6 text-stark-red" />
@@ -82,11 +84,11 @@ const PremiumRoofingSection = () => {
               <h3 className="text-2xl font-heading font-bold text-navy">Metal Roofing</h3>
             </div>
             
-            <div className="mb-8 rounded-xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/5ea5b3b8-72f3-4e18-b9c5-0ce95d7896c9.webp" 
-                alt="Premium Standing Seam Metal Roofing" 
-                className="w-full h-auto"
+            <div className="mb-8 rounded-xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/lovable-uploads/5ea5b3b8-72f3-4e18-b9c5-0ce95d7896c9.webp"
+                alt="Premium Standing Seam Metal Roofing"
+                className="w-full h-full object-cover"
               />
             </div>
             
@@ -113,12 +115,14 @@ const PremiumRoofingSection = () => {
               </li>
             </ul>
             
-            <Link to="/metal-roofing" className="btn-primary">
-              Learn About Metal Roofing
-            </Link>
+            <div className="mt-auto">
+              <Link to="/metal-roofing" className="btn-primary inline-block">
+                Learn About Metal Roofing
+              </Link>
+            </div>
           </div>
           
-          <div className="glass-card p-8 rounded-2xl hover-card">
+          <div className="glass-card p-8 rounded-2xl hover-card flex flex-col h-full">
             <div className="flex items-center mb-6">
               <div className="bg-stark-red/10 p-3 rounded-full mr-4">
                 <Building2 className="h-6 w-6 text-stark-red" />
@@ -126,11 +130,11 @@ const PremiumRoofingSection = () => {
               <h3 className="text-2xl font-heading font-bold text-navy">TPO Roofing</h3>
             </div>
             
-            <div className="mb-8 rounded-xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.webp" 
-                alt="TPO Commercial Roofing" 
-                className="w-full h-auto"
+            <div className="mb-8 rounded-xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/lovable-uploads/4e22b510-288f-4fd5-934c-4d533af06eec.webp"
+                alt="TPO Commercial Roofing"
+                className="w-full h-full object-cover"
               />
             </div>
             
@@ -157,9 +161,11 @@ const PremiumRoofingSection = () => {
               </li>
             </ul>
             
-            <Link to="/tpo-roofing" className="btn-primary">
-              Learn About TPO Roofing
-            </Link>
+            <div className="mt-auto">
+              <Link to="/tpo-roofing" className="btn-primary inline-block">
+                Learn About TPO Roofing
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -86,7 +86,7 @@ const PartnerTile: React.FC<{ partner: Partner }> = ({ partner }) => {
 
 const PartnerLogos: React.FC = () => {
   return (
-    <section className="border-t border-white/10 pt-10 md:pt-12 pb-2">
+    <section className="border-t border-white/10 mt-8 md:mt-12 pt-10 md:pt-12 pb-2">
       <div className="text-center mb-6 md:mb-8">
         <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-stark-red font-semibold mb-1">
           Trusted Manufacturers

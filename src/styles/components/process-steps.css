@@ -23,6 +23,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-self: stretch;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   cursor: pointer;
   position: relative;
@@ -43,9 +44,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
   transition: background-color 0.3s ease;
   position: relative;
+  flex: 1;
 }
 
 .process-step-number {
@@ -70,8 +73,15 @@
 .process-step-title {
   font-weight: 700;
   font-size: 1.125rem;
+  line-height: 1.4;
   color: #333;
   margin-bottom: 0.75rem;
+  height: 2.8em;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .process-step-content {

@@ -49,7 +49,7 @@ const ProcessSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 md:py-28 bg-gray-50">
+    <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           className="text-center mb-16"
@@ -58,7 +58,7 @@ const ProcessSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-navy">
             Our Process Makes It Easy!
           </h2>
           <p className="text-charcoal/80 max-w-2xl mx-auto text-lg">

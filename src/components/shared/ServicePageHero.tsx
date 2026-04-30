@@ -32,6 +32,8 @@ interface ServicePageHeroProps {
   overlayOpacity?: number;
   /** Accent colour (default red-600) */
   accentColor?: string;
+  /** Horizontal alignment of all hero content (default 'left') */
+  align?: 'left' | 'center';
 }
 
 const ServicePageHero: React.FC<ServicePageHeroProps> = ({
@@ -45,7 +47,9 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
   secondaryCta,
   overlayOpacity = 0.55,
   accentColor = '#dc2626',
+  align = 'left',
 }) => {
+  const isCenter = align === 'center';
   // Split title for animated word-by-word reveal
   const words = title.split(' ');
 
@@ -81,12 +85,12 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
       </motion.div>
 
       {/* ── Content ── */}
-      <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16 lg:px-24 pt-20">
+      <div className={`absolute inset-0 flex flex-col justify-center px-6 md:px-16 lg:px-24 py-20 ${isCenter ? 'items-center text-center' : ''}`}>
 
         {/* Breadcrumb */}
         {breadcrumb && (
           <motion.div
-            className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+            className={`flex items-center gap-1.5 text-white/60 text-sm tracking-widest uppercase mb-6 ${isCenter ? 'justify-center' : ''}`}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -106,7 +110,7 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
             transition={{ delay: 0.3, duration: 0.6 }}
           >
             <span
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider text-white border border-white/20 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider text-white border border-white/20 backdrop-blur-sm"
               style={{ backgroundColor: `${accentColor}33` }}
             >
               <span
@@ -119,11 +123,11 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
         )}
 
         {/* Title — word-by-word reveal */}
-        <div className="flex flex-wrap gap-x-4 gap-y-1 mb-4 max-w-4xl">
+        <div className={`flex flex-wrap gap-x-4 gap-y-1 mb-4 max-w-4xl ${isCenter ? 'justify-center' : ''}`}>
           {words.map((word, i) => (
             <div key={i} className="overflow-hidden">
               <motion.span
-                className="block text-[clamp(2.5rem,7vw,6rem)] font-extrabold text-white leading-none tracking-tight font-heading drop-shadow-2xl"
+                className="block text-[clamp(2.5rem,7vw,6rem)] font-extrabold text-white leading-none tracking-tight font-heading"
                 initial={{ y: '110%' }}
                 animate={{ y: '0%' }}
                 transition={{ delay: 0.4 + i * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -136,7 +140,7 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
 
         {/* Accent line */}
         <motion.div
-          className="h-[3px] rounded-full mb-5"
+          className={`h-[3px] rounded-full mb-5 ${isCenter ? 'mx-auto' : ''}`}
           style={{ backgroundColor: accentColor }}
           initial={{ width: 0 }}
           animate={{ width: 64 }}
@@ -146,7 +150,7 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
         {/* Subtitle */}
         {subtitle && (
           <motion.p
-            className="text-lg md:text-xl text-white/80 font-medium mb-8 max-w-xl"
+            className={`text-lg md:text-xl text-white/80 font-medium mb-8 max-w-xl ${isCenter ? 'mx-auto' : ''}`}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
@@ -157,7 +161,7 @@ const ServicePageHero: React.FC<ServicePageHeroProps> = ({
 
         {/* CTA buttons */}
         <motion.div
-          className="flex flex-wrap gap-3"
+          className={`flex flex-wrap gap-3 ${isCenter ? 'justify-center' : ''}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.95, duration: 0.6 }}

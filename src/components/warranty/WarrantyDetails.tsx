@@ -174,12 +174,12 @@ const WarrantyDetails = () => {
         </div>
         
         <div className="bg-white rounded-lg shadow-sm p-8 mt-8">
-          <h3 className="text-2xl font-heading font-bold text-navy mb-6 flex items-center">
+          <h3 className="text-2xl font-heading font-bold text-navy mb-6 flex items-center justify-center">
             <Calendar className="text-stark-red mr-3" size={28} />
             System-Wide Coverage
           </h3>
-          
-          <p className="text-charcoal/80 mb-6">
+
+          <p className="text-charcoal/80 mb-6 text-center">
             Our warranty covers your entire roofing system, not just individual components. This comprehensive approach ensures total protection.
           </p>
           

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 const MaterialsSection = () => {
-  return <section className="py-16 bg-white">
+  return <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div initial={{
         opacity: 0,
@@ -17,8 +17,8 @@ const MaterialsSection = () => {
       }} transition={{
         duration: 0.7
       }} className="text-center mb-12">
-          <h2 className="text-3xl font-heading font-bold mb-4 text-stark-red">Premium Roofing Materials</h2>
-          <p className="text-charcoal/80 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-navy">Premium Roofing Materials</h2>
+          <p className="text-lg md:text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
             We exclusively use industry-leading materials to ensure your new roof provides superior protection, lasting beauty, and enhanced curb appeal.
           </p>
         </motion.div>
@@ -47,9 +47,9 @@ const MaterialsSection = () => {
           once: true
         }} transition={{
           duration: 0.7
-        }}>
-            <h3 className="text-2xl font-heading font-bold text-navy mb-6">Complete Roofing System</h3>
-            <p className="text-charcoal/80 mb-6">
+        }} className="text-left self-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-stark-red mb-6 text-left">Complete Roofing System</h3>
+            <p className="text-charcoal/80 mb-6 text-left leading-relaxed">
               Our premium roof replacement includes a complete system of components that work together to provide maximum protection for your home:
             </p>
             <ul className="grid grid-cols-1 gap-4 mb-6">

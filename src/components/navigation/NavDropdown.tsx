@@ -28,9 +28,9 @@ const NavDropdown = ({
 }: NavDropdownProps) => {
   return (
     <div className="relative group">
-      <button 
+      <button
         className={cn(
-          "relative px-3 py-2 font-medium transition-colors duration-300 flex items-center gap-1", 
+          "relative px-3 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-300 flex items-center gap-1",
           isHighlighted ? "text-stark-red" : isScrolled ? "navbar scrolled text-charcoal hover:text-stark-red" : "navbar text-white hover:text-stark-red"
         )}
         onClick={() => setIsOpen(!isOpen)}

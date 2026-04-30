@@ -13,28 +13,28 @@ const HappinessSection: React.FC = () => {
     <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
-          <motion.div 
-            className="flex-1"
+          <motion.div
+            className="flex-1 text-left"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-stark-red mb-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-stark-red mb-2 text-left">
               Your Peace of Mind Is Our #1 Priority
             </h2>
-            <p className="text-base md:text-lg font-semibold text-stark-red/80 mb-4">
+            <p className="text-base md:text-lg font-semibold text-stark-red/80 mb-4 text-left">
               A personal note from Brenda Scarllet — Owner, Stark Roofing &amp; Renovation
             </p>
-            <p className="text-lg text-[#333333] mb-4">
+            <p className="text-lg text-[#333333] mb-4 text-left leading-relaxed">
               Hi, I'm Brenda. When you invite us onto your property, you're trusting us with the place you call home — and I don't take that lightly. My family and I built Stark Roofing &amp; Renovation on a simple promise: treat every house like it's our own, and every homeowner like a neighbor.
             </p>
-            <p className="text-lg text-[#333333] mb-6">
+            <p className="text-lg text-[#333333] mb-6 text-left leading-relaxed">
               With over 30 years of experience and more than 2,000 roofs completed across King, Snohomish, and Pierce counties, our crew shows up on time, communicates clearly, and stands behind every nail we drive. Whether you're weathering a Pacific Northwest storm or finally giving your home the upgrade it deserves, you'll have my word — and my number — every step of the way.
             </p>
 
             <div className="mt-6">
-              <Link to="/contact">
+              <Link to="/contact" className="inline-block">
                 <Button
                   className="bg-stark-red hover:bg-stark-redHover text-white font-semibold px-8 py-3 flex items-center gap-2"
                 >

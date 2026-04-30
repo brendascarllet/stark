@@ -16,7 +16,7 @@ const StormHero = () => {
   return (
     <section
       id="storm-hero"
-      className="relative overflow-hidden bg-gradient-to-br from-navy via-navy to-[#0a1530] pt-28 md:pt-32 pb-12 md:pb-16"
+      className="relative overflow-hidden bg-gradient-to-br from-navy via-navy to-[#0a1530] pt-28 md:pt-32 pb-20 md:pb-28"
     >
       {/* Background pattern accents */}
       <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true">
@@ -55,7 +55,7 @@ const StormHero = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* ── LEFT: Copy + CTAs ── */}
-          <div className="text-white">
+          <div className="text-white text-left">
             {/* Pulsing live alert badge */}
             <motion.div
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-stark-red/20 border border-stark-red/40 backdrop-blur-sm mb-5"

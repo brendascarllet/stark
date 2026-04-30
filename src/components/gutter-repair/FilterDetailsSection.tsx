@@ -6,19 +6,19 @@ const FilterDetailsSection = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Image Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <img 
-              src="/lovable-uploads/94706dc5-2fc6-4423-ba6a-0137845afbff.webp" 
-              alt="Modern home with clean white gutters at sunset" 
-              className="w-full h-64 object-cover object-center rounded-lg shadow-lg"
+            <img
+              src="/lovable-uploads/94706dc5-2fc6-4423-ba6a-0137845afbff.webp"
+              alt="Modern home with clean white gutters at sunset"
+              className="w-full h-96 md:h-[480px] object-cover object-center rounded-lg shadow-lg"
             />
           </motion.div>
 
@@ -28,11 +28,12 @@ const FilterDetailsSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="text-left"
           >
-            <h2 className="text-3xl font-heading font-bold text-navy mb-6 md:text-4xl">
+            <h2 className="text-3xl font-heading font-bold text-navy mb-6 md:text-4xl text-left">
               Keep Your Gutters Performing Optimally
             </h2>
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 mb-6 text-left leading-relaxed">
               Clogged or damaged gutters can lead to serious water damage to your home's foundation, roof, and siding. Our expert gutter repair services ensure your gutter system functions properly, protecting your home from costly repairs.
             </p>
             

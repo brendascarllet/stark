@@ -30,7 +30,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Breadcrumb */}
         <motion.div
-          className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
+          className="flex items-center justify-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -40,10 +40,10 @@ const HeroSection = () => {
           <span className="text-white/70">Roof Replacement</span>
         </motion.div>
 
-        <div className="max-w-2xl text-white">
+        <div className="max-w-2xl mx-auto text-white text-center">
           {/* GAF certified badge */}
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-stark-red/20 border border-stark-red/40 backdrop-blur-sm mb-5"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-stark-red/20 border border-stark-red/40 backdrop-blur-sm mb-6"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.5 }}
@@ -54,7 +54,7 @@ const HeroSection = () => {
 
           {/* Headline */}
           <motion.h1
-            className="font-heading font-extrabold leading-[1.05] tracking-tight mb-4"
+            className="font-heading font-extrabold leading-[1.05] tracking-tight mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.6 }}
@@ -69,7 +69,7 @@ const HeroSection = () => {
 
           {/* Accent bar */}
           <motion.div
-            className="h-1 bg-stark-red rounded-full mb-5"
+            className="h-1 bg-stark-red rounded-full mb-8 mx-auto"
             initial={{ width: 0 }}
             animate={{ width: 64 }}
             transition={{ delay: 0.55, duration: 0.5 }}
@@ -77,7 +77,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <motion.p
-            className="text-base md:text-lg text-white/85 mb-7 leading-relaxed max-w-xl"
+            className="text-base md:text-lg text-white/85 mb-10 leading-relaxed max-w-xl mx-auto"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.55 }}
@@ -89,13 +89,13 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-3 mb-8"
+            className="flex flex-col sm:flex-row gap-3 mb-10 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.55 }}
           >
             <motion.a
-              href="#book-replacement"
+              href="#contact"
               className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-stark-red text-white font-bold text-base rounded-full shadow-2xl"
               whileHover={{ scale: 1.04, boxShadow: '0 0 35px rgba(220,38,38,0.5)' }}
               whileTap={{ scale: 0.97 }}
@@ -116,7 +116,7 @@ const HeroSection = () => {
 
           {/* Trust badges row */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.05, duration: 0.5 }}

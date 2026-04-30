@@ -16,7 +16,7 @@ interface DesktopNavigationProps {
 
 const DesktopNavigation = ({ isScrolled }: DesktopNavigationProps) => {
   return (
-    <nav className="hidden md:flex items-center space-x-6">
+    <nav className="hidden md:flex items-center space-x-4">
       <NavMenuSection
         label="Roofing"
         items={getRoofingItems()}

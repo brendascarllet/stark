@@ -26,8 +26,8 @@ const ServiceAreaSection: React.FC = () => {
             </div>
           </motion.div>
           
-          <motion.div 
-            className="flex-1"
+          <motion.div
+            className="flex-1 text-left"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -37,15 +37,15 @@ const ServiceAreaSection: React.FC = () => {
               <MapPin size={20} className="text-stark-red" />
               <span className="text-sm font-medium text-stark-red uppercase tracking-wider">Our Service Areas</span>
             </div>
-            <h2 className="section-title mb-4">Proudly Serving the Greater Seattle Area</h2>
-            <h3 className="text-xl text-navy font-medium mb-4">Wherever You Are, We've Got You Covered</h3>
-            <p className="text-lg text-charcoal/80 mb-6">
+            <h2 className="section-title mb-4 text-left">Proudly Serving the Greater Seattle Area</h2>
+            <h3 className="text-xl text-navy font-medium mb-4 text-left">Wherever You Are, We've Got You Covered</h3>
+            <p className="text-lg text-charcoal/80 mb-6 text-left leading-relaxed">
               We've built our reputation on trust, reliability, and delivering exceptional results for homeowners throughout the region. Whether you're in Seattle, Tacoma, Bellevue, or anywhere in between — we're just a call away and ready to help with roofing, gutters, and remodeling services.
             </p>
-            
+
             <div className="mt-6">
-              <Link to="/contact">
-                <Button 
+              <Link to="/contact" className="inline-block">
+                <Button
                   className="bg-stark-red hover:bg-stark-redHover text-white font-semibold px-8 py-3"
                 >
                   Get In Touch

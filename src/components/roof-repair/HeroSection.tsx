@@ -35,15 +35,15 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-24 items-center max-w-6xl mx-auto">
           {/* ── Left: Copy ── */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6 text-left">
             {/* Breadcrumb */}
             <motion.div
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-5"
+              className="flex items-center gap-1.5 text-white/50 text-xs tracking-widest uppercase mb-6"
             >
               <a href="/" className="hover:text-white transition-colors">Home</a>
               <ChevronRight className="w-3 h-3" />
@@ -55,7 +55,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stark-red/15 border border-stark-red/40 backdrop-blur-sm mb-5"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stark-red/15 border border-stark-red/40 backdrop-blur-sm mb-6"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-stark-red opacity-75" />
@@ -71,7 +71,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-[1.05] tracking-tight mb-5"
+              className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-[1.05] tracking-tight mb-6 text-left"
             >
               Roof Leaking?
               <span className="block text-stark-red mt-2">We'll Fix It This Week.</span>
@@ -82,7 +82,7 @@ const HeroSection = () => {
               initial={{ width: 0 }}
               animate={{ width: 64 }}
               transition={{ delay: 0.45, duration: 0.5 }}
-              className="h-[3px] bg-stark-red rounded-full mb-5"
+              className="h-[3px] bg-stark-red rounded-full mb-8"
             />
 
             {/* Subhead */}
@@ -90,7 +90,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-lg md:text-xl text-white/80 max-w-xl mb-7 leading-relaxed"
+              className="text-lg md:text-xl text-white/80 max-w-xl mb-10 leading-relaxed text-left"
             >
               Permanent fixes for leaks, missing shingles, flashing failures, and storm damage —
               done by a GAF-certified Seattle crew who actually shows up.
@@ -101,12 +101,12 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-8 max-w-xl"
+              className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-xl"
             >
               {trustPoints.map(({ icon: Icon, text }) => (
                 <li key={text} className="flex items-start gap-2.5 text-white/85 text-sm">
                   <Icon size={18} className="text-stark-red flex-shrink-0 mt-0.5" />
-                  <span>{text}</span>
+                  <span className="text-left">{text}</span>
                 </li>
               ))}
             </motion.ul>
@@ -116,7 +116,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.75, duration: 0.5 }}
-              className="flex flex-col sm:flex-row gap-3"
+              className="flex flex-col sm:flex-row gap-3 justify-start"
             >
               <motion.a
                 href="#schedule-form"
@@ -145,13 +145,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.7, ease: 'easeOut' }}
-            className="hidden lg:block lg:col-span-5 relative"
+            className="hidden lg:block lg:col-span-6 relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
               <img
                 src="/hero-custom-everett.webp"
                 alt="Pacific Northwest craftsman home with quality shingle roof"
-                className="w-full h-[520px] object-cover"
+                className="w-full h-[560px] object-cover"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).src = '/stark-crew-team.jpg';
                 }}

@@ -10,12 +10,10 @@ import ProcessSection from '@/components/sections/ProcessSection';
 import MaterialsSection from '@/components/roof-replacement/MaterialsSection';
 import GallerySection from '@/components/roof-replacement/GallerySection';
 import ContactSection from '@/components/roof-replacement/ContactSection';
-import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import ScrollToTop from '@/components/ScrollToTop';
 import VirtualAssistant from '@/components/finance/VirtualAssistant';
 import PremiumRoofingSection from '@/components/roof-replacement/PremiumRoofingSection';
 import RoofingComparison from '@/components/roof-replacement/RoofingComparison';
-import HorizontalContactForm from '@/components/home/HorizontalContactForm';
 import FinancingOptionsSection from '@/components/home/FinancingOptionsSection';
 import { useEntranceAnimations } from '@/hooks/useEntranceAnimations';
 import { useSEOMeta } from '@/hooks/useSEOMeta';
@@ -75,21 +73,6 @@ const RoofReplacement = () => {
         <PremiumRoofingSection />
       </AnimatedSection>
 
-      {/* Lead-capture form — anchored so the hero "Book My Free Estimate"
-          button actually scrolls to it. */}
-      <div id="book-replacement">
-        <HorizontalContactForm />
-      </div>
-
-      {/* Added WhyChooseUsSection here as it fits better with roof replacement */}
-      <AnimatedSection
-        animation="slide-up"
-        delay={300}
-        className="relative z-10"
-      >
-        <WhyChooseUsSection />
-      </AnimatedSection>
-      
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

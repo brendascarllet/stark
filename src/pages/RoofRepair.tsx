@@ -14,7 +14,6 @@ import ProcessSection from '@/components/roof-repair/ProcessSection';
 import EmergencySection from '@/components/roof-repair/EmergencySection';
 import FAQSection from '@/components/roof-repair/FAQSection';
 import CTASection from '@/components/roof-repair/CTASection';
-import EmergencyBanner from '@/components/roof-repair/EmergencyBanner';
 import SectionEmergencyBanner from '@/components/roof-repair/SectionEmergencyBanner';
 import FloatingContactBar from '@/components/roof-repair/FloatingContactBar';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -45,9 +44,6 @@ const RoofRepair = () => {
       />
       <Navbar />
 
-      {/* Emergency Banner */}
-      <EmergencyBanner />
-      
       {/* Repair-specific Hero (split layout, urgency-forward) */}
       <HeroSection />
 

@@ -15,10 +15,10 @@ const NavItem = ({
   isScrolled
 }: NavItemProps) => {
   return (
-    <Link 
-      to={to} 
+    <Link
+      to={to}
       className={cn(
-        "nav-item py-2 px-3 font-medium transition-colors duration-300 hover:text-stark-red",
+        "nav-item py-2 px-3 text-sm font-medium whitespace-nowrap transition-colors duration-300 hover:text-stark-red",
         isScrolled ? "text-navy" : "text-white"
       )}
     >

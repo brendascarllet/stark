@@ -8,7 +8,7 @@ const GAFHighlight = () => {
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -28,23 +28,23 @@ const GAFHighlight = () => {
             </div>
           </motion.div>
           
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="w-full md:w-1/2"
+            className="w-full md:w-1/2 text-left"
           >
             <div className="flex items-center mb-4">
               <Shield className="text-stark-red mr-2" size={24} />
               <span className="text-navy font-medium">GAF Certified Contractor</span>
             </div>
-            
-            <h2 className="text-3xl font-heading font-bold text-navy mb-4">
+
+            <h2 className="text-3xl font-heading font-bold text-navy mb-4 text-left">
               GAF Timberline HDZ Shingles
             </h2>
-            
-            <p className="text-charcoal/80 mb-6">
+
+            <p className="text-charcoal/80 mb-6 text-left">
               Our premium roofing installations feature GAF Timberline HDZ architectural shingles, America's #1 shingle brand. These shingles offer exceptional protection against wind, rain, and other elements while enhancing your home's curb appeal.
             </p>
             

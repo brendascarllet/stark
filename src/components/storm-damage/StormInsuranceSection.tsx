@@ -69,7 +69,7 @@ const StormInsuranceSection = () => {
           </div>
         </div>
         
-        <div className="mt-10 text-center">
+        <div className="mt-16 mb-6 text-center">
           <a href="#assessment" className="btn-primary inline-block">
             Get Help With Your Insurance Claim →
           </a>

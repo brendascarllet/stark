@@ -18,7 +18,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 animate-fade-in drop-shadow-lg">
             Professional Roof Cleaning Services
           </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in border-l-4 border-stark-red pl-4 font-medium drop-shadow-md" style={{ animationDelay: '200ms' }}>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in font-medium drop-shadow-md leading-relaxed" style={{ animationDelay: '200ms' }}>
             Restore your roof's appearance and extend its lifespan with our professional cleaning services. Remove harmful moss, algae, and debris.
           </p>
           

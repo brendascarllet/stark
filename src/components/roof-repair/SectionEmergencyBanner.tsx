@@ -9,8 +9,8 @@ const SectionEmergencyBanner = () => {
     opacity: 1
   }} transition={{
     duration: 0.5
-  }} className="w-full text-white py-5 shadow-md relative z-10 bg-slate-50">
-      <div className="container mx-auto px-4 bg-stark-red">
+  }} className="w-full text-white py-5 shadow-md relative z-10 bg-stark-red">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-3 md:mb-0">
             <AlertTriangle className="mr-2 animate-pulse" size={20} />

@@ -5,7 +5,7 @@ import GetStartedForm from '@/components/shared/GetStartedForm';
 
 const ContactSection = () => {
   return (
-    <section className="relative z-30 py-6 md:py-8 lg:py-10">
+    <section className="relative z-30 py-14 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-20">
         <motion.div
           initial={{ y: 30, opacity: 0 }}

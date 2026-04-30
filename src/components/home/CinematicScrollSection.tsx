@@ -123,18 +123,18 @@ const ChapterSlide: React.FC<ChapterSlideProps> = ({ chapter, index, progress, t
 
       {/* ── Text panel ── */}
       <motion.div
-        className="relative w-full md:w-1/2 h-[60%] md:h-full flex flex-col justify-center px-6 md:px-16 bg-[#0a0a0a]"
+        className="relative w-full md:w-1/2 h-[60%] md:h-full flex flex-col justify-center items-start text-left px-6 md:px-16 bg-[#0a0a0a]"
         style={{ y: textY, opacity: textOpacity }}
       >
-        {/* Chapter number */}
-        <motion.span
-          className="text-[6rem] md:text-[9rem] font-extrabold leading-none select-none absolute -top-4 -left-2 md:left-4 pointer-events-none"
-          style={{ color: `${chapter.accent}18`, opacity: numOpacity }}
-        >
-          {chapter.number}
-        </motion.span>
+        <div className="relative z-10 w-full max-w-md text-left">
+          {/* Chapter number — sits directly above the accent line */}
+          <motion.span
+            className="block text-3xl md:text-[2.5rem] font-extrabold leading-none select-none mb-3 pointer-events-none"
+            style={{ color: `${chapter.accent}99`, opacity: numOpacity }}
+          >
+            {chapter.number}
+          </motion.span>
 
-        <div className="relative z-10">
           {/* Accent line */}
           <motion.div
             className="h-1 w-12 rounded-full mb-6"
@@ -142,13 +142,13 @@ const ChapterSlide: React.FC<ChapterSlideProps> = ({ chapter, index, progress, t
             initial={false}
           />
 
-          <h3 className="text-[clamp(2rem,5vw,4rem)] font-extrabold text-white leading-tight tracking-tight mb-3 font-heading">
+          <h3 className="text-[clamp(2rem,5vw,4rem)] font-extrabold text-white leading-tight tracking-tight mb-3 font-heading text-left">
             {chapter.headline}
           </h3>
-          <p className="text-lg md:text-xl font-semibold mb-4" style={{ color: chapter.accent }}>
+          <p className="text-lg md:text-xl font-semibold mb-4 text-left" style={{ color: chapter.accent }}>
             {chapter.sub}
           </p>
-          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-sm mb-8">
+          <p className="text-white/60 text-sm md:text-base leading-relaxed mb-8 text-left">
             {chapter.body}
           </p>
 

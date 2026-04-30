@@ -51,6 +51,7 @@ const Skylights = () => {
         ctaHref="#contact"
         secondaryCta={{ label: 'View All VELUX Models', href: '/skylights/velux-lineup' }}
         accentColor="#f59e0b"
+        align="center"
       />
       <OverviewSection />
       <FeaturedFixedSkylight />

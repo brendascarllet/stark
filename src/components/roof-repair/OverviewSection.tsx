@@ -4,19 +4,19 @@ import { Shield, Check } from 'lucide-react';
 
 const OverviewSection = () => {
   return (
-    <section className="py-16">
+    <section className="py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/2">
-            <h2 className="text-3xl font-heading font-bold text-navy mb-6">
+        <div className="flex flex-col md:flex-row items-stretch gap-12">
+          <div className="w-full md:w-1/2 text-left flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-6 text-left">
               Expert Roof Repair When You Need It Most
             </h2>
-            
-            <p className="text-charcoal/80 mb-4">
+
+            <p className="text-charcoal/80 mb-4 text-left leading-relaxed">
               Even small roofing issues can quickly escalate into major problems if left unaddressed. Our professional roof repair services help maintain your home's protection against the elements while extending your roof's lifespan.
             </p>
-            
-            <p className="text-charcoal/80 mb-6">
+
+            <p className="text-charcoal/80 mb-6 text-left leading-relaxed">
               With our team of experienced professionals, we identify and fix roofing problems quickly and effectively, using premium materials that are built to last in Washington's challenging climate.
             </p>
             
@@ -46,11 +46,11 @@ const OverviewSection = () => {
           </div>
           
           <div className="w-full md:w-1/2">
-            <div className="rounded-xl overflow-hidden shadow-xl">
-              <img 
-                src="/lovable-uploads/98c822d1-6bab-4b93-9d02-4afb2ed7bde5.webp" 
-                alt="Professional roofer repairing damaged shingles" 
-                className="w-full h-auto"
+            <div className="rounded-xl overflow-hidden shadow-xl h-full">
+              <img
+                src="/lovable-uploads/98c822d1-6bab-4b93-9d02-4afb2ed7bde5.webp"
+                alt="Professional roofer repairing damaged shingles"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
