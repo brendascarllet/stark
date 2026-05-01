@@ -132,41 +132,19 @@ export function getAttribution(): Attribution {
 export function trackLeadSubmission(
   service?: string,
   formType?: string,
-  userData?: UserData,
+  _userData?: UserData,
 ) {
+  // Google Ads conversion + Meta Lead + Enhanced Conversions are fired on the
+  // /thank-you page only (see ThankYou.tsx). This function only fires the GA4
+  // funnel-analytics event "lead_form_submitted" (NOT a conversion).
   try {
     const value = getLeadValue(service);
 
-    // Google Ads conversion with dynamic value
-    window.gtag?.('event', 'conversion', {
-      send_to: 'AW-17475363009/I9C_CKq9jpscEMHB84xB',
-      value,
-      currency: 'USD',
-    });
-
-    // GA4 lead event with form type dimension
-    window.gtag?.('event', 'generate_lead', {
-      event_category: 'conversion',
+    window.gtag?.('event', 'lead_form_submitted', {
+      event_category: 'engagement',
       event_label: service || 'contact_form',
       form_type: formType || 'unknown',
       value,
-    });
-
-    // Enhanced Conversions: send hashed user data for better attribution
-    if (userData && (userData.email || userData.phone)) {
-      window.gtag?.('set', 'user_data', {
-        email: userData.email || undefined,
-        phone_number: userData.phone || undefined,
-        address: userData.zip ? { postal_code: userData.zip } : undefined,
-      });
-    }
-
-    // Meta Pixel lead event
-    window.fbq?.('track', 'Lead', {
-      content_name: formType === 'quiz' ? 'Roof Quiz' : 'Contact Form',
-      content_category: service || 'General',
-      value,
-      currency: 'USD',
     });
   } catch (e) {
     console.warn('Tracking error:', e);

@@ -1,26 +1,23 @@
 /**
- * Global phone-click tracking.
+ * Global phone-click tracking — Meta Pixel only.
  *
  * Listens for clicks on any <a href="tel:..."> in the document and fires
- * conversion events for Google Ads, GA4, and Meta Pixel — without needing
- * onClick handlers on each individual button.
+ * the Meta Pixel "Contact" event.
  *
- * Conversion action: "Cliques em telefone - Site"
- * Google Ads account: 886-589-3754  (AW-17475363009)
- * Label: GDPvCKvOxqMcEMHB84xB
+ * NOTE: Google Ads conversion + GA4 phone_click event are now handled by
+ * GTM tags ("Conv - Phone Click" + "GA4 - Phone Click"), triggered by
+ * "Phone Clicks" (Click URL contains tel:). Removing them from this file
+ * avoids double-firing.
  *
  * Idempotent — calling initPhoneTracking() multiple times only attaches once.
  */
 
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
     fbq?: (...args: unknown[]) => void;
   }
 }
 
-const GADS_ACCOUNT = 'AW-17475363009';
-const PHONE_CLICK_LABEL = 'GDPvCKvOxqMcEMHB84xB';
 const PHONE_LEAD_VALUE = 100;
 
 let attached = false;
@@ -40,27 +37,8 @@ export function initPhoneTracking(): () => void {
     const link = target.closest?.('a[href^="tel:"]') as HTMLAnchorElement | null;
     if (!link) return;
 
-    const href = link.getAttribute('href') || '';
-    const phone = href.replace(/^tel:/, '');
-    const pagePath = window.location.pathname;
-
     try {
-      // Google Ads conversion
-      window.gtag?.('event', 'conversion', {
-        send_to: `${GADS_ACCOUNT}/${PHONE_CLICK_LABEL}`,
-        value: PHONE_LEAD_VALUE,
-        currency: 'USD',
-      });
-
-      // GA4 custom event for richer reporting (page, phone number)
-      window.gtag?.('event', 'phone_click', {
-        phone_number: phone,
-        page_path: pagePath,
-        value: PHONE_LEAD_VALUE,
-        currency: 'USD',
-      });
-
-      // Meta Pixel Contact event
+      // Meta Pixel Contact event (Google Ads + GA4 handled by GTM)
       window.fbq?.('track', 'Contact', {
         content_name: 'Phone Click',
         content_category: 'Call',

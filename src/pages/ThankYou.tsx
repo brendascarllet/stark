@@ -60,36 +60,45 @@ const ThankYou: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    // Backup conversion tracking: fires on ThankYou page load in case the
-    // form-side tracking was blocked (ad blocker, network error, etc.).
-    // Guarded by sessionStorage flag to prevent double-firing.
+    // Primary lead conversion firing — happens here (not on form submit).
+    // Guarded by sessionStorage flag to prevent double-firing on reload.
     try {
       const alreadyFired = sessionStorage.getItem('stark_ty_fired');
       if (!alreadyFired) {
         const value = getLeadValue(state.service);
-        window.gtag?.('event', 'conversion', {
-          send_to: 'AW-17475363009/I9C_CKq9jpscEMHB84xB',
-          value,
-          currency: 'USD',
-        });
-        window.gtag?.('event', 'generate_lead', {
-          event_category: 'conversion',
-          event_label: state.service || 'thank_you_page',
-          form_type: 'thank_you_backup',
-          value,
-        });
+
+        // 1) Enhanced Conversions: SET user_data BEFORE the conversion event
+        //    so Google can attach hashed PII to the conversion.
         if (state.email || state.phone) {
           window.gtag?.('set', 'user_data', {
             email: state.email || undefined,
             phone_number: state.phone || undefined,
           });
         }
+
+        // 2) Google Ads conversion (Submit lead form (1))
+        window.gtag?.('event', 'conversion', {
+          send_to: 'AW-17475363009/I9C_CKq9jpscEMHB84xB',
+          value,
+          currency: 'USD',
+        });
+
+        // 3) GA4 generate_lead event (semantically a key event for funnel)
+        window.gtag?.('event', 'generate_lead', {
+          event_category: 'conversion',
+          event_label: state.service || 'thank_you_page',
+          form_type: 'thank_you',
+          value,
+        });
+
+        // 4) Meta Pixel Lead event
         window.fbq?.('track', 'Lead', {
           content_name: 'Thank You Page',
           content_category: state.service || 'General',
           value,
           currency: 'USD',
         });
+
         sessionStorage.setItem('stark_ty_fired', '1');
       }
     } catch (e) {
