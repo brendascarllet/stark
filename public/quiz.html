@@ -236,32 +236,13 @@ html, body { height: 100%; font-family: var(--font-body); background: #0d1420; c
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>emailjs.init('ZRltQQTK2lkYAspj3');</script>
 
-<!-- Google tag (gtag.js) — GA4 + Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVQ798GKLX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RVQ798GKLX');
-  gtag('config', 'AW-17475363009');
-</script>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '934924722283703');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=934924722283703&ev=PageView&noscript=1"
-/></noscript>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W69Q5BP8');</script>
+<!-- End Google Tag Manager -->
 
 <!-- Attribution capture: gclid/utm/landing_page/referrer on first pageview -->
 <script>
@@ -292,6 +273,10 @@ function getStarkAttribution(){
 </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W69Q5BP8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div id="bg-layer"></div>
 
 <div class="ticker-wrap"><div class="ticker-track" id="ticker-track"></div></div>
@@ -1039,7 +1024,7 @@ function submitLead(){
   try{ if(typeof emailjs!=='undefined'){ emailjs.send('service_74bf6sl','template_a5qe8zr',{from_name:lead.name||'',reply_to:lead.email||'',phone:lead.phone||'',service:lead.q1||'',address:[lead.street,lead.apt,lead.city,lead.state,lead.zip].filter(Boolean).join(', '),message:'Property: '+(lead.q2||'N/A')+'\nUrgency: '+(lead.q3||'N/A')+'\nRoof Condition: '+(lead.q4||'N/A')+'\nTrees: '+(lead.q5||'N/A')+'\nDiscount: '+(lead.q6||'N/A')+'\nSubmitted: '+lead.timestamp+'\n\n-- Attribution --\ngclid: '+(attr.gclid||'(none)')+'\nutm_source: '+(attr.utm_source||'(none)')+'\nutm_medium: '+(attr.utm_medium||'(none)')+'\nutm_campaign: '+(attr.utm_campaign||'(none)')+'\nutm_term: '+(attr.utm_term||'(none)')+'\nlanding: '+(attr.landing_page||'')+'\nreferrer: '+(attr.referrer||'(direct)'),source:document.referrer||'Quiz Funnel',page_url:window.location.href,gclid:attr.gclid||'',utm_source:attr.utm_source||'',utm_medium:attr.utm_medium||'',utm_campaign:attr.utm_campaign||'',utm_term:attr.utm_term||'',utm_content:attr.utm_content||'',landing_page:attr.landing_page||'',referrer:attr.referrer||''}).then(function(){console.log('EmailJS: Lead sent successfully');},function(err){console.error('EmailJS error:',err);}); } }catch(e){console.error('EmailJS exception:',e);}
   // Conversion tracking: Quiz Completed / Lead
   try {
-    gtag('event', 'conversion', { send_to: 'AW-17475363009/rlAJCJbupJscEMHB84xB', value: 1.0, currency: 'USD' });
+    gtag('event', 'conversion', { send_to: 'AW-17475363009/pgvMCOySjZscEMHB84xB', value: 1.0, currency: 'USD' });
     gtag('event', 'generate_lead', { event_category: 'conversion', event_label: lead.q1 || 'quiz_lead', value: 1 });
     fbq('track', 'Lead', { content_name: 'Roof Quiz', content_category: lead.q1 || 'Unknown Service', value: 1.00, currency: 'USD' });
   } catch(e) { console.warn('Tracking error:', e); }
