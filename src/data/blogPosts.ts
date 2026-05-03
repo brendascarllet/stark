@@ -14,6 +14,142 @@ import { cityBlogPosts } from './cityBlogPosts';
 
 const corePosts: BlogPost[] = [
   {
+    slug: "roof-replacement-timeline-eastside-wa",
+    title: "How Long Does Roof Replacement Actually Take? Eastside WA Timeline",
+    excerpt: "Most Eastside homes complete roof replacement in 2 to 5 days of active work, with a 1 to 3 week total timeline from contract to final cleanup. Here is the day-by-day breakdown and what slows things down.",
+    date: "2026-05-03",
+    author: "Stark Roofing Team",
+    image: "/blog-roof-replacement-timeline.webp",
+    keywords: "how long does roof replacement take eastside wa,roof replacement timeline sammamish,roof replacement duration bellevue,how long does it take to replace a roof,roof replacement schedule kirkland",
+    readTime: "5 min read",
+    content: `
+# How Long Does Roof Replacement Actually Take? Eastside WA Timeline
+
+You signed the contract. The deposit (or in our case, no deposit) is sorted. The shingles are ordered. Now your house is about to lose its roof for a few days, and the family wants to know what to expect.
+
+For most Sammamish, Bellevue, Redmond, and Kirkland homes, the answer is 2 to 5 days of active work. The full project from contract signature to final cleanup typically runs 1 to 3 weeks, depending on permits, material lead times, and the weather.
+
+This guide walks through the real timeline, what slows things down, and how to plan for the disruption.
+
+## The short answer for Eastside homes
+
+For a 2,000 to 3,000 sq ft home with a moderately pitched roof and asphalt shingle replacement:
+
+- **Active roofing work:** 2 to 5 days
+- **From contract to start date:** 1 to 4 weeks (depends on permits and shingle availability)
+- **Total timeline (signature to final inspection):** 2 to 5 weeks
+
+Cedar shake conversions take longer. Steep roofs take longer. Bad weather pushes the start date out, not the duration. Once the roof is open, we work straight through to finish.
+
+## Pre-construction phase (1-2 weeks before)
+
+Most of the calendar time before active work isn't on your roof. It's in three places:
+
+**1. Permit pull.** Bellevue, Sammamish, Kirkland, and Issaquah all require roof permits. Standard turnaround in 2026 is 5 to 10 business days. Some unincorporated areas of King County are faster.
+
+**2. Material order.** GAF Timberline HDZ in standard colors (Charcoal, Weathered Wood, Slate) is typically in stock at regional distributors. Custom colors or premium shingles like Grand Sequoia can add 1 to 2 weeks.
+
+**3. Crew scheduling.** Spring and early summer are the busiest seasons in Western Washington. We typically book 1 to 3 weeks out from contract signing. After Labor Day, the calendar opens up.
+
+If you're planning a [roof replacement](https://starkroofingrenovation.com/roof-replacement) for a specific date (selling the home, hosting an event), tell us at the estimate stage. We can usually accommodate fixed dates with 3 to 4 weeks of lead time.
+
+## Day-by-day breakdown of a typical replacement
+
+For a standard 2,500 sq ft Eastside home with asphalt shingle replacement, here's how the days run:
+
+### Day 1: Tear-off and prep
+
+- **6:30 AM.** Crew arrives. Material delivery either at start of day or already on site.
+- **7:00 AM to noon.** Tarps go up to protect landscaping, plants, and patios. Tear-off begins. Old shingles come into a dump trailer or rented dumpster.
+- **Noon to 4:00 PM.** Tear-off completes. Decking inspected. Any rotten plywood gets replaced now. Underlayment goes down. Ice and water shield in valleys, eaves, and around penetrations.
+- **End of day.** Synthetic underlayment fully installed across the entire roof. The home is dry under the underlayment overnight even if it rains.
+
+### Day 2: Field shingle install
+
+- **7:00 AM to 4:00 PM.** Drip edge on eaves and rakes. Starter strips. Field shingles installed in courses, working from eave to ridge. A single crew can shingle 5 to 8 squares per day on a moderate-pitch roof.
+- **End of day.** Most or all of the field shingles are done. The roof looks finished from the ground.
+
+### Day 3: Flashing, ridge, and detail work
+
+- **7:00 AM to 2:00 PM.** Step flashing at walls. New chimney flashing if needed. Pipe boots replaced. Ridge cap installed. Vent stack flashing tightened up.
+- **2:00 PM to 4:00 PM.** Final inspection by the crew lead. Cleanup begins.
+
+### Day 4 (if needed): Final cleanup and inspection
+
+- **Magnetic sweep** for nails across the property.
+- **Debris haul-off** to the dump.
+- **Final walk-through** with the homeowner. Roof inspection by Brenda or our project lead.
+- **Photos** for the warranty file and homeowner records.
+
+For most Eastside homes, days 3 and 4 collapse into one. Smaller homes finish in 2 days total. Larger or more complex roofs spread across 4 to 5.
+
+## What slows roof replacements down
+
+Most timeline overruns trace back to one of these:
+
+### 1. Decking damage discovered during tear-off
+
+If we find more rotted plywood than expected, we replace it before underlayment goes down. Each sheet of plywood adds 30 to 45 minutes of crew time. A home with 10+ sheets of bad decking can add a full day.
+
+### 2. Steep pitch
+
+A 4/12 pitch roof is walkable. A 10/12 pitch needs roof jacks, harnesses, and slower work. Anything above 8/12 typically adds 25 to 40% to the labor timeline. Hillside homes in [Sammamish](https://starkroofingrenovation.com/service-area/sammamish), Issaquah, and parts of Newcastle often have steep pitches.
+
+### 3. Multiple stories or complex roofline
+
+Two-story homes with cut-up rooflines (multiple gables, dormers, valleys) take longer than ranches with simple gables. The flashing work alone can double.
+
+### 4. Skylights, chimneys, or solar panels
+
+Each one adds detail work. Solar panel removal and reinstallation adds 1 to 2 days minimum (handled by the solar contractor, not us).
+
+### 5. Weather
+
+We don't roof in heavy rain or temperatures below 40°F. Both happen often enough in Pacific Northwest winters to push schedules. We track 7-day forecasts and start when we have a clear window.
+
+## Special cases that take longer
+
+**Cedar shake conversions** typically take 4 to 6 days because the deck almost always needs full plywood replacement. Skip sheathing under old cedar shake is rarely in good enough condition to leave.
+
+**[Storm damage](https://starkroofingrenovation.com/storm-damage) repairs** with insurance involvement add days to weeks of administrative work before any tearing starts. Once approved, the actual repair runs the same timeline as a standard replacement.
+
+**Multi-layer tear-offs** (when a previous roofer added a second layer of shingles instead of doing a full tear-off) add a full day of demolition.
+
+**Tile or metal roof installs** run 5 to 8 days for a typical Eastside home because the materials are heavier and the install is slower.
+
+## How weather affects timelines in PNW
+
+Western Washington weather is the variable that catches new homeowners off guard. Three rules we follow:
+
+**1. We don't open a roof if rain is forecast within the next 24 hours.** Once the old roof is off, the underlayment is your only barrier. We don't gamble.
+
+**2. Below 40°F, asphalt shingle adhesive doesn't activate properly.** December through February work is limited to dry, mild stretches. Most replacements in Sammamish, [Bellevue](https://starkroofingrenovation.com/service-area/bellevue), and the rest of the Eastside happen between April and October.
+
+**3. Wind matters as much as rain.** Sustained winds over 25 mph make safe work impossible on the roof and risk shingles flying off the dump trailer.
+
+If your scheduled start date hits bad weather, we push the start. We don't half-finish a roof and leave it exposed.
+
+## What you can do during the work
+
+For homeowners staying in the house during replacement, three practical notes:
+
+- **Park cars in the street or driveway, not the garage.** The crew uses the driveway for the dump trailer and material staging.
+- **Keep windows closed and pets indoors.** Tear-off generates dust and falling debris. Indoor noise is significant.
+- **Plan for one full day of disruption around 7:00 AM start.** The crew arrives early and works until 4:00 PM most days.
+
+You don't need to be home for the install if you trust the crew. Many of our customers leave for work and come back to a finished roof at the end of the day.
+
+## Schedule your free roof assessment
+
+If you're planning a replacement and want a realistic timeline for your specific home, we'll come out and walk it. Roof size, pitch, decking condition, and complexity all affect the schedule.
+
+Stark Roofing & Renovation is GAF Master Elite certified. Every replacement we do qualifies for the GAF Golden Pledge warranty (50 years material, 25 years workmanship). No deposits required.
+
+Call **(206) 739-8232** or [request a free assessment online](https://starkroofingrenovation.com/contact). We serve Sammamish, Bellevue, Redmond, Kirkland, Issaquah, and the entire Eastside.
+
+    `
+  },
+  {
     slug: "how-to-know-when-to-replace-your-roof-seattle",
     title: "7 Signs It's Time to Replace Your Roof in Seattle",
     excerpt: "Seattle homeowners face unique roofing challenges. Learn the warning signs that mean it's time for a new roof before small problems become expensive emergencies.",
