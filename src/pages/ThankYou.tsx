@@ -83,10 +83,8 @@ const ThankYou: React.FC = () => {
           currency: 'USD',
         });
 
-        // 2b) Google Ads conversion — "Enviar formulário de lead"
-        window.gtag?.('event', 'conversion', {
-          send_to: 'AW-17475363009/vBxtCO6GqqccEMHB84xB',
-        });
+        // Note: "Enviar formulário de lead" conversion (vBxtCO6GqqccEMHB84xB)
+        // is fired by GTM via History Change trigger on /thank-you, not here.
 
         // 3) GA4 generate_lead event (semantically a key event for funnel)
         window.gtag?.('event', 'generate_lead', {
