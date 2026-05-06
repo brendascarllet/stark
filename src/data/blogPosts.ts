@@ -14,6 +14,137 @@ import { cityBlogPosts } from './cityBlogPosts';
 
 const corePosts: BlogPost[] = [
   {
+    slug: "cedar-shake-conversion-kirkland",
+    title: "Cedar Shake Conversion in Kirkland: What Homeowners Need to Know",
+    excerpt: "Cedar shake roofs from the 80s and 90s are at end of life across Kirkland. Here is what to expect when you convert: skip sheathing replacement, full deck rebuild, GAF architectural shingle as the default choice. Cost ranges $22,000 to $38,000.",
+    date: "2026-05-06",
+    author: "Stark Roofing Team",
+    image: "/lovable-uploads/cedar-shake-kirkland.webp",
+    keywords: "cedar shake conversion kirkland wa,cedar shake replacement kirkland,kirkland roof replacement cedar,gaf timberline hdz kirkland,cedar shake to asphalt kirkland",
+    readTime: "6 min read",
+    content: `
+# Cedar Shake Conversion in Kirkland: What Homeowners Need to Know
+
+Drive through Kirkland's Finn Hill, Juanita, or Totem Lake neighborhoods and you'll see them everywhere. Cedar shake roofs from the 1980s and 90s, weathered to silver-gray, splitting at the edges, with patches of moss in the valleys. They were the standard roof for Kirkland homes for decades. Now most of them are at the end of their service life and ready to come off.
+
+If you live in one of these homes, this is the timeline most owners follow. The cedar shake reaches 25 to 30 years. The repairs start adding up. The first big leak shows up after a winter storm. And then the conversion happens, usually to GAF architectural shingle. We've done hundreds of these conversions, and the homeowners are surprised by two things every time: how much rotted decking we find under the old cedar, and how much better the new architectural shingle handles Pacific Northwest weather.
+
+This guide walks through what to expect when you convert.
+
+## Why so many Kirkland homes have cedar shake
+
+Cedar shake was the default roof for premium homes from the 1970s through the 1990s. The Pacific Northwest grows the cedar in our backyard, the look fits the regional architecture, and the material was readily available at reasonable cost. Kirkland was building out fast during that period. Whole neighborhoods went up with cedar shake roofs as standard.
+
+What looked like an obvious choice in 1985 didn't account for what we know now about how cedar performs in this climate over decades. Cedar holds moisture against itself. It splits in freeze-thaw cycles. Moss grows directly on it and through it. Without aggressive maintenance every few years, the lifespan drops fast.
+
+Most cedar shake roofs in Kirkland today are 25 to 35 years old. The original material has done its job and is ready for replacement.
+
+## How long cedar shake lasts in Kirkland weather
+
+A well-maintained cedar shake roof in Kirkland can last 25 to 30 years. A neglected one fails at 15 to 20.
+
+The variables:
+
+- **Tree cover.** Homes in Finn Hill, Bridle Trails, and parts of Juanita with heavy tree shade hold moisture longer. Cedar shake under a canopy fails faster.
+- **Slope.** Steep roofs shed water and dry between storms. Low-slope cedar shake holds water and decays from the bottom.
+- **Treatment history.** Properly treated cedar (every 3 to 5 years) outlasts untreated by a decade.
+- **Original quality.** Some 80s installations used thin shakes; others used the heavier "heavy hand-split" grade. The thin ones don't make it past 20.
+
+If your cedar shake is past 25 years and you've never had it treated, plan for replacement now rather than after the next leak.
+
+## Signs your cedar shake is ready to come off
+
+You don't always need to be on the roof to see this:
+
+### 1. Visible curling or splitting
+
+Healthy cedar shake lays flat. Curled or split shakes mean the material is brittle and water-permeable.
+
+### 2. Moss growing through, not just on top
+
+Surface moss can be cleaned. Moss with roots wedged between shakes has already broken the seal. By that point, water is getting underneath every time it rains.
+
+### 3. Granules and debris in your gutters that aren't from leaves
+
+Cedar fibers and chips in the gutters mean the shakes are deteriorating from above. The wood is breaking down.
+
+### 4. Stained ceilings or attic moisture
+
+Active leaks usually mean the underlayment under the cedar has failed. The shakes themselves can look intact while the layer below is rotted through.
+
+### 5. The roof is over 25 years old
+
+Even with no visible damage, cedar shake at 25+ years is on borrowed time. Decking damage compounds quickly once it starts.
+
+## What we find under old cedar shake
+
+This is the part most homeowners aren't ready for, and it's the reason cedar conversions cost more than a standard re-roof.
+
+Cedar shake was installed over **skip sheathing**, which is rows of 1x4 or 1x6 boards spaced an inch apart, not solid plywood. The gaps let the cedar breathe. They also let water and air in.
+
+When we tear off cedar shake in [Kirkland](/service-area/kirkland), here's what we typically find:
+
+- **Skip sheathing in poor condition.** Thirty plus years of moisture cycles deform the boards. Some are split, some are rotted at the joints.
+- **No underlayment, or disintegrated underlayment.** Old cedar jobs rarely had ice and water shield. What was there has often broken down.
+- **Damaged flashing.** Original chimney and valley flashing was usually galvanized steel that rusts through within 25 years.
+- **Rotted decking around penetrations.** Skylights, plumbing vents, and chimneys are the high-leak zones. The deck under them is often the first thing to go.
+
+This is why a cedar conversion isn't just a tear-off and re-install. The deck has to be brought up to current code with full plywood sheathing, modern underlayment, ice and water shield, and new flashing. Skipping any of that means the new roof leaks within five years.
+
+## Why most homeowners convert to architectural shingle
+
+The realistic options for replacing cedar shake on a Kirkland home are: another cedar shake, architectural [asphalt shingle](/asphalt-shingles), or metal panel.
+
+**Another cedar shake** is the period-correct match. It looks the same when new. The downsides: same material limitations, same maintenance schedule, much higher cost than asphalt, and a shrinking pool of qualified installers in the region.
+
+**Architectural asphalt shingle** is what most Kirkland homeowners go with. GAF Timberline HDZ in colors like Weathered Wood or Slate gives you the dimensional, layered look that complements Pacific Northwest architecture. Lifespan: 30+ years with the GAF Golden Pledge warranty. Cost: roughly half of cedar shake.
+
+**Standing seam [metal](/metal-roofing)** is the premium option. Lasts 50+ years, never grows moss. The look is more contemporary, which works on some Kirkland homes and clashes with others. Cost: roughly twice architectural shingle.
+
+For homes in older Kirkland neighborhoods where the cedar look matters for the architectural style, GAF Grand Sequoia is the closest visual match in asphalt. It's thicker than standard architectural and gives a deeper shadow line.
+
+## The conversion process step by step
+
+A typical cedar-to-shingle [roof replacement](/roof-replacement) in Kirkland takes 4 to 6 days. Here's the sequence:
+
+1. **Tear-off.** All cedar shakes come off. The skip sheathing comes off too if the deck needs to be brought up to current code, which most do.
+2. **Decking installation.** New CDX plywood goes down over the rafters. This adds weight to the structure but stays well within engineering limits for residential homes.
+3. **Underlayment.** Synthetic underlayment goes over the entire roof. This replaces the felt or tar paper from the original install.
+4. **Ice and water shield.** Goes in the valleys, around penetrations, and along the eaves. Required by Washington code on new roof installs and absent on most original cedar installs.
+5. **Drip edge.** New aluminum drip edge along all eaves and rakes. Replaces the unfinished cedar edges.
+6. **Starter strips.** Along the eaves, sealed with adhesive.
+7. **Field shingles.** GAF Timberline HDZ or Grand Sequoia in your chosen color. Six-nail pattern for high-wind areas.
+8. **Ridge cap.** Matched ridge shingles, with proper ventilation if the original lacked it.
+9. **Flashing.** New step flashing at walls, new chimney flashing, new pipe boots, and new vent stack flashing.
+10. **Cleanup.** Magnetic sweep for nails, debris haul-off, final walk-through.
+
+We document the entire process with photos and provide the homeowner a written report. The decking damage is photographed before plywood goes over it, so you have the record of what was found.
+
+## How much cedar shake conversion costs in Kirkland
+
+Cedar conversions cost more than a standard re-roof because of the deck work. Typical ranges for a 2,000 to 3,000 sq ft Kirkland home:
+
+- **Mid-range conversion (GAF Timberline HDZ):** $22,000 to $32,000
+- **Premium asphalt conversion (GAF Grand Sequoia, dimensional look):** $26,000 to $38,000
+- **Cedar-to-cedar replacement:** $40,000 to $65,000
+- **Standing seam metal conversion:** $50,000 to $80,000
+
+The wide range comes mostly from decking. A home with 80% intact skip sheathing and only a few rotted patches is at the low end. A home with full skip-to-plywood replacement plus framing repairs is at the high end.
+
+We give every Kirkland homeowner a written estimate with line items: tear-off, decking, underlayment, shingles, flashing, ridge vent, permit, disposal. No surprises after the work starts.
+
+## Schedule a free cedar shake assessment in Kirkland
+
+If your cedar shake roof is over 20 years old, the next storm is the question. We'd rather assess it now than after a leak.
+
+Stark Roofing & Renovation is GAF Master Elite certified, top 2% of contractors nationwide. Every conversion we do qualifies for the GAF [Golden Pledge warranty](/warranty): 50 years on materials, 25 years on workmanship. The warranty stays with the home.
+
+Call **(206) 739-8232** to schedule a free assessment, or [request one online](/contact). Our team will come out, walk the roof, photograph the condition, and have a written estimate to you within 48 hours. No deposit required.
+
+We serve Kirkland, [Sammamish](/service-area/sammamish), Bellevue, Redmond, Issaquah, and the entire Eastside.
+`
+  },
+  {
     slug: "roof-replacement-timeline-eastside-wa",
     title: "How Long Does Roof Replacement Actually Take? Eastside WA Timeline",
     excerpt: "Most Eastside homes complete roof replacement in 2 to 5 days of active work, with a 1 to 3 week total timeline from contract to final cleanup. Here is the day-by-day breakdown and what slows things down.",
